@@ -3,8 +3,8 @@ import Blogs from "./pages/Blogs";
 
 function App() {
   return (
-    <div className="App">
-        
+    <div>
+        <Blogs />
     </div>
   );
 }
