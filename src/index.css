@@ -2,17 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --bg-primary: 0, 83, 143;
+    --bg-secondary: 0, 83, 143;
+    --bg-accent: 15, 23, 42;
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    --text-primary: 0, 0, 0;
+    --text-secondary: 56, 63, 74;
+    --text-tertiary: 255, 255, 255;
+  }
+  .dark {
+    --bg-primary: 15, 23, 42;
+    --bg-secondary: 30, 41, 59;
+    --bg-accent: 30, 41, 59;
+  }
 }
