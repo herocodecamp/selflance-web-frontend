@@ -5,12 +5,13 @@ import LandingPage from "./pages/LandingPage";
 import Blogs from "./pages/Blogs/Blogs";
 import Footer from "./components/Footer/Footer";
 import SingleBlog from "./pages/SingleBlog";
+import PrivacyandTerms from "./common/Privacy&Terms/PrivacyandTerms";
 
 function App() {
   return (
     <>
    <Navbar/>
-   <SingleBlog />
+   <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/>
    <Footer />
    </>
   );
