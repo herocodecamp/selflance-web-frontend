@@ -4,7 +4,7 @@ import Logo from "../../Assets/logo.png";
 const NavbarView = () => {
   return (
     <div className="navbar-container bg-primary py-3">
-      <div className="max-w-[1300px] border-b font-medium py-3 border-gray-500 mx-auto flex text-white justify-between items-center">
+      <div className="max-w-[1400px] border-b font-medium py-3 border-gray-500 mx-auto flex text-white justify-between items-center">
         <img src={Logo} alt="" />
         <div>
           <ul className="flex items-center gap-x-10  ">

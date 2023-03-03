@@ -4,7 +4,7 @@ import { categories } from "../../utils/mockData";
 const CategoriesView = () => {
   return (
     <div >
-      <div className="max-w-[1300px] mx-auto my-20">
+      <div className="max-w-[1400px] mx-auto my-20">
         <div className="flex justify-between items-center">
           <p className="text-5xl font-bold">Explore Jobs by <br /> Category   </p>
           <p className="text-sm text-gray-500">We have a growing number of Jobs posted by buyers, so that <br /> you can sell your services with ease</p>

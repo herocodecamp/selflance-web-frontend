@@ -4,7 +4,7 @@ import HeaderImage from "../../Assets/Header.png";
 const HeaderView = () => {
   return (
     <div className="bg-primary ">
-      <div className="max-w-[1300px] mx-auto">
+      <div className="max-w-[1400px] mx-auto">
         <ul className="header-menu text-white flex justify-between  text-sm py-5">
           <li className="flex items-center gap-x-1.5">
             <span>Graphic Designing</span>
