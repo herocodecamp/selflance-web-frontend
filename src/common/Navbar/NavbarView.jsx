@@ -6,15 +6,15 @@ import { AiOutlineClose } from "react-icons/ai";
 const NavbarView = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <div className="navbar-container  bg-primary py-3">
-      <div className="max-w-[1400px] border-b font-medium py-3 border-gray-500 mx-auto flex text-white justify-between items-center">
+    <div className="navbar-container  md:bg-primary py-3">
+      <div className="max-w-[1400px] md:border-b font-medium py-3 border-gray-500 mx-auto flex text-white justify-between items-center">
         <div className="flex items-center gap-x-1 pl-2">
           {/* mobile bar icons */}
           <span onClick={() => setToggle(!toggle)} className="lg:hidden">
             {toggle ? (
-              <AiOutlineClose className="font-bold" size={30} />
+              <AiOutlineClose className="font-bold text-black" size={30} />
             ) : (
-              <FaBars size={30} />
+              <FaBars className="text-black" size={30} />
             )}
           </span>
           {/* logo */}
@@ -44,7 +44,7 @@ const NavbarView = () => {
       </div>
       {/* mobile menu */}
       {toggle && (
-        <div className=" absolute top-24 py-3 mobile menu lg:hidden w-full bg-white">
+        <div className=" absolute top-24 py-3 mobile menu lg:hidden z-10 h-full w-2/3 bg-white">
           <ul className=" flex flex-col gap-y-3 px-2 ">
             <li className="bg-[#00538F]/80 text-white py-2 px-2 rounded-md">
               Home
