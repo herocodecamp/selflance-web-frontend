@@ -21,13 +21,13 @@ const PrivacyandTermsView =({heading, subheading})=>{
             {/* Header ends */}
 
             {/* Body */}
-            <div class="grid grid-cols-6 justify-center items-center mx-20 gap-10 mt-20 mb-40">
+            <div class="grid grid-cols-6 justify-center items-center md:mx-20 gap-4 md:gap-10 mt-20 mb-40">
                 {/* section 1 */}
                 <div class="col-start-1 col-span-2">
-                    <div class="flex flex-row gap-5">
+                    <div class="flex flex-row  gap-5">
                         <div class="border-solid border-l-2 h-auto"></div>
                        <div class="mt-5 mb-5">
-                        <ul class="list-none space-y-6 text-base font-normal w-60">
+                        <ul class="list-none space-y-6 text-base font-normal w-28 md:w-60">
                                 <li class="font-bold">Introduction</li>
                                 <li>Our Values</li>
                                 <li>Why we Process information?</li>
