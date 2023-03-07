@@ -13,14 +13,14 @@ import FeaturedJobs from "./components/FeaturedJobs";
 import SingleBlog from "./pages/SingleBlog";
 import FAQ from "./common/FAQ";
 import SellerProfile from "./pages/SellerProfile";
-
+import ServiceDetails from "./pages/ServiceDetails";
 import PrivacyandTerms from "./common/Privacy&Terms/PrivacyandTerms";
 
 function App() {
   return (
     <>
    <Navbar/>
-   <SellerProfile />
+   <ServiceDetails />
    {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
  
    </>
