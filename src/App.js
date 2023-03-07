@@ -13,7 +13,7 @@ import FeaturedJobs from "./components/FeaturedJobs";
 import SingleBlog from "./pages/SingleBlog";
 import FAQ from "./common/FAQ";
 import SellerProfile from "./pages/SellerProfile";
-
+import ServiceDetails from "./pages/ServiceDetails";
 import PrivacyandTerms from "./common/Privacy&Terms/PrivacyandTerms";
 import ManageOrder from "./pages/ManageOrderPage";
 
