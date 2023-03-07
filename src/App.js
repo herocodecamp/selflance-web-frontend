@@ -15,12 +15,17 @@ import FAQ from "./common/FAQ";
 import SellerProfile from "./pages/SellerProfile";
 import ServiceDetails from "./pages/ServiceDetails";
 import PrivacyandTerms from "./common/Privacy&Terms/PrivacyandTerms";
+import ManageOrder from "./pages/ManageOrderPage";
 
 function App() {
   return (
     <>
    <Navbar/>
-   <ServiceDetails />
+
+   <ManageOrder />
+
+   {/* <SellerProfile /> */}
+
    {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
  
    </>
