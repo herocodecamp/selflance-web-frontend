@@ -16,13 +16,16 @@ import SellerProfile from "./pages/SellerProfile";
 import ServiceDetails from "./pages/ServiceDetails";
 import PrivacyandTerms from "./common/Privacy&Terms/PrivacyandTerms";
 import ManageOrder from "./pages/ManageOrderPage";
+import SearchPage from "./pages/SearcePage";
 
 function App() {
   return (
     <>
    <Navbar/>
 
-   <ManageOrder />
+   <SearchPage />
+
+   {/* <ManageOrder /> */}
 
    {/* <SellerProfile /> */}
 
