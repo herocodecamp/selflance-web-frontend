@@ -1,5 +1,6 @@
 import React from 'react';
 import Filter from '../../components/SearchPageComponent/Filter';
+import RecentSearch from '../../components/SearchPageComponent/RecentSearch';
 import SearchSeller from '../../components/SearchPageComponent/SearchSeller';
 
 const SearchPreview = () => {
@@ -9,6 +10,7 @@ const SearchPreview = () => {
         <Filter />
         <SearchSeller />
       </div>
+      <RecentSearch />
     </div>
   );
 };
