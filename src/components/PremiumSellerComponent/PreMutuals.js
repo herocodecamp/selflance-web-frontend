@@ -11,7 +11,7 @@ const friends = [
 
 ];
 
-const GigMutuals = () => {
+const PreMutuals = () => {
   return (
     <>
       {friends.length > 0 && (
@@ -44,7 +44,7 @@ const GigMutuals = () => {
           </div>
           <span className='text-[#92929D] ml-6'>clients</span>
           <div className='flex items-center space-x-2 lg:space-x-1 absolute right-2 lg:right-1'>
-            <AiFillStar className='text-[#FFB33E] font-semibold ' /> <span className='text-[#121F3E] font-semibold '>5.0</span> <span className='text-gray-300 font-semibold '>(520)</span>
+            <AiFillStar className='text-[#59AED5] font-semibold ' /> <span className='text-[#121F3E] font-semibold '>5.0</span> <span className='text-gray-300 font-semibold '>(520)</span>
           </div>
         </div>
       )}
@@ -53,4 +53,4 @@ const GigMutuals = () => {
   );
 };
 
-export default GigMutuals;
+export default PreMutuals;
