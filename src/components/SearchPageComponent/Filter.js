@@ -52,8 +52,8 @@ const Filter = () => {
   };
 
   return (
-    <div className='p-12'>
-      <div className='sm:w-[306px]'>
+    <div className='lg:p-12 p-6'>
+      <div className='sm:w-[306px] w-[200px]'>
 
         <div className=' border border-[#D1D1D1] bg-[#FFFFFF] border-box'>
           <div className='border-b pb-6 pl-4 border-[#D1D1D1]'>

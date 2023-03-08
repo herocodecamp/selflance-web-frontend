@@ -1,6 +1,7 @@
 import React from 'react';
 import PremiumFilter from '../../components/PremiumSellerComponent/PremiumFilter';
 import PremiumSearch from '../../components/PremiumSellerComponent/PremiumSearch';
+import PreRecentSearch from '../../components/PremiumSellerComponent/PreRecentSearch';
 
 
 const PremiumSellerView = () => {
@@ -10,7 +11,7 @@ const PremiumSellerView = () => {
         <PremiumFilter />
         <PremiumSearch />
       </div>
-
+      <PreRecentSearch />
     </div>
   );
 };
