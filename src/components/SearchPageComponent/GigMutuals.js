@@ -15,12 +15,12 @@ const GigMutuals = () => {
   return (
     <>
       {friends.length > 0 && (
-        <div className="flex items-center relative">
+        <div className="flex items-center relative">     
           {friends.slice(0, 3).map((url) => (
             <img
               key={url._id}
               src={url.image}
-              alt="mutual clients"
+              alt="clients"
               className="w-8 h-8 rounded-full border-2 border-white"
             />
           ))}
@@ -43,7 +43,7 @@ const GigMutuals = () => {
             </div>
           </div>
           <span className='text-[#92929D] ml-6'>clients</span>
-          <div className='flex items-center space-x-2 absolute right-2'>
+          <div className='flex items-center space-x-2 lg:space-x-1 absolute right-2 lg:right-1'>
             <AiFillStar className='text-[#FFB33E] font-semibold ' /> <span className='text-[#121F3E] font-semibold '>5.0</span> <span className='text-gray-300 font-semibold '>(520)</span>
           </div>
         </div>

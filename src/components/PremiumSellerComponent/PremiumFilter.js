@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Filter = () => {
+const PremiumFilter = () => {
   const [filters, setFilters] = useState({
     filter1: false,
     filter2: false,
@@ -19,6 +19,7 @@ const Filter = () => {
     seller4: false,
     seller6: false
   })
+  
   const [sellerLng, setSellerLng] = useState({
     language1: false,
     language2: false,
@@ -363,4 +364,4 @@ const Filter = () => {
   );
 };
 
-export default Filter;
+export default PremiumFilter;

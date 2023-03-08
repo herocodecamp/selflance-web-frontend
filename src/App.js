@@ -17,21 +17,24 @@ import ServiceDetails from "./pages/ServiceDetails";
 import PrivacyandTerms from "./common/Privacy&Terms/PrivacyandTerms";
 import ManageOrder from "./pages/ManageOrderPage";
 import SearchPage from "./pages/SearcePage";
+import PremiumSellerPage from "./pages/PremiumSellerPage";
 
 function App() {
   return (
     <>
-   <Navbar/>
+      <Navbar />
 
-   <SearchPage />
+      <PremiumSellerPage />
 
-   {/* <ManageOrder /> */}
+      {/* <SearchPage /> */}
 
-   {/* <SellerProfile /> */}
+      {/* <ManageOrder /> */}
 
-   {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
- 
-   </>
+      {/* <SellerProfile /> */}
+
+      {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
+
+    </>
   );
 }
 
