@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 import image1 from '../../Assets/Active_Gig_1.png'
@@ -47,7 +46,8 @@ const ManagePost = () => {
   return (
     <div className='my-12 grid grid-cols-1 gap-5'> 
       {
-        Posts?.map((manage) => <ManageDetails
+        Posts?.map((manage) => 
+        <ManageDetails
           key={manage._id}
           manage={manage}
         />

@@ -22,7 +22,7 @@ function App() {
     <>
    <Navbar/>
 
-   <ManageOrder />
+   <ServiceDetails />
 
    {/* <SellerProfile /> */}
 
