@@ -3,7 +3,9 @@ import { FcManager } from 'react-icons/fc'
 import banner1 from '../../Assets/svg/banner1.svg'
 import DCategories from './DCategories';
 import DPremiupSeller from './DPremiumSeller';
+import DTopSeller from './DTopSeller';
 import Recommended from './Recommended';
+import Suggested from './Suggested';
 
 const Banner = () => {
   return (
@@ -24,9 +26,13 @@ const Banner = () => {
       {/* dashboard catagories Details */}
       <DCategories />
       {/* dashboard Recommend seller  */}
-      <Recommended />  
+      <Recommended />
       {/* Premium seller */}
       <DPremiupSeller />
+      {/* top rated seller */}
+      <DTopSeller />
+      {/* suggested seller */}
+      <Suggested />
     </div>
   );
 };
