@@ -24,13 +24,17 @@ function App() {
     <>
       <Navbar />
 
-      <PremiumSellerPage />
+      {/* <PremiumSellerPage /> */}
+      {/* <Header /> */}
+      {/* <AboutFee /> */}
 
+{/* <LandingPage /> */}
       {/* <SearchPage /> */}
 
-      {/* <ServiceDetails /> */}
+      <ServiceDetails />
 
       {/* <SellerProfile /> */}
+      {/* <SingleBlog /> */}
 
       {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
 
