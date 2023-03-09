@@ -124,7 +124,7 @@ const ServiceDetailsView = () =>{
 
     return(
         <div class="bg-rosewhite">
-            <div class="mx-4 md:mx-10">
+            <div class="mx-4 lg:mx-10">
                 {/* top nav */}  
                 
                 <div class="hidden md:block text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
@@ -188,7 +188,7 @@ const ServiceDetailsView = () =>{
                                 </div>
                         </div>
                         {/* details */}
-                                <div class="hidden md:flex">
+                                <div class="hidden md:block">
                                     <div class="text-2xl font-medium mt-0 md:mt-10">Detail</div>
                                     
                                     <div class="my-3">
@@ -569,7 +569,7 @@ const ServiceDetailsView = () =>{
 
                                             <div class=" grid grid-cols-1">
                                                 <div class="col-span-full place-self-center">
-                                                <button class="bg-[#00538F] text-white rounded-lg w-[100px] md:w-[350px] h-[30px] md:h-[47px] text-xs md:text-lg font-medium" onClick={()=>{handleOfferClick(activeIndex)}}>Select Offer</button>
+                                                <button class="bg-[#00538F] text-white rounded-lg w-[100px] xl:w-[350px] h-[30px] md:h-[47px] text-xs lg:text-lg font-medium" onClick={()=>{handleOfferClick(activeIndex)}}>Select Offer</button>
                                                 </div>
                                             </div>
 
@@ -587,8 +587,8 @@ const ServiceDetailsView = () =>{
                                                 </div>
                                                 <div class="text-center text-lg font-medium">{userDetails.name}</div>
                                                 <div  class="text-center text-[#FFB33E] text-sm font-medium mt-1">{userDetails.rating}</div>
-                                                <div class="text-center flex mb-5 mt-3 mx-10">
-                                                    <button class="bg-[#00538F] text-white rounded-lg w-[180px] md:w-[400px] h-[35px]  md:h-[57px] text-xs md:text-lg font-medium" >Contact this Seller</button>
+                                                <div class="text-center mb-5 mt-3 mx-5 md:mx-0 lg:mx-10">
+                                                    <button class="bg-[#00538F] text-white rounded-lg w-[180px]  xl:w-[400px] h-[25px]  lg:h-[57px] sm:text-sm lg:text-lg font-medium" >Contact this Seller</button>
                                                 </div>
                                                 <hr />
                                                 <div class="mb-5" >
