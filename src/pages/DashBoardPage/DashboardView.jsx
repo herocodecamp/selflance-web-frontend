@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from '../../components/DashboardComponent/Banner';
+import DCategories from '../../components/DashboardComponent/DCategories';
 import LeftBar from '../../components/DashboardComponent/LeftBar';
 
 const DashboardView = () => {
