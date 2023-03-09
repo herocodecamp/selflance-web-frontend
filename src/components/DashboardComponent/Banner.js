@@ -2,6 +2,7 @@ import React from 'react';
 import { FcManager } from 'react-icons/fc'
 import banner1 from '../../Assets/svg/banner1.svg'
 import DCategories from './DCategories';
+import DPremiupSeller from './DPremiumSeller';
 import Recommended from './Recommended';
 
 const Banner = () => {
@@ -23,7 +24,9 @@ const Banner = () => {
       {/* dashboard catagories Details */}
       <DCategories />
       {/* dashboard Recommend seller  */}
-      <Recommended />
+      <Recommended />  
+      {/* Premium seller */}
+      <DPremiupSeller />
     </div>
   );
 };
