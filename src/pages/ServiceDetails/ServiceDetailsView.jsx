@@ -4,29 +4,62 @@ import {FaAngleLeft} from 'react-icons/fa';
 import {FaArrowLeft} from 'react-icons/fa';
 import {FaArrowRight} from 'react-icons/fa';
 import GigMainImage from "../../Assets/Service_Details_main_pic.png";
+import profileImage from "../../Assets/profileImage.png";
+import RatingStar from "../../Assets/Star-filled.png";
+import Review from "../../components/Reviews";
+import {BsCheck2Square, BsCheck} from "react-icons/bs";
+
 
 
 const images = [
-    'https://picsum.photos/800/400',
-    'https://picsum.photos/800/401',
-    'https://picsum.photos/800/402',
-    'https://picsum.photos/800/403',
+ GigMainImage,GigMainImage,GigMainImage,GigMainImage
   ];
-const packageList = ['Summary', 'Price', 'Prototype','Source File', 'Logo', 'No of Pages', 'No. of Revisions', 'Delivery'];
+// const packageList = ['Summary', 'Price', 'Prototype','Source File', 'Logo', 'No of Pages', 'No. of Revisions', 'Delivery'];
 
-const packageData = {
-    basic: [
-        'I will design 2 App screen including source file + prototype', '$10', false,true, false, 'Up tp 2', '3', '1'
-    ],
-    standard: [
-        'I will design 8 App screen including source file + prototype', '$30', true,true, false, 'Up tp 4', 'Unlimited', '2'
-    ],
-    premium: [
-        'I will design 4 App screen including source file + prototype', '$60', true,true, true, 'Up tp 8', 'Unlimited', '3'
-    ]
-}
+const Packages = ['Basic', 'Standard', 'Premium'];
+
+// packageData[0]=> basic
+// packageData[1]=> standard
+// packageData[2]=> premium
+
+const packageData= [
+    {
+        summary: 'I will design 2 App screen including source file + prototype',
+        price: '$10',
+        prototype: false,
+        sourcefile: true,
+        logo: false,
+        pages: 'Up to 2',
+        revisions: '3',
+        deliveryDuration: '1'
+    },
+    {
+        summary: 'I will design 4 App screen including source file + prototype',
+        price: '$30',
+        prototype: true,
+        sourcefile: true,
+        logo: false,
+        pages: 'Up to 4',
+        revisions: 'Unlimited',
+        deliveryDuration: '2'
+    },
+    {
+        summary: 'I will design 8 App screen including source file + prototype',
+        price: '$40',
+        prototype: true,
+        sourcefile: true,
+        logo: true,
+        pages: 'Up to 8',
+        revisions: 'Unlimited',
+        deliveryDuration: '3'
+    },
+]
+
 const userDetails ={
+    id:'1',
     name: 'Hamza Saeed',
+    image: profileImage,
+    status: 'online',
     about: `Hi guys, my name is Hamza Saeed and I am originally certified by government. I am a professional graphic designer and work on different software like FIGMA, ADOBE XD ,ADOBE PHOTOSHOP, ADOBE ILLUSTRATOR. I am doing this work for the last five years professionally with different companies. There are advantages to using design in business. It has the potential to improve your performance, efficiencies, and the value of your products and services. It can also lower your company's costs and risks. It has the potential to increase customer engagement and retention. Please contact me for queries. Thanks`,
     country: 'Pakistan',
     lastdelivery: '15 Days ago',
@@ -36,21 +69,21 @@ const userDetails ={
     progressOrder: '02',
     reviews: '20',
     serviceCategory: 'PERSONAL APP DESIGNER EXPERT / GRAPHIC DESIGNER/ FIGMA',
-    description: `I welcome you to the ultimate & one-stop-shop for your all graphic design work. I’m a professional graphic designer with over 5 years of experience & would love to work as your personal expert graphic designer.
+    description: `I welcome you to the ultimate & one-stop-shop for your all graphic design work. I’m a professional graphic designer with over 5 years of experience & would love to work as your personal expert graphic designer. \n
 
-    WHATEVER PHOTOSHOP EDITS YOU NEED:
-    ✅ Color correction, contrast and brightness
-    ✅ Photo Repair
-    ✅ Removing objects or people from the frame
-    ✅ Compositing images together
-    ✅ Social Media posts
-    ✅ Recoloring and tinting
-    ✅ Cropping
-    ✅ Sharpening and Smoothing
-    ✅ Blemish Removal
-    ✅ Banners
-    ✅ Photo Manipulation
-    ✅ Product Photos
+    WHATEVER PHOTOSHOP EDITS YOU NEED: \n
+    ✅ Color correction, contrast and brightness\n
+    ✅ Photo Repair\n
+    ✅ Removing objects or people from the frame\n
+    ✅ Compositing images together\n
+    ✅ Social Media posts\n
+    ✅ Recoloring and tinting\n
+    ✅ Cropping\n
+    ✅ Sharpening and Smoothing\n
+    ✅ Blemish Removal\n
+    ✅ Banners\n
+    ✅ Photo Manipulation\n
+    ✅ Product Photos\n
     
     If you did not find anything you want, feel free to contact me, so that we can find the best solution for your specific needs.
     Why Me?
@@ -69,6 +102,7 @@ const beadCrumbs =['Graphics & Design', 'App Design'];
 const ServiceDetailsView = () =>{
 
     const [activeIndex, setActiveIndex] = useState(0);
+    const [activePkgTab, setActivePkgTab] = useState('Basic');
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -80,13 +114,13 @@ const ServiceDetailsView = () =>{
    const nextImageIndex = () =>
     setCurrentImageIndex((index) => (index + 1) % images.length);
 
-    const handleClick = (index) => {
-      setActiveIndex(index);
+    const handleOfferClick = (index) => {
+            console.log(index);
     };
 
     return(
-        <div class="bg-slate-100">
-            <div class="mx-10">
+        <div class="bg-rosewhite">
+            <div class=" mx-2 md:mx-10">
                 {/* top nav */}  
                 
                 <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
@@ -120,132 +154,421 @@ const ServiceDetailsView = () =>{
                 </ol>
                 </nav>
 
-                <div class="grid grid-cols-12 grid-flow-row gap-8 mt-6">
+                <div class="grid grid-cols-12 grid-flow-row gap-2 md:gap-8 mt-6">
                     {/* Left Section */}
                     <div class="col-start-1 col-span-8 flex flex-col">
-                        <div>
+                        <div class="text-2xl md:text-5xl font-bold">
                         I will design and develop fully responsive website
                         </div>
                         {/* carousel */}
-                        <div class="">
-                            <div class="">
-                                
-                                Image Carousels will live here I will do it later!
-
-
-                            </div>
-
+                        <div class="object-center mt-10 mb-5 mr-4">  
+                                <img src={images.slice(0,4)[currentImageIndex]} alt="" class="rounded-lg object-center"/>
+                                <div class="flex items-center justify-center">
+                                    <button type="button" onClick={previousImageIndex} class="cursor-pointer p-1 md:p-2 w-6 h-6 text-white bg-black rounded-full  md:w-8 md:h-8 dark:text-gray-800 bg-opacity-30"><FaArrowLeft  /></button>
+                                    <button type="button" onClick={nextImageIndex} class="ml-20 cursor-pointer p-1 md:p-2 w-6 h-6 text-white bg-black rounded-full  md:w-8 md:h-8 dark:text-gray-800 bg-opacity-30"> <FaArrowRight /></button>
+                                </div>
                         </div>
-                        <div>Detail</div>
-                        <div>
+                        <div class="hidden md:block">
+                                <div class="grid gric-cols-4 gap-5">
+                                    {
+                                        images.slice(0,4).map((item,index)=>{
+                                            return(
+                                                <div class={`col-start-${index+1} col-span-1`}>
+                                                    
+                                                    <img src={item} alt="" class={currentImageIndex === index ? `border-4 border-solid border-[#00538F] rounded-lg`: ''}/>
+                                                </div>
+                                            )
+                                        })
+                                    }
+
+                                </div>
+                        </div>
+                        <div class="text-2xl font-medium mt-10">Detail</div>
+                        <div class="">
                             <h1>{userDetails.serviceCategory}</h1>
 
                            <p>{userDetails.description}</p>
 
                         </div>
-                        <hr />
-                        <div>Packages</div>
-                        {/* Packages Table */}
-                        <div class="">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam et iusto dolorum est fuga, tempora deleniti ea optio vitae, beatae corporis, fugiat quaerat nemo accusamus saepe! Illo tempora architecto rem.
-                                    <div class="flex flex-row max-w-[500px]">
-                                        <table class="text-sm text-left text-gray-500 dark:text-gray-400">
-                                            <thead class="text-xs text-gray-900 uppercase dark:text-gray-400">
-                                                <tr>
-                                                    <th scope="col" class="px-6 py-3">
-                                                        Packages
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>          
-                                                    {
-                                                        packageList.map((item, i)=>{
-                                                           return( 
-                                                            <tr class="bg-white dark:bg-gray-800">
-                                                                <th key={i} scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                                    {item}
-                                                                </th>
-                                                        </tr>)
-                                                            })
-                                                    }
-                                            </tbody>
-                                        </table>
-                                        <table class="text-sm text-left text-gray-500 dark:text-gray-400">
-                                            <thead class="text-xs text-gray-900 uppercase dark:text-gray-400">
-                                                <tr>
-                                                    <th scope="col" class="px-6 py-3">
-                                                        Basic
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>          
-                                                    {
-                                                        packageData.basic.map((item, i)=>{
-                                                           return( 
-                                                            <tr class="bg-white dark:bg-gray-800">
-                                                                <th key={i} scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                                    {item}
-                                                                </th>
-                                                        </tr>)
-                                                            })
-                                                    }
-                                            </tbody>
-                                        </table>
-                                        <table class="text-sm text-left text-gray-500 dark:text-gray-400">
-                                            <thead class="text-xs text-gray-900 uppercase dark:text-gray-400">
-                                                <tr>
-                                                    <th scope="col" class="px-6 py-3">
-                                                        Standard
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>          
-                                                    {
-                                                        packageData.standard.map((item, i)=>{
-                                                           return( 
-                                                            <tr class="bg-white dark:bg-gray-800">
-                                                                <th key={i} scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                                    {item}
-                                                                </th>
-                                                        </tr>)
-                                                            })
-                                                    }
-                                            </tbody>
-                                        </table>
-                                        <table class="text-sm text-left text-gray-500 dark:text-gray-400">
-                                            <thead class="text-xs text-gray-900 uppercase dark:text-gray-400">
-                                                <tr>
-                                                    <th scope="col" class="px-6 py-3">
-                                                        Premium
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>          
-                                                    {
-                                                        packageData.premium.map((item, i)=>{
-                                                           return( 
-                                                            <tr class="bg-white dark:bg-gray-800">
-                                                                <th key={i} scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                                    {item}
-                                                                </th>
-                                                        </tr>)
-                                                            })
-                                                    }
-                                            </tbody>
-                                        </table>
-                                    </div>
+                        <hr class="my-10" />
+                        <div class="text-3xl font-medium">Packages</div>
 
-
+                         <div class="border border-solid border-[#D1D1D1] my-10">
                             
+                                        <div class="relative overflow-x-auto">
+                                            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                                    <tr>
+                                                        <th scope="col" class="px-6 py-3 border-r-2">
+                                                            Packages
+                                                        </th>
+                                                        {
+                                                            Packages.map((item,index)=>{
+                                                                return(
+                                                                <th scope="col" class="px-6 py-3 border-r-2" key={index}>
+                                                                    {item}
+                                                                </th>)
+                                                            })
+                                                        }
+                                                    
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                                        <th scope="row" class="px-6 py-4 font-medium border-r-2 text-gray-900 whitespace-nowrap dark:text-white">
+                                                            Summary
+                                                        </th>
+                                                        {
+                                                            packageData.map((item,index)=>{
+                                                                return(
+                                                                    <td class="px-6 py-4 border-r-2" key={index}>
+                                                                        {item.summary}
+                                                                    </td>
+                                                                )
+                                                            })
+                                                        }
+                                                    </tr>
+
+                                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                                        <th scope="row" class="px-6 py-4 font-medium border-r-2 text-gray-900 whitespace-nowrap dark:text-white">
+                                                            Price
+                                                        </th>
+                                                        {
+                                                            packageData.map((item,index)=>{
+                                                                return(
+                                                                    <td class="px-6 py-4 border-r-2" key={index}>
+                                                                        {item.price}
+                                                                    </td>
+                                                                )
+                                                            })
+                                                        }
+                                                    </tr>
+
+                                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                                        <th scope="row" class="px-6 py-4 border-r-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                            Prototype
+                                                        </th>
+                                                        {
+                                                            packageData.map((item,index)=>{
+                                                                return(
+                                                                    <td class="px-6 py-4 border-r-2" key={index}>
+                                                                        {item.prototype === true ? <BsCheck2Square /> : ''}
+                                                                    </td>
+                                                                )
+                                                            })
+                                                        }
+                                                    </tr>
+
+                                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                                        <th scope="row" class="px-6 py-4 border-r-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                            Source File
+                                                        </th>
+                                                        {
+                                                            packageData.map((item,index)=>{
+                                                                return(
+                                                                    <td class="px-6 py-4 border-r-2" key={index}>
+                                                                        {item.sourcefile === true ? <BsCheck2Square /> : ''}
+                                                                    </td>
+                                                                )
+                                                            })
+                                                        }
+                                                    </tr>
+
+                                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                                        <th scope="row" class="px-6 py-4 border-r-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                            Logo
+                                                        </th>
+                                                        {
+                                                            packageData.map((item,index)=>{
+                                                                return(
+                                                                    <td class="px-6 py-4 border-r-2" key={index}>
+                                                                        {item.logo === true ? <BsCheck2Square /> : ''}
+                                                                    </td>
+                                                                )
+                                                            })
+                                                        }
+                                                    </tr>
+
+                                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                                        <th scope="row" class="px-6 py-4 border-r-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                            No. of Pages
+                                                        </th>
+                                                        {
+                                                            packageData.map((item,index)=>{
+                                                                return(
+                                                                    <td class="px-6 py-4 border-r-2" key={index}>
+                                                                        {item.pages}
+                                                                    </td>
+                                                                )
+                                                            })
+                                                        }
+                                                    </tr>
+
+                                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                                        <th scope="row" class="px-6 py-4 border-r-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                            No. of Revisions
+                                                        </th>
+                                                        {
+                                                            packageData.map((item,index)=>{
+                                                                return(
+                                                                    <td class="px-6 py-4 border-r-2" key={index}>
+                                                                        {item.revisions}
+                                                                    </td>
+                                                                )
+                                                            })
+                                                        }
+                                                    </tr>
+
+                                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                                        <th scope="row" class="px-6 py-4 border-r-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                            Delivery
+                                                        </th>
+                                                        {
+                                                            packageData.map((item,index)=>{
+                                                                return(
+                                                                    <td class="px-6 py-4 border-r-2" key={index}>
+                                                                        {item.deliveryDuration}
+                                                                    </td>
+                                                                )
+                                                            })
+                                                        }
+                                                    </tr>
+                                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                                        <th scope="row" class="px-6 py-4 font-medium border-r-2 text-gray-900 whitespace-nowrap dark:text-white">
+                                                          
+                                                        </th>
+                                                        {
+                                                            Packages.map((item,index)=>{
+                                                                return(
+                                                                    <td class="px-6 py-4 border-r-2" key={index}>
+                                                                        <button class="bg-[#00538F] w-[120px] text-white font-medium text-lg rounded-md" onClick={console.log(index)}>Select</button>
+                                                                    </td>
+                                                                )
+                                                            })
+                                                        }
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
 
                         </div>
+                      
 
+
+                        {/* About the Seller */}
+                        <div class="text-2xl font-medium my-5 ">About the Seller</div>
+                        <div class="border border-solid border-#D1D1D1 rounded-lg p-3 md:p-8 mt-10 mb-10">
+                                <div class="grid grid-cols-12">
+                                    <div class="col-start-1 col-span-2">
+                                        <span><img src={userDetails.image}  alt="pic" class="flex-initial w-[125px] h-auto rounded-full overflow-hidden self-center" /></span>
+
+                                    </div>
+                                    <div class="col-start-3 col-span-5 md:col-span-3 items-center ml-3 md:ml-0">
+                                        <p class="text-base md:text-lg font-bold ">{userDetails.name}</p>
+                                        <p class="text-[#FFB33E] font-bold text-sm md:text-base ">{userDetails.rating}</p>
+                                        <p class="text-[#27AE60] text-sm md:text-base">{userDetails.status}</p>
+
+                                    </div>
+                                </div>
+                                <div class="my-8 font-base text-[#4F5350] text-sm leading-8">
+                                    {userDetails.about}
+                                </div>
+                                <div class="grid grid-cols-8 gap-10 justify-start">
+                                    <div class="col-start-1 col-span-2">
+                                        <h4 class="text-xs font-medium">country</h4>
+                                        <h2 class="text-sm md:text-lg font-medium mt-3">{userDetails.country}</h2>
+                                    </div>
+                                    <div class="col-start-3 col-span-2">
+                                        <h4 class="text-xs font-medium">Last Delivery</h4>
+                                        <h2 class="text-sm md:text-lg font-medium mt-3">{userDetails.lastdelivery}</h2>
+                                    </div>
+                                    <div class="col-start-5 col-span-2">
+                                        <h4 class="text-xs font-medium">Membership</h4>
+                                        <h2 class="text-sm md:text-lg font-medium mt-3">{userDetails.membership}</h2>
+                                    </div>
+
+                                </div>
+                        </div>
+                        
+                        {/* Reviews */}
+                        <div>
+                        <div class="flex justify-between mt-10">
+                                {/* Review */}
+                                <div class="flex flex-row items-center">
+                                    <h4 class="font-bold  text-sm md:text-xl">Reviews (46)</h4>
+                                    <img src={RatingStar} class="flex-initial w-[10px] md:w-[17.79px] h-[9px] md:h-[16.42px] ml-3 " alt=""/> <p class="text-sm ml-1">4.9</p>
+                                </div>
+                                
+                                <div>
+                                    <label for="filter" class="border-none mr-2"></label>
+                                    <select id="filter" class=" border-none text-xs md:text-sm font-medium text-[#828282] mr-2">
+                                                        <option>Most Relevant</option>
+                                                        <option>Positive Reviews</option>
+                                                        <option>Negative Reviews</option>
+                                                        <option>All</option>
+                                    </select>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div>
+                            <Review />
+                        </div>
                     </div>
                     {/* Left Section ends */}
 
                     {/* Right Section */}
-                    <div class="col-start-9 col-span-4">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat numquam enim esse natus deserunt repudiandae magnam fugit non praesentium, ab nemo commodi reiciendis voluptas laudantium provident dicta labore officia. Repellendus.
+                    <div class="col-start-9 col-span-4 space-y-8">
+                        {/* Box-1 */}
+                        <div class="text-xl font-bold text-gray-800">Price</div>
+                        <div class="border border-solid border-[#D1D1D1] rounded-lg">
+                            {/* nav */}
+                                <div>
+                                    <nav>
+                                    <ul class="border-b border-gray-200 dark:border-gray-700 dark:text-gray-400">
+                                        <div class="grid grid-cols-3">
+                                            {
+                                                Packages.map((item,index)=>{
+                                                    return(
+                                                        <div class = {activePkgTab === item ? `col-start-${index+1} col-span-1 md:px-3 border-r border-gray-200 dark:border-gray-700 bg-[#00538F] text-white`: `col-start-${index+1} col-span-1 md:px-3 border-r border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400`} >
+                                                        <li class="">
+                                                            <button class=" text-xs md:text-sm h-[52.23px] font-medium block" onClick={()=>{setActiveIndex(index); setActivePkgTab(item)}}>{item}</button>
+                                                        </li>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+
+                                    </ul>
+                                    </nav>
+                                    {/* Package Data */}
+                                    <div class="p-1 md:p-5">
+                                        <div class="text-[#121F3E] text-xl font-bold">
+                                        {packageData[activeIndex].price}
+                                        </div>
+                                        <div class="text-[#121F3E] text-base md:text-lg font-medium my-2">
+                                        I can design the website with 6 pages.
+                                        </div>
+                                        <div class="grid grid-cols-2 my-5 items-center">
+                                            <div class="col-start-1 col-span-1 place-self-start text-xs md:text-sm text-[#4F5350] opacity-80 font-medium">
+                                                    Delivery days
+                                            </div>
+                                            <div class="col-start-2 col-span-1 place-self-end text-xs md:text-sm font-medium">
+                                                {packageData[activeIndex].deliveryDuration}
+                                            </div>
+
+                                        </div>
+
+                                        <div class="grid grid-cols-2 my-5">
+                                            <div class="col-start-1 col-span-1 place-self-start text-xs md:text-sm text-[#4F5350] opacity-80 font-medium">
+                                                    Revisions
+                                            </div>
+                                            <div class="col-start-2 col-span-1 place-self-end text-xs md:text-sm font-medium">
+                                                {packageData[activeIndex].revisions}
+                                            </div>
+
+                                        </div>
+
+                                        <hr class="my-3"/>
+
+                                        <div class="grid grid-cols-2 my-5">
+                                            <div class="col-start-1 col-span-1 place-self-start text-xs md:text-sm text-[#4F5350] opacity-80 font-medium">
+                                                   No. of Pages  
+                                            </div>
+                                            <div class="col-start-2 col-span-1 place-self-end text-xs md:text-sm font-medium">
+                                            {packageData[activeIndex].pages}
+                                            </div>
+
+                                        </div>
+
+                                        <div class="grid grid-cols-2 my-5">
+                                            <div class="col-start-1 col-span-1 place-self-start text-xs md:text-sm text-[#4F5350] opacity-80 font-medium">
+                                                    Prototype
+                                            </div>
+                                            <div class="col-start-2 col-span-1 place-self-end text-xs md:text-sm font-medium">
+                                                {packageData[activeIndex].prototype === true ? <BsCheck /> : ''}
+                                            </div>
+
+                                        </div>
+
+                                        <div class="grid grid-cols-2 my-5">
+                                            <div class="col-start-1 col-span-1 place-self-start text-xs md:text-sm text-[#4F5350] opacity-80 font-medium">
+                                                    Source File
+                                            </div>
+                                            <div class="col-start-2 col-span-1 place-self-end text-xs md:text-sm font-medium">
+                                                {packageData[activeIndex].sourcefile === true ? <BsCheck /> : '' }
+                                            </div>
+
+                                        </div>
+
+                                        <div class=" grid grid-cols-1">
+                                            <div class="col-span-full place-self-center">
+                                            <button class="bg-[#00538F] text-white rounded-lg w-[100px] md:w-[350px] h-[30px] md:h-[47px] text-xs md:text-lg font-medium" onClick={()=>{handleOfferClick(activeIndex)}}>Select Offer</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                        </div>
+
+                        {/* Box-2 */}
+                        <div class="border border-solid border-[/#D1D1D1] rounded-lg p-2 md:p-8 items-center">
+                                                <div class="flex flex-row items-center justify-center">
+                                                <img src={userDetails.image}  alt="pic" class="inline-block object-center w-[77px] h-auto rounded-full" />
+                                                </div>
+                                                <div class="text-center text-lg font-medium">{userDetails.name}</div>
+                                                <div  class="text-center text-[#FFB33E] text-sm font-medium mt-1">{userDetails.rating}</div>
+                                                <div class="self-center text-center flex mb-5 mt-3">
+                                                    <button class="bg-[#00538F] text-white rounded-lg w-[180px] md:w-[400px] h-[35px]  md:h-[57px] text-xs md:text-lg font-medium" >Contact this Seller</button>
+                                                </div>
+                                                <hr />
+                                                <div class="mb-10" >
+                                                    <div class="grid grid-cols-2 gap-2">
+                                                        <div class="col-start-1 col-span-1 font-xs my-2">
+                                                            Seller's Rating
+                                                        </div>
+                                                        <div class="col-start-2 col-span-1 justify-self-end my-2 fotn-xs text-[#FFB33E]">
+                                                            {userDetails.rating}
+                                                        </div>   
+                                                    </div>
+                                                    <hr />
+                                                    <div class="grid grid-cols-2">
+                                                        <div class="col-start-1 col-span-1 font-xs my-2">
+                                                            Completed Orders
+                                                        </div>
+                                                        <div class="col-start-2 col-span-1 justify-self-end my-2 fotn-xs">
+                                                            {userDetails.completedOrder}
+                                                        </div>   
+                                                    </div>
+                                                    <hr />
+                                                    <div class="grid grid-cols-2">
+                                                        <div class="col-start-1 col-span-1 font-xs my-2">
+                                                            Order in Progress
+                                                        </div>
+                                                        <div class="col-start-2 col-span-1 justify-self-end my-2 fotn-xs">
+                                                            {userDetails.progressOrder}
+                                                        </div>   
+                                                    </div>
+                                                    <hr />
+                                                    <div class="grid grid-cols-2">
+                                                        <div class="col-start-1 col-span-1 my-2 fotn-xs">
+                                                            Reviews
+                                                        </div>
+                                                        <div class="col-start-2 col-span-1 justify-self-end my-2 fotn-sx">
+                                                            {/* insted update the userDetail to contain the comments: [] then use the comments.length()*/}
+                                                            {userDetails.reviews}
+                                                        </div>   
+                                                    </div>
+                                                    <hr />
+
+                                                </div>
+                        </div>
+                        
 
                     </div>
                     
