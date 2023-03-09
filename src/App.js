@@ -18,15 +18,17 @@ import PrivacyandTerms from "./common/Privacy&Terms/PrivacyandTerms";
 import ManageOrder from "./pages/ManageOrderPage";
 import SearchPage from "./pages/SearcePage";
 import PremiumSellerPage from "./pages/PremiumSellerPage";
+import Dashboar from "./pages/DashBoardPage";
 
 function App() {
   return (
     <>
       <Navbar />
-
+      
+      {/* <Dashboar />
       {/* <PremiumSellerPage /> */}
       {/* <Header /> */}
-      {/* <AboutFee /> */}
+      {/* <AboutFee /> */} */}
 
 {/* <LandingPage /> */}
       {/* <SearchPage /> */}
