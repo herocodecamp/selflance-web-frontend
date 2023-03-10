@@ -161,7 +161,7 @@ const ServiceDetailsView = () =>{
                 <div class="grid grid-cols-12 grid-flow-col gap-2 md:gap-8 mt-6">
                     {/* Left Section */}
                     <div class="col-span-full md:col-start-1 md:col-span-8 flex flex-col">
-                        <div class="text-xl md:text-5xl font-bold">
+                        <div class="text-xl lg:text-5xl font-bold">
                         I will design and develop fully responsive website
                         </div>
                         {/* carousel */}
@@ -398,11 +398,11 @@ const ServiceDetailsView = () =>{
                         <div class="text-2xl font-medium my-2 md:my-5 ">About the Seller</div>
                         <div class="border border-solid border-#D1D1D1 rounded-lg p-3 md:p-8 my-5 md:my-10">
                                 <div class="grid grid-cols-12">
-                                    <div class="col-start-1 col-span-4 md:col-span-2">
+                                    <div class="col-start-1 col-span-4 lg:col-span-2">
                                         <span><img src={userDetails.image}  alt="pic" class="flex-initial w-[125px] h-auto rounded-full overflow-hidden self-center" /></span>
 
                                     </div>
-                                    <div class="col-start-5 md:col-start-3 col-span-6 md:col-span-3 items-center ml-3 md:ml-0">
+                                    <div class="col-start-5 lg:col-start-3 col-span-6 lg:col-span-3 items-center ml-3 lg:ml-2">
                                         <p class="text-base md:text-lg font-bold ">{userDetails.name}</p>
                                         <p class="text-[#FFB33E] font-bold text-sm md:text-base ">{userDetails.rating}</p>
                                         <p class="text-[#27AE60] text-sm md:text-base">{userDetails.status}</p>
@@ -587,7 +587,7 @@ const ServiceDetailsView = () =>{
                                                 </div>
                                                 <div class="text-center text-lg font-medium">{userDetails.name}</div>
                                                 <div  class="text-center text-[#FFB33E] text-sm font-medium mt-1">{userDetails.rating}</div>
-                                                <div class="text-center mb-5 mt-3 mx-5 md:mx-0 lg:mx-10">
+                                                <div class="text-center mb-5 mt-3 mx-5 md:mx-0 ">
                                                     <button class="bg-[#00538F] text-white rounded-lg w-[180px]  xl:w-[400px] h-[25px]  lg:h-[57px] sm:text-sm lg:text-lg font-medium" >Contact this Seller</button>
                                                 </div>
                                                 <hr />

@@ -33,7 +33,7 @@ function App() {
 {/* <LandingPage /> */}
       {/* <SearchPage /> */}
 
-      <ServiceDetails />
+      <Blogs />
 
       {/* <SellerProfile /> */}
       {/* <SingleBlog /> */}

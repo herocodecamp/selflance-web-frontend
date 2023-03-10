@@ -2,7 +2,7 @@ import React from "react";
 
 const FaqView =()=>{
     return(
-                    <div class="h-[1025px] bg-[#E5EEF4] mt-16">
+                    <div class="hidden lg:block h-[1025px] bg-[#E5EEF4] mt-16">
                     <div class="grid grid-rows-1 mx-48 justify-center items-center">
                             <div class="col-span-full justify-center text-center">
                                 <h1 class="text-4xl font-bold mt-20">Frequently Asked Question</h1>
