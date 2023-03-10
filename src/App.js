@@ -19,16 +19,13 @@ import ManageOrder from "./pages/ManageOrderPage";
 import SearchPage from "./pages/SearcePage";
 import PremiumSellerPage from "./pages/PremiumSellerPage";
 import Dashboar from "./pages/DashBoardPage";
-import OrderProcess from "./pages/orderRequirements/OrderProcess";
 
 function App() {
   return (
     <>
       <Navbar />
 
-      <OrderProcess />
-
-      {/* <Dashboar /> */}
+      <Dashboar />
       {/* <PremiumSellerPage /> */}
       {/* <Header /> */}
       {/* <AboutFee /> */}
