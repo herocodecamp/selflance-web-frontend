@@ -23,6 +23,7 @@ import Dashboar from "./pages/DashBoardPage";
 import OrderProcess from "./pages/orderRequirements/OrderProcess";
 import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
 import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
+import Congratulations from "./pages/orderRequirements/Congratulations";
 // >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57
 
 function App() {
@@ -30,17 +31,18 @@ function App() {
     <>
       <Navbar />
 
-{/* <<<<<<< HEAD */}
-      <SubmitRequirement2 />
+      {/* <<<<<<< HEAD */}
+      {/* <SubmitRequirement2 /> */}
 
+      <Congratulations />
       {/* <OrderProcess /> */}
 
       {/* <Dashboar /> */}
 
-{/* ======= */}
+      {/* ======= */}
       {/* <Dashboar /> */}
 
-{/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
+      {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
 
       {/* <PremiumSellerPage /> */}
       {/* <Header /> */}
