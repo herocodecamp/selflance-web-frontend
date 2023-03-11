@@ -20,28 +20,28 @@ import SearchPage from "./pages/SearcePage";
 import PremiumSellerPage from "./pages/PremiumSellerPage";
 import Dashboar from "./pages/DashBoardPage";
 import OrderProcess from "./pages/orderRequirements/OrderProcess";
+import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
 
 function App() {
   return (
     <>
       <Navbar />
 
-      <OrderProcess />
+      <SubmiteRequirement />
+
+      {/* <OrderProcess /> */}
 
       {/* <Dashboar /> */}
       {/* <PremiumSellerPage /> */}
       {/* <Header /> */}
       {/* <AboutFee /> */}
-
       {/* <LandingPage /> */}
       {/* <SearchPage /> */}
-
       {/* <Blogs /> */}
-
       {/* <SellerProfile /> */}
       {/* <SingleBlog /> */}
 
-      <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/>
+      {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
 
     </>
   );
