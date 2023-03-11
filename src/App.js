@@ -41,7 +41,7 @@ function App() {
       {/* <SellerProfile /> */}
       {/* <SingleBlog /> */}
 
-      {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
+      <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/>
 
     </>
   );
