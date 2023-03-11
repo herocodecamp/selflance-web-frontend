@@ -4,6 +4,7 @@ import { BsCheckSquare } from 'react-icons/bs';
 import { FiSettings } from 'react-icons/fi';
 import { RxDashboard } from 'react-icons/rx';
 import { RxCross1 } from 'react-icons/rx'
+import CatagoriesDropdown from './CatagoriesDropdown';
 
 const Drawer = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -15,11 +16,11 @@ const Drawer = () => {
   return (
 
     <>
-      <button className='fixed top-20 left-6 md:hidden' onClick={handleToggle}><AiOutlineMenu className='text-2xl' /></button>
+      <button className='absolute top-20 left-6 md:hidden' onClick={handleToggle}><AiOutlineMenu className='text-2xl' /></button>
 
       <div
         className={`fixed inset-y-0 bg-[#ffff]  border border-[
-          #D1D1D1] left-0 w-64  p-8 transition-transform z-10  duration-300 transform ${isOpen ? 'translate-x-0 overflow-y-auto' : '-translate-x-full'
+          #D1D1D1] left-0  p-8 transition-transform z-10  duration-300 transform ${isOpen ? 'translate-x-0 overflow-y-auto' : '-translate-x-full'
           }`}
       >
         <button className='fixed top-2 right-2' onClick={handleToggle}><RxCross1 className="text-2xl" /></button>
@@ -47,6 +48,7 @@ const Drawer = () => {
 
           </ul>
         </div>
+        <CatagoriesDropdown />
       </div>
 
     </>
