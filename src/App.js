@@ -18,19 +18,25 @@ import PrivacyandTerms from "./common/Privacy&Terms/PrivacyandTerms";
 import ManageOrder from "./pages/ManageOrderPage";
 import SearchPage from "./pages/SearcePage";
 import PremiumSellerPage from "./pages/PremiumSellerPage";
+import Dashboar from "./pages/DashBoardPage";
 
 function App() {
   return (
     <>
       <Navbar />
+      
+      {/* <Dashboar />
+      {/* <PremiumSellerPage /> */}
+      {/* <Header /> */}
+      {/* <AboutFee /> */}
 
-      <PremiumSellerPage />
-
+{/* <LandingPage /> */}
       {/* <SearchPage /> */}
 
-      {/* <ManageOrder /> */}
+      <Blogs />
 
       {/* <SellerProfile /> */}
+      {/* <SingleBlog /> */}
 
       {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
 
