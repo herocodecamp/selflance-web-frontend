@@ -59,14 +59,14 @@ const Recommended = () => {
     <div className='pt-6'>
       <h2 className='text-[#000000] font-semibold text-base leading-4 py-6'>Recommended Sellers</h2>
 
-      <div className='grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-2.5'>
+      <div className='grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-6 gap-2.5'>
         {
           RecommendSeller.slice(0, 6).map(seller => {
             return (
 
               <div className='shadow-md rounded-lg bg-[#ffffff]'>
                 <div>
-                  <img src={seller.image} className=" w-full" alt="img" />
+                  <img src={seller.image} className="max-h-[250px] w-full" alt="img" />
                 </div>
                 <div className='py-4 px-2 space-y-2'>
                   <p className='font-semibold text-base text-[#121F3E] leading-4'>{seller.name}</p>
