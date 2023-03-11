@@ -54,43 +54,43 @@ const CatagoriesDropdown = () => {
             <ul className='grid grid-cols-1 gap-5'>
 
               <li className='hover:bg-[#F5F5F5] hover:cursor-pointer  flex space-x-2 items-center bg-[#F5F5F5] border border-[#DFDFDF] rounded-lg  sm:px-2 sm:py-2 px-1 py-1 lg:px-4 lg:py-4'>
-                <span className='bg-[#FF7A00] w-[40px] h-[40px] rounded-full '><AiOutlineLaptop className='text-white text-xl w-50 mx-auto mt-2' /></span>
-                <p className='font-bold text-xl leading-7 text-[#1D263A]'>Digital Marketing</p>
+                <span className='bg-[#FF7A00] w-[30px] h-[30px] rounded-full '><AiOutlineLaptop className='text-white text-xl w-50 mx-auto mt-1' /></span>
+                <p className='font-bold text-sm leading-7 text-[#1D263A]'>Digital Marketing</p>
               </li>
 
               <li className='hover:bg-[#F5F5F5] hover:cursor-pointer  flex space-x-2 items-center bg-[#ffff] border border-[#DFDFDF] rounded-lg lg:px-4 sm:px-2 sm:py-2 px-1 py-1  lg:py-4'>
-                <span className='bg-[#00538F] w-[40px] h-[40px] rounded-full'><MdGraphicEq className='text-white text-xl w-50 mx-auto mt-2' /></span>
-                <p className='font-bold text-xl leading-7 text-[#1D263A]'>Graphic Design</p>
+                <span className='bg-[#00538F] w-[30px] h-[30px] rounded-full'><MdGraphicEq className='text-white text-xl w-50 mx-auto mt-1' /></span>
+                <p className='font-bold text-sm leading-7 text-[#1D263A]'>Graphic Design</p>
               </li>
 
               <li className='hover:bg-[#F5F5F5] hover:cursor-pointer  flex space-x-2 items-center bg-[#ffff] border border-[#DFDFDF] rounded-lg lg:px-4 sm:px-2 sm:py-2 px-1 py-1  lg:py-4'>
-                <span className='bg-[#144BD6] w-[40px] h-[40px] rounded-full'><AiOutlineVideoCameraAdd className='text-white text-xl w-50 mx-auto mt-2' /></span>
-                <p className='font-bold text-xl leading-7 text-[#1D263A]'>Video editing</p>
+                <span className='bg-[#144BD6] w-[30px] h-[30px] rounded-full'><AiOutlineVideoCameraAdd className='text-white text-xl w-50 mx-auto mt-1' /></span>
+                <p className='font-bold text-sm leading-7 text-[#1D263A]'>Video editing</p>
               </li>
 
               <li className='hover:bg-[#F5F5F5] hover:cursor-pointer  flex space-x-2 items-center bg-[#ffff] border border-[#DFDFDF] rounded-lg lg:px-4 sm:px-2 sm:py-2 px-1 py-1  lg:py-4'>
-                <span className='bg-[#FF3B30] w-[40px] h-[40px] rounded-full'><FaBusinessTime className='text-white text-xl w-50 mx-auto mt-2' /></span>
-                <p className='font-bold text-xl leading-7 text-[#1D263A]'>Business</p>
+                <span className='bg-[#FF3B30] w-[30px] h-[30px] rounded-full'><FaBusinessTime className='text-white text-xl w-50 mx-auto mt-1' /></span>
+                <p className='font-bold text-sm leading-7 text-[#1D263A]'>Business</p>
               </li>
 
               <li className='hover:bg-[#F5F5F5] hover:cursor-pointer  flex space-x-2 items-center  bg-[#ffff] border border-[#DFDFDF] rounded-lg px-1  py-1'>
-                <span className='bg-[#7E5BFF] w-[40px] h-[40px] rounded-full'><TfiWrite className='text-white text-xl w-50 mx-auto mt-2' /></span>
-                <p className='font-bold text-xl leading-7 text-[#1D263A]'>Writing</p>
+                <span className='bg-[#7E5BFF] w-[30px] h-[30px] rounded-full'><TfiWrite className='text-white text-xl w-50 mx-auto mt-1' /></span>
+                <p className='font-bold text-sm leading-7 text-[#1D263A]'>Writing</p>
               </li>
 
               <li className='hover:bg-[#F5F5F5] hover:cursor-pointer  flex space-x-2 items-center  bg-[#ffff] border border-[#DFDFDF] rounded-lg  px-1 py-1'>
-                <span className='bg-[#06AEF3] w-[40px] h-[40px] rounded-full'><BsCode className='text-white text-xl w-50 mx-auto mt-2' /></span>
-                <p className='font-bold text-xl leading-7 text-[#1D263A]'>Programming</p>
+                <span className='bg-[#06AEF3] w-[30px] h-[30px] rounded-full'><BsCode className='text-white text-xl w-50 mx-auto mt-1' /></span>
+                <p className='font-bold text-sm leading-7 text-[#1D263A]'>Programming</p>
               </li>
 
               <li className='hover:bg-[#F5F5F5] hover:cursor-pointer  flex space-x-2 items-center  bg-[#ffff] border border-[#DFDFDF] rounded-lg lg: px- sm:px-2 sm:py-2 px-1 py-1 lg:py-4'>
-                <span className='bg-[#F2C94C] w-[40px] h-[40px] rounded-full'><SiGnusocial className='text-white text-xl w-50 mx-auto mt-2' /></span>
-                <p className='font-bold text-xl leading-7 text-[#1D263A]'>Social media</p>
+                <span className='bg-[#F2C94C] w-[30px] h-[30px] rounded-full'><SiGnusocial className='text-white text-xl w-50 mx-auto mt-1' /></span>
+                <p className='font-bold text-sm leading-7 text-[#1D263A]'>Social media</p>
               </li>
 
               <li className='hover:bg-[#F5F5F5] hover:cursor-pointer  flex space-x-2 items-center bg-[#ffff] border border-[#DFDFDF] rounded-lg lg:px-4 sm:px-2 sm:py-2 px-1 py-1 lg:py-4 '>
-                <span className='bg-[#6FCF97] w-[40px] h-[40px] rounded-full'><GiArtificialIntelligence className='text-white text-xl w-50 mx-auto mt-2' /></span>
-                <p className='font-bold text-xl leading-7 text-[#1D263A]'>AI Services</p>
+                <span className='bg-[#6FCF97] w-[30px] h-[30px] rounded-full'><GiArtificialIntelligence className='text-white text-sm w-50 mx-auto mt-1' /></span>
+                <p className='font-bold text-sm leading-7 text-[#1D263A]'>AI Services</p>
               </li>
 
             </ul>
