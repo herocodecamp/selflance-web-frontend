@@ -1,6 +1,6 @@
 import React from 'react';
 import { FcManager } from 'react-icons/fc'
-import banner1 from '../../Assets/svg/banner1.svg'
+import banner1 from '../../Assets/svg/banner-1.svg'
 import DCategories from './DCategories';
 import DPremiupSeller from './DPremiumSeller';
 import DTopSeller from './DTopSeller';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BiArrowBack } from 'react-icons/bi';
-import congratulation from '../../Assets/svg/congratulations.svg'
+import congratulation from '../../Assets/svg/congratulation.svg'
 
 const Congratulations = () => {
   return (

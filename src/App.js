@@ -34,10 +34,11 @@ function App() {
       {/* <<<<<<< HEAD */}
 
       {/* <SubmitRequirement2 /> */}
-      <SubmiteRequirement />
+      {/* <SubmiteRequirement /> */}
 
       {/* <Congratulations /> */}
-      {/* <OrderProcess /> */}
+
+      <OrderProcess />
 
       {/* <Dashboar /> */}
 
