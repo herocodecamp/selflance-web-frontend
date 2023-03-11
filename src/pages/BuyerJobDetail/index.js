@@ -1,0 +1,1 @@
+import JobDetail from "./JobDetail";
