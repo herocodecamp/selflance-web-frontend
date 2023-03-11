@@ -24,16 +24,16 @@ function App() {
   return (
     <>
       <Navbar />
-      
-      {/* <Dashboar />
+
+      <Dashboar />
       {/* <PremiumSellerPage /> */}
       {/* <Header /> */}
       {/* <AboutFee /> */}
 
-{/* <LandingPage /> */}
+      {/* <LandingPage /> */}
       {/* <SearchPage /> */}
 
-      <Blogs />
+      {/* <Blogs /> */}
 
       {/* <SellerProfile /> */}
       {/* <SingleBlog /> */}
