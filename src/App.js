@@ -32,9 +32,11 @@ function App() {
       <Navbar />
 
       {/* <<<<<<< HEAD */}
-      {/* <SubmitRequirement2 /> */}
 
-      <Congratulations />
+      {/* <SubmitRequirement2 /> */}
+      <SubmiteRequirement />
+
+      {/* <Congratulations /> */}
       {/* <OrderProcess /> */}
 
       {/* <Dashboar /> */}
