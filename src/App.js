@@ -33,12 +33,12 @@ function App() {
 
       {/* <<<<<<< HEAD */}
 
-      {/* <SubmitRequirement2 /> */}
+      <SubmitRequirement2 />
       {/* <SubmiteRequirement /> */}
 
       {/* <Congratulations /> */}
 
-      <OrderProcess />
+      {/* <OrderProcess /> */}
 
       {/* <Dashboar /> */}
 
