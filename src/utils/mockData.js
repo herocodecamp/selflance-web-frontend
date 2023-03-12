@@ -81,5 +81,77 @@ export const feedback = [
   },
 ];
 
+export const jobPost = [
+  {
+    key: 'ud832jd98dj8ded2w',
+    title: 'I Need UI UX Developer',
+    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.',
+    categories: 'Logo design',
+    status: 'Pending',
+    date: '24 June 2022'
+  },
+  {
+    key: 'ud832jd98dj8d',
+    title: 'I Need UI UX Developer',
+    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.',
+    categories: 'Logo design',
+    status: 'Running',
+    date: '24 June 2022'
+  },
+  {
+    key: 'ud832jd98dj8ddde4',
+    title: 'I Need UI UX Developer',
+    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.',
+    categories: 'Logo design',
+    status: 'Pending',
+    date: '24 June 2022'
+  },
+  {
+    key: 'ud832jd98djfeewd',
+    title: 'I Need UI UX Developer',
+    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.',
+    categories: 'Logo design',
+    status: 'Running',
+    date: '24 June 2022'
+  },
+  {
+    key: 'iedinif39jd',
+    title: 'I Need UI UX Developer',
+    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.',
+    categories: 'Logo design',
+    status: 'Pending',
+    date: '24 June 2022'
+  },
+]
 
+export const sellerResponse = [
+  {
+    key: 'jsbjhjhdiuqhhw',
+    name: 'Elon Musk',
+    level: '1',
+    response: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.',
+    categories: 'Logo design',
+    budget: '$200',
+    date: '24 June 2022'
+  },
+  {
+    //gen random info
+    key: 'jsbjhjhdiuqhh423w',
+    name: 'John Doe',
+    level: '2',
+    response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    categories: 'UI/UX Design',
+    budget: '$520',
+    date: '24 June 2022'
+  },
+  {
+    key: '716y6y73y67',
+    name: 'Sammy Bass',
+    level: '9',
+    response: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U',
+    categories: 'Software Development',
+    budget: '$100',
+    date: '24 June 2022'
+  },
+]
 
