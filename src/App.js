@@ -38,7 +38,9 @@ function App() {
 
       {/* <Congratulations /> */}
 
-      <OrderProcess />
+     
+      {/*  */}
+      {/* <ServiceDetails /> */}
 
       {/* <Dashboar /> */}
 
@@ -46,14 +48,14 @@ function App() {
       {/* <Dashboar /> */}
 
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
-
+      {/* <ManageOrder /> */}
       {/* <PremiumSellerPage /> */}
       {/* <Header /> */}
       {/* <AboutFee /> */}
       {/* <LandingPage /> */}
       {/* <SearchPage /> */}
       {/* <Blogs /> */}
-      {/* <SellerProfile /> */}
+      <SellerProfile />
       {/* <SingleBlog /> */}
 
       {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}

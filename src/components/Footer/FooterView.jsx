@@ -3,10 +3,10 @@ import Logo from '../../Assets/logo.png'
 
 const FooterView = () =>{
     return(
-        <div class="h-[592px] bg-[#00538F]">
-            <div class="grid grid-grow-rows grid-cols-11 gap-10 mx-28 text-white">
+        <div class=" h-[800px] md:h-[592px] bg-[#00538F]">
+            <div class="grid  grid-flow-col lg:grid-flow-rows grid-cols-11  gap-10 mx-10 lg:mx-28 text-white">
                 <div class="flex flex-col col-span-3 mt-32">
-                        <img src={Logo} alt="Logo" class="w-40" />
+                        <img src={Logo} alt="Logo" class="flex-none w-40" />
                         
                         <p class="text-xs font-normal mt-10 opacity-80 leading-6">
                         Empowering freelancers worldwide with hassle-free and commission-free services. Join the freelance revolution with us today and start earning more
