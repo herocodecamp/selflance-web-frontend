@@ -16,7 +16,7 @@ const Drawer = () => {
   return (
 
     <>
-      <button className='absolute top-20 left-6 md:hidden' onClick={handleToggle}><AiOutlineMenu className='text-2xl' /></button>
+      <button className='absolute top-20 left-6 sm:hidden' onClick={handleToggle}><AiOutlineMenu className='text-2xl' /></button>
 
       <div
         className={`fixed inset-y-0 bg-[#ffff]  border border-[

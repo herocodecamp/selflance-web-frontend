@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AiFillStar } from 'react-icons/ai';
 import seller1 from '../../Assets/profileImage.png'
 import seller2 from '../../Assets/profileImage.png'
@@ -54,36 +54,68 @@ const RecommendSeller = [
   }
 ]
 
+
 const Recommended = () => {
+  const [selectNumber, setSelectNumber] = useState(4)
+
+  const handleSeeMore = () => {
+    setSelectNumber(selectNumber + 6)
+  }
+
   return (
-    <div className='pt-6'>
+    <div className='pt-6 relative'>
       <h2 className='text-[#000000] font-semibold text-base leading-4 py-6'>Recommended Sellers</h2>
 
-      <div className='grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-6 gap-2.5'>
+      <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5'>
+
         {
           RecommendSeller.slice(0, 6).map(seller => {
             return (
 
-              <div className='shadow-md rounded-lg bg-[#ffffff]'>
+              <div className='shadow-md hidden sm:block rounded-lg bg-[#ffffff]'>
                 <div>
-                  <img src={seller.image} className="max-h-[250px] w-full" alt="img" />
+                  <img src={seller.image} className=" w-full mx-auto" alt="img" />
                 </div>
                 <div className='py-4 px-2 space-y-2'>
-                  <p className='font-semibold text-base text-[#121F3E] leading-4'>{seller.name}</p>
+                  <p className='font-semibold text-xs sm:text-base text-[#121F3E] sm:leading-2 truncate'>{seller.name}</p>
 
-                  <p className='flex items-center space-x-2'>
-                    <AiFillStar className=' text-[#FFB33E] font-semibold ' /> <span className='text-xl text-[#121F3E] font-semibold '>5.0</span> <span className='text-gray-300 font-sm '>(520 Review)</span>
+                  <p className='flex items-center space-x-2 truncate'>
+                    <AiFillStar className=' text-[#FFB33E] sm:font-semibold ' /> <span className='text-xl text-[#121F3E] sm:font-semibold '>5.0</span> <span className='text-gray-300 sm:font-sm '>(520 Review)</span>
                   </p>
 
-                  <p className='text-[#121F3E] leading-4 '>{seller.level}</p>
+                  <p className='text-[#121F3E] text-xs sm:leading-2 truncate'>{seller.level}</p>
                 </div>
-
-
               </div>
 
             )
           })
         }
+
+
+        {RecommendSeller.slice(0, selectNumber).map(seller => {
+          return (
+
+            <div className='shadow-md sm:hidden rounded-lg bg-[#ffffff]'>
+              <div>
+                <img src={seller.image} className=" w-full mx-auto" alt="img" />
+              </div>
+              <div className='py-4 px-2 space-y-2'>
+                <p className='font-semibold text-xs sm:text-base text-[#121F3E] sm:leading-2 truncate'>{seller.name}</p>
+
+                <p className='flex items-center space-x-2 truncate'>
+                  <AiFillStar className=' text-[#FFB33E] sm:font-semibold ' /> <span className='text-xl text-[#121F3E] sm:font-semibold '>5.0</span> <span className='text-gray-300 sm:font-sm '>(520 Review)</span>
+                </p>
+
+                <p className='text-[#121F3E] text-xs sm:leading-2 truncate'>{seller.level}</p>
+              </div>
+            </div>
+
+          )
+        })}
+
+      </div>
+      <div className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute right-2 mt-2 sm:hidden'>
+        <button onClick={handleSeeMore}>see more</button>
       </div>
       <div>
 
