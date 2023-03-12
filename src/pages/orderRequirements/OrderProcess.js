@@ -4,9 +4,9 @@ import { BiArrowBack } from 'react-icons/bi'
 
 const OrderProcess = () => {
   return (
-    <div className='sm:px-12 py-12 px-4 sm:py-4'>
+    <div className='sm:px-12 px-4 sm:py-4'>
       <h2 className='text-[#00538F] sm:xl leading-5 font-bold flex space-x-4 items-center'> <BiArrowBack className='text-xl sm:text-2xl text-[#000000] hover:cursor-pointer' /> <span>Add New Card</span></h2>
-      <div className='flex items-center justify-center h-full sm:h-screen w-full sm:w-1/3 mx-auto sm:text-center'>
+      <div className='flex items-center justify-center h-full h-screen w-full sm:w-1/3 mx-auto text-center'>
 
         <div className='space-y-3'>
           <img src={orderProcess} className="max-h-[300px] mx-auto" alt="order" />
