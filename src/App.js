@@ -18,14 +18,23 @@ import PrivacyandTerms from "./common/Privacy&Terms/PrivacyandTerms";
 import ManageOrder from "./pages/ManageOrderPage";
 import SearchPage from "./pages/SearcePage";
 import PremiumSellerPage from "./pages/PremiumSellerPage";
-import Dashboar from "./pages/DashBoardPage";
+import Dashboard from "./pages/DashBoardPage";
+import OrderPage  from "./pages/OrderPage";
+import AddNewCard from "./pages/OrderPage/AddNewCard";
+import OrderProcessing from "./pages/OrderPage/OrderProcessing";
+
 
 function App() {
   return (
     <>
       <Navbar />
 
-      <Dashboar />
+      {/* <OrderPage/> */}
+      {/* <AddNewCard/> */}
+      <OrderProcessing/>
+
+      {/* <Dashboard /> */}
+
       {/* <PremiumSellerPage /> */}
       {/* <Header /> */}
       {/* <AboutFee /> */}
@@ -38,7 +47,7 @@ function App() {
       {/* <SellerProfile /> */}
       {/* <SingleBlog /> */}
 
-      <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/>
+      {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
 
     </>
   );

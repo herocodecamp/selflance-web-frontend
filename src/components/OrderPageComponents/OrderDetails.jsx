@@ -4,6 +4,8 @@ import CreditOrDebit from "../../Assets/CreditOrDebit.png";
 import Paypal from "../../Assets/Paypal.png";
 import Razorpay from "../../Assets/Razorpay.png";
 
+import { FaCheck } from "react-icons/fa";
+
 
 const OrderDetails = () => {
    return(
@@ -11,6 +13,7 @@ const OrderDetails = () => {
          {/* Order Details Start */}
          <div className="w-[50%] shadow-lg border ml-3 border-slate-200 rounded-2xl py-8 px-[54px]">
             <h3 className="text-3xl mb-8">Order Details</h3>
+
             <ul className="space-y-4 overflow-hidden text-slate-500">
                <li className="">Delivery days 
                   <span className="float-right">2Days</span>
