@@ -4,7 +4,7 @@ import PreSellerGig from './PreSellerGig';
 
 const PremiumSearch = () => {
   return (
-    <div className='pt-16 sm:w-4/5 w-full px-4 sm:pr-12'>
+    <div className='pt-16 sm:w-4/5 w-full px-4'>
       <div className='space-y-4'>
         <FilterDrawer />
         <h4 className='text-[#121F3E]'>Programming & Tech > Website development</h4>

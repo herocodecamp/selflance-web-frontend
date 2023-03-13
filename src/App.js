@@ -66,11 +66,11 @@ function App() {
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
       {/* <ManageOrder /> */}
 {/* >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7 */}
-      <PremiumSellerPage />
+      {/* <PremiumSellerPage /> */}
       {/* <Header /> */}
       {/* <AboutFee /> */}
       {/* <LandingPage /> */}
-      {/* <SearchPage /> */}
+      <SearchPage />
       {/* <Blogs /> */}
       {/* <SellerProfile /> */}
       {/* <SingleBlog /> */}

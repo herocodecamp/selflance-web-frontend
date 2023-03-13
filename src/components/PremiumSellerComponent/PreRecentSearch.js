@@ -31,7 +31,7 @@ const recentSearch = [
 
 const PreRecentSearch = () => {
   return (
-    <div className='p-12 bg-[#F5F5F5] hidden sm:block'>
+    <div className='p-12 bg-[#F5F5F5] hidden md:block'>
       <h2 className='text-[#000000] font-bold text-3xl px-12'>Your most recent browsing history</h2>
       <div className='grid sm:grid-cols-4 gap-5 py-4'>
         {

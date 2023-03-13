@@ -4,7 +4,7 @@ import PreMutuals from './PreMutuals';
 const PreGigDetails = ({ gig }) => {
   return (
     <div>
-      <div className='bg-[#FFFFFF] shadow px-4 py-4 rounded-lg space-y-2 relative '>
+      <div className='bg-[#FFFFFF] shadow px-4 py-4 rounded-lg space-y-2 relative sm:block'>
         <div>
           <img src={gig.image} className="rounded-lg w-full mx-auto border-2 border-[#FAFAFB]" alt="alt" />
         </div>

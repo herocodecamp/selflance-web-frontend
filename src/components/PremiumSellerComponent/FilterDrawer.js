@@ -64,19 +64,18 @@ const FilterDrawer = () => {
       <button className='absolute top-24 left-4 sm:hidden' onClick={handleToggle}><AiOutlineMenu className='text-2xl' /></button>
 
       <div
-        className={`fixed inset-y-0 bg-[#ffff]  border border-[
-          #D1D1D1] left-0  p-8 transition-transform z-10  duration-300 transform ${isOpen ? 'translate-x-0 overflow-y-auto' : '-translate-x-full'
+        className={`fixed inset-y-0 bg-[#ffff]   border border-[#D1D1D1] left-0  p-8 transition-transform z-10  duration-300 transform ${isOpen ? 'translate-x-0 overflow-y-auto' : '-translate-x-full'
           }`}
       >
-        <button className='fixed top-2 right-2' onClick={handleToggle}><RxCross1 className="text-2xl" /></button>
+        <button className='fixed top-2 left-2' onClick={handleToggle}><RxCross1 className="text-2xl" /></button>
 
-        <div className='rounded-lg w-[400px] '>
+        <div className='rounded-lg'>
 
 
-          <div className='sm:p-12 p-6'>
+          <div className='sm:p-12 '>
             <div>
 
-              <div className=' border border-[#D1D1D1] bg-[#FFFFFF] border-box'>
+              <div className=' border w-[240px] border-[#D1D1D1] bg-[#FFFFFF] border-box'>
                 <div className='border-b pb-6 pl-4 border-[#D1D1D1]'>
                   <h2 className='sm:text-4xl text-xl'>Filters</h2>
                 </div>
