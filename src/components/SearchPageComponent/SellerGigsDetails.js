@@ -4,7 +4,7 @@ import GigMutuals from './GigMutuals';
 const SellerGigsDetails = ({ gig }) => {
   return (
     <div>
-      <div className='bg-[ #FFFFFF] shadow px-4 py-4 rounded-lg space-y-2 relative'>
+      <div className='bg-[ #FFFFFF] shadow px-2 py-2 rounded-lg space-y-2 relative'>
         <div>
           <img src={gig.image} className="rounded sm:w-[296] mx-auto sm:h-[154] w-full border-2 border-[#FAFAFB]" alt="alt" />
         </div>

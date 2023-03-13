@@ -64,7 +64,7 @@ const DTopSeller = () => {
   return (
     <div className='py-6'>
       <h2 className='text-[##000000] font-bold text-xl leading-4 py-4'>Top rated seller</h2>
-      <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 '>
+      <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 '>
         {
           Gigs?.slice(0, 3).map(gig => <DTopDetails
             key={gig._id}

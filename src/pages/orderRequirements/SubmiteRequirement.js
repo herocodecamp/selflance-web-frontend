@@ -23,11 +23,11 @@ const SubmiteRequirement = () => {
 
 
   return (
-    <div className='px-12 py-4'>
+    <div className='sm:px-12 px-4 py-4 space-y-4'>
       <h2 className='text-[#00538F] sm:xl leading-5 font-bold flex space-x-4 items-center'> <BiArrowBack className='text-2xl sm:text-4xl text-[#000000] hover:cursor-pointer' /> <span>Send Requirement</span></h2>
 
       <div className='sm:pt-16 pt-6 '>
-        <div className='bg-[#FFFFFF] rounded-3xl drop-shadow-lg sm:w-1/2 mx-auto w-full sm:py-8 px-6 text-center space-y-6'>
+        <div className='bg-[#FFFFFF] rounded-3xl drop-shadow-lg sm:w-1/2 mx-auto w-full sm:py-8 px-2 sm:px-6 text-center space-y-2 sm:space-y-4 py-4'>
 
           <BiUpload className='text-xl w-1/2 mx-auto sm:text-2xl text-[#00538F]' />
           <div class="relative rounded-md shadow-sm ">
@@ -39,7 +39,7 @@ const SubmiteRequirement = () => {
             />
             <button
               type="button"
-              class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-[#00538F] text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+              class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-[#00538F] text-white hover:text-gray-500 "
             >
               upload file, photo and document
             </button>
@@ -57,7 +57,7 @@ const SubmiteRequirement = () => {
 
         </div>
       </div>
-      <div className='p-12 '>
+      <div className='sm:p-12 p-4'>
         {selectedFile && (
           <div className='flex items-center space-x-6'>
             <span className='bg-[#E2EED8] w-[40px] h-[40px] rounded-full'><AiOutlineFileProtect className='text-[#00538F] text-2xl w-1/2 mx-auto mt-2' /></span>
@@ -73,10 +73,10 @@ const SubmiteRequirement = () => {
           </div>
         )}
       </div>
-      <div className='py-12 text-center'>
+      <div className='text-center'>
         <button
           disabled={!selectedFile}
-          className={`font-bold text-base ${selectedFile ? 'bg-[#00538F]' : 'bg-[#80A9C7]'}  text-white sm:px-4 sm:py-2 px-2 py-1  rounded-lg`}
+          className={`font-bold text-base ${selectedFile ? 'bg-[#00538F]' : 'bg-[#80A9C7]'}  text-white sm:px-4 sm:py-2 px-4 py-2  rounded-lg`}
         >Submit Requirement</button>
       </div>
 

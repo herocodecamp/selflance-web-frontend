@@ -47,7 +47,7 @@ const SubmitRequirement2 = () => {
 
           <p className='text-[#696974]'>or</p>
 
-          <div {...getRootProps()} className="border-2 border-dashed p-6 ">
+          <div {...getRootProps()} className="border-2 border-dashed p-4 ">
             <input {...getInputProps()} />
             <p className='text-[#696974] leading-4 text-base'>drag a file, photo and document</p>
           </div>

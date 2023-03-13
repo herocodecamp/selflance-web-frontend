@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import image1 from '../../Assets/Active_Gig_1.png'
 import image2 from '../../Assets/Active_Gig_2.png'
 import image3 from '../../Assets/Active_Gig_3.png'
@@ -61,14 +61,56 @@ const Gigs = [
 
 
 const PreSellerGig = () => {
+  const [seeMore, setSeeMore] = useState(3)
+
+  const handleSeeMore = () => {
+    setSeeMore(seeMore + 3)
+  }
+
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10 py-6'>
-      {
-        Gigs?.map(gig => <PreGigDetails
-          key={gig._id}
-          gig={gig}
-        ></PreGigDetails>)
-      }
+    <div className='relative py-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-6 '>
+
+
+
+        {
+
+          Gigs?.map(gig => {
+            return (
+              <div className='sm:block hidden'>
+                <PreGigDetails
+                  key={gig._id}
+                  gig={gig}
+                ></PreGigDetails>
+              </div>
+            )
+          })
+
+        }
+        {
+
+          Gigs?.slice(0, seeMore).map(gig => {
+            return (
+              <div className='sm:hidden block'>
+                <PreGigDetails
+                  key={gig._id}
+                  gig={gig}
+                ></PreGigDetails>
+              </div>
+            )
+          })
+
+        }
+
+      </div>
+      <button
+        onClick={handleSeeMore}
+        className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full inline-flex absolute right-2 bottom-1 sm:hidden">
+        <span>See More</span>
+        <svg class="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M6.293 6.293a1 1 0 011.414 0l3.172 3.172a1 1 0 010 1.414l-3.172 3.172a1 1 0 01-1.414-1.414L8.586 10 6.293 7.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </button>
     </div>
   );
 };

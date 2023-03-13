@@ -45,8 +45,8 @@ const ManageNav = () => {
         </button>
 
       </div>
-      </div>
-   
+    </div>
+
   );
 };
 
