@@ -1,5 +1,6 @@
 import React from 'react';
 import FilterDrawer from '../PremiumSellerComponent/FilterDrawer';
+import Pagination from './Pagination';
 import SellerGig from './SellerGig';
 
 const SearchSeller = () => {
@@ -31,7 +32,6 @@ const SearchSeller = () => {
         </div>
 
         <SellerGig />
-
       </div>
     </div>
   );

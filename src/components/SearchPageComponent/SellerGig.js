@@ -9,6 +9,7 @@ import image7 from '../../Assets/Active_Gig_1.png'
 import image8 from '../../Assets/Active_Gig_1.png'
 import image9 from '../../Assets/Active_Gig_1.png'
 import SellerGigsDetails from './SellerGigsDetails';
+import Pagination from './Pagination';
 
 const Gigs = [
   {
@@ -111,6 +112,9 @@ const SellerGig = () => {
           <path fill-rule="evenodd" d="M6.293 6.293a1 1 0 011.414 0l3.172 3.172a1 1 0 010 1.414l-3.172 3.172a1 1 0 01-1.414-1.414L8.586 10 6.293 7.707a1 1 0 010-1.414z" clip-rule="evenodd" />
         </svg>
       </button>
+      <div>
+        <Pagination />
+      </div>
     </div>
   );
 };
