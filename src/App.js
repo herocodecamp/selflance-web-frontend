@@ -33,7 +33,7 @@ function App() {
 
       {/* <<<<<<< HEAD */}
 
-      <SubmitRequirement2 />
+      {/* <SubmitRequirement2 /> */}
       {/* <SubmiteRequirement /> */}
 
       {/* <Congratulations /> */}
@@ -54,8 +54,8 @@ function App() {
       {/* <AboutFee /> */}
       {/* <LandingPage /> */}
       {/* <SearchPage /> */}
-      {/* <Blogs /> */}
-      <SellerProfile />
+      <Blogs />
+      {/* <SellerProfile /> */}
       {/* <SingleBlog /> */}
 
       {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
