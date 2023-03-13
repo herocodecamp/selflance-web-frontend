@@ -31,13 +31,13 @@ const recentSearch = [
 
 const PreRecentSearch = () => {
   return (
-    <div className='p-12 bg-[#F5F5F5]'>
+    <div className='p-12 bg-[#F5F5F5] hidden sm:block'>
       <h2 className='text-[#000000] font-bold text-3xl px-12'>Your most recent browsing history</h2>
-      <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 py-4'>
+      <div className='grid lg:grid-cols-4 gap-5 py-4'>
         {
           recentSearch?.map(gig => <PreGigDetails
-          key={gig._id}
-          gig={gig}
+            key={gig._id}
+            gig={gig}
           ></PreGigDetails>)
         }
       </div>

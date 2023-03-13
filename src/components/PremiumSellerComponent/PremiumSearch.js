@@ -3,13 +3,13 @@ import PreSellerGig from './PreSellerGig';
 
 const PremiumSearch = () => {
   return (
-    <div className='pt-16 w-4/5 pr-12'>
+    <div className='pt-16 sm:w-4/5 w-full px-4 sm:pr-12'>
       <div className='space-y-4'>
         <h4 className='text-[#121F3E]'>Programming & Tech > Website development</h4>
         <h3 className='text-[#000000] text-2xl leading-9'>Results for "website development"
         </h3>
 
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between items-center space-x-2'>
           <p className='leading-9 text-[#6A6A6A] tracking-normal'>search result here</p>
 
           <div className='sm:flex sm:space-x-6'>

@@ -53,8 +53,8 @@ const PremiumFilter = () => {
   };
 
   return (
-    <div className='sm:p-12  p-6'>
-      <div className='lg:w-[306px] w-[200px]'>
+    <div className='sm:p-12  p-6 hidden sm:block'>
+      <div className='lg:w-[306px] sm:w-[200px]'>
 
         <div className=' border border-[#D1D1D1] bg-[#FFFFFF] border-box'>
           <div className='border-b pb-6 pl-4 border-[#D1D1D1]'>
