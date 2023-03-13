@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import {FaLessThan} from 'react-icons/fa'
 
 
 
@@ -28,8 +27,8 @@ const Pagination = () => {
               onClick={() => handleClick(number)}
               className={`px-3 py-2 rounded-md  ${currentPage === number ? 'bg-[#FFB33E] text-white' : ''}`}
             >
-             {number}
-            
+              {number}
+
             </button>
           </li>
         ))}

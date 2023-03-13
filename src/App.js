@@ -20,7 +20,7 @@ import SearchPage from "./pages/SearcePage";
 import PremiumSellerPage from "./pages/PremiumSellerPage";
 
 import Dashboard from "./pages/DashBoardPage";
-import OrderPage  from "./pages/OrderPage";
+import OrderPage from "./pages/OrderPage";
 import AddNewCard from "./pages/OrderPage/AddNewCard";
 import OrderProcessing from "./pages/OrderPage/OrderProcessing";
 
@@ -53,24 +53,24 @@ function App() {
       {/* <SubmiteRequirement /> */}
 
       {/* <Congratulations /> */}
+      <ManageOrder />
 
-     
-    
+
       {/* {/* <ServiceDetails /> */}
 
       {/* <Dashboar /> */}
 
       {/* ======= */}
-    
+
 
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
       {/* <ManageOrder /> */}
-{/* >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7 */}
+      {/* >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7 */}
       {/* <PremiumSellerPage /> */}
       {/* <Header /> */}
       {/* <AboutFee /> */}
       {/* <LandingPage /> */}
-      <SearchPage />
+      {/* <SearchPage /> */}
       {/* <Blogs /> */}
       {/* <SellerProfile /> */}
       {/* <SingleBlog /> */}
