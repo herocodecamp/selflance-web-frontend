@@ -15,15 +15,17 @@ const PreMutuals = () => {
   return (
     <>
       {friends.length > 0 && (
-        <div className="flex items-center relative">
-          {friends.slice(0, 3).map((url) => (
-            <img
-              key={url._id}
-              src={url.image}
-              alt="clients"
-              className="w-8 h-8 rounded-full border-2 border-white"
-            />
-          ))}
+        <div className="flex items-center relative ">
+          <div className='w-1/6 flex'>
+            {friends.slice(0, 3).map((url) => (
+              <img
+                key={url._id}
+                src={url.image}
+                alt="clients"
+                className="w-full  rounded-full border-2 border-white"
+              />
+            ))}
+          </div>
           <div className="absolute left-20 flex items-center justify-center">
             <div className="bg-gray-300 p-1 rounded-full">
               <svg

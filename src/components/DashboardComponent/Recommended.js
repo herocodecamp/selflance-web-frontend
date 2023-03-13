@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { AiFillStar } from 'react-icons/ai';
-import seller1 from '../../Assets/profileImage.png'
-import seller2 from '../../Assets/profileImage.png'
-import seller3 from '../../Assets/profileImage.png'
-import seller4 from '../../Assets/profileImage.png'
-import seller5 from '../../Assets/profileImage.png'
-import seller6 from '../../Assets/profileImage.png'
-import seller7 from '../../Assets/profileImage.png'
+import seller1 from '../../Assets/recommend-seller/seller-1.png'
+import seller2 from '../../Assets/recommend-seller/seller-2.png'
+import seller3 from '../../Assets/recommend-seller/seller-3.png'
+import seller4 from '../../Assets/recommend-seller/seller-4.png'
+import seller5 from '../../Assets/recommend-seller/seller-5.png'
+import seller6 from '../../Assets/recommend-seller/seller-6.png'
+import seller7 from '../../Assets/recommend-seller/seller-7.png'
 
 
 const RecommendSeller = [

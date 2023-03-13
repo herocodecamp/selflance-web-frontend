@@ -24,7 +24,7 @@ const GigMutuals = () => {
               className="w-8 h-8 rounded-full border-2 border-white"
             />
           ))}
-          <div className="absolute left-20 flex items-center justify-center">
+          <div className="absolute left-20 flex items-center justify-center  ">
             <div className="bg-gray-300 p-1 rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,9 +42,9 @@ const GigMutuals = () => {
               </svg>
             </div>
           </div>
-          <span className='text-[#92929D] ml-6'>clients</span>
+          <span className='text-[#92929D] text-xs ml-6'>clients</span>
           <div className='flex items-center space-x-2 lg:space-x-1 absolute right-2 lg:right-1'>
-            <AiFillStar className='text-[#FFB33E] font-semibold ' /> <span className='text-[#121F3E] font-semibold '>5.0</span> <span className='text-gray-300 font-semibold '>(520)</span>
+            <AiFillStar className='text-[#FFB33E] font-semibold ' /> <span className='text-[#121F3E] text-xs sm:font-semibold '>5.0</span> <span className='text-xs text-gray-300 sm:font-semibold '>(520)</span>
           </div>
         </div>
       )}
