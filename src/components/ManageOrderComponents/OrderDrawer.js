@@ -28,7 +28,7 @@ const OrderDrawer = () => {
   return (
     <div>
 
-      <button className='absolute top-24 left-10 sm:hidden' onClick={handleToggle}><AiOutlineMenu className='text-2xl' /></button>
+      <button className='sm:hidden' onClick={handleToggle}><AiOutlineMenu className='text-2xl' /></button>
 
       <div
         className={`fixed inset-y-0 bg-[#ffff]  border border-[

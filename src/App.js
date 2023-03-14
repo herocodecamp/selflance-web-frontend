@@ -46,14 +46,14 @@ function App() {
 
       {/* <Dashboard /> */}
 
-    <Footer />
+    {/* <Footer /> */}
       {/* <<<<<<< HEAD */}
 
       {/* <SubmitRequirement2 /> */}
       {/* <SubmiteRequirement /> */}
 
       {/* <Congratulations /> */}
-      {/* <ManageOrder /> */}
+      <ManageOrder />
 
 
       {/* {/* <ServiceDetails /> */}
