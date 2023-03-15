@@ -3,6 +3,7 @@ import { FcManager } from 'react-icons/fc';
 import banner1 from '../../Assets/svg/banner-1.svg'
 import DCategories from '../DashboardComponent/DCategories';
 import SeDrawer from './SeDrawer';
+import SeSearch from './SeSearch';
 
 const SeBanner = () => {
   return (
@@ -23,6 +24,7 @@ const SeBanner = () => {
           </div>
         </div>
         <DCategories />
+        <SeSearch />
       </div>
 
 
