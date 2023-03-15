@@ -46,7 +46,7 @@ function App() {
 
       {/* <Dashboard /> */}
 
-
+    {/* <Footer /> */}
       {/* <<<<<<< HEAD */}
 
       {/* <SubmitRequirement2 /> */}
