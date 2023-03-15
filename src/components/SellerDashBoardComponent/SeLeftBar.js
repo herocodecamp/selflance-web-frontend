@@ -17,7 +17,7 @@ const SeLeftBar = () => {
   }
 
   const handleActiveClass = (activeId) => {
-    let classes = 'space-x-6 flex hover:cursor-pointer items-center flex-grow'
+    let classes = 'space-x-6 font-semibold flex hover:cursor-pointer items-center flex-grow'
 
     if (activeId === active) {
       classes +=' text-[#00538F] '
@@ -26,10 +26,10 @@ const SeLeftBar = () => {
   }
 
   return (
-    <div className='px-8 py-8 hidden sm:block'>
+    <div className='lg:px-8 px-4 py-8 hidden sm:block'>
 
       <div className='border border-[
-      #D1D1D1] w-[150px] sm:w-[247px] bg-[#ffff] rounded-lg p-6 lg:h-[833px]'>
+      #D1D1D1] sm:w-[150px] md:w-[200px] lg:w-[247px] bg-[#ffff] rounded-lg p-6 lg:h-[833px]'>
 
         <ul className='space-y-8'>
 
