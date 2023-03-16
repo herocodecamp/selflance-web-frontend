@@ -32,6 +32,7 @@ import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
 import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
 import Congratulations from "./pages/orderRequirements/Congratulations";
 
+import ManageOrderDetails from "./components/ManageOrderComponents/OrderDetails";
 // >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57
 // >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7
 
@@ -53,8 +54,8 @@ function App() {
       {/* <SubmiteRequirement /> */}
 
       {/* <Congratulations /> */}
-      <ManageOrder />
-
+      {/* <ManageOrder /> */}
+      <ManageOrderDetails />
 
       {/* {/* <ServiceDetails /> */}
 
@@ -76,7 +77,7 @@ function App() {
       {/* <SingleBlog /> */}
 
       {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
-
+      
     </>
   );
 }
