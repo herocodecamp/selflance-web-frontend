@@ -33,6 +33,7 @@ import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
 import Congratulations from "./pages/orderRequirements/Congratulations";
 import SeDashboard from "./pages/SellerDashboard";
 import SellerSearchPage from "./pages/SellerSearchPage";
+import SeDashboardPage2 from "./pages/SellerDashBoard2";
 
 // >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57
 // >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7
@@ -60,9 +61,9 @@ function App() {
       {/* {/* <ServiceDetails /> */}
 
       {/* <Dashboar /> */}
-
+      <SeDashboardPage2 />
       {/* <SeDashboard /> */}
-      <SellerSearchPage />
+      {/* <SellerSearchPage /> */}
 
 
 
