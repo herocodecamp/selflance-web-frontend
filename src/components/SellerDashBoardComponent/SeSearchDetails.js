@@ -33,7 +33,7 @@ const SeSearchDetails = ({ result }) => {
           <img className='w-[22px] h-[22px]' src={userSvg} alt="" />
           <p className='text-[#000000]'>{result.applied} applied</p>
         </div>
-        <button className='flex w-[90px] h-[35px] sm:w-[120px] sm:h-[40px] lg:w-[167px] lg:h-[58px] bg-[#00538F] items-center justify-center   rounded-md text-white px-4 py-2'>Apply <FaGreaterThan className='ml-2' /></button>
+        <button className='flex w-[90px] h-[35px] sm:w-[120px] sm:h-[40px] lg:w-[167px] lg:h-[58px] bg-[#00538F] items-center justify-center   rounded-md text-white px-4 py-2'>Apply <FaGreaterThan className='ml-2 mt-2' /></button>
       </div>
     </div>
   );
