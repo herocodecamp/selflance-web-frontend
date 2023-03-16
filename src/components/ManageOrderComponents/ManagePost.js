@@ -189,7 +189,6 @@ const ManagePost = () => {
       break;
     default:
       data_to_display = Orders.active;
-
   }
 
   return (

@@ -4,58 +4,95 @@ import sellerAvatar from '../../Assets/seller_profile.png'
 import SePagination from './SePagination';
 import SeSearchDetails from './SeSearchDetails';
 
-const searchResult = [
-  {
-    _id: 1,
-    profile: sellerAvatar,
-    title: "I Need UI UX Designer",
-    description: "If you're looking for delivery men, you may be in need of someone to transport goods, packages......",
-    price: '$500',
-    level: 'Level 1',
-    duration: '1 month',
-    applied: 20,
-  },
-  {
-    _id: 2,
-    profile: sellerAvatar,
-    title: "I Need UI UX Designer",
-    description: "If you're looking for delivery men, you may be in need of someone to transport goods, packages......",
-    price: '$500',
-    level: 'Level 1',
-    duration: '1 month',
-    applied: 20,
-  },
-  {
-    _id: 3,
-    profile: sellerAvatar,
-    title: "I Need UI UX Designer",
-    description: "If you're looking for delivery men, you may be in need of someone to transport goods, packages......",
-    price: '$500',
-    level: 'Level 1',
-    duration: '1 month',
-    applied: 20,
-  },
-  {
-    _id: 4,
-    profile: sellerAvatar,
-    title: "I Need UI UX Designer",
-    description: "If you're looking for delivery men, you may be in need of someone to transport goods, packages......",
-    price: '$500',
-    level: 'Level 1',
-    duration: '1 month',
-    applied: 20,
-  },
-  {
-    _id: 5,
-    profile: sellerAvatar,
-    title: "I Need UI UX Designer",
-    description: "If you're looking for delivery men, you may be in need of someone to transport goods, packages......",
-    price: '$500',
-    level: 'Level 1',
-    duration: '1 month',
-    applied: 20,
-  },
-]
+const result = {
+  bestMatched: [
+    {
+      _id: 3,
+      profile: sellerAvatar,
+      title: "I Need UI UX Designer",
+      description: "If you're looking for delivery men, you may be in need of someone to transport goods, packages......",
+      price: '$500',
+      level: 'Level 1',
+      duration: '1 month',
+      applied: 20,
+    },
+    {
+      _id: 4,
+      profile: sellerAvatar,
+      title: "I Need UI UX Designer",
+      description: "If you're looking for delivery men, you may be in need of someone to transport goods, packages......",
+      price: '$500',
+      level: 'Level 1',
+      duration: '1 month',
+      applied: 20,
+    },
+  ],
+  applied: [
+    {
+      _id: 1,
+      profile: sellerAvatar,
+      title: "I Need UI UX Designer",
+      description: "If you're looking for delivery men, you may be in need of someone to transport goods, packages......",
+      price: '$500',
+      level: 'Level 1',
+      duration: '1 month',
+      applied: 20,
+    },
+    {
+      _id: 2,
+      profile: sellerAvatar,
+      title: "I Need UI UX Designer",
+      description: "If you're looking for delivery men, you may be in need of someone to transport goods, packages......",
+      price: '$500',
+      level: 'Level 1',
+      duration: '1 month',
+      applied: 20,
+    },
+    {
+      _id: 3,
+      profile: sellerAvatar,
+      title: "I Need UI UX Designer",
+      description: "If you're looking for delivery men, you may be in need of someone to transport goods, packages......",
+      price: '$500',
+      level: 'Level 1',
+      duration: '1 month',
+      applied: 20,
+    },
+    {
+      _id: 4,
+      profile: sellerAvatar,
+      title: "I Need UI UX Designer",
+      description: "If you're looking for delivery men, you may be in need of someone to transport goods, packages......",
+      price: '$500',
+      level: 'Level 1',
+      duration: '1 month',
+      applied: 20,
+    },
+  ],
+  saved: [
+    {
+      _id: 4,
+      profile: sellerAvatar,
+      title: "I Need UI UX Designer",
+      description: "If you're looking for delivery men, you may be in need of someone to transport goods, packages......",
+      price: '$500',
+      level: 'Level 1',
+      duration: '1 month',
+      applied: 20,
+    },
+    {
+      _id: 5,
+      profile: sellerAvatar,
+      title: "I Need UI UX Designer",
+      description: "If you're looking for delivery men, you may be in need of someone to transport goods, packages......",
+      price: '$500',
+      level: 'Level 1',
+      duration: '1 month',
+      applied: 20,
+    },
+  ]
+}
+
 
 const SeSearch = () => {
   const [activeColor, setActiveColor] = useState(1)
@@ -71,8 +108,24 @@ const SeSearch = () => {
     }
 
     return classes
-
   }
+
+  let data_to_display;
+  switch (activeColor) {
+    case 1:
+      data_to_display = result.bestMatched;
+      break;
+    case 2:
+      data_to_display = result.applied;
+      break;
+    case 3:
+      data_to_display = result.saved;
+      break;
+
+    default:
+      data_to_display = result.bestMatched;
+  }
+
   return (
     <div className="py-6 ">
       <div className='bg-[#F4F4F4] h-[44px] w-full rounded-lg flex items-center space-x-4 px-2'>
@@ -89,13 +142,13 @@ const SeSearch = () => {
 
       <div className='grid grid-cols-1 gap-8 py-6'>
         {
-           searchResult?.map(result => <SeSearchDetails
-           key={result._id}
-           result={result}
-           ></SeSearchDetails>)
+          data_to_display?.map(result => <SeSearchDetails
+            key={result._id}
+            result={result}
+          ></SeSearchDetails>)
         }
       </div>
-    <SePagination />
+      <SePagination />
     </div>
   );
 };
