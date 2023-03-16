@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import sellerAvatar from '../../Assets/seller_profile.png'
+import SePagination from './SePagination';
 import SeSearchDetails from './SeSearchDetails';
 
 const searchResult = [
@@ -86,7 +87,7 @@ const SeSearch = () => {
         </ul>
       </div>
 
-      <div className='grid grid-cols-1 gap-8'>
+      <div className='grid grid-cols-1 gap-8 py-6'>
         {
            searchResult?.map(result => <SeSearchDetails
            key={result._id}
@@ -94,7 +95,7 @@ const SeSearch = () => {
            ></SeSearchDetails>)
         }
       </div>
-
+    <SePagination />
     </div>
   );
 };

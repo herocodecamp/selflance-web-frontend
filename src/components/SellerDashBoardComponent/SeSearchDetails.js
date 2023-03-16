@@ -5,7 +5,7 @@ import userSvg from '../../Assets/svg/user.svg'
 
 const SeSearchDetails = ({ result }) => {
   return (
-    <div className='bg-[#FFFFFF] px-8 py-6 space-y-6 rounded-3xl drop-shadow-xl relative'>
+    <div className='bg-[#FFFFFF] px-8 py-6 space-y-6 rounded-3xl drop-shadow-2xl relative'>
       <div className='flex space-x-4 items-center'>
         <img src={result.profile} className="w-[54px] h-[54px] rounded-full" alt="" />
         <h3 className='text-base font-bold lg:leading-10 text-[#000000]'>{result.title}</h3>
