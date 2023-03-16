@@ -31,6 +31,9 @@ import OrderProcess from "./pages/orderRequirements/OrderProcess";
 import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
 import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
 import Congratulations from "./pages/orderRequirements/Congratulations";
+import SeDashboard from "./pages/SellerDashboard";
+import SellerSearchPage from "./pages/SellerSearchPage";
+import SeDashboardPage2 from "./pages/SellerDashBoard2";
 
 import ManageOrderDetails from "./components/ManageOrderComponents/OrderDetails";
 // >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57
@@ -47,7 +50,7 @@ function App() {
 
       {/* <Dashboard /> */}
 
-    {/* <Footer /> */}
+      {/* <Footer /> */}
       {/* <<<<<<< HEAD */}
 
       {/* <SubmitRequirement2 /> */}
@@ -60,8 +63,10 @@ function App() {
       {/* {/* <ServiceDetails /> */}
 
       {/* <Dashboar /> */}
+      <SeDashboardPage2 />
+      {/* <SeDashboard /> */}
+      {/* <SellerSearchPage /> */}
 
-      {/* ======= */}
 
 
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
