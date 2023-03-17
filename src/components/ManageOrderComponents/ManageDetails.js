@@ -3,7 +3,7 @@ import { TfiWrite } from 'react-icons/tfi'
 import { BsCalendarDate } from 'react-icons/bs'
 import { BiDollarCircle } from 'react-icons/bi'
 import { BsAlarm } from 'react-icons/bs'
-
+import { Link } from 'react-router-dom';
 
 const ManageDetails = ({ manage }) => {
   return (
@@ -39,31 +39,36 @@ const ManageDetails = ({ manage }) => {
           </div>
 
           <div class="col-span-full">
-            <h4 className='text-[#00538F] font-bold text-[8px] md:text-base lg:text-2xl'>{manage.title}</h4>
+            
+            <h4 className='text-[#00538F] font-bold text-[8px] md:text-base lg:text-2xl'>
+            {manage.title}
+            </h4>
+            
+
+
+        </div>
+
+        <div class="col-span-full">
+          <div class="flex flex-row flex-wrap items-center">
+            <TfiWrite className='w-[14px] h-[12px] lg:w-[28px] lg:h-[26px] text-[#979797] opacity-80' />
+          
+            <p className='text-[#979797] text-[10px] lg:text-base font-bold ml-2 lg:ml-4'>Write a note</p>
           </div>
-
-          <div class="col-span-full">
-            <div class="flex flex-row flex-wrap items-center">
-              <TfiWrite className='w-[14px] h-[12px] lg:w-[28px] lg:h-[26px]' />
-
-              <p className='text-[#979797] text-[10px] lg:text-2xl font-bold ml-2 lg:ml-4'>Write a note</p>
-            </div>
+        </div>
+        <div class="col-span-full">
+          <div class="flex flex-row flex-wrap items-center">
+            <BsCalendarDate className='w-[14px] h-[12px] lg:w-[28px] lg:h-[26px] text-[#979797] opacity-80' />
+          
+            <p className='text-[10px] lg:text-base font-bold ml-2 lg:ml-4 text-[#D57635]'>{manage.time}</p>
           </div>
-          <div class="col-span-full">
-            <div class="flex flex-row flex-wrap items-center">
-              <BsCalendarDate className='w-[14px] h-[12px] lg:w-[28px] lg:h-[26px]' />
-
-              <p className='text-[10px] lg:text-2xl font-bold ml-2 lg:ml-4 text-[#D57635]'>{manage.time}</p>
-            </div>
+        </div>
+        <div class="col-span-full">
+          <div class="flex flex-row flex-wrap items-center">
+            <BiDollarCircle className='w-[14px] h-[12px] lg:w-[28px] lg:h-[26px] text-[#979797] opacity-80' />
+          
+            <p className='text-[10px] lg:text-base font-bold ml-2 lg:ml-4 text-[#D57635]'>{manage.price}</p>
           </div>
-          <div class="col-span-full">
-            <div class="flex flex-row flex-wrap items-center">
-              <BiDollarCircle className='w-[14px] h-[12px] lg:w-[28px] lg:h-[26px]' />
-
-              <p className='text-[10px] lg:text-2xl font-bold ml-2 lg:ml-4 text-[#D57635]'>{manage.price}</p>
-            </div>
-          </div>
-
+        </div>
 
 
           <div class='col-span-full'>

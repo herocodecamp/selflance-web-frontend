@@ -193,7 +193,7 @@ const ManagePost = () => {
 
   return (
     <>
-      <div className='bg-[#F4F4F4] sm:flex items-center space-x-4 mt-12 h-black] rounded hidden'>
+      <div className='bg-[#F4F4F4] sm:flex items-center space-x-4 mt-12 rounded hidden'>
         {nav_el.map((item, index) => {
           return (
             <button key={index} className={getButtonClass(index)} onClick={() => handleButtonClick(index)}>
