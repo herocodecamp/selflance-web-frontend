@@ -3,7 +3,6 @@ import { TfiWrite } from 'react-icons/tfi'
 import { BsCalendarDate } from 'react-icons/bs'
 import { BiDollarCircle } from 'react-icons/bi'
 import { BsAlarm } from 'react-icons/bs'
-import { Link } from 'react-router-dom';
 
 const ManageDetails = ({ manage }) => {
   return (
