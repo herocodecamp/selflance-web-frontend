@@ -58,10 +58,10 @@ const SeTopBar = () => {
 
       <div className='mt-8 rounded-2xl drop-shadow-lg bg-white px-2 py-2'>
         <div className='flex space-x-6 items-center'>
-          <img src={profile2} className="w-[130px] h-[130px] rounded-full" alt="" />
+          <img src={profile2} className="w-[80px] h-[80px] sm:w-[100px] sm:h[100px] lg:w-[130px] lg:h-[130px] rounded-full" alt="" />
 
           <div className='space-y-2'>
-            <h2 className='text-[#15151E] text-xl font-semibold'>Saiful Islam Sujan</h2>
+            <h2 className='text-[#15151E] text-base sm:text-xl font-semibold'>Saiful Islam Sujan</h2>
             <p className='text-[#7A7A7A] font-sm text-sm'>Researcher at Grameenphone</p>
             <div className='flex place-items-center space-x-2'>
               <span>5.0</span>
