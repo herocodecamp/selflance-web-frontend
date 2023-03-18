@@ -2,7 +2,7 @@ import React,{useState, useEffect} from "react";
 import profile1 from '../../Assets/manage-order/profile-1.png';
 import gigImageFUll from '../../Assets/gig_image_full.png';
 import { Modal,Button, Label, TextInput } from "flowbite-react";
-
+import gigDeliveryImage from "../../Assets/gig_delivery_file.png";
 
 
 const order_screen_nav =['Timeline', 'Chat']
@@ -61,55 +61,56 @@ const order_details = {
     }
 }
 
-const order_details_pending = {
-    order_id: '#F025E15',
-    title: 'I will create responsive design for your mobile app',
-    details: 'Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at.',
-    gig_image: '',
-    duration: '3 Days',
-    amount: '$5.00',
-    active: false,
-    revisions: false,
-    pending: true,
-    cancelled: false,
-    gig_buyed: {
-        package: 'Basic',
-        revisions: 'Unlimited',
-        files: ['Source file', 'JPG','PNG','ZIP'],
-        resolution: 'High Resolution',
-    },
-    summary: {
-        subtotal: '$5.00',
-        service: '$2.00',
-        delivery_date: 'Thursday, 24 Jun 2023'
-    }
-}
+// const order_details_pending = {
+//     order_id: '#F025E15',
+//     title: 'I will create responsive design for your mobile app',
+//     details: 'Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at.',
+//     gig_image: '',
+//     duration: '3 Days',
+//     amount: '$5.00',
+//     active: false,
+//     revisions: false,
+//     pending: true,
+//     cancelled: false,
+//     gig_buyed: {
+//         package: 'Basic',
+//         revisions: 'Unlimited',
+//         files: ['Source file', 'JPG','PNG','ZIP'],
+//         resolution: 'High Resolution',
+//     },
+//     summary: {
+//         subtotal: '$5.00',
+//         service: '$2.00',
+//         delivery_date: 'Thursday, 24 Jun 2023'
+//     }
+// }
 
-const order_details_delivered = {
-    order_id: '#F025E15',
-    title: 'I will create responsive design for your mobile app',
-    details: 'Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at.',
-    gig_image: '',
-    duration: '3 Days',
-    amount: '$5.00',
-    active: false,
-    delivered: true,
-    revisions: false,
-    pending: true,
-    cancelled: false,
-    gig_buyed: {
-        package: 'Basic',
-        revisions: 'Unlimited',
-        files: ['Source file', 'JPG','PNG','ZIP'],
-        resolution: 'High Resolution',
-    },
-    summary: {
-        subtotal: '$5.00',
-        service: '$2.00',
-        delivery_date: 'Thursday, 24 Jun 2023'
-    },
-    delivered_image: '',
-    delivered_file: 'Figma file 23564 25452...'
+// const order_details_delivered = {
+//     order_id: '#F025E15',
+//     title: 'I will create responsive design for your mobile app',
+//     details: 'Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at.',
+//     gig_image: '',
+//     duration: '3 Days',
+//     amount: '$5.00',
+//     active: false,
+//     delivered: true,
+//     revisions: false,
+//     pending: true,
+//     cancelled: false,
+//     gig_buyed: {
+//         package: 'Basic',
+//         revisions: 'Unlimited',
+//         files: ['Source file', 'JPG','PNG','ZIP'],
+//         resolution: 'High Resolution',
+//     },
+//     summary: {
+//         subtotal: '$5.00',
+//         service: '$2.00',
+//         delivery_date: 'Thursday, 24 Jun 2023'
+//     },
+//     delivered_image: '',
+//     delivered_file: 'Figma file 23564 25452...'
+// }
 
 // }
 
@@ -128,40 +129,40 @@ const ManageOrderDetails = () => {
         <>
         <div class="mx-4 lg:mx-24 my-10">
             <div class='flex items-center justify-between mb-1 lg:mb-4'>
-                <p class="text-[#5E5E5E] text-[10px] md:text-lg">Order ID {order_details_active.order_id}</p>
+                <p class="text-[#5E5E5E] text-[10px] md:text-lg">Order ID {order_details.order_id}</p>
                 <p class='text-[8px] md:text-xl font-semibold sm:font-bold'>Day : <span class='text-[#D57635]'>03</span> : : Hours : <span class='text-[#00538F]'>24</span> : : Minutes : <span class=' text-[#00538F]'>30</span></p>
             </div>
 
             <div class="grid grid-cols-2 mt-2 lg:mt-4 rounded-md border border-solid p-2 lg:p-10 shadow-md">
                 {/* Image_Gig */}
                 <div class="col-span-full">
-                        <img src={order_details_active.gig_image} alt='' class="inline rounded-md" />
+                        <img src={order_details.gig_image} alt='' class="inline rounded-md" />
                 </div>
                 <div class="col-span-full flex flex-row flex-wrap items-center mt-3 lg:mt-6 justify-between">
                     <div class="flex flex-row items-center justify-start">
-                        <img src={order_details_active.gig_buyed.seller.image} class="inline md:w-[58px] w-[20px] h-[20px] mt-2 md:h-[58px] rounded-full" alt="" />
-                        <h4 class="ml-1 md:ml-3 text-[8px] md:text-base font-semibold text-[#5E5E5E] opacity-80">{order_details_active.gig_buyed.seller.name}</h4>
+                        <img src={order_details.gig_buyed.seller.image} class="inline md:w-[58px] w-[20px] h-[20px] mt-2 md:h-[58px] rounded-full" alt="" />
+                        <h4 class="ml-1 md:ml-3 text-[8px] md:text-base font-semibold text-[#5E5E5E] opacity-80">{order_details.gig_buyed.seller.name}</h4>
                     </div>
                      <button class='bg-[#27AE60] w-[60px] md:w-[100px] h-auto border border-[#27AE60]  py-1 rounded text-[5px] md:text-xs text-white '>In Progress</button>
                 </div>
                 <div class="col-span-full mt-4 space-y-3">
-                    <h1 class="text-[#00538F] text- base lg:text-2xl font-semibold">{order_details_active.title}</h1>
+                    <h1 class="text-[#00538F] text- base lg:text-2xl font-semibold">{order_details.title}</h1>
                     <h3 class="text-[#5E5E5E] text-sm md:text-base font-normal">Service Details</h3>
-                    <h2 class="text-[8px] md:text-sm text-[#979797] opacity-90">{order_details_active.details.slice(0,340)}....Read more</h2>
+                    <h2 class="text-[8px] md:text-sm text-[#979797] opacity-90">{order_details.details.slice(0,340)}....Read more</h2>
                     <div class="flex flex-row items-center">
                         <h3 class="text-sm md:text-base text-right text-[#979797] font-semibold">Duration</h3>
                         <h3 class="text-sm md:text ml-16 text-[#979797] font-semibold">:</h3>
-                        <h3 class="text-sm md:text ml-10 text-[#979797] font-semibold" >{order_details_active.duration}</h3>
+                        <h3 class="text-sm md:text ml-10 text-[#979797] font-semibold" >{order_details.duration}</h3>
                     </div>
                     <div class="flex flex-row items-center">
                         <h3 class="text-sm md:text text-right text-[#979797] font-semibold">Amount</h3>
                         <h3 class="text-sm md:text ml-16 text-[#979797] font-semibold">:</h3>
-                        <h3 class="text-sm md:text ml-10 text-[#979797] font-semibold">{order_details_active.amount}</h3>
+                        <h3 class="text-sm md:text ml-10 text-[#979797] font-semibold">{order_details.amount}</h3>
                     </div>
                     <div class="flex flex-row items-center">
                         <h3 class="text-sm md:text text-right text-[#979797] font-semibold">Status</h3>
                         <h3 class="text-sm md:text ml-20 text-[#979797] font-semibold">:</h3>
-                        <h3 class="text-sm md:text ml-10 text-[#121F3E] font-semibold">{order_details_active.duration}</h3>
+                        <h3 class="text-sm md:text ml-10 text-[#121F3E] font-semibold">{order_details.duration}</h3>
                     </div>
 
                     <div class="flex flex-col md:flex-row flex-wrap items-top  justify-center gap-3 lg:gap-5 mx-5">
@@ -198,7 +199,7 @@ const ManageOrderDetails = () => {
 
                                 <div class="col-start-5 col-span-3 text-end">
                                     {
-                                        order_details_active.gig_buyed.files.map((item,index)=>{
+                                        order_details.gig_buyed.files.map((item,index)=>{
                                            return( <h2 key={index} class="text-[#979797] opacity-80 text-sm">
                                                     {item} ,
                                                 </h2>)
@@ -221,7 +222,7 @@ const ManageOrderDetails = () => {
 
                                 <div class="col-start-5 col-span-3 text-end">
                                      <h2 class="text-[#979797] opacity-80 text-sm">
-                                                    {order_details_active.gig_buyed.resolution}
+                                                    {order_details.gig_buyed.resolution}
                                                 </h2>
                                         
                                     
@@ -242,7 +243,7 @@ const ManageOrderDetails = () => {
 
                                 <div class="col-start-5 col-span-3 text-end">
                                      <h2 class="text-[#979797] opacity-80 text-sm">
-                                                    {order_details_active.gig_buyed.package}
+                                                    {order_details.gig_buyed.package}
                                                 </h2>
                                         
                                     
@@ -268,7 +269,7 @@ const ManageOrderDetails = () => {
                                 </div>
 
                                 <div class="col-start-5 col-span-3 text-end">
-                                    <h2 class="text-[#979797] opacity-80 text-sm">{order_details_active.summary.subtotal}</h2>
+                                    <h2 class="text-[#979797] opacity-80 text-sm">{order_details.summary.subtotal}</h2>
                                 </div>
 
                             </div>
@@ -286,7 +287,7 @@ const ManageOrderDetails = () => {
 
                                 <div class="col-start-5 col-span-3 text-end">
                                <h2  class="text-[#979797] opacity-80 text-sm">
-                                                    {order_details_active.summary.service}
+                                                    {order_details.summary.service}
                                                 </h2>
                                 </div>
 
@@ -326,7 +327,7 @@ const ManageOrderDetails = () => {
 
                                 <div class="col-start-5 col-span-3 text-end">
                                      <h2 class="text-[#979797] opacity-80 text-sm">
-                                                    {order_details_active.summary.delivery_date}
+                                                    {order_details.summary.delivery_date}
                                                 </h2>
                                         
                                     
