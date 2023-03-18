@@ -1,10 +1,9 @@
 import React from 'react';
-import { BiArrowBack } from 'react-icons/bi'
-import { MdNotificationsNone } from 'react-icons/md'
-import { BsHeart, BsThreeDotsVertical } from 'react-icons/bs'
-import sellerAvatar from '../../Assets/seller_profile.png'
-import profile2 from '../../Assets/seller_review_avatar_2.png'
-import star from '../../Assets/Star-Gold.png'
+import { BiArrowBack } from 'react-icons/bi';
+import { BsHeart, BsThreeDotsVertical } from 'react-icons/bs';
+import { MdNotificationsNone } from 'react-icons/md';
+import sellerAvatar from '../../Assets/seller_review_avatar_3.png'
+import SellerBidDetails from './SellerBidDetails';
 
 const result = {
   _id: 3,
@@ -17,9 +16,9 @@ const result = {
   applied: 20,
 }
 
-const SeTopBar = () => {
+const SellerApplyDetails = () => {
   return (
-    <div>
+    <div className='px-2 sm:px-12 py-6'>
       <div className='flex justify-between items-center border-b-2 border-[#D1D1D1] pb-6'>
         <div className='flex space-x-10 items-center'>
           <span><BiArrowBack className='text-[#000000] text-2xl' /></span>
@@ -56,37 +55,11 @@ const SeTopBar = () => {
         </div>
       </div>
 
-      <div className='mt-8 rounded-2xl drop-shadow-lg bg-white px-2 py-2'>
-        <div className='flex space-x-6 items-center'>
-          <img src={profile2} className="w-[80px] h-[80px] sm:w-[100px] sm:h[100px] lg:w-[130px] lg:h-[130px] rounded-full" alt="" />
+      <SellerBidDetails />
 
-          <div className='space-y-2'>
-            <h2 className='text-[#15151E] text-base sm:text-xl font-semibold'>Saiful Islam Sujan</h2>
-            <p className='text-[#7A7A7A] font-sm text-sm'>Researcher at Grameenphone</p>
-            <div className='flex place-items-center space-x-2'>
-              <span>5.0</span>
-              <img src={star} className="w-[18px] h-[17px]" alt="" />
-              <p>20 Job Posted</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className='space-y-4 mt-6 '>
-        <h2 className='text-xl text-[#15151E] font-bold'>Descriptions</h2>
-        <p className='text-[#7A7A7A] leading-8'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing...There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
-      </div>
-      <div className='space-y-4 mt-6'>
-        <h2 className='text-xl text-[#15151E] font-bold'>Descriptions</h2>
-        <p className='text-[#7A7A7A] leading-8'>Must have a bike or Bicycle</p>
-      </div>
-
-      <div className='flex justify-center items-center py-4 '>
-        <button className='bg-[#00538F] text-white px-8 py-3 text-center rounded-md text-base'>Apply</button>
-      </div>
 
     </div>
   );
 };
 
-export default SeTopBar;
+export default SellerApplyDetails;
