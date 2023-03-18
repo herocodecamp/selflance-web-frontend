@@ -35,7 +35,10 @@ import SeDashboard from "./pages/SellerDashboard";
 import SellerSearchPage from "./pages/SellerSearchPage";
 import SeDashboardPage2 from "./pages/SellerDashBoard2";
 
+import OrderScreen from "./components/ManageOrderComponents/OrderScreen";
+
 import ManageOrderDetails from "./components/ManageOrderComponents/OrderDetails";
+import ManageDetails from "./components/ManageOrderComponents/ManageDetails";
 // >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57
 // >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7
 
@@ -58,16 +61,16 @@ function App() {
 
       {/* <Congratulations /> */}
       {/* <ManageOrder /> */}
-      <ManageOrderDetails />
 
       {/* {/* <ServiceDetails /> */}
 
       {/* <Dashboar /> */}
-      <SeDashboardPage2 />
+      {/* <SeDashboardPage2 /> */}
       {/* <SeDashboard /> */}
       {/* <SellerSearchPage /> */}
 
-
+{/* <ManageOrderDetails /> */}
+<ManageOrderDetails />
 
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
       {/* <ManageOrder /> */}
