@@ -3,6 +3,7 @@ import Control from '../../common/Control/Control'
 import {MdOutlineSpeed, MdOutlineFileUpload} from 'react-icons/md'
 import { BsTags, BsPaypal } from 'react-icons/bs'
 import {FaCreditCard} from 'react-icons/fa'
+import PricePicker from '../../common/PricePicker'
 
 const PostJobView = () => {
   return ( 
@@ -74,22 +75,21 @@ const PostJobView = () => {
                     </label>
                     
                 </div>
-                <div className='grid grid-cols-2 gap-4'>
-                <label class="block mt-12">
-                        <span class="block w-full text-[#00538F] text-2xl font-medium pl-3">Set Hourly Rate</span>
-                        <div className='mt-6 grid grid-cols-2 gap-4'>
-                            <div>
-                            <div class="relative mb-6">
-                                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                    
-                                </div>
-                                <input type="text" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="$5" />
-                                </div>
-                            </div>    
-                            
-
-                            </div>
-                        </label>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div class="block mt-12">
+                    <span class="block w-full text-[#00538F] text-2xl font-medium pl-3">Set Hourly Rate</span>
+                    <div className='mt-6 grid grid-cols-2 gap-4 text-gray-500'>
+                        <div className=''>
+                                <p className='ml-3'>From</p>
+                                <PricePicker />
+                        </div>
+                        <div>
+                                <p className='ml-3'>To</p>
+                                <PricePicker />
+                        </div>
+                        
+                    </div>
+                </div>
                     
                 </div>
 

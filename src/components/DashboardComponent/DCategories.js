@@ -11,7 +11,7 @@ import { GiArtificialIntelligence } from 'react-icons/gi'
 
 const DCategories = () => {
   return (
-    <div className='pt-4 hidden md:block'>
+    <div className='pt-4 hidden sm:block'>
       <h2 className='text-[#121F3E] py-4 leading-8 text-xl font-sem
       '>Categories</h2>
 

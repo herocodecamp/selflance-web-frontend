@@ -4,9 +4,9 @@ import PreMutuals from './PreMutuals';
 const PreGigDetails = ({ gig }) => {
   return (
     <div>
-      <div className='bg-[ #FFFFFF] shadow px-4 py-4 rounded-lg space-y-2 relative'>
+      <div className='bg-[#FFFFFF] shadow px-4 py-4 rounded-lg space-y-2 relative sm:block'>
         <div>
-          <img src={gig.image} className="rounded sm:w-[296] mx-auto sm:h-[154] w-full border-2 border-[#FAFAFB]" alt="alt" />
+          <img src={gig.image} className="rounded-lg w-full mx-auto border-2 border-[#FAFAFB]" alt="alt" />
         </div>
         <h2 className='font-poppins  text-[#59AED5] leading-6 font-semibold'>{gig.title}</h2>
 

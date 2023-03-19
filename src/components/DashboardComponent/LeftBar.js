@@ -10,10 +10,9 @@ import { RxDashboard } from 'react-icons/rx'
 const LeftBar = () => {
 
   return (
-    <div className='px-8 py-8 hidden md:block'>
+    <div className='px-8 py-8 hidden sm:block'>
 
-      <div className='border border-[
-      #D1D1D1] w-[150px] md:w-[247px] bg-[#ffff] rounded-lg p-6 lg:h-[833px]'>
+      <div className='border border-[#D1D1D1] w-[150px] sm:w-[247px] bg-[#ffff] rounded-lg p-6 lg:h-[833px]'>
 
         <ul className='space-y-8'>
 

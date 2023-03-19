@@ -155,3 +155,265 @@ export const sellerResponse = [
   },
 ]
 
+export const messages = [
+  //gen random name and messages
+  {
+    id : 1,
+    name: 'John Doe',
+    message: 'Thanks',
+    time: '10:00am',
+    unread: 3,
+  },
+  {
+    id : 2,
+    name: 'James',
+    message: 'Hello',
+    time: '9:20am',
+    unread: 1,
+  },
+  {
+    id : 3,
+    name: 'Cane Doe',
+    message: 'How are you?',
+    time: '8:30am',
+    unread: 2,
+  },
+  {
+    id : 4,
+    name: 'Noah Kahan',
+    message: 'I am fine',
+    time: '7:40am',
+    unread: 0,
+  },
+  {
+    id : 5,
+    name: 'Emma Watson',
+    message: 'What about you?',
+    time: '6:50am',
+    unread: 0,
+  },
+  {
+    id : 6,
+    name: 'Calvin Harris',
+    message: 'No money',
+    time: '5:00am',
+    unread: 0,
+  },
+  {
+    id : 7,
+    name: 'David Guetta',
+    message: 'Time to go',
+    time: '4:10am',
+    unread: 0,
+    
+  },
+  {
+    id : 8,
+    name: 'Michael Schulte',
+    message: 'Falling Apart',
+    time: '3:20am',
+    unread: 0,
+  },
+  {
+    id : 9,
+    name: 'Liam Payne',
+    message: 'Always on my mind',
+    time: '2:30am',
+    unread: 0,
+  },
+  {
+    id : 10,
+    name: 'Louis Tomlinson',
+    message: 'Stars are blind',
+    time: '1:40am',
+    unread: 0,
+  },
+  {
+    id : 11,
+    name: 'Zayn Malik',
+    message: 'Pillowtalk',
+    time: '12:50pm',
+    unread: 0,
+  },
+  {
+    id : 12,
+    name: 'Niall Horan',
+    message: 'Slow Hands',
+    time: '11:00pm',
+    unread: 0,
+  },
+  {
+    id : 13,
+    name: 'Harry Styles',
+    message: 'Sign of the Times',
+    time: '10:10pm',
+    unread: 0,
+  },
+  {
+    id : 14,
+    name: 'Rita Ora',
+    message: 'Let You Love Me',
+    time: '9:20pm',
+    unread: 0,
+  },
+]
+
+export const chatData = {
+  "data":{
+      "chat1" : [  
+          { 
+            id: 1,
+             "from":{  
+                "type":"user1"
+             },
+             "msg":{  
+                "message": "Hello"
+                }
+          },
+          {  
+            id: 2,
+             "from":{  
+                 "type":"Courtney Henry"
+             },
+             "msg":{  
+                "message":"Hi"
+  
+             }
+          },
+          {  
+              id: 3,
+             "from":{  
+                "type":"user1"
+             },
+             "msg":{  
+                "message": "What plans for today?"
+                }
+          },
+          {  
+              id: 4,
+             "from":{  
+                 "type":"Courtney Henry"
+             },
+             "msg":{  
+                "message":"Nothing much. How about you?"
+  
+             }
+          },
+          {  
+              id:5,
+             "from":{  
+                "type":"user1"
+             },
+             "msg":{  
+                "message": "Planning to go to a movie. Wanna come?"
+                }
+          },
+          {  
+            id: 6,
+             "from":{  
+                 "type":"Courtney Henry"
+             },
+             "msg":{  
+                "message":"Sure why not."
+  
+             }
+          },
+          {  
+            id: 7,
+             "from":{  
+                "type":"user1"
+             },
+             "msg":{  
+                "message": "Great. see you then."
+                }
+          },
+          {  
+            id: 8,
+             "from":{  
+                 "type":"Courtney Henry"
+             },
+             "msg":{  
+                "message":"ya bye."
+  
+             }
+          }
+     ],
+  
+     "chat2" : [  
+          {  
+              id: 1,
+              "from":{  
+                  "type":"user1"
+              },
+              "msg":{  
+                  "message": "Hi"
+              }
+          },
+          {  
+              id: 2,
+              "from":{  
+                  "type":"Courtney Henry"
+              },
+              "msg":{  
+                  "message":"Hi"
+              }
+          },
+          {  
+              id: 3,
+              "from":{  
+                  "type":"user1"
+              },
+              "msg":{  
+                  "message": "How can I help you?"
+              }
+          },
+          {  
+              id: 4,
+              "from":{  
+                  "type":"Courtney Henry"
+              },
+              "msg":{  
+                  "message":"I would like to know more about your product."
+              }
+          },
+          {  
+              id: 5,
+              "from":{  
+                  "type":"user1"
+              },
+              "msg":{  
+                  "message": "Sure. I will send you an email with details on our product."
+              }
+          },
+          {  
+              id: 6,
+              "from":{  
+                  "type":"user1"
+              },
+              "msg":{  
+                  "message":"Let me know if you have any doubts."
+              }
+          },
+          {  
+              id: 7,
+              "from":{  
+                  "type":"Courtney Henry"
+              },
+              "msg":{  
+                  "message": "Great. Thanks!"
+              }
+          },
+          {  
+              id: 8,
+              "from":{  
+                  "type":"user1"
+              },
+              "msg":{  
+                  "message":"Anytime."
+              }
+          }
+      ]
+  }   
+};
+
+

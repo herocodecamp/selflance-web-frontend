@@ -4,16 +4,16 @@ import Logo from '../../Assets/logo.png'
 const FooterView = () =>{
     return(
         <div class=" h-[800px] md:h-[592px] bg-[#00538F]">
-            <div class="grid  grid-flow-col lg:grid-flow-rows grid-cols-11  gap-10 mx-10 lg:mx-28 text-white">
-                <div class="flex flex-col col-span-3 mt-32">
+            <div class="flex flex-row flex-wrap lg:grid  lg:grid-flow-rows lg:grid-cols-11  gap-6 md:gap-10 mx-3 md:mx-10 lg:mx-28 justify-between text-white">
+                <div class="flex flex-col items-center lg:items-start  lg:col-span-3 mt-8 lg:mt-32">
                         <img src={Logo} alt="Logo" class="flex-none w-40" />
                         
-                        <p class="text-xs font-normal mt-10 opacity-80 leading-6">
+                        <p class="text-xs font-normal mt-2 lg:mt-10 opacity-80 text-center lg:text-left leading-6">
                         Empowering freelancers worldwide with hassle-free and commission-free services. Join the freelance revolution with us today and start earning more
                         </p>
                         
                 </div>
-                <div class="flex flex-col col-span-2 mt-32">
+                <div class="flex flex-col lg:col-span-2 lg:mt-32">
                     <h1 class="text-xs font-normal">COMPANY</h1>
                     <ul class="mt-5 space-y-4 text-sm font-normal opacity-80">
                         <li><a href="/#">Home</a></li>
@@ -24,7 +24,7 @@ const FooterView = () =>{
                         <li><a href="/#">Invite Friends</a></li>
                     </ul>
                 </div>
-                <div class="flex flex-col col-span-2 mt-32">
+                <div class="flex flex-col lg:col-span-2 lg:mt-32">
                     <h1 class="text-xs font-normal">HELP</h1>
                     <ul class="mt-5 space-y-4 text-sm font-normal opacity-80">
                         <li><a href="/#">Help & Support</a></li>
@@ -35,7 +35,7 @@ const FooterView = () =>{
                         <li><a href="/#">Buying on Selflance</a></li>
                     </ul>
                 </div>
-                <div class="flex flex-col col-span-2 mt-32">
+                <div class="flex flex-col lg:col-span-2 lg:mt-32">
                     <h1 class="text-xs font-normal">COMPANY</h1>
                     <ul class="mt-5 space-y-4 text-sm font-normal opacity-80">
                         <li><a href="/#">Graphic & Design</a></li>
@@ -45,7 +45,7 @@ const FooterView = () =>{
                         <li><a href="/#">Writing & Translation</a></li>
                     </ul>
                 </div>
-                <div class="flex flex-col col-span-2 mt-32">
+                <div class="flex flex-col lg:col-span-2 lg:mt-32">
                     <h1 class="text-xs font-normal">CATEGORIES</h1>
                     <ul class="mt-5 space-y-4 text-sm font-normal opacity-80">
                         <li><a href="/#">Data</a></li>
@@ -57,8 +57,8 @@ const FooterView = () =>{
                 </div>
                 
             </div>
-            <hr class="mx-32 mt-20"></hr>
-            <div class="text-white text-center mt-10">
+            <hr class="mx-10 lg:mx-32 mt-10 lg:mt-20"></hr>
+            <div class="text-white text-center mt-7 lg:mt-10">
             © Copyright 2021, All Rights Reserved by Selflance
             </div>
         </div>
