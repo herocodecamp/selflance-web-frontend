@@ -9,7 +9,7 @@ import { FaCheck } from "react-icons/fa";
 
 const OrderDetails = () => {
    return(
-      <div className="container w-[1300px] my-20 mx-auto space-x-10 flex">
+      <div className="container w-[1300px] my-20 mx-auto space-x-10 sm:flex-none">
          {/* Order Details Start */}
          <div className="w-[50%] shadow-lg border ml-3 border-slate-200 rounded-2xl py-8 px-[54px]">
             <h3 className="text-3xl mb-8">Order Details</h3>

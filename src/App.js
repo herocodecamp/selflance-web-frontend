@@ -18,13 +18,15 @@ import PrivacyandTerms from "./common/Privacy&Terms/PrivacyandTerms";
 import ManageOrder from "./pages/ManageOrderPage";
 import SearchPage from "./pages/SearcePage";
 import PremiumSellerPage from "./pages/PremiumSellerPage";
-
 import Dashboard from "./pages/DashBoardPage";
-import OrderPage from "./pages/OrderPage";
-import AddNewCard from "./pages/OrderPage/AddNewCard";
-import OrderProcessing from "./pages/OrderPage/OrderProcessing";
+import OrderPage  from "./pages/OrderPage";
+import AddNewCardPage from "./pages/AddNewCardPage";
+import OrderProcessingPage from "./pages/OrderProcessingPage/OrderProcessingPage";
+import CustomerSupportPage from "./pages/CustomerSupportPage";
+import BuyerOrderManagementPage from "./pages/BuyerOrderManagementPage";
 
 
+<<<<<<< HEAD
 import Dashboar from "./pages/DashBoardPage";
 
 import OrderProcess from "./pages/orderRequirements/OrderProcess";
@@ -44,17 +46,22 @@ import ApplySuccess from "./pages/ApplySuccess/ApplySuccess";
 // >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57
 // >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7
 
+=======
+>>>>>>> 69e4bfed9349813136b71a0a8af4314bd5d25aff
 function App() {
   return (
     <>
       <Navbar />
 
       {/* <OrderPage/> */}
-      {/* <AddNewCard/> */}
-      {/* <OrderProcessing/> */}
+      {/* <AddNewCardPage/> */}
+      {/* <OrderProcessingPage/> */}
+      {/* <CustomerSupportPage/> */}
+      {/* <BuyerOrderManagementPage/> */}
 
       {/* <Dashboard /> */}
 
+<<<<<<< HEAD
       {/* <Footer /> */}
       {/* <<<<<<< HEAD */}
 
@@ -80,13 +87,15 @@ function App() {
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
       {/* <ManageOrder /> */}
       {/* >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7 */}
+=======
+>>>>>>> 69e4bfed9349813136b71a0a8af4314bd5d25aff
       {/* <PremiumSellerPage /> */}
       {/* <Header /> */}
       {/* <AboutFee /> */}
       {/* <LandingPage /> */}
       {/* <SearchPage /> */}
       {/* <Blogs /> */}
-      {/* {/* <SellerProfile /> */}
+      {/* <SellerProfile /> */}
       {/* <SingleBlog /> */}
 
       {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
