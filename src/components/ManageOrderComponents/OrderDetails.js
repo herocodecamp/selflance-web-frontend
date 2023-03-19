@@ -23,7 +23,7 @@ const order_details = {
     duration: '3 Days',
     amount: '$5.00',
     expectedDelivery: '25 Jun 2023',
-    orderStatus: [false,true,false,false,false,false],   
+    orderStatus: [true,false,false,false,false,false],   
     gig_buyed: {
         package: 'Basic',
         revisions: 'Unlimited',
@@ -114,13 +114,15 @@ const ManageOrderDetails =()=>{
 
     const[showModal,setShowModal]=useState(false);
     const [orderNavIndex,setorderNavIndex] = useState(0);
+    const [isFileOpen,setIsFileOpen]  = useState(false);
+    const [isDeliveryOpen, setIsdeliveryOpen] = useState(false);
 
  useEffect(()=>{
     order_details.orderStatus.map((item,index)=>{
                                          
-        return item && (setorderNavIndex(index))
+        return item && setorderNavIndex(index)
     })
- },[])
+ } , [])
 
  const handleOrderCancel=()=>{
     console.log('Order Cancelled')
@@ -438,32 +440,52 @@ const ManageOrderDetails =()=>{
                     <div className="flex flex-col mt-2 lg:mt-4 rounded-md border border-solid p-2 lg:p-10 shadow-md">
                             <div className="flex flex-row justify-between">
                                 <div>The Order was Delivered</div>
-                                <div> <FaAngleDown /></div>
+                                <div><button onClick={()=>setIsdeliveryOpen(!isDeliveryOpen)}><FaAngleDown /></button> </div>
                             </div>
                      </div>
-
-                     <div className="flex flex-col mt-2 lg:mt-4 rounded-md border border-solid p-2 lg:p-10 shadow-md">
-                            <div className="flex flex-row justify-between">
-                                <div>Here is the Work of the Seller</div>
-                                <div> <FaAngleUp /></div>
-                            </div>
-                     </div>
-
-                     <div>Delivery File From the Seller</div>
-                     <div className="flex flex-col mt-2 lg:mt-4 rounded-md border border-solid p-2 lg:p-10 shadow-md">
+                {
+                    isDeliveryOpen && (
+                                        <div className="flex flex-col mt-2 lg:mt-4 rounded-md border border-solid p-2 lg:p-10 shadow-md">
+                                        <div className="flex flex-row justify-between">
+                                            <div>Here is the Work of the Seller</div>
+                                            <div> <button onClick={()=>setIsFileOpen(!isFileOpen)}><FaAngleUp /></button> </div>
+                                        </div>
+                                        </div>
+                                                     
+                            )
+                   
+                                   
+                 
+                }
+                {
+                                
+                                isFileOpen && (
+                                <div>
+                                    <div>Delivery File From the Seller</div>
+                            <div className="flex flex-col mt-2 lg:mt-4 rounded-md border border-solid p-2 lg:p-10 shadow-md">
                             <div className="flex flex-row items-center justify-between">
                                 <div className=""><BsFillFileEarmarkTextFill/></div>
-                               
+                            
                                 <div className="flex flex-col">
                                     <div>Here is Seller work file</div>
                                     <div><a href="/#">Figma file 23564 25452...</a></div>
                                 </div>
                                 <div className=""><a href="/#"><BiDownload/></a></div>
                             </div>
+                        
+                            </div>
+                            <div>Image File</div>
+                            <div className="object-left"><img src={order_details.gig_buyed.delivery.deliveryFiles} alt="" className="inline w-[350px] h-auto" /></div>
+                                </div>
+                )
+                }
+                                
                            
-                     </div>
-                     <div>Image File</div>
-                     <div className="object-left"><img src={order_details.gig_buyed.delivery.deliveryFiles} alt="" className="inline w-[350px] h-auto" /></div>
+                    
+
+                     
+                     
+                     
                      </div>
                 ): null
             }
@@ -471,10 +493,21 @@ const ManageOrderDetails =()=>{
             
 
                 {/* Buttons */}
-            <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 my-10">
-            <button type="button" onClick={()=>setShowModal(true)} className="text-[#FF3B30] bg-white md:w-[180px] h-auto font-medium border border-[#FF3B30] rounded-md text-sm px-5 py-2.5 text-center mr-2 mb-2">Cancel</button>
 
-            <button type="button" className="text-white md:w-[180px] h-auto bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-md text-sm px-5 py-2.5 text-center mr-2 mb-2">Review</button>
+            <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 my-10">
+                {
+                    order_status_button_value[orderNavIndex].includes('In Progress') || (order_status_button_value[orderNavIndex].includes('Pending')) || order_details.gig_buyed.delivery.value ? (<button type="button" onClick={()=>setShowModal(true)} className="text-[#FF3B30] bg-white md:w-[180px] h-auto font-medium border border-[#FF3B30] rounded-md text-sm px-5 py-2.5 text-center mr-2 mb-2">Cancel</button>):null
+
+                }
+                {
+                    
+                    order_details.gig_buyed.delivery.value && (<button type="button" className="text-white md:w-[180px] h-auto bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-md text-sm px-5 py-2.5 text-center mr-2 mb-2">Review</button>)
+                }
+                {
+                    order_status_button_value[orderNavIndex].includes('Completed') && (<button type="button" className="text-white md:w-[180px] h-auto bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-md text-sm px-5 py-2.5 text-center mr-2 mb-2">Re Order</button>)
+                }
+
+            
             
             <div>
             
