@@ -197,7 +197,7 @@ const ManagePost = () => {
         {nav_el.map((item, index) => {
           return (
             <button key={index} className={getButtonClass(index)} onClick={() => handleButtonClick(index)}>
-              {item.name} <sup className='w-4 h-4 mt-[-5px] rounded-full bg-white text-black '>{item.number}</sup>
+              {item.name} <sup className='w-4 h-4 mt-[-5px] rounded-full text-white '>{item.number}</sup>
             </button>
           )
 
