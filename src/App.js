@@ -40,6 +40,7 @@ import OrderScreen from "./components/ManageOrderComponents/OrderScreen";
 import SellerApplyPage from "./pages/SellerApplyPage";
 import ManageDetails from "./components/ManageOrderComponents/ManageDetails";
 import ManageOrderDetails from "./components/ManageOrderComponents/OrderDetails";
+import ApplySuccess from "./pages/ApplySuccess/ApplySuccess";
 // >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57
 // >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7
 
@@ -71,7 +72,9 @@ function App() {
       {/* <SeDashboard /> */}
       {/* <SellerSearchPage /> */}
 
-<ManageOrderDetails />
+      {/* <ManageOrderDetails /> */}
+
+      <ApplySuccess />
 
 
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
@@ -87,7 +90,7 @@ function App() {
       {/* <SingleBlog /> */}
 
       {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
-      
+
     </>
   );
 }
