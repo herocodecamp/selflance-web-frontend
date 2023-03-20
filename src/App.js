@@ -26,6 +26,26 @@ import CustomerSupportPage from "./pages/CustomerSupportPage";
 import BuyerOrderManagementPage from "./pages/BuyerOrderManagementPage";
 
 
+import Dashboar from "./pages/DashBoardPage";
+
+import OrderProcess from "./pages/orderRequirements/OrderProcess";
+import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
+import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
+import Congratulations from "./pages/orderRequirements/Congratulations";
+import SeDashboard from "./pages/SellerDashboard";
+import SellerSearchPage from "./pages/SellerSearchPage";
+import SeDashboardPage2 from "./pages/SellerDashBoard2";
+
+import OrderScreen from "./components/ManageOrderComponents/OrderScreen";
+
+import SellerApplyPage from "./pages/SellerApplyPage";
+import ManageDetails from "./components/ManageOrderComponents/ManageDetails";
+import ManageOrderDetails from "./components/ManageOrderComponents/OrderDetails";
+import ApplySuccess from "./pages/ApplySuccess/ApplySuccess";
+import SeProfileDashboardPage from "./pages/SeProfileDashboard";
+
+
+
 function App() {
   return (
     <>
@@ -39,6 +59,33 @@ function App() {
 
       {/* <Dashboard /> */}
 
+      {/* <Footer /> */}
+      {/* <<<<<<< HEAD */}
+
+      {/* <SubmitRequirement2 /> */}
+      {/* <SubmiteRequirement /> */}
+
+      {/* <Congratulations /> */}
+      {/* <ManageOrder /> */}
+      {/* <ManageOrderDetails /> */}
+
+      {/* {/* <ServiceDetails /> */}
+      {/* <ManageOrderDetails /> */}
+
+      {/* <Dashboar /> */}
+      {/* <SellerApplyPage /> */}
+
+      {/* <SeDashboardPage2 /> */}
+      {/* <SeDashboard /> */}
+      {/* <SellerSearchPage /> */}
+      {/* <ApplySuccess /> */}
+      <SeProfileDashboardPage />
+
+
+      {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
+      {/* <ManageOrder /> */}
+      {/* >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7 */}
+
       {/* <PremiumSellerPage /> */}
       {/* <Header /> */}
       {/* <AboutFee /> */}
@@ -49,7 +96,7 @@ function App() {
       {/* <SingleBlog /> */}
 
       {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
-      
+
     </>
   );
 }

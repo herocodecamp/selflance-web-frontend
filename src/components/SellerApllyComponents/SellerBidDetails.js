@@ -106,7 +106,7 @@ const SellerBidDetails = () => {
 
               <div className='space-y-4'>
                 <h4 className='text-[#15151E] text-xl font-bold'>Add files <span className='text-[#8E8E8E]'>(Optional)</span></h4>
-                <h4 className='text-[#15151E] text-base font-bold'>Uplaod file,photo and document</h4>
+                <h4 className='text-[#15151E] text-base font-bold'>Upload file,photo and document</h4>
 
                 <div class="relative w-11/12 sm:w-full resize-none text-[#8E8E8E] border-2 border-[#E3E3E3] px-4 py-2 pr-8 rounded  shadow leading-tight ">
                   <input
