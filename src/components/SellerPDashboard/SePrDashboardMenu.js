@@ -13,12 +13,12 @@ const SePrDashboardMenu = () => {
     <div>
 
       <ul className='bg-[#ffff] w-[44px] sm:w-[66px] space-y-4 mx-auto'>
-        <li className='w-[22px] h-[22px] border-l-4 border-[#00538F] pl-4' to="/"><RxDashboard className="text-[#92929D]" /></li>
-        <li className='w-[22px] h-[22px] pl-4' to="/"><AiOutlineMessage className="text-[#92929D]" /></li>
-        <li className='w-[22px] h-[22px]  pl-4' to="/"><BsCheckSquare className="text-[#92929D]" /></li>
-        <li className='w-[22px] h-[22px]  pl-4' to="/"><AiOutlineCalendar className="text-[#92929D]" /></li>
-        <li className='w-[22px] h-[22px] pl-4' to="/"><AiOutlineClockCircle className="text-[#92929D]" /></li>
-        <li className='w-[22px] h-[22px]  pl-4' to="/"><FiSettings className="text-[#92929D]" /></li>
+        <li className='w-[22px] h-[22px] border-l-4 border-[#00538F] pl-4 hover:cursor-pointer' to="/"><RxDashboard className="text-[#92929D]" /></li>
+        <li className='w-[22px] h-[22px] pl-4 hover:cursor-pointer' to="/"><AiOutlineMessage className="text-[#92929D]" /></li>
+        <li className='w-[22px] h-[22px]  pl-4 hover:cursor-pointer' to="/"><BsCheckSquare className="text-[#92929D]" /></li>
+        <li className='w-[22px] h-[22px]  pl-4 hover:cursor-pointer' to="/"><AiOutlineCalendar className="text-[#92929D] hover:cursor-pointer" /></li>
+        <li className='w-[22px] h-[22px] pl-4 hover:cursor-pointer' to="/"><AiOutlineClockCircle className="text-[#92929D]" /></li>
+        <li className='w-[22px] h-[22px]  pl-4 hover:cursor-pointer' to="/"><FiSettings className="text-[#92929D]" /></li>
       </ul>
 
     </div>

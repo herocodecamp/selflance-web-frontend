@@ -93,12 +93,16 @@ const SePrDashboardTopBar = () => {
 
       <div className='py-6'>
         <h2 className='text-[#121F3E] text-xl font-bold'>Standards to maintain</h2>
-        {
-          sellerInfo?.seller_standard.map((standard, index) => <SeStandardMantain key={index} 
-          standard={standard}
-          />  
-          )
-        }
+
+        <div className='py-6 grid grid-cols-1 gap-7'>
+          {
+            sellerInfo?.seller_standard.map((standard, index) => <SeStandardMantain key={index}
+              standard={standard}
+            />
+            )
+          }
+        </div>
+
       </div>
     </div>
   );
