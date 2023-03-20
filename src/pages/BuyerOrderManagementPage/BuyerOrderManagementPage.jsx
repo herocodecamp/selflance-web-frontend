@@ -1,5 +1,5 @@
 import React from "react";
-import HistoryBackButtonView from "../../components/HistoryBackButton/HistoryBackButtonView";
+import HistoryBackButton from "../../components/HistoryBackButton/";
 import CommonButton from "../../components/OrderPageComponents/CommonButton";
 import Footer from "../../components/Footer/Footer";
 
@@ -7,7 +7,7 @@ const BuyerOrderManagementPage = () => {
    return(
       <>
          <div className="w-[90%] md:w-[80%] my-5 md:my-10 mx-auto">
-            <HistoryBackButtonView text="Customer Support"/>
+            <HistoryBackButton text="Customer Support"/>
             <h2 className="font-medium text-lg sm:text-3xl">Buyer Order Management</h2>
 
             <div className="mt-10">

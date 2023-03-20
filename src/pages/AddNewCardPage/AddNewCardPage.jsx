@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../../Assets/Card.png";
-import HistoryBackButtonView from "../../components/HistoryBackButton/HistoryBackButtonView";
+import HistoryBackButton from "../../components/HistoryBackButton/";
 import CommonButton from '../../components/OrderPageComponents/CommonButton';
 import Footer from "../../components/Footer/Footer";
 
@@ -9,7 +9,7 @@ const AddNewCard = () => {
    return(
       <>
          <div className="sm:w-full md:w-[90%] xl:w-[90%] mx-auto">
-            <HistoryBackButtonView text="Add New Card"/>
+            <HistoryBackButton text="Add New Card"/>
             <div className="shadow-lg border border-slate-200 rounded-3xl p-1 sm:p-2 md:p-5 lg:p-8 m-3">
                <img src={Card} alt="Card" className="mb-4 md:mb-12 m-auto"/>
 

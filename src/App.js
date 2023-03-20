@@ -31,7 +31,7 @@ function App() {
     <>
       <Navbar />
 
-      {/* <OrderPage/> */}
+      <OrderPage/>
       {/* <AddNewCardPage/> */}
       {/* <OrderProcessingPage/> */}
       {/* <CustomerSupportPage/> */}

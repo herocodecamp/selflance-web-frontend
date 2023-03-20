@@ -1,5 +1,5 @@
 import React from "react";
-import HistoryBackButtonView from "../../components/HistoryBackButton/HistoryBackButtonView";
+import HistoryBackButton from "../../components/HistoryBackButton/";
 import CommonButton from "../../components/OrderPageComponents/CommonButton";
 import customerSupportBg from "../../Assets/customer-support.png";
 import { BiSearch, BiChevronRight } from "react-icons/bi";
@@ -12,7 +12,7 @@ const CustomerSupportPage = () => {
       <>
          {/* Banner Section */}
          <div className="w-full h-full sm:w-[80%] sm:h-[80%]  my-5 mx-auto bg-white">
-         <HistoryBackButtonView text="Customer Support"/>
+         <HistoryBackButton text="Customer Support"/>
             <img src={customerSupportBg} alt="customer banner images" className="w-[90%] h-[90%] sm:w-[80%] sm:h-[80%] md:h-[70%] mx-auto"/>
          </div>
 
