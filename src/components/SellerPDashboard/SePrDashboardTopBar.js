@@ -1,8 +1,10 @@
+import { Progress } from 'flowbite-react';
 import React from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { MdNotificationsNone } from 'react-icons/md';
 import sellerProfile from '../../Assets/seller_profile(10).png'
+import starIcon from '../../Assets/Star-Gold.png'
 
 const sellerInfo = {
   _id: 1,
@@ -15,6 +17,7 @@ const sellerInfo = {
   last_month_earning: 2000.25,
   average_selling: 500.32,
   active_order: 5,
+
   seller_standard: [
     {
       title: 'Response Rate',
@@ -54,8 +57,29 @@ const SePrDashboardTopBar = () => {
           <span><BsThreeDotsVertical className='text-[#121F3E]  text-2xl' /></span>
         </div>
       </div>
-      <div>
-        <img src={ } alt="" />
+      <div className='px-4 py-2 sm:px-8 sm:py-4 bg-[#00538F] drop-shadow-lg rounded-lg space-y-2'>
+        <img className='shrink-0 w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] lg:w-[109px] lg:h-[109px] rounded-full' src={sellerInfo.image} alt="" />
+        <div className='flex items-center'>
+
+          <div>
+            <h4 className='leading-10 text-xl sm:text-2xl lg:text-4xl font-bold text-white'>Hi {sellerInfo.name}</h4>
+            <h5 className='leading-10 text-xl sm:text-2xl lg:text-3xl text-white flex items-center space-x-1'> <span>{sellerInfo.country}</span><span className='font-bold text-2xl'>.</span>  <span></span>{sellerInfo.level}</h5>
+          </div>
+
+          <div className='bg-[#FFFFFF] rounded-full px-4 py-4 sm:px-6 sm:py-6'>
+            <div className='bg-[#F4A14D] bg-opacity-20 w-[34px] h-[34px] rounded-full flex items-center justify-center'>
+              <img src={starIcon} className="w-[20px] h-[20px] rounded-full shrink-0" alt="" />
+            </div>
+            <div>
+              <Progress
+                progress={sellerInfo.rating}
+                size="lg"
+                color="blue"
+              />
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   );
