@@ -26,7 +26,6 @@ import CustomerSupportPage from "./pages/CustomerSupportPage";
 import BuyerOrderManagementPage from "./pages/BuyerOrderManagementPage";
 
 
-<<<<<<< HEAD
 import Dashboar from "./pages/DashBoardPage";
 
 import OrderProcess from "./pages/orderRequirements/OrderProcess";
@@ -43,11 +42,10 @@ import SellerApplyPage from "./pages/SellerApplyPage";
 import ManageDetails from "./components/ManageOrderComponents/ManageDetails";
 import ManageOrderDetails from "./components/ManageOrderComponents/OrderDetails";
 import ApplySuccess from "./pages/ApplySuccess/ApplySuccess";
-// >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57
-// >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7
+import SeProfileDashboardPage from "./pages/SeProfileDashboard";
 
-=======
->>>>>>> 69e4bfed9349813136b71a0a8af4314bd5d25aff
+
+
 function App() {
   return (
     <>
@@ -61,7 +59,6 @@ function App() {
 
       {/* <Dashboard /> */}
 
-<<<<<<< HEAD
       {/* <Footer /> */}
       {/* <<<<<<< HEAD */}
 
@@ -73,22 +70,22 @@ function App() {
       {/* <ManageOrderDetails /> */}
 
       {/* {/* <ServiceDetails /> */}
+      {/* <ManageOrderDetails /> */}
 
       {/* <Dashboar /> */}
+      {/* <SellerApplyPage /> */}
+
       {/* <SeDashboardPage2 /> */}
       {/* <SeDashboard /> */}
       {/* <SellerSearchPage /> */}
-
-      {/* <ManageOrderDetails /> */}
-
-      <ApplySuccess />
+      {/* <ApplySuccess /> */}
+      <SeProfileDashboardPage />
 
 
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
       {/* <ManageOrder /> */}
       {/* >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7 */}
-=======
->>>>>>> 69e4bfed9349813136b71a0a8af4314bd5d25aff
+
       {/* <PremiumSellerPage /> */}
       {/* <Header /> */}
       {/* <AboutFee /> */}
