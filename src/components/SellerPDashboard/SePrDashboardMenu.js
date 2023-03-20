@@ -12,7 +12,7 @@ const SePrDashboardMenu = () => {
   return (
     <div>
 
-      <ul className='bg-[#ffff] w-[66px] space-y-4 mx-auto'>
+      <ul className='bg-[#ffff] w-[44px] sm:w-[66px] space-y-4 mx-auto'>
         <li className='w-[22px] h-[22px] border-l-4 border-[#00538F] pl-4' to="/"><RxDashboard className="text-[#92929D]" /></li>
         <li className='w-[22px] h-[22px] pl-4' to="/"><AiOutlineMessage className="text-[#92929D]" /></li>
         <li className='w-[22px] h-[22px]  pl-4' to="/"><BsCheckSquare className="text-[#92929D]" /></li>
