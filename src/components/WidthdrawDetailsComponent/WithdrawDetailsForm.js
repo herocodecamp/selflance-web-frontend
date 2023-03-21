@@ -25,9 +25,9 @@ const WithdrawDetailsForm = () => {
         <h4 className=' lg:text-2xl text-xl text-[#121F3E] font-bold'>$5000.00</h4>
       </div>
 
-      <form>
+      <form className='py-6 sm:py-8'>
 
-        <div className='py-6 space-y-2'>
+        <div className='space-y-2'>
           <label className='text-[#15151E] text-xl lg:text-2xl font-semibold'>Enter Withdraw Amount</label>
           <br />
           <input className="border-1 border-[#E3E3E3] bg-[#FFFFFF] bg-opacity-15 focus:ring-0 text-[#000000] font-bold text-center rounded-md drop-shadow-md"
@@ -35,11 +35,11 @@ const WithdrawDetailsForm = () => {
             type="number" name="amount" id="" />
         </div>
 
-        <div className=' sm:py-12'>
-          <label className='py-8 text-[#15151E] text-xl lg:text-2xl font-semibold'>Withdraw Method</label>
+        <div className='pt-6'>
+          <label className=' text-[#15151E] text-xl lg:text-2xl font-semibold'>Withdraw Method</label>
           <br />
 
-          <div className='py-8 grid grid-cols-1 gap-7'>
+          <div className='pt-6 grid grid-cols-1 gap-7'>
 
             <div className='flex items-center justify-between px-6 py-4  bg-[#FFFFFF] drop-shadow-lg rounded-full'>
               <div className='flex items-center space-x-4'>
@@ -92,7 +92,7 @@ const WithdrawDetailsForm = () => {
             <div className='flex items-center justify-between px-6 py-4  bg-[#FFFFFF] drop-shadow-lg rounded-full'>
               <div className='flex items-center space-x-4'>
                 <div className='bg-[#7A7A7A] bg-opacity-20 w-[40px] h-[40px] rounded-full flex items-center justify-center'>
-                  <img src={upi} className='text-[#00538F] w-[20px] h-[20px]' alt="" />
+                  <img src={upi} className='text-[#00538F] w-[30px] h-[30px]' alt="" />
                 </div>
                 <h2 className='text-xl text-[#121F3E] font-semibold leading-7'>UPI xxx xxx 2456</h2>
               </div>
@@ -110,6 +110,11 @@ const WithdrawDetailsForm = () => {
         </div>
 
       </form>
+
+      <div className='flex justify-center items-center'>
+      <button className= ' bg-[#00538F] text-white w-[120px] sm:w-[160px] lg:w-[200px] px-6 py-3 font-bold rounded-md'>Confirm</button>
+      </div>
+ 
 
     </div>
 
