@@ -19,11 +19,22 @@ import ManageOrder from "./pages/ManageOrderPage";
 import SearchPage from "./pages/SearcePage";
 import PremiumSellerPage from "./pages/PremiumSellerPage";
 import Dashboard from "./pages/DashBoardPage";
-import OrderPage  from "./pages/OrderPage";
+import OrderPage from "./pages/OrderPage";
 import AddNewCardPage from "./pages/AddNewCardPage";
 import OrderProcessingPage from "./pages/OrderProcessingPage/OrderProcessingPage";
 import CustomerSupportPage from "./pages/CustomerSupportPage";
 import BuyerOrderManagementPage from "./pages/BuyerOrderManagementPage";
+
+// Section
+import PostJobPage from "./pages/PostJobPage";
+import ReviewJobPage from "./pages/ReviewJobPage";
+import JobResponsePage from "./pages/JobResponse";
+import JobList from "./pages/JobList";
+import JobDetail from "./pages/BuyerJobDetail";
+import Messaging from "./components/Messaging";
+import BecomeSeller from "./pages/BecomeSeller";
+import GuidelinePage from "./pages/Guideline";
+import MenuPage from "./pages/Menu";
 
 
 import Dashboar from "./pages/DashBoardPage";
@@ -43,6 +54,9 @@ import ManageDetails from "./components/ManageOrderComponents/ManageDetails";
 import ManageOrderDetails from "./components/ManageOrderComponents/OrderDetails";
 import ApplySuccess from "./pages/ApplySuccess/ApplySuccess";
 import SeProfileDashboardPage from "./pages/SeProfileDashboard";
+import SellerWithdrawPage from "./pages/SellerWithdraw";
+import WithdrawDetailsPage from "./pages/WithdrawdetailsPage";
+import WithdrawSuccessPage from "./pages/WithdrawSuccessPage/WithdrawSuccessPage";
 
 
 
@@ -81,6 +95,10 @@ function App() {
       {/* <ApplySuccess /> */}
       {/* <SeProfileDashboardPage /> */}
 
+      {/* <SellerWithdrawPage /> */}
+
+      {/* <WithdrawDetailsPage /> */}
+      <WithdrawSuccessPage />
 
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
       {/* <ManageOrder /> */}

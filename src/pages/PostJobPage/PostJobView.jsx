@@ -102,7 +102,7 @@ const PostJobView = () => {
                 <div className='grid grid-cols-1 gap-4'>
                     <div class="block mt-12">
                         <span class="block w-full text-[#00538F] text-2xl font-medium pl-3">Upload Documents</span>
-                        <label for="input-file" class="mt-6 flex flex-col justify-center w-full h-20 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                        <label htmlFor="input-file" class="mt-6 flex flex-col justify-center w-full h-20 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                             <div class="flex justify-between items-center mx-4">
                                 <p class=" text-sm text-gray-400 dark:text-gray-400">Upload File</p>
                                 <p class=" text-gray-400 dark:text-gray-400"><MdOutlineFileUpload size={'1.5em'}/></p>
@@ -118,7 +118,7 @@ const PostJobView = () => {
                         <span class="block w-full text-[#00538F] font-medium text-2xl pl-3">Select Payment Method</span>
                         <ul class="mt-6 lg:gap-0 items-center lg:flex-row flex-col justify-between gap-6 text-lg text-gray-900 bg-white border-gray-200 rounded-lg flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                             <li class="border w-full shadow rounded-full border-gray-200 dark:border-gray-600">
-                                <label for="horizontal-list-radio-card" class="flex items-center gap-6 justify-between hover:cursor-pointer">
+                                <label htmlFor="horizontal-list-radio-card" class="flex items-center gap-6 justify-between hover:cursor-pointer">
                                     <span  class="flex items-center gap-3 p-1 text-gray-900 dark:text-gray-300">
                                         <span className='bg-[#eab681] p-3 rounded-full'><FaCreditCard className='text-[#DD730A]' size={'2em'}/></span>
                                         Credit or Debit Card 
@@ -127,7 +127,7 @@ const PostJobView = () => {
                                 </label>
                             </li>
                             <li class="border w-full shadow rounded-full border-gray-200 dark:border-gray-600">
-                                <label for="horizontal-list-radio-paypal" class="flex items-center gap-6 justify-between hover:cursor-pointer">
+                                <label htmlFor="horizontal-list-radio-paypal" class="flex items-center gap-6 justify-between hover:cursor-pointer">
                                     <span  class="flex items-center gap-3 p-1 text-gray-900 dark:text-gray-300">
                                         <span className='bg-[#a3ceff] p-3 rounded-full'><BsPaypal className='text-[#1e2a6b]' size={'2em'}/></span>
                                         Paypal 
@@ -136,7 +136,7 @@ const PostJobView = () => {
                                 </label>
                             </li>
                             <li class="border w-full shadow rounded-full border-gray-200 dark:border-gray-600">
-                                <label for="horizontal-list-razorpay" class="flex items-center gap-6 justify-between hover:cursor-pointer">
+                                <label htmlFor="horizontal-list-razorpay" class="flex items-center gap-6 justify-between hover:cursor-pointer">
                                     <span  class="flex items-center gap-3 p-1 text-gray-900 dark:text-gray-300">
                                         <span className='bg-[#a3ceff] p-3 rounded-full'><BsPaypal className='text-[#1e2a6b]' size={'2em'}/></span>
                                         Razorpay 
@@ -154,7 +154,7 @@ const PostJobView = () => {
                                     <input id="helper-checkbox" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-8 h-8 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
                                 </div>
                                 <div class="ml-5 text-sm">
-                                    <label for="helper-checkbox" class=" text-2xl text-gray-400 dark:text-gray-300">5% Advance Payment for security and safety. I've accepted this term & condition</label>
+                                    <label htmlFor="helper-checkbox" class=" text-2xl text-gray-400 dark:text-gray-300">5% Advance Payment for security and safety. I've accepted this term & condition</label>
                                 </div>
                             </div>
 
