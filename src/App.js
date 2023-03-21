@@ -44,6 +44,7 @@ import ManageOrderDetails from "./components/ManageOrderComponents/OrderDetails"
 import ApplySuccess from "./pages/ApplySuccess/ApplySuccess";
 import SeProfileDashboardPage from "./pages/SeProfileDashboard";
 import SellerWithdrawPage from "./pages/SellerWithdraw";
+import WithdrawDetailsPage from "./pages/WithdrawdetailsPage";
 
 
 
@@ -82,7 +83,9 @@ function App() {
       {/* <ApplySuccess /> */}
       {/* <SeProfileDashboardPage /> */}
 
-      <SellerWithdrawPage />
+      {/* <SellerWithdrawPage /> */}
+
+      <WithdrawDetailsPage />
 
 
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
