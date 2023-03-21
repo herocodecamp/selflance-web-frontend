@@ -23,7 +23,7 @@ const WithdrawSuccessPage = () => {
         </div>
 
         <div className='pt-6 sm:w-[400px] mx-auto space-y-4 sm:space-y-6'>
-          <h3 className='font-bold text-xl text-center text-[#121F3E] lg:text-2xl'>Withdrawal Complete!</h3>
+          <h3 className='font-bold text-xl text-center text-[#121F3E] lg:text-2xl'>Withdraw Complete!</h3>
           <p className='text-[#8E8E8E] text-center'>You will be notified further for this job
             <span className='text-[#121F3E] ml-2'>Thankyou!</span> </p>
         
