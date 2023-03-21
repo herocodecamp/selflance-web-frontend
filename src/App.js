@@ -25,6 +25,17 @@ import OrderProcessingPage from "./pages/OrderProcessingPage/OrderProcessingPage
 import CustomerSupportPage from "./pages/CustomerSupportPage";
 import BuyerOrderManagementPage from "./pages/BuyerOrderManagementPage";
 
+// Section
+import PostJobPage from "./pages/PostJobPage";
+import ReviewJobPage from "./pages/ReviewJobPage";
+import JobResponsePage from "./pages/JobResponse";
+import JobList from "./pages/JobList";
+import JobDetail from "./pages/BuyerJobDetail";
+import Messaging from "./components/Messaging";
+import BecomeSeller from "./pages/BecomeSeller";
+import GuidelinePage from "./pages/Guideline";
+import MenuPage from "./pages/Menu";
+
 
 import Dashboar from "./pages/DashBoardPage";
 
