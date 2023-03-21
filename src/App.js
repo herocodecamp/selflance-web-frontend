@@ -29,8 +29,8 @@ import BuyerOrderManagementPage from "./pages/BuyerOrderManagementPage";
 import Dashboar from "./pages/DashBoardPage";
 
 import OrderProcess from "./pages/orderRequirements/OrderProcess";
-import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
-import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
+// import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
+// import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
 import Congratulations from "./pages/orderRequirements/Congratulations";
 import SeDashboard from "./pages/SellerDashboard";
 import SellerSearchPage from "./pages/SellerSearchPage";
@@ -51,9 +51,9 @@ function App() {
     <>
       <Navbar />
 
-      <OrderPage/>
+      {/* <OrderPage/> */}
       {/* <AddNewCardPage/> */}
-      {/* <OrderProcessingPage/> */}
+      <OrderProcessingPage/>
       {/* <CustomerSupportPage/> */}
       {/* <BuyerOrderManagementPage/> */}
 
@@ -79,7 +79,7 @@ function App() {
       {/* <SeDashboard /> */}
       {/* <SellerSearchPage /> */}
       {/* <ApplySuccess /> */}
-      <SeProfileDashboardPage />
+      {/* <SeProfileDashboardPage /> */}
 
 
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
@@ -94,6 +94,7 @@ function App() {
       {/* <Blogs /> */}
       {/* <SellerProfile /> */}
       {/* <SingleBlog /> */}
+
 
       {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
 
