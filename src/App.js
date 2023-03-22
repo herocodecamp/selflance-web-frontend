@@ -25,12 +25,23 @@ import OrderProcessingPage from "./pages/OrderProcessingPage/OrderProcessingPage
 import CustomerSupportPage from "./pages/CustomerSupportPage";
 import BuyerOrderManagementPage from "./pages/BuyerOrderManagementPage";
 
+// Section
+import PostJobPage from "./pages/PostJobPage";
+import ReviewJobPage from "./pages/ReviewJobPage";
+import JobResponsePage from "./pages/JobResponse";
+import JobList from "./pages/JobList";
+import JobDetail from "./pages/BuyerJobDetail";
+import Messaging from "./components/Messaging";
+import BecomeSeller from "./pages/BecomeSeller";
+import GuidelinePage from "./pages/Guideline";
+import MenuPage from "./pages/Menu";
+
 
 import Dashboar from "./pages/DashBoardPage";
 
 import OrderProcess from "./pages/orderRequirements/OrderProcess";
-import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
-import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
+// import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
+// import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
 import Congratulations from "./pages/orderRequirements/Congratulations";
 import SeDashboard from "./pages/SellerDashboard";
 import SellerSearchPage from "./pages/SellerSearchPage";
@@ -57,7 +68,7 @@ function App() {
 
       {/* <OrderPage/> */}
       {/* <AddNewCardPage/> */}
-      {/* <OrderProcessingPage/> */}
+      <OrderProcessingPage/>
       {/* <CustomerSupportPage/> */}
       {/* <BuyerOrderManagementPage/> */}
 
@@ -103,6 +114,7 @@ function App() {
       {/* <Blogs /> */}
       {/* <SellerProfile /> */}
       {/* <SingleBlog /> */}
+
 
       {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
 
