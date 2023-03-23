@@ -10,7 +10,7 @@ const SeSelectService = () => {
   }
 
   const handleSelectStyle = (option) => {
-    let classes = ' rounded-md w-1/2  whitespace-nowrap	text-sm sm:text-xl px-2 sm:px-6 py-2 text-center  '
+    let classes = ' rounded-md w-1/2 hover:cursor-pointer  whitespace-nowrap	text-sm sm:text-xl px-2 sm:px-6 py-2 text-center  '
     if (selectBtn === option) {
       classes += ' text-white bg-[#00538F] '
     } else {
