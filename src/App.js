@@ -40,8 +40,8 @@ import MenuPage from "./pages/Menu";
 import Dashboar from "./pages/DashBoardPage";
 
 import OrderProcess from "./pages/orderRequirements/OrderProcess";
-// import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
-// import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
+import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
+import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
 import Congratulations from "./pages/orderRequirements/Congratulations";
 import SeDashboard from "./pages/SellerDashboard";
 import SellerSearchPage from "./pages/SellerSearchPage";
@@ -62,6 +62,8 @@ import AgreementPage from "./pages/AgreementPage";
 import UploadDeliveryPage from "./pages/UploadDelivery";
 import SeWriteReview from "./pages/SeWriteReview/SeWriteReview";
 
+import LoginPageView from "./pages/LoginPage";
+
 
 
 function App() {
@@ -74,6 +76,8 @@ function App() {
       {/* <OrderProcessingPage/> */}
       {/* <CustomerSupportPage/> */}
       {/* <BuyerOrderManagementPage/> */}
+      {/* <LoginPageView/> */}
+
 
       {/* <Dashboard /> */}
 
@@ -103,10 +107,13 @@ function App() {
 
       {/* <WithdrawDetailsPage /> */}
       {/* <WithdrawSuccessPage /> */}
+
       {/* <SeCreateOfferPage /> */}
       {/* <AgreementPage /> */}
       {/* <UploadDeliveryPage /> */}
       <SeWriteReview />
+
+{/* >>>>>>> 0221b61b7196386fbd3f592f7231f95a6da6a467 */}
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
       {/* <ManageOrder /> */}
       {/* >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7 */}
