@@ -57,6 +57,7 @@ import SeProfileDashboardPage from "./pages/SeProfileDashboard";
 import SellerWithdrawPage from "./pages/SellerWithdraw";
 import WithdrawDetailsPage from "./pages/WithdrawdetailsPage";
 import WithdrawSuccessPage from "./pages/WithdrawSuccessPage/WithdrawSuccessPage";
+import LoginPageView from "./pages/LoginPage";
 
 
 
@@ -67,9 +68,11 @@ function App() {
 
       {/* <OrderPage/> */}
       {/* <AddNewCardPage/> */}
-      <OrderProcessingPage/>
+      {/* <OrderProcessingPage/> */}
       {/* <CustomerSupportPage/> */}
       {/* <BuyerOrderManagementPage/> */}
+      <LoginPageView/>
+
 
       {/* <Dashboard /> */}
 
@@ -98,7 +101,7 @@ function App() {
       {/* <SellerWithdrawPage /> */}
 
       {/* <WithdrawDetailsPage /> */}
-      <WithdrawSuccessPage />
+      {/* <WithdrawSuccessPage /> */}
 
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
       {/* <ManageOrder /> */}
