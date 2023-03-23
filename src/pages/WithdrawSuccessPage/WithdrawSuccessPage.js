@@ -17,7 +17,7 @@ const WithdrawSuccessPage = () => {
           <span><BsThreeDotsVertical className='text-[#121F3E]  text-2xl' /></span>
         </div>
       </div>
-      <div className='py-12 space-y-6 w-11/12 sm:w-1/2  mx-auto'>
+      <div className='py-12 space-y-6 w-11/12 sm:w-1/2 mx-auto'>
         <div>
           <img src={checkSuccess} className="w-[250px] mx-auto" alt="" />
         </div>
