@@ -58,6 +58,7 @@ import SellerWithdrawPage from "./pages/SellerWithdraw";
 import WithdrawDetailsPage from "./pages/WithdrawdetailsPage";
 import WithdrawSuccessPage from "./pages/WithdrawSuccessPage/WithdrawSuccessPage";
 import SeCreateOfferPage from "./pages/SellerCreateAnOferr";
+import AgreementPage from "./pages/AgreementPage";
 
 
 
@@ -100,7 +101,8 @@ function App() {
 
       {/* <WithdrawDetailsPage /> */}
       {/* <WithdrawSuccessPage /> */}
-      <SeCreateOfferPage />
+      {/* <SeCreateOfferPage /> */}
+      <AgreementPage />
 
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
       {/* <ManageOrder /> */}
