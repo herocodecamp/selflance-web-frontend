@@ -1,7 +1,4 @@
 import React from "react";
-import HistoryBackButton from "../../components/HistoryBackButton";
-import bgImage from "../../Assets/gig_image_full.png";
-import Image from "../../Assets/processing_bg.png";
 import bg from "../../Assets/Order-processing-bg.png";
 
 
