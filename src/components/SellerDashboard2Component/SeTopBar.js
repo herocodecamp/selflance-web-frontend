@@ -74,7 +74,7 @@ const SeTopBar = () => {
 
       <div className='space-y-4 mt-6 '>
         <h2 className='text-xl text-[#15151E] font-bold'>Descriptions</h2>
-        <p className='text-[#7A7A7A] leading-8'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing...There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
+        <p className='text-[#7A7A7A] sm:leading-8 leading-10'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing...There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
       </div>
       <div className='space-y-4 mt-6'>
         <h2 className='text-xl text-[#15151E] font-bold'>Descriptions</h2>

@@ -97,7 +97,7 @@ function App() {
       {/* <Dashboar /> */}
       {/* <SellerApplyPage /> */}
 
-      {/* <SeDashboardPage2 /> */}
+      <SeDashboardPage2 />
       {/* <SeDashboard /> */}
       {/* <SellerSearchPage /> */}
       {/* <ApplySuccess /> */}
@@ -112,7 +112,8 @@ function App() {
       {/* <AgreementPage /> */}
       {/* <UploadDeliveryPage /> */}
       {/* <SeWriteReview /> */}
-      <SellerWithdrawPage />
+      {/* <SellerWithdrawPage /> */}
+
 
 {/* >>>>>>> 0221b61b7196386fbd3f592f7231f95a6da6a467 */}
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
