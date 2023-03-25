@@ -39,9 +39,9 @@ import MenuPage from "./pages/Menu";
 
 import Dashboar from "./pages/DashBoardPage";
 
-import OrderProcess from "./pages/orderRequirements/OrderProcess";
-import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
-import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
+// import OrderProcess from "./pages/orderRequirements/OrderProcess";
+// import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
+// import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
 import Congratulations from "./pages/orderRequirements/Congratulations";
 import SeDashboard from "./pages/SellerDashboard";
 import SellerSearchPage from "./pages/SellerSearchPage";
@@ -58,6 +58,7 @@ import SellerWithdrawPage from "./pages/SellerWithdraw";
 import WithdrawDetailsPage from "./pages/WithdrawdetailsPage";
 import WithdrawSuccessPage from "./pages/WithdrawSuccessPage/WithdrawSuccessPage";
 import LoginPageView from "./pages/LoginPage";
+import ConfirmPage from "./pages/ConfirmPage";
 
 
 
@@ -71,8 +72,8 @@ function App() {
       {/* <OrderProcessingPage/> */}
       {/* <CustomerSupportPage/> */}
       {/* <BuyerOrderManagementPage/> */}
-      <LoginPageView/>
-
+      {/* <LoginPageView/> */}
+      <ConfirmPage/>
 
       {/* <Dashboard /> */}
 

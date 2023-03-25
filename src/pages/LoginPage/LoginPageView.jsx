@@ -3,6 +3,7 @@ import LoginImage from "../../Assets/login-img.png";
 import { BiShow } from "react-icons/bi";
 import { FaGoogle, FaFacebook, FaApple, FaGooglePlay } from "react-icons/fa";
 import CommonButton from "../../components/OrderPageComponents/CommonButton";
+import Footer from "../../components/Footer/Footer";
 
 
 const LoginPageView = () => {
@@ -77,6 +78,7 @@ const LoginPageView = () => {
                </div>
             </div>
          </div>
+         <Footer/>
       </>
    )
 }
