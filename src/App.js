@@ -57,6 +57,11 @@ import SeProfileDashboardPage from "./pages/SeProfileDashboard";
 import SellerWithdrawPage from "./pages/SellerWithdraw";
 import WithdrawDetailsPage from "./pages/WithdrawdetailsPage";
 import WithdrawSuccessPage from "./pages/WithdrawSuccessPage/WithdrawSuccessPage";
+import SeCreateOfferPage from "./pages/SellerCreateAnOferr";
+import AgreementPage from "./pages/AgreementPage";
+import UploadDeliveryPage from "./pages/UploadDelivery";
+import SeWriteReview from "./pages/SeWriteReview/SeWriteReview";
+
 import LoginPageView from "./pages/LoginPage";
 import ConfirmPage from "./pages/ConfirmPage";
 
@@ -73,7 +78,7 @@ function App() {
       {/* <CustomerSupportPage/> */}
       {/* <BuyerOrderManagementPage/> */}
       {/* <LoginPageView/> */}
-      <ConfirmPage/>
+      {/* <ConfirmPage/> */}
 
       {/* <Dashboard /> */}
 
@@ -103,6 +108,15 @@ function App() {
 
       {/* <WithdrawDetailsPage /> */}
       {/* <WithdrawSuccessPage /> */}
+
+      {/* <SeCreateOfferPage /> */}
+      {/* <AgreementPage /> */}
+      {/* <UploadDeliveryPage /> */}
+      {/* <SeWriteReview /> */}
+      {/* <SellerWithdrawPage /> */}
+
+
+{/* >>>>>>> 0221b61b7196386fbd3f592f7231f95a6da6a467 */}
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
       {/* <ManageOrder /> */}
       {/* >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7 */}

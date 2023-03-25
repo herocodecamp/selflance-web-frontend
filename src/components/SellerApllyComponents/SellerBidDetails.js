@@ -17,27 +17,27 @@ const SellerBidDetails = () => {
   };
 
   return (
-    <div className='py-6'>
+    <div className='py-6 pt-6'>
       <div className='space-y-4 sm:space-y-8'>
         <h2 className='text-[#15151E] text-xl font-semibold'>Project Bid</h2>
 
-        <div className='bg-[#FFFFFF] drop-shadow-2xl p-4 space-y-3 rounded-2xl'>
+        <div className='bg-[#FFFFFF] drop-shadow-2xl p-6 space-y-3 rounded-2xl '>
           <div className='flex space-x-4  items-center'>
             <input type="radio" />
             <h3 className='text-[#121F3E]  text-base sm:text-xl'>By Project</h3>
           </div>
-          <p className='text-[#8E8E8E] font-sm pr-6'>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour...Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+          <p className='text-[#8E8E8E] font-sm pr-6 leading-7'>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour...Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
         </div>
 
         <div>
           <form>
             <div className="space-y-4">
 
-              <div className='sm:flex sm:items-center sm:justify-between space-y-4 sm:space-y-0 space-x-0 sm:space-x-2'>
+              <div className='sm:flex sm:items-center sm:justify-between space-y-4 sm:space-y-0 space-x-0 sm:space-x-2 mt-4'>
                 <div className='space-y-3'>
                   <label className='block text-base lg:text-xl text-[#121F3E]'>Your Bid</label>
                   <input
-                    className='text-[#8E8E8E] border-2 border-[#E3E3E3] px-4 py-2 pr-8 rounded w-11/12 sm:w-[300px] lg:w-[400px] shadow leading-tight'
+                    className='text-[#8E8E8E] border-2 border-[#E3E3E3] px-4 py-4 pr-8 rounded w-11/12 sm:w-[300px] lg:w-[400px] shadow leading-tight'
                     type="text" name="bid"
                     placeholder='$ 90.00'
                   />
@@ -47,7 +47,7 @@ const SellerBidDetails = () => {
                   <div className="relative space-y-3 w-11/12 sm:w-[300px] lg:w-[400px]">
                     <label className='text-[#121F3E] lg:text-sl text-base'>Duration</label>
                     <select
-                      className="block appearance-none w-full bg-white border-2 border-[#E3E3E3]   px-4 py-2 pr-8 rounded shadow leading-tight "
+                      className="block appearance-none w-full bg-white border-2 border-[#E3E3E3]   px-4 py-4 pr-8 rounded shadow leading-tight "
                       value={selectedOption}
                       onChange={handleChange}
                     >
@@ -79,7 +79,7 @@ const SellerBidDetails = () => {
                     <div className='space-y-3'>
                       <label className='block text-base lg:text-xl text-[#121F3E]'>Time</label>
                       <input
-                        className='text-[#8E8E8E] border-2 border-[#E3E3E3] px-4 py-2 pr-8 w-11/12 sm:w-[300px] lg:w-[400px]  rounded shadow leading-tight'
+                        className='text-[#8E8E8E] border-2 border-[#E3E3E3] px-4 py-4 pr-8 w-11/12 sm:w-[300px] lg:w-[400px]  rounded shadow leading-tight'
                         type="text" name="time"
                         placeholder='9:00 pm'
                       />
@@ -89,7 +89,7 @@ const SellerBidDetails = () => {
                   <div className='space-y-3'>
                     <label className='block text-base lg:text-xl text-[#121F3E]'>Date</label>
                     <input
-                      className='text-[#8E8E8E] border-2 border-[#E3E3E3] px-4 py-2 pr-8 rounded w-11/12 sm:w-[300px] lg:w-[400px]  shadow leading-tight'
+                      className='text-[#8E8E8E] border-2 border-[#E3E3E3] px-4 py-4 pr-8 rounded w-11/12 sm:w-[300px] lg:w-[400px]  shadow leading-tight'
                       type="text" name="date"
                       placeholder='22 Mar 2023'
                     />
@@ -108,7 +108,7 @@ const SellerBidDetails = () => {
                 <h4 className='text-[#15151E] text-xl font-bold'>Add files <span className='text-[#8E8E8E]'>(Optional)</span></h4>
                 <h4 className='text-[#15151E] text-base font-bold'>Upload file,photo and document</h4>
 
-                <div class="relative w-11/12 sm:w-full resize-none text-[#8E8E8E] border-2 border-[#E3E3E3] px-4 py-2 pr-8 rounded  shadow leading-tight ">
+                <div class="relative w-11/12 sm:w-full resize-none text-[#8E8E8E] border-2 border-[#E3E3E3] px-4 py-4 pr-8 rounded  shadow leading-tight ">
                   <input
                     type="file"
 
