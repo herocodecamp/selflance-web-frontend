@@ -9,10 +9,6 @@ import {FaAngleUp, FaAngleDown} from 'react-icons/fa';
 import {BiDownload} from 'react-icons/bi';
 
 
-
-const order_screen_nav =['Timeline', 'Chat']
-const chat = "Chat will live here";
-
 const order_status_button_value = ['In Progress', 'Completed','In Revision', 'Pending','Cancelled','Delivered'];
 
 const order_details = {
@@ -23,7 +19,7 @@ const order_details = {
     duration: '3 Days',
     amount: '$5.00',
     expectedDelivery: '25 Jun 2023',
-    orderStatus: [true,false,false,false,false,false],   
+    orderStatus: [false,false,false,false,false,true],   
     gig_buyed: {
         package: 'Basic',
         revisions: 'Unlimited',
@@ -117,6 +113,7 @@ const ManageOrderDetails =()=>{
     const [isFileOpen,setIsFileOpen]  = useState(false);
     const [isDeliveryOpen, setIsdeliveryOpen] = useState(false);
 
+
  useEffect(()=>{
     order_details.orderStatus.map((item,index)=>{
                                          
@@ -128,20 +125,21 @@ const ManageOrderDetails =()=>{
     console.log('Order Cancelled')
  }
 
- console.log(orderNavIndex);
+ console.log(orderNavIndex)
 
     return(
         <>
 
+
         <div className="mx-4 lg:mx-24 my-10">
-            <div className="grid grid-cols-6 flex-row">
+            <div className="grid grid-cols-6 flex-row mb-5">
                 <div className="col-start-1 col-span-2">
                             <div>
                                 {
-                                    order_status_button_value[orderNavIndex].includes('In Progress') ||  order_status_button_value[orderNavIndex].includes('In Revision') || order_details.gig_buyed.delivery.value ? 
+                                    order_status_button_value[orderNavIndex].includes('In Progress') ||  order_status_button_value[orderNavIndex].includes('In Revision') || order_status_button_value[orderNavIndex].includes('Delivered') ? 
                                                             (<div className="flex-col">
-                                                                <div>{order_details.buyer.name}</div>
-                                                                <div>Online</div>
+                                                                <div className="text-sm md:text-4xl font-normal md:font-semibold">{order_details.buyer.name}</div>
+                                                                <div className={`text-xs md:text-sm ${order_details.buyer.online ? `text-[#27AE60]`:`text-[#4F5350]`}`}>Online</div>
                                                                 </div>):'Order Details'
                                 }
                                
@@ -150,15 +148,15 @@ const ManageOrderDetails =()=>{
                 </div>
 
                 <div className="col-start-6 col-span-1 flex flex-row justify-end gap-5">
-                        <div><VscBellDot /></div>
-                        <div><BsThreeDotsVertical /></div>                
+                        <div className={`text-lg md:text-3xl ${order_details.buyer.notifications.length > 0? `text-[#00538F]`:`text-[#979797]`}`} ><VscBellDot /></div>
+                        <div className="text-lg md:text-3xl"><BsThreeDotsVertical /></div>                
                         
                 </div>
 
             </div>
-            
+            <hr></hr>
             <div className='flex items-center justify-between mb-1 lg:mb-4'>
-                <p className="text-[#5E5E5E] text-[10px] md:text-lg">
+                <p className=" text-[10px] md:text-2xl font-bold my-5">
                     {
                         (()=>{
 
@@ -174,7 +172,7 @@ const ManageOrderDetails =()=>{
                             {
                                 return(<div className="flex flex-col">
                                 <div>Order was Deliverd</div>
-                                <div>{order_details.gig_buyed.delivery.deliveryDate}</div>
+                                <div className="text-sm font-semibold text-[#5E5E5E]">{order_details.gig_buyed.delivery.deliveryDate}</div>
                                 </div>)
                             }
                             else
@@ -185,6 +183,7 @@ const ManageOrderDetails =()=>{
                        
                         
                     }
+                    
                     </p>
                     {
                        ( order_status_button_value[orderNavIndex].includes('In Progress') || (order_status_button_value[orderNavIndex].includes('In Revision'))) && (<p className='text-[8px] md:text-xl font-semibold sm:font-bold'>Day : <span className='text-[#D57635]'>03</span> : : Hours : <span className='text-[#00538F]'>24</span> : : Minutes : <span className=' text-[#00538F]'>30</span></p>)
@@ -209,12 +208,15 @@ const ManageOrderDetails =()=>{
                     </div>
                     
                     {
+                        
                         order_details.orderStatus.map((item,index)=>{
                             if(item)
                             {
+                                let color_arr= ['#D57635','#27AE60','#ff0e0e','#dde80f','#5f0707','#00538F']
                                 return(
-                                <button key={index} className='bg-[#27AE60] w-[60px] md:w-[100px] h-auto border border-[#27AE60]  py-1 rounded text-[5px] md:text-xs text-white '>{order_status_button_value[index]}</button>)
-
+                                <button key={index} className={`bg-[${color_arr[index]}] w-[60px] md:w-[100px] h-auto border border-[#1c1b1b]  py-1 rounded text-[5px] md:text-xs text-white `}>{order_status_button_value[index]}</button>)
+                                    
+                               
                             }
                         })
                     }
@@ -255,23 +257,23 @@ const ManageOrderDetails =()=>{
                             
                                 <div className="col-span-full">
 
-                                        <div className="flex flex-col md:flex-row flex-wrap items-top  justify-center gap-3 lg:gap-5 mx-5">
+                                        <div className="flex flex-col md:flex-row flex-wrap items-top mt-3 md:mt-6 justify-center gap-3 lg:gap-5 mx-5">
                                             <div className="border border-solid rounded-md p-4 shadow-md  text-left space-y-3 lg:my-10">
                                                 {/* Box #1 */}
-                                                <div className="text-lg  text-[#121F3E] font-semibold">Order Details</div>
+                                                <div className="text-sm md:text-lg  text-[#121F3E] font-semibold">Order Details</div>
                                                 {/* Item # 1 */}
                                                 <div className="grid grid-cols-7 gap-5">
 
                                                     <div className="col-start-1 col-span-2">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm text-start">Revisions</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm text-start">Revisions</h2>
                                                     </div>
 
                                                     <div className="col-start-4 col-span-1">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm">:</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm">:</h2>
                                                     </div>
 
                                                     <div className="col-start-5 col-span-3 text-end">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm">Unlimited</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm">Unlimited</h2>
                                                     </div>
 
                                                 </div>
@@ -280,17 +282,17 @@ const ManageOrderDetails =()=>{
                                                 <div className="grid grid-cols-7 gap-5">
 
                                                     <div className="col-start-1 col-span-2">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm text-start">Files</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm text-start">Files</h2>
                                                     </div>
 
                                                     <div className="col-start-4 col-span-1">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm">:</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm">:</h2>
                                                     </div>
 
                                                     <div className="col-start-5 col-span-3 text-end">
                                                         {
                                                             order_details.gig_buyed.files.map((item,index)=>{
-                                                            return( <h2 key={index} className="text-[#979797] opacity-80 text-sm">
+                                                            return( <h2 key={index} className="text-[#979797] opacity-80 text-xs md:text-sm">
                                                                         {item} ,
                                                                     </h2>)
                                                             })
@@ -303,15 +305,15 @@ const ManageOrderDetails =()=>{
                                                 <div className="grid grid-cols-7 gap-5">
 
                                                     <div className="col-start-1 col-span-2">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm text-start">Resolution</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm text-start">Resolution</h2>
                                                     </div>
 
                                                     <div className="col-start-4 col-span-1">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm">:</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm">:</h2>
                                                     </div>
 
                                                     <div className="col-start-5 col-span-3 text-end">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm">
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm">
                                                                         {order_details.gig_buyed.resolution}
                                                                     </h2>
                                                             
@@ -324,15 +326,15 @@ const ManageOrderDetails =()=>{
                                                 <div className="grid grid-cols-7 gap-5">
 
                                                     <div className="col-start-1 col-span-2">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm text-start">Package</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm text-start">Package</h2>
                                                     </div>
 
                                                     <div className="col-start-4 col-span-1">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm">:</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm">:</h2>
                                                     </div>
 
                                                     <div className="col-start-5 col-span-3 text-end">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm">
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm">
                                                                         {order_details.gig_buyed.package}
                                                                     </h2>
                                                             
@@ -346,20 +348,20 @@ const ManageOrderDetails =()=>{
                                             {/* Box 2 */}
                                             <div className="border border-solid rounded-md p-4 shadow-md  text-left space-y-3 mb-8 lg:my-10">
                                                 {/* Box #1 */}
-                                                <div className="text-lg  text-[#121F3E] font-semibold">Order Summary</div>
+                                                <div className="text-sm md:text-lg  text-[#121F3E] font-semibold">Order Summary</div>
                                                 {/* Item # 1 */}
                                                 <div className="grid grid-cols-7 gap-5">
 
                                                     <div className="col-start-1 col-span-2">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm text-start">Subtotal</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm text-start">Subtotal</h2>
                                                     </div>
 
                                                     <div className="col-start-4 col-span-1">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm">:</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm">:</h2>
                                                     </div>
 
                                                     <div className="col-start-5 col-span-3 text-end">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm">{order_details.summary.subtotal}</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm">{order_details.summary.subtotal}</h2>
                                                     </div>
 
                                                 </div>
@@ -368,15 +370,15 @@ const ManageOrderDetails =()=>{
                                                 <div className="grid grid-cols-7 gap-5">
 
                                                     <div className="col-start-1 col-span-2">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm text-start">Service</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm text-start">Service</h2>
                                                     </div>
 
                                                     <div className="col-start-4 col-span-1">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm">:</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm">:</h2>
                                                     </div>
 
                                                     <div className="col-start-5 col-span-3 text-end">
-                                                <h2  className="text-[#979797] opacity-80 text-sm">
+                                                <h2  className="text-[#979797] opacity-80 text-xs md:text-sm">
                                                                         {order_details.summary.service}
                                                                     </h2>
                                                     </div>
@@ -387,15 +389,15 @@ const ManageOrderDetails =()=>{
                                                 <div className="grid grid-cols-7 gap-5">
 
                                                     <div className="col-start-1 col-span-2">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm text-start">Total</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm text-start">Total</h2>
                                                     </div>
 
                                                     <div className="col-start-4 col-span-1">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm">:</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm">:</h2>
                                                     </div>
 
                                                     <div className="col-start-5 col-span-3 text-end">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm">
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm">
                                                                         $7.00
                                                                     </h2>
                                                             
@@ -408,15 +410,15 @@ const ManageOrderDetails =()=>{
                                                 <div className="grid grid-cols-7 gap-5">
 
                                                     <div className="col-start-1 col-span-2">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm text-start">Delivery Date</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm text-start">Delivery Date</h2>
                                                     </div>
 
                                                     <div className="col-start-4 col-span-1">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm">:</h2>
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm">:</h2>
                                                     </div>
 
                                                     <div className="col-start-5 col-span-3 text-end">
-                                                        <h2 className="text-[#979797] opacity-80 text-sm">
+                                                        <h2 className="text-[#979797] opacity-80 text-xs md:text-sm">
                                                                         {order_details.summary.delivery_date}
                                                                     </h2>
                                                             
@@ -436,17 +438,17 @@ const ManageOrderDetails =()=>{
                 {/* Delivered files and options */}
             {
                 order_status_button_value[orderNavIndex].includes('Completed') || (order_status_button_value[orderNavIndex].includes('Delivered')) || (order_status_button_value[orderNavIndex].includes('In Revision')) ? (
-                    <div>
-                    <div className="flex flex-col mt-2 lg:mt-4 rounded-md border border-solid p-2 lg:p-10 shadow-md">
-                            <div className="flex flex-row justify-between">
+                    <div className="space-y-8 md:space-y-12 mt-10">
+                    <div className="flex flex-col rounded-md border border-solid p-2 lg:p-6 shadow-md">
+                            <div className="flex flex-row justify-between text-base lg:text-lg font-semibold">
                                 <div>The Order was Delivered</div>
                                 <div><button onClick={()=>setIsdeliveryOpen(!isDeliveryOpen)}><FaAngleDown /></button> </div>
                             </div>
                      </div>
                 {
                     isDeliveryOpen && (
-                                        <div className="flex flex-col mt-2 lg:mt-4 rounded-md border border-solid p-2 lg:p-10 shadow-md">
-                                        <div className="flex flex-row justify-between">
+                                        <div className="flex flex-col mt-2 lg:mt-4 rounded-md border border-solid p-2 lg:p-6 shadow-md">
+                                        <div className="flex flex-row justify-between text-base lg:text-lg font-semibold">
                                             <div>Here is the Work of the Seller</div>
                                             <div> <button onClick={()=>setIsFileOpen(!isFileOpen)}><FaAngleUp /></button> </div>
                                         </div>
@@ -461,20 +463,20 @@ const ManageOrderDetails =()=>{
                                 
                                 isFileOpen && (
                                 <div>
-                                    <div>Delivery File From the Seller</div>
-                            <div className="flex flex-col mt-2 lg:mt-4 rounded-md border border-solid p-2 lg:p-10 shadow-md">
+                                    <div className="text-lg lg:text-3xl font-semibold">Delivery File From the Seller</div>
+                            <div className="flex flex-col mt-2 lg:mt-4 rounded-md border border-solid p-2 lg:p-6 shadow-md">
                             <div className="flex flex-row items-center justify-between">
-                                <div className=""><BsFillFileEarmarkTextFill/></div>
+                                <div className="text-lg lg:text-3xl text-[#00538F]"><BsFillFileEarmarkTextFill/></div>
                             
                                 <div className="flex flex-col">
-                                    <div>Here is Seller work file</div>
-                                    <div><a href="/#">Figma file 23564 25452...</a></div>
+                                    <div className="text-base lg:text-xl font-semibold">Here is Seller work file</div>
+                                    <div><a href="/#" className="text-xs md:text-sm text-[#8E8E8E] underline">Figma file 23564 25452...</a></div>
                                 </div>
-                                <div className=""><a href="/#"><BiDownload/></a></div>
+                                <div className="text-[#8E8E8E] text-lg lg:text-3xl"><a href="/#"><BiDownload/></a></div>
                             </div>
                         
                             </div>
-                            <div>Image File</div>
+                            <div className="my-4 md:my-8 text-base md:text-xl font-semibold ">Image File</div>
                             <div className="object-left"><img src={order_details.gig_buyed.delivery.deliveryFiles} alt="" className="inline w-[350px] h-auto" /></div>
                                 </div>
                 )
@@ -496,12 +498,12 @@ const ManageOrderDetails =()=>{
 
             <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 my-10">
                 {
-                    order_status_button_value[orderNavIndex].includes('In Progress') || (order_status_button_value[orderNavIndex].includes('Pending')) || order_details.gig_buyed.delivery.value ? (<button type="button" onClick={()=>setShowModal(true)} className="text-[#FF3B30] bg-white md:w-[180px] h-auto font-medium border border-[#FF3B30] rounded-md text-sm px-5 py-2.5 text-center mr-2 mb-2">Cancel</button>):null
+                    order_status_button_value[orderNavIndex].includes('In Progress') || (order_status_button_value[orderNavIndex].includes('Pending')) || order_status_button_value[orderNavIndex].includes('Delivered') || order_status_button_value[orderNavIndex].includes('In Revision') ? (<button type="button" onClick={()=>setShowModal(true)} className="text-[#FF3B30] bg-white md:w-[180px] h-auto font-medium border border-[#FF3B30] rounded-md text-sm px-5 py-2.5 text-center mr-2 mb-2">Cancel</button>):null
 
                 }
                 {
                     
-                    order_details.gig_buyed.delivery.value && (<button type="button" className="text-white md:w-[180px] h-auto bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-md text-sm px-5 py-2.5 text-center mr-2 mb-2">Review</button>)
+                    order_status_button_value[orderNavIndex].includes('Delivered') && (<button type="button" className="text-white md:w-[180px] h-auto bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-md text-sm px-5 py-2.5 text-center mr-2 mb-2">Review</button>)
                 }
                 {
                     order_status_button_value[orderNavIndex].includes('Completed') && (<button type="button" className="text-white md:w-[180px] h-auto bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-md text-sm px-5 py-2.5 text-center mr-2 mb-2">Re Order</button>)
@@ -521,6 +523,9 @@ const ManageOrderDetails =()=>{
 
 
         </div>
+
+
+
         <div className="m-auto">
          <Modal
                 show={showModal}

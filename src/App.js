@@ -71,7 +71,8 @@ function App() {
       {/* <SeDashboard /> */}
       {/* <SellerSearchPage /> */}
 
-<ManageOrderDetails />
+{/* <ManageOrderDetails /> */}
+ <OrderScreen />
 
 
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
