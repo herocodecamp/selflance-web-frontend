@@ -35,6 +35,12 @@ import Messaging from "./components/Messaging";
 import BecomeSeller from "./pages/BecomeSeller";
 import GuidelinePage from "./pages/Guideline";
 import MenuPage from "./pages/Menu";
+import SupportPage from "./pages/Support";
+import WorkplacePage from "./pages/Workplace";
+import VerificationPage from "./pages/Verification";
+
+
+
 
 
 import Dashboar from "./pages/DashBoardPage";
@@ -60,6 +66,7 @@ import WithdrawSuccessPage from "./pages/WithdrawSuccessPage/WithdrawSuccessPage
 import SeCreateOfferPage from "./pages/SellerCreateAnOferr";
 import AgreementPage from "./pages/AgreementPage";
 import UploadDeliveryPage from "./pages/UploadDelivery";
+
 
 
 
@@ -104,7 +111,7 @@ function App() {
       {/* <WithdrawSuccessPage /> */}
       {/* <SeCreateOfferPage /> */}
       {/* <AgreementPage /> */}
-      <UploadDeliveryPage />
+      <VerificationPage />
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
       {/* <ManageOrder /> */}
       {/* >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7 */}
