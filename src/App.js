@@ -39,9 +39,9 @@ import MenuPage from "./pages/Menu";
 
 import Dashboar from "./pages/DashBoardPage";
 
-import OrderProcess from "./pages/orderRequirements/OrderProcess";
-import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
-import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
+// import OrderProcess from "./pages/orderRequirements/OrderProcess";
+// import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
+// import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
 import Congratulations from "./pages/orderRequirements/Congratulations";
 import SeDashboard from "./pages/SellerDashboard";
 import SellerSearchPage from "./pages/SellerSearchPage";
@@ -63,6 +63,7 @@ import UploadDeliveryPage from "./pages/UploadDelivery";
 import SeWriteReview from "./pages/SeWriteReview/SeWriteReview";
 
 import LoginPageView from "./pages/LoginPage";
+import ConfirmPage from "./pages/ConfirmPage";
 
 
 
@@ -77,7 +78,7 @@ function App() {
       {/* <CustomerSupportPage/> */}
       {/* <BuyerOrderManagementPage/> */}
       {/* <LoginPageView/> */}
-
+      {/* <ConfirmPage/> */}
 
       {/* <Dashboard /> */}
 
@@ -98,6 +99,8 @@ function App() {
       {/* <SellerApplyPage /> */}
 
       {/* <SeDashboardPage2 /> */}
+
+
 
       {/* <SeDashboard /> */}
       {/* <SellerSearchPage /> */}
