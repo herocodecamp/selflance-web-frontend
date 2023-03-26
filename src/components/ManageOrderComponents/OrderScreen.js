@@ -6,38 +6,6 @@ import ManageOrderDetails from "./OrderDetails";
 // will get the props of the order_details
 const order_screen_nav =['Timeline', 'Chat']
 const chat = "Chat will live here";
-const order_details = {
-    order_id: '#F025E15',
-    title: 'I will create responsive design for your mobile app',
-    details: 'Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at. Sit imper. Lorem ipsum dolor sit amet consectetur. Orci orci vel ulla mcorper suspendisse eu sed at.',
-    // gig_image: gigImageFUll,
-    duration: '3 Days',
-    amount: '$5.00',
-    orderStatus: [true,false,false,false,false],   
-    gig_buyed: {
-        package: 'Basic',
-        revisions: 'Unlimited',
-        files: ['Source file', 'JPG','PNG','ZIP'],
-        resolution: 'High Resolution',
-        seller:{
-            _id:'0',
-            // image: profile1,
-            name: 'Ahmed'
-        },
-        deliveryFiles : [],
-        deliveryDate: '24 Jun 2023'
-    },
-    buyer:{
-        name: 'Shaid ul Islam',
-        online: true,
-        notifications: []
-    },
-    summary: {
-        subtotal: '$5.00',
-        service: '$2.00',
-        delivery_date: 'Thursday, 24 Jun 2023'
-    }
-}
 
 const OrderScreen=()=>{
 
