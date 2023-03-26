@@ -1,3 +1,3 @@
-import OrderPage from './OrderPage';
+import OrderPageView from './OrderPageView';
 
-export default OrderPage;
+export default OrderPageView;

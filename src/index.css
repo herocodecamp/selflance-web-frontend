@@ -23,7 +23,15 @@
   @apply text-blue-500
   bg-white
   transform 
-  -translate-y-20
+  -translate-y-5
   -translate-x-2
   scale-75;
+}
+
+#select select{
+  background-color: #FFFFFF;
+  color: #979797;
+}
+#select #base{
+  background-color: #FFFFFF;
 }

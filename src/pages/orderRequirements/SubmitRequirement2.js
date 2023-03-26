@@ -56,6 +56,7 @@ const SubmitRequirement2 = () => {
 
         </div>
       </div>
+
       <div className='sm:p-12 p-4'>
         {selectedFile && (
           <div className='flex items-center space-x-6'>
@@ -72,6 +73,7 @@ const SubmitRequirement2 = () => {
           </div>
         )}
       </div>
+      
       <div className='text-center'>
         <button
           disabled={!selectedFile}

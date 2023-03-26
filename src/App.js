@@ -18,18 +18,30 @@ import PrivacyandTerms from "./common/Privacy&Terms/PrivacyandTerms";
 import ManageOrder from "./pages/ManageOrderPage";
 import SearchPage from "./pages/SearcePage";
 import PremiumSellerPage from "./pages/PremiumSellerPage";
-
 import Dashboard from "./pages/DashBoardPage";
 import OrderPage from "./pages/OrderPage";
-import AddNewCard from "./pages/OrderPage/AddNewCard";
-import OrderProcessing from "./pages/OrderPage/OrderProcessing";
+import AddNewCardPage from "./pages/AddNewCardPage";
+import OrderProcessingPage from "./pages/OrderProcessingPage/OrderProcessingPage";
+import CustomerSupportPage from "./pages/CustomerSupportPage";
+import BuyerOrderManagementPage from "./pages/BuyerOrderManagementPage";
+
+// Section
+import PostJobPage from "./pages/PostJobPage";
+import ReviewJobPage from "./pages/ReviewJobPage";
+import JobResponsePage from "./pages/JobResponse";
+import JobList from "./pages/JobList";
+import JobDetail from "./pages/BuyerJobDetail";
+import Messaging from "./components/Messaging";
+import BecomeSeller from "./pages/BecomeSeller";
+import GuidelinePage from "./pages/Guideline";
+import MenuPage from "./pages/Menu";
 
 
 import Dashboar from "./pages/DashBoardPage";
 
-import OrderProcess from "./pages/orderRequirements/OrderProcess";
-import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
-import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
+// import OrderProcess from "./pages/orderRequirements/OrderProcess";
+// import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
+// import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
 import Congratulations from "./pages/orderRequirements/Congratulations";
 import SeDashboard from "./pages/SellerDashboard";
 import SellerSearchPage from "./pages/SellerSearchPage";
@@ -40,8 +52,20 @@ import OrderScreen from "./components/ManageOrderComponents/OrderScreen";
 import SellerApplyPage from "./pages/SellerApplyPage";
 import ManageDetails from "./components/ManageOrderComponents/ManageDetails";
 import ManageOrderDetails from "./components/ManageOrderComponents/OrderDetails";
-// >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57
-// >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7
+import ApplySuccess from "./pages/ApplySuccess/ApplySuccess";
+import SeProfileDashboardPage from "./pages/SeProfileDashboard";
+import SellerWithdrawPage from "./pages/SellerWithdraw";
+import WithdrawDetailsPage from "./pages/WithdrawdetailsPage";
+import WithdrawSuccessPage from "./pages/WithdrawSuccessPage/WithdrawSuccessPage";
+import SeCreateOfferPage from "./pages/SellerCreateAnOferr";
+import AgreementPage from "./pages/AgreementPage";
+import UploadDeliveryPage from "./pages/UploadDelivery";
+import SeWriteReview from "./pages/SeWriteReview/SeWriteReview";
+
+import LoginPageView from "./pages/LoginPage";
+import ConfirmPage from "./pages/ConfirmPage";
+
+
 
 function App() {
   return (
@@ -49,8 +73,12 @@ function App() {
       <Navbar />
 
       {/* <OrderPage/> */}
-      {/* <AddNewCard/> */}
-      {/* <OrderProcessing/> */}
+      {/* <AddNewCardPage/> */}
+      {/* <OrderProcessingPage/> */}
+      {/* <CustomerSupportPage/> */}
+      {/* <BuyerOrderManagementPage/> */}
+      {/* <LoginPageView/> */}
+      {/* <ConfirmPage/> */}
 
       {/* <Dashboard /> */}
 
@@ -65,30 +93,49 @@ function App() {
       {/* <ManageOrderDetails /> */}
 
       {/* {/* <ServiceDetails /> */}
+      {/* <ManageOrderDetails /> */}
 
       {/* <Dashboar /> */}
+      {/* <SellerApplyPage /> */}
+
       {/* <SeDashboardPage2 /> */}
+
+
+
       {/* <SeDashboard /> */}
       {/* <SellerSearchPage /> */}
+      {/* <ApplySuccess /> */}
+      {/* <SeProfileDashboardPage /> */}
 
-{/* <ManageOrderDetails /> */}
- <OrderScreen />
+      {/* <SellerWithdrawPage /> */}
+
+      {/* <WithdrawDetailsPage /> */}
+      {/* <WithdrawSuccessPage /> */}
+
+      <SeCreateOfferPage />
+      {/* <AgreementPage /> */}
+      {/* <UploadDeliveryPage /> */}
+      {/* <SeWriteReview /> */}
+      {/* <SellerWithdrawPage /> */}
 
 
+{/* >>>>>>> 0221b61b7196386fbd3f592f7231f95a6da6a467 */}
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
       {/* <ManageOrder /> */}
       {/* >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7 */}
+
       {/* <PremiumSellerPage /> */}
       {/* <Header /> */}
       {/* <AboutFee /> */}
       {/* <LandingPage /> */}
       {/* <SearchPage /> */}
       {/* <Blogs /> */}
-      {/* {/* <SellerProfile /> */}
+      {/* <SellerProfile /> */}
       {/* <SingleBlog /> */}
 
+
       {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
-      
+
     </>
   );
 }
