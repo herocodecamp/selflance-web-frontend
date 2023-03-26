@@ -29,7 +29,7 @@ const SeCreateOfferForm = () => {
           <label className='text-[#00538F] text-xl sm:text-2xl font-semibold'>Your Offer</label>
           <br />
           <textarea
-            className='resize-none text-[#979797] w-full rounded-md drop-shadow-md border-1 border-[#E3E3E3] px-6 py-4 focus:ring-0'
+            className='resize-none text-[#0000000] placeholder-text-[#979797] w-full rounded-md drop-shadow-md border-1 border-[#E3E3E3] px-6 py-4 focus:ring-0'
             placeholder='Describe your offer here.....e.g. deliverables, timelines, and more'
             name="description" cols="30" rows="10"></textarea>
         </div>
@@ -38,12 +38,12 @@ const SeCreateOfferForm = () => {
 
           <div id="select" className='sm:col-span-1'>
             <div className="mb-2 block">
-              <label className='text-[#00538F] text-xl sm:text-2xl font-semibold'>Delivery Time</label>
+              <label className='text-[#00538F] text-xl sm:text-2xl font-semibold bg-blue-400'>Delivery Time</label>
             </div>
             <Select
               required={true}
               name="delivery_time"
-              className='border border-[#E3E3E3] rounded-md'
+              className=' rounded-md'
             >
               <option>
                 2 days
@@ -67,7 +67,7 @@ const SeCreateOfferForm = () => {
             <Select
               required={true}
               name="revision"
-              className='border border-[#E3E3E3] rounded-md'
+              className=' rounded-md'
             >
               <option>
                 unlimited
@@ -86,7 +86,7 @@ const SeCreateOfferForm = () => {
 
           <div id="select" className='sm:col-span-1'>
             <div className="mb-2 block">
-              <label className='text-[#00538F] text-xl sm:text-2xl font-semibold'>Total price</label>
+              <label className='text-[#979797] text-xl sm:text-2xl font-semibold'>Total price</label>
             </div>
             <TextInput
               id="base"
@@ -104,7 +104,7 @@ const SeCreateOfferForm = () => {
             <Select
               required={true}
               name="additional"
-              className='border border-[#E3E3E3] rounded-md'
+              className=' rounded-md'
             >
               <option>
                 service option
@@ -127,8 +127,8 @@ const SeCreateOfferForm = () => {
             </div>
 
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-2.5'>
-              <div className='sm:col-span-1 py-2 flex items-center justify-between border rounded-md px-4 border-[#E3E3E3]'>
-                <p className='bg-[#f9fafb] text-xl font-sm'>Request Requirements</p>
+              <div className='sm:col-span-1 flex items-center justify-between border rounded-md px-4 border-[#E3E3E3]'>
+                <p className='bg-[#ffff] text-[#979797] text-xl font-sm'>Request Requirements</p>
                 <label class="relative inline-flex items-center cursor-pointer">
                   <input
                     checked={isChecked}
@@ -142,7 +142,7 @@ const SeCreateOfferForm = () => {
                 <Select
                   required={true}
                   name="expiry"
-                  className='border border-[#E3E3E3] rounded-md'
+                  className=' rounded-md'
                 >
                   <option>
                     expiry time (optional)
