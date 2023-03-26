@@ -27,6 +27,12 @@ import Messaging from "./components/Messaging";
 import BecomeSeller from "./pages/BecomeSeller";
 import GuidelinePage from "./pages/Guideline";
 import MenuPage from "./pages/Menu";
+import SupportPage from "./pages/Support";
+import WorkplacePage from "./pages/Workplace";
+import VerificationPage from "./pages/Verification";
+
+
+
 
 
 import Dashboar from "./pages/DashBoardPage";
@@ -59,6 +65,7 @@ import ConfirmPage from "./pages/ConfirmPage";
 import SignUpPageView from "./pages/SignUpPage";
 
 import { Routes,BrowserRouter,Route } from "react-router-dom";
+
 
 
 function App() {
@@ -108,12 +115,7 @@ function App() {
 
       {/* <SeCreateOfferPage /> */}
       {/* <AgreementPage /> */}
-      {/* <UploadDeliveryPage /> */}
-      {/* <SeWriteReview /> */}
-      {/* <SellerWithdrawPage /> */}
-
-
-{/* >>>>>>> 0221b61b7196386fbd3f592f7231f95a6da6a467 */}
+      <UploadDeliveryPage />
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
       {/* <ManageOrder /> */}
       {/* >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7 */}
