@@ -108,11 +108,11 @@ function App() {
       {/* <SeProfileDashboardPage /> */}
 
       {/* <SellerWithdrawPage /> */}
-
+<OrderScreen />
       {/* <WithdrawDetailsPage /> */}
       {/* <WithdrawSuccessPage /> */}
 
-      <SeCreateOfferPage />
+      {/* <SeCreateOfferPage /> */}
       {/* <AgreementPage /> */}
       {/* <UploadDeliveryPage /> */}
       {/* <SeWriteReview /> */}
