@@ -112,8 +112,8 @@ function App() {
       {/* <WithdrawDetailsPage /> */}
       {/* <WithdrawSuccessPage /> */}
 
-      <SeCreateOfferPage />
-      {/* <AgreementPage /> */}
+      {/* <SeCreateOfferPage /> */}
+      <AgreementPage />
       {/* <UploadDeliveryPage /> */}
       {/* <SeWriteReview /> */}
       {/* <SellerWithdrawPage /> */}
