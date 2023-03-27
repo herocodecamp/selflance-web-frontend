@@ -81,6 +81,8 @@ const SignUpPageView = () => {
             </div>
          </div>
          <Footer/>
+         <h1>Welcome to Sign Up Page</h1>
+         
       </>
    )
 }

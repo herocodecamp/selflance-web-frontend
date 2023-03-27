@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../../Assets/logo.png";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const NavbarView = () => {
   const [toggle, setToggle] = useState(false);
@@ -22,23 +23,33 @@ const NavbarView = () => {
         </div>
         {/* desktop menu */}
         <div>
+          <nav>
           <ul className="lg:flex hidden items-center gap-x-10  ">
-            <li>Home</li>
-            <li>Find Freelancer</li>
-            <li>Blogs</li>
-            <li>Find Work</li>
-            <li>Post a Job</li>
-            <li>How it Works</li>
+            <li>
+              <Link to='/' > Home </Link>  
+            </li>
+            <li>
+              <Link to="/users/search">Find Freelancer</Link></li>
+            <li>
+              <Link to="/blogs">Blogs</Link></li>
+            <li>
+              <Link to="/">Find Work</Link></li>
+            <li>
+              <Link to="/job_post">Post a Job</Link></li>
+            <li>
+              <Link to="/privacy_policy">How it Works</Link></li>
           </ul>
+          </nav>
         </div>
 
         <div className="flex px-2 items-center font-normal gap-x-8">
-          <button className=" hidden sm:flex ">Login</button>
+          <button className=" hidden sm:flex "> <Link to="/login">Login</Link> </button>
           <button
             className="bg-[#DD730A] px-1.5 py-1.5 sm:py-2.5 sm:px-4 rounded-md
             "
           >
-            Sign Up
+            <Link to="/signup">Sign Up</Link>
+            
           </button>
         </div>
       </div>

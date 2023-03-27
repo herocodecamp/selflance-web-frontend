@@ -6,7 +6,7 @@ import PostJobView from './PostJobView'
 const PostJobPage = () => {
   return (
     <>
-      <Navbar/>
+      
       <PostJobView/>
       <Footer/>
     </>
