@@ -1,17 +1,9 @@
 import Navbar from "./common/Navbar";
-import Categories from "./components/Categories";
-import Header from "./components/Header";
-import AboutFee from "./components/AboutFee";
-import OurFounder from "./components/OurFounder";
 import Feedback from "./components/Feedback";
-import SelflanceApp from "./components/SelflanceApp";
+
 import LandingPage from "./pages/LandingPage";
 import Blogs from "./pages/Blogs/Blogs";
-import Footer from "./components/Footer/Footer";
-import WheSelflance from "./components/WheSelflance";
-import FeaturedJobs from "./components/FeaturedJobs";
 import SingleBlog from "./pages/SingleBlog";
-import FAQ from "./common/FAQ";
 import SellerProfile from "./pages/SellerProfile";
 import ServiceDetails from "./pages/ServiceDetails";
 import PrivacyandTerms from "./common/Privacy&Terms/PrivacyandTerms";
@@ -35,6 +27,12 @@ import Messaging from "./components/Messaging";
 import BecomeSeller from "./pages/BecomeSeller";
 import GuidelinePage from "./pages/Guideline";
 import MenuPage from "./pages/Menu";
+import SupportPage from "./pages/Support";
+import WorkplacePage from "./pages/Workplace";
+import VerificationPage from "./pages/Verification";
+
+
+
 
 
 import Dashboar from "./pages/DashBoardPage";
@@ -64,14 +62,17 @@ import SeWriteReview from "./pages/SeWriteReview/SeWriteReview";
 
 import LoginPageView from "./pages/LoginPage";
 import ConfirmPage from "./pages/ConfirmPage";
+import SignUpPageView from "./pages/SignUpPage";
+
+import { Routes,BrowserRouter,Route } from "react-router-dom";
 
 
 
 function App() {
   return (
     <>
-      <Navbar />
-
+     
+      
       {/* <OrderPage/> */}
       {/* <AddNewCardPage/> */}
       {/* <OrderProcessingPage/> */}
@@ -108,18 +109,17 @@ function App() {
       {/* <SeProfileDashboardPage /> */}
 
       {/* <SellerWithdrawPage /> */}
-
+{/* <OrderScreen /> */}
       {/* <WithdrawDetailsPage /> */}
       {/* <WithdrawSuccessPage /> */}
 
       {/* <SeCreateOfferPage /> */}
+
       <AgreementPage />
+
+      {/* <AgreementPage /> */}
+
       {/* <UploadDeliveryPage /> */}
-      {/* <SeWriteReview /> */}
-      {/* <SellerWithdrawPage /> */}
-
-
-{/* >>>>>>> 0221b61b7196386fbd3f592f7231f95a6da6a467 */}
       {/* >>>>>>> d557f8ea6609c88871491270f3b84522c8920f57 */}
       {/* <ManageOrder /> */}
       {/* >>>>>>> 133941fa406d450496b91e82ff2d71cf7f9855f7 */}
@@ -135,6 +135,25 @@ function App() {
 
 
       {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
+      
+
+      {/* Routing */}
+      <BrowserRouter>
+        <Routes>
+              <Route  path="/" element={<LandingPage />} />
+              <Route path="/blogs" element={<Blogs />} />
+              <Route path="/login" element={<LoginPageView />} />
+              <Route path="/signup" element={<SignUpPageView />} />
+              <Route path="/job_post" element={<PostJobPage />} />
+              <Route path="/users/search" element={<SearchPage />} />
+              <Route path="/users/orders" element={<OrderScreen />} />
+              <Route path="/users/seller/dashboard" element={<SeDashboard />} />
+              <Route path="/users/buyer/dashboard" element={<Dashboard />} />
+
+              <Route path="/privacy_policy" element={<PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/>} />
+        </Routes>
+        
+      </BrowserRouter>
 
     </>
   );
