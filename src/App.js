@@ -19,11 +19,16 @@ import ManageOrder from "./pages/ManageOrderPage";
 import SearchPage from "./pages/SearcePage";
 import PremiumSellerPage from "./pages/PremiumSellerPage";
 import Dashboard from "./pages/DashBoardPage";
+
 import OrderPage from "./pages/OrderPage";
 import AddNewCardPage from "./pages/AddNewCardPage";
 import OrderProcessingPage from "./pages/OrderProcessingPage/OrderProcessingPage";
 import CustomerSupportPage from "./pages/CustomerSupportPage";
 import BuyerOrderManagementPage from "./pages/BuyerOrderManagementPage";
+import LoginPage from "./pages/LoginPage";
+import ConfirmPage from "./pages/ConfirmPage";
+import SignUpPage from "./pages/SignUpPage";
+
 
 // Section
 import PostJobPage from "./pages/PostJobPage";
@@ -54,17 +59,13 @@ import ManageDetails from "./components/ManageOrderComponents/ManageDetails";
 import ManageOrderDetails from "./components/ManageOrderComponents/OrderDetails";
 import ApplySuccess from "./pages/ApplySuccess/ApplySuccess";
 import SeProfileDashboardPage from "./pages/SeProfileDashboard";
-import SellerWithdrawPage from "./pages/SellerWithdraw";
+// import SellerWithdrawPage from "./pages/SellerWithdraw";
 import WithdrawDetailsPage from "./pages/WithdrawdetailsPage";
 import WithdrawSuccessPage from "./pages/WithdrawSuccessPage/WithdrawSuccessPage";
 import SeCreateOfferPage from "./pages/SellerCreateAnOferr";
 import AgreementPage from "./pages/AgreementPage";
-import UploadDeliveryPage from "./pages/UploadDelivery";
+// import UploadDeliveryPage from "./pages/UploadDelivery";
 import SeWriteReview from "./pages/SeWriteReview/SeWriteReview";
-
-import LoginPageView from "./pages/LoginPage";
-import ConfirmPage from "./pages/ConfirmPage";
-
 
 
 function App() {
@@ -77,8 +78,10 @@ function App() {
       {/* <OrderProcessingPage/> */}
       {/* <CustomerSupportPage/> */}
       {/* <BuyerOrderManagementPage/> */}
-      {/* <LoginPageView/> */}
-      {/* <ConfirmPage/> */}
+      {/* <LoginPage/> */}
+      {/* <SignUpPage/> */}
+      <ConfirmPage/>
+
 
       {/* <Dashboard /> */}
 
