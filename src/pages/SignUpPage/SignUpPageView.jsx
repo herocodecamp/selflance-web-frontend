@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
-import SignUpImage from "../../Assets/signUp-img.png"
+import SignUpImage from "../../Assets/signup-img.png"
 import { BiShow } from "react-icons/bi";
 import { FaGoogle, FaFacebook, FaApple, FaGooglePlay } from "react-icons/fa";
 import CommonButton from "../../components/OrderPageComponents/CommonButton";

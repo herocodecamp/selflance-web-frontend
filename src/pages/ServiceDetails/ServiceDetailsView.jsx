@@ -9,7 +9,7 @@ import RatingStar from "../../Assets/Star-filled.png";
 import Review from "../../components/Reviews";
 import {BsCheck2Square, BsCheck} from "react-icons/bs";
 import {FaChevronDown, FaChevronRight} from 'react-icons/fa';
-
+import { Link } from "react-router-dom";
 
 
 const images = [
@@ -403,7 +403,8 @@ const ServiceDetailsView = () =>{
 
                                     </div>
                                     <div class="col-start-5 lg:col-start-3 col-span-6 lg:col-span-3 items-center ml-3 lg:ml-2">
-                                        <p class="text-base md:text-lg font-bold ">{userDetails.name}</p>
+                                        <Link to="/users/:userID/profile">
+                                        <p class="text-base md:text-lg font-bold ">{userDetails.name}</p> </Link>
                                         <p class="text-[#FFB33E] font-bold text-sm md:text-base ">{userDetails.rating}</p>
                                         <p class="text-[#27AE60] text-sm md:text-base">{userDetails.status}</p>
 

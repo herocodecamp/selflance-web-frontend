@@ -1,5 +1,6 @@
 import React from 'react';
 import GigMutuals from './GigMutuals';
+import { Link } from 'react-router-dom';
 
 const SellerGigsDetails = ({ gig }) => {
   return (
@@ -8,7 +9,8 @@ const SellerGigsDetails = ({ gig }) => {
         <div>
           <img src={gig.image} className="rounded sm:w-[296] mx-auto sm:h-[154] w-full border-2 border-[#FAFAFB]" alt="alt" />
         </div>
-        <h2 className='font-poppins  text-[#171725] leading-6 font-semibold'>{gig.title}</h2>
+        <h2 className='font-poppins  text-[#171725] leading-6 font-semibold'>
+          <Link to="/users/search/:userID/gig-details">{gig.title}</Link></h2>
 
         <div>
           <div className='flex items-center space-x-6'>
@@ -21,7 +23,7 @@ const SellerGigsDetails = ({ gig }) => {
         
         <GigMutuals />
 
-      <button className='w-full mx-auto bg-[#00538F] rounded-lg text-white font-semibold leading-6 py-2'>chat</button>
+      <button className='w-full mx-auto bg-[#00538F] rounded-lg text-white font-semibold leading-6 py-2'><Link to="/inbox/sellername">chat</Link></button>
       </div>
 
     </div>

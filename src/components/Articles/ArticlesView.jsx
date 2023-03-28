@@ -11,6 +11,7 @@ import PopularImage6 from "../../Assets/Blogs-2f.png";
 import PopularImage7 from "../../Assets/Blogs-2g.png";
 import PopularImage8 from "../../Assets/Blogs-2h.png";
 import PopularImage9 from "../../Assets/Blogs-2i.png";
+import { Link } from "react-router-dom";
 
 
 const Blogs =[
@@ -369,8 +370,8 @@ const LatestArticlesView = ()=>{
                             <img class="rounded-lg" src={item.image} alt="blog image1"/>
                             <p class="text-[#FF794D] text-xs font-medium mt-2 ml-2">{item.date}</p>
                             
-                            <a href="/#" target="_blank" >
-                                <h2 class="text-[#1D263A] text-base md:text-2xl font-medium mt-3 ml-2">{item.title} </h2></a>
+                            <Link to="/blogs/:blogID" >
+                                <h2 class="text-[#1D263A] text-base md:text-2xl font-medium mt-3 ml-2">{item.title} </h2></Link>
                         </div>
                     )
                 })
@@ -393,8 +394,8 @@ const PopularArticlesView = () =>{
                                         <img class="rounded-lg" src={item.image} alt="blog image1"/>
                                         <p class="text-[#FF794D] text-xs font-medium mt-2 ml-2">{item.date}</p>
                                         
-                                        <a href="/#" target="_blank" >
-                                            <h2 class="text-[#1D263A] text-base md:text-2xl font-medium mt-3 ml-2">{item.title}</h2></a>
+                                        <Link to="/blogs/:blogID" >
+                                            <h2 class="text-[#1D263A] text-base md:text-2xl font-medium mt-3 ml-2">{item.title}</h2></Link>
                                     </div>
                                 )
                             })

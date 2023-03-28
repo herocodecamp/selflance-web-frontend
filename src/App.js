@@ -70,7 +70,7 @@ import { Routes, BrowserRouter, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      {/* <OrderPage/> */}
+      <OrderPage/>
       {/* <AddNewCardPage/> */}
       {/* <OrderProcessingPage/> */}
       {/* <CustomerSupportPage/> */}
@@ -136,16 +136,35 @@ function App() {
 
       {/* Routing */}
       <BrowserRouter>
+        <Navbar />
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/login" element={<LoginPageView />} />
-          <Route path="/signup" element={<SignUpPageView />} />
-          <Route path="/job_post" element={<PostJobPage />} />
-          <Route path="/users/search" element={<SearchPage />} />
-          <Route path="/users/orders" element={<OrderScreen />} />
-          <Route path="/users/seller/dashboard" element={<SeDashboard />} />
-          <Route path="/users/buyer/dashboard" element={<Dashboard />} />
+              <Route  path="/" element={<LandingPage />} />
+
+              <Route path="/blogs" element={<Blogs />} />
+              <Route path="/blogs/:blogID" element={<SingleBlog />} /> 
+              
+              <Route path="/login" element={<LoginPageView />} />
+              <Route path="/signup" element={<SignUpPageView />} />
+
+              <Route path="/job_posts" element={<JobList/>} />
+              <Route path="/job_post/new" element={<PostJobPage />} />
+              <Route path="/job_post/new/review" element={<ReviewJobPage/>} />
+              <Route path="/job_posts/response" element={<JobResponsePage/>} />
+              <Route path="/job_posts/:jobID/details" element={<JobDetail/>}/>
+              <Route path="/inbox/sellername" element={<Messaging/>} />
+
+              <Route path="/buyer/orders" element={<ManageOrder/>} />
+
+              <Route path="/users/search" element={<SearchPage />} />
+              <Route path="/users/search/:userID/gig-details" element={< ServiceDetails/>} />
+              <Route path="/users/:userID/profile" element={<SellerProfile/>} />
+
+              <Route path="/users/orders" element={<OrderScreen />} />
+              <Route path="/users/seller/dashboard" element={<SeDashboard />} />
+              <Route path="/users/buyer/dashboard" element={<Dashboard />} />
+
+              <Route path="/become_seller" element={<BecomeSeller />} />
+              <Route path="/settings/:sellerID" element={<MenuPage />} />
 
           <Route
             path="/privacy_policy"

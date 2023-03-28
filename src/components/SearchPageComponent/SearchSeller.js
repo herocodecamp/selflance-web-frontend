@@ -8,7 +8,7 @@ const SearchSeller = () => {
     <div className='pt-16 sm:w-4/5 w-full px-4'>
       <div className='space-y-4'>
         <FilterDrawer />
-        <h4 className='text-[#121F3E]'>Programming & Tech > Website development</h4>
+        <h4 className='text-[#121F3E]'>Programming & Tech  Website development</h4>
         <h3 className='text-[#000000] text-2xl leading-9'>Results for "website development"
         </h3>
 

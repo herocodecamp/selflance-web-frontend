@@ -1,6 +1,7 @@
 import React from "react";
 import { LatestArticles } from "../../components/Articles";
 import { PopularArticles } from "../../components/Articles";
+import { Link } from "react-router-dom";
 
 
 const BlogsView = ()=>{
@@ -24,6 +25,7 @@ const BlogsView = ()=>{
             <div>
                 <PopularArticles />
             </div>
+          
 
         </div>
     )
