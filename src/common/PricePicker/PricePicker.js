@@ -1,9 +1,9 @@
 import React from 'react'
 import PricePickerView from './PricePickerView'
 
-const PricePicker = () => {
+const PricePicker = ({name='', onChange=null, onBlur=null, value=''}) => {
   return (
-    <PricePickerView />
+    <PricePickerView onChange={onChange} onBlur={onBlur} name={name} value={value}/>
   )
 }
 
