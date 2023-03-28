@@ -3,6 +3,7 @@ import Control from '../../common/Control/Control';
 import Stepper from '../../common/Stepper';
 import {BsFileTextFill} from 'react-icons/bs';
 import {ImPencil} from 'react-icons/im';
+import { Link } from 'react-router-dom';
 
 const ReviewJobView = () => {
   return (
@@ -103,7 +104,7 @@ const ReviewJobView = () => {
             </div>
             <div className="flex items-center mt-12">
             <button type="button" class="text-white bg-[#00538F] hover:bg-[#014c82] focus:ring-4 focus:outline-none focus:ring-blue-300 shadow text-lg font-medium rounded-lg py-3 px-8 lg:py-6 lg:px-24 text-center mx-auto items-center ">
-                Post a Job
+                <Link to="/job_posts/response"> Post a Job </Link>
               </button>
             </div>
 

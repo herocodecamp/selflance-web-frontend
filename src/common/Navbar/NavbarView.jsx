@@ -33,9 +33,9 @@ const NavbarView = () => {
             <li>
               <Link to="/blogs">Blogs</Link></li>
             <li>
-              <Link to="/">Find Work</Link></li>
+              <Link to="/become_seller">Find Work</Link></li>
             <li>
-              <Link to="/job_post">Post a Job</Link></li>
+              <Link to="/job_post/new">Post a Job</Link></li>
             <li>
               <Link to="/privacy_policy">How it Works</Link></li>
           </ul>
@@ -58,15 +58,15 @@ const NavbarView = () => {
         <div className=" absolute top-24 py-3 mobile menu lg:hidden z-10 h-full w-2/3 bg-white">
           <ul className=" flex flex-col gap-y-3 px-2 ">
             <li className="bg-[#00538F]/80 text-white py-2 px-2 rounded-md">
-              Home
+               <Link to='/' > Home </Link>
             </li>
             <li className=" text-black py-2 px-2 rounded-md">
-              Find Freelancer
+            <Link to="/users/search">Find Freelancer</Link>
             </li>
-            <li className=" text-black py-2 px-2 rounded-md">Blogs</li>
-            <li className=" text-black py-2 px-2 rounded-md">Find Work</li>
-            <li className=" text-black py-2 px-2 rounded-md">Post a Job</li>
-            <li className=" text-black py-2 px-2 rounded-md">How it Works</li>
+            <li className=" text-black py-2 px-2 rounded-md"><Link to="/blogs">Blogs</Link></li>
+            <li className=" text-black py-2 px-2 rounded-md"><Link to="/become_seller">Find Work</Link></li>
+            <li className=" text-black py-2 px-2 rounded-md"><Link to="/job_post/new">Post a Job</Link></li>
+            <li className=" text-black py-2 px-2 rounded-md"><Link to="/privacy_policy">How it Works</Link></li>
           </ul>
         </div>
       )}

@@ -8,12 +8,12 @@ import OurFounder from '../../components/OurFounder';
 import SelflanceApp from '../../components/SelflanceApp';
 import FAQ from '../../common/FAQ';
 import Footer from '../../components/Footer/Footer';
-import Navbar from '../../common/Navbar';
+
 
 const LandigPageView = () => {
   return (
     <div>
-      <Navbar />
+      
       <Header/>
       <Categories />
       <WheSelflance />

@@ -4,6 +4,7 @@ import { ImPencil } from 'react-icons/im'
 import Control from '../../common/Control/Control'
 import Stepper from '../../common/Stepper'
 import seller from '../../Assets/image.png'
+import { Link } from 'react-router-dom'
 
 const JobDetailView = () => {
   return (
@@ -111,10 +112,10 @@ const JobDetailView = () => {
             </div>
             <div className="flex justify-center gap-6 mt-12">
                 <button type="button" class="text-white bg-[#00538F] hover:bg-[#014c82] focus:ring-4 focus:outline-none focus:ring-blue-300 shadow text-lg font-medium rounded-lg py-3 px-8 lg:py-6 lg:px-24 text-center">
-                    Chat
+                    <Link to="/inbox/sellername">Chat</Link>
                 </button>
                 <button type="button" class="text-white bg-[#DD730A] hover:bg-[#bd6308] focus:ring-4 focus:outline-none focus:ring-blue-300 shadow text-lg font-medium rounded-lg py-3 px-8 lg:py-6 lg:px-24 text-center">
-                    Accept
+                   <Link to="/buyer/orders">Accept</Link> 
                 </button>
             </div>
 

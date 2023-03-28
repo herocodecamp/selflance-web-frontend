@@ -14,6 +14,7 @@ import PortfolioImage3 from "../../Assets/seller_portfolio-3.png";
 import Review from "../../components/Reviews";
 import { MdOutlineEdit } from "react-icons/md";
 import { BiTime } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 
 const sellerData={
@@ -404,7 +405,7 @@ const SellerProfileView= ()=>{
                                                 <div class="p-2 lg:p-5">
                                                     {/* Description */}
                                                 <a href="/#">
-                                                    <h5 class="mb-2 text-sm lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white">{item.title}</h5>
+                                                    <h5 class="mb-2 text-sm lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white"><Link to="/users/search/:userID/gig-details">{item.title}</Link></h5>
                                                 </a>
                                                 
                                                 <p class="mb-3 text-[10px] md:text-sm font-medium text-[#00538F] dark:text-gray-400 text-right">Starting at {item.startingRate}</p>

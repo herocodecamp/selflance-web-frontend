@@ -6,6 +6,7 @@ import {HiOutlineTrash} from 'react-icons/hi'
 import seller from '../../Assets/image.png'
 import { jobPost } from '../../utils/mockData';
 import JobPost from '../../common/JobPost';
+import { Link } from 'react-router-dom';
 
 
 
@@ -21,7 +22,7 @@ const JobResponseView = () => {
               <img src={seller} alt="seller" className='rounded-full w-20 h-20' />
               <h2 className='text-3xl text-black font-medium'>{data.name} <span className='text-xl text-gray-500 font-normal'>(Level - {data.level})</span></h2>
             </div>
-            <p className='mt-3'>{data.response}</p>
+            <p className='mt-3'><Link to="/job_posts/:jobID/details"> {data.response} </Link></p>
             <p className='my-3'><span className='text-2xl font-medium'>Category:</span> {data.categories}</p>
           </div>
           <div className=''>

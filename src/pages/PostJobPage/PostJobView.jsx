@@ -3,7 +3,8 @@ import Control from '../../common/Control/Control'
 import {MdOutlineSpeed, MdOutlineFileUpload} from 'react-icons/md'
 import { BsTags, BsPaypal } from 'react-icons/bs'
 import {FaCreditCard} from 'react-icons/fa'
-import PricePicker from '../../common/PricePicker'
+import PricePicker from '../../common/PricePicker';
+import { Link } from 'react-router-dom'
 
 const PostJobView = () => {
   return ( 
@@ -164,11 +165,11 @@ const PostJobView = () => {
                     <div className='grid lg:grid-cols-2 gap-4'>
                         <div className="col-end-3 col-span-1 gap-6 mt-12 flex-row-reverse flex gap w-full justify-between text-lg">
                             <button type="button" className="text-white bg-[#00538F] hover:bg-[#014c82] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg py-3 px-8  lg:px-16 lg:py-6 text-center  w-full items-center ">
-                            Review a Job
+                            <Link to="/job_post/new/review"> Review a Job</Link>
                             
                             </button>
                             <button type="button" className="border text-gray-400 shadow hover:bg-gray-100  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg ;f text-center items-center w-full ">
-                                Back
+                                <Link to="/job_posts">Back</Link>
                                 
                             </button>
                         </div>

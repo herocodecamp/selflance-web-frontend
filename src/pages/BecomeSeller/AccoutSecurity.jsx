@@ -1,5 +1,6 @@
 import React from 'react'
 import ProgressBar from './ProgressBar'
+import { Link } from 'react-router-dom'
 
 const AccoutSecurity = () => {
   return (
@@ -45,7 +46,7 @@ const AccoutSecurity = () => {
             </div>
             <div className="flex justify-center gap-6 mt-12">
                 <button type="button" className="text-white bg-[#00538F] hover:bg-[#014c82] focus:ring-4 focus:outline-none focus:ring-blue-300 shadow text-lg font-medium rounded-lg py-3 px-8 lg:py-6 lg:px-24 text-center">
-                    Continue
+                    <Link to="/settings/:sellerID">Continue</Link>
                 </button>
             </div>
             
