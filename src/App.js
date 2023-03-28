@@ -70,7 +70,7 @@ import { Routes, BrowserRouter, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      {/* <OrderPage/> */}
+      <OrderPage/>
       {/* <AddNewCardPage/> */}
       {/* <OrderProcessingPage/> */}
       {/* <CustomerSupportPage/> */}
