@@ -1,7 +1,7 @@
 import React from "react";
 import CreditOrDebit from "../../Assets/CreditOrDebit.png";
 import Paypal from "../../Assets/Paypal.png";
-import RazorPay from "../../Assets/RazorPay.png";
+import RazorPay from "../../Assets/Razorpay.png";
 
 import { FaCheck } from "react-icons/fa";
 
