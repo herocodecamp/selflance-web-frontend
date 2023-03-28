@@ -11,11 +11,16 @@ import ManageOrder from "./pages/ManageOrderPage";
 import SearchPage from "./pages/SearcePage";
 import PremiumSellerPage from "./pages/PremiumSellerPage";
 import Dashboard from "./pages/DashBoardPage";
+
 import OrderPage from "./pages/OrderPage";
 import AddNewCardPage from "./pages/AddNewCardPage";
 import OrderProcessingPage from "./pages/OrderProcessingPage/OrderProcessingPage";
 import CustomerSupportPage from "./pages/CustomerSupportPage";
 import BuyerOrderManagementPage from "./pages/BuyerOrderManagementPage";
+import LoginPage from "./pages/LoginPage";
+import ConfirmPage from "./pages/ConfirmPage";
+import SignUpPage from "./pages/SignUpPage";
+
 
 // Section
 import PostJobPage from "./pages/PostJobPage";
@@ -48,19 +53,19 @@ import ManageDetails from "./components/ManageOrderComponents/ManageDetails";
 import ManageOrderDetails from "./components/ManageOrderComponents/OrderDetails";
 import ApplySuccess from "./pages/ApplySuccess/ApplySuccess";
 import SeProfileDashboardPage from "./pages/SeProfileDashboard";
-import SellerWithdrawPage from "./pages/SellerWithdraw";
+// import SellerWithdrawPage from "./pages/SellerWithdraw";
 import WithdrawDetailsPage from "./pages/WithdrawdetailsPage";
 import WithdrawSuccessPage from "./pages/WithdrawSuccessPage/WithdrawSuccessPage";
 import SeCreateOfferPage from "./pages/SellerCreateAnOferr";
 import AgreementPage from "./pages/AgreementPage";
-import UploadDeliveryPage from "./pages/UploadDelivery";
+// import UploadDeliveryPage from "./pages/UploadDelivery";
 import SeWriteReview from "./pages/SeWriteReview/SeWriteReview";
 
 import LoginPageView from "./pages/LoginPage";
-import ConfirmPage from "./pages/ConfirmPage";
 import SignUpPageView from "./pages/SignUpPage";
 
 import { Routes, BrowserRouter, Route } from "react-router-dom";
+
 
 function App() {
   return (
@@ -70,8 +75,10 @@ function App() {
       {/* <OrderProcessingPage/> */}
       {/* <CustomerSupportPage/> */}
       {/* <BuyerOrderManagementPage/> */}
-      {/* <LoginPageView/> */}
+      {/* <LoginPage/> */}
+      {/* <SignUpPage/> */}
       {/* <ConfirmPage/> */}
+
 
       {/* <Dashboard /> */}
 
@@ -93,7 +100,7 @@ function App() {
 
       {/* <SeDashboardPage2 /> */}
 
-      <SellerApplyPage />
+      {/* <SellerApplyPage /> */}
       {/* <SeDashboard /> */}
       {/* <SellerSearchPage /> */}
       {/* <ApplySuccess /> */}
@@ -105,6 +112,9 @@ function App() {
       {/* <WithdrawSuccessPage /> */}
 
       {/* <SeCreateOfferPage /> */}
+
+      {/* <AgreementPage /> */}
+
 
       {/* <AgreementPage /> */}
 
@@ -125,7 +135,7 @@ function App() {
       {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
 
       {/* Routing */}
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/blogs" element={<Blogs />} />
@@ -147,7 +157,7 @@ function App() {
             }
           />
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </>
   );
 }
