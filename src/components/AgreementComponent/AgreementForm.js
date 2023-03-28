@@ -5,10 +5,10 @@ import { AgreementSchema } from "../SeCreateOfferComponent/CreateOfferSchema";
 const initialValues = {
   title: "",
   description: "",
-  price: 0,
-  revision: 0,
-  deliver: 0,
-  extra_revision: 0,
+  price: "",
+  revision: "",
+  deliver: "",
+  extra_revision: "",
   isChecked: false,
 };
 

@@ -31,10 +31,6 @@ import SupportPage from "./pages/Support";
 import WorkplacePage from "./pages/Workplace";
 import VerificationPage from "./pages/Verification";
 
-
-
-
-
 import Dashboar from "./pages/DashBoardPage";
 
 // import OrderProcess from "./pages/orderRequirements/OrderProcess";
@@ -64,15 +60,11 @@ import LoginPageView from "./pages/LoginPage";
 import ConfirmPage from "./pages/ConfirmPage";
 import SignUpPageView from "./pages/SignUpPage";
 
-import { Routes,BrowserRouter,Route } from "react-router-dom";
-
-
+import { Routes, BrowserRouter, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-     
-      
       {/* <OrderPage/> */}
       {/* <AddNewCardPage/> */}
       {/* <OrderProcessingPage/> */}
@@ -101,21 +93,18 @@ function App() {
 
       {/* <SeDashboardPage2 /> */}
 
-
-
+      <SellerApplyPage />
       {/* <SeDashboard /> */}
       {/* <SellerSearchPage /> */}
       {/* <ApplySuccess /> */}
       {/* <SeProfileDashboardPage /> */}
 
       {/* <SellerWithdrawPage /> */}
-{/* <OrderScreen /> */}
+      {/* <OrderScreen /> */}
       {/* <WithdrawDetailsPage /> */}
       {/* <WithdrawSuccessPage /> */}
 
       {/* <SeCreateOfferPage /> */}
-
-      <AgreementPage />
 
       {/* <AgreementPage /> */}
 
@@ -133,28 +122,32 @@ function App() {
       {/* <SellerProfile /> */}
       {/* <SingleBlog /> */}
 
-
       {/* <PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/> */}
-      
 
       {/* Routing */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
-              <Route  path="/" element={<LandingPage />} />
-              <Route path="/blogs" element={<Blogs />} />
-              <Route path="/login" element={<LoginPageView />} />
-              <Route path="/signup" element={<SignUpPageView />} />
-              <Route path="/job_post" element={<PostJobPage />} />
-              <Route path="/users/search" element={<SearchPage />} />
-              <Route path="/users/orders" element={<OrderScreen />} />
-              <Route path="/users/seller/dashboard" element={<SeDashboard />} />
-              <Route path="/users/buyer/dashboard" element={<Dashboard />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/login" element={<LoginPageView />} />
+          <Route path="/signup" element={<SignUpPageView />} />
+          <Route path="/job_post" element={<PostJobPage />} />
+          <Route path="/users/search" element={<SearchPage />} />
+          <Route path="/users/orders" element={<OrderScreen />} />
+          <Route path="/users/seller/dashboard" element={<SeDashboard />} />
+          <Route path="/users/buyer/dashboard" element={<Dashboard />} />
 
-              <Route path="/privacy_policy" element={<PrivacyandTerms title="Privacy Policy" subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"/>} />
+          <Route
+            path="/privacy_policy"
+            element={
+              <PrivacyandTerms
+                title="Privacy Policy"
+                subtitle="At Selflance, we value your privacy. Get all the details in our Privacy Policy. Updated: 27th February, 2023"
+              />
+            }
+          />
         </Routes>
-        
-      </BrowserRouter>
-
+      </BrowserRouter> */}
     </>
   );
 }
