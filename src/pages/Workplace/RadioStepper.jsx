@@ -9,25 +9,25 @@ const RadioStepper = ({step, handleStep}) => {
                 <div className={`relative flex items-center justify-center w-8 h-8 mr-3 text-sm text-white ${step === 1? 'bg-[#00538F]' : 'border-2'} border-[#00538F] rounded-full`}>
                     
                 </div>
-                <p className='text-xl font-medium'>Create Service</p>
+                <p className='text-xl font-medium text-center'>Create Service</p>
             </li>
             <div className='w-1/6 border-2'></div>
             <li className="flex items-center flex-col cursor-pointer" onClick={() => {handleStep(2)}} >
                 <div className={`relative flex items-center justify-center w-8 h-8 mr-3 text-sm text-white ${step === 2? 'bg-[#00538F]' : 'border-2'} border-[#00538F] rounded-full`}>
                 </div>
-                <p className='text-xl font-medium'>Enter Details</p>
+                <p className='text-xl font-medium text-center'>Enter Details</p>
             </li>
             <div className='w-1/6 border-2'></div>
             <li className="flex items-center flex-col cursor-pointer" onClick={() => {handleStep(3)}} >
                 <div className={`relative flex items-center justify-center w-8 h-8 mr-3 text-sm text-white ${step === 3? 'bg-[#00538F]' : 'border-2'} border-[#00538F] rounded-full`}>
                 </div>
-                <p className='text-xl font-medium'>Add Photos</p>
+                <p className='text-xl font-medium text-center'>Add Photos</p>
             </li>
             <div className='w-1/6 border-2'></div>
             <li className="flex items-center flex-col cursor-pointer" onClick={() => {handleStep(4)}} >
                 <div className={`relative flex items-center justify-center w-8 h-8 mr-3 text-sm text-white ${step === 4? 'bg-[#00538F]' : 'border-2'} border-[#00538F] rounded-full`}>
                 </div>
-                <p className='text-xl font-medium'>Summary</p>
+                <p className='text-xl font-medium text-center'>Summary</p>
             </li>
         </ol>
         <div className='flex items-center w-full mb-4 justify-around sm:mb-5'>

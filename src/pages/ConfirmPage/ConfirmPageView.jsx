@@ -37,9 +37,9 @@ const ConfirmPageView = () =>{
                   </div>
                   <div className="w-64 space-x-1 mb-8 md:mb-16">
                      <p className="text-center text-md font-bold">00:56</p>
-                     <div className="flex">
+                     <div className="flex space-x-1">
                         <p className="text-sm">Didn’t receive code?</p>
-                        <button className="text-[#009EF7] text-sm">Resend Code</button>
+                        <button className="text-[#009EF7] font-medium text-sm">Resend Code</button>
                      </div>
                   </div>
                   <CommonButton type="submit" text="Submit" className="w-[280px] sm:w-full md:w-[70%] bg-primary rounded-md text-white py-1 mb-5"/>

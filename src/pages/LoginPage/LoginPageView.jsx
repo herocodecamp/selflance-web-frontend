@@ -9,14 +9,14 @@ import Footer from "../../components/Footer/Footer";
 const LoginPageView = () => {
    return(
       <>
-         <div className="w-full sm:w-[90%] md:w-[80%] mx-auto flex-none sm:flex m-2 p-2 bg-white">
+         <div className="w-full sm:w-[90%] md:w-[90%] mx-auto flex-none sm:flex m-2 p-2 bg-white md:space-x-28">
             {/* Login Image */}
-            <div className="sm:w-[40%] md:w-[50%] hidden sm:block">
-               <img src={LoginImage} alt="Login image" />
+            <div className="md:w-[50%] mt-24 lg:mt-0 hidden md:block">
+               <img src={LoginImage} alt="Login image"/>
             </div>
 
             {/* Login From */}
-            <div className="w-[95%] mx-auto sm:w-[60%] md:w-[50%]">
+            <div className="w-[95%] mx-auto sm:w-[70%] md:w-[45%]">
                <div className="border border-slate-200 shadow-md p-4 rounded-md">
                   <div className="text-center mb-14">
                      <h1 className="text-3xl font-bold my-2">Login</h1>
@@ -47,15 +47,15 @@ const LoginPageView = () => {
                   </div>
 
                   {/* Sign up with Google & Facebook */}
-                  <div className="w-full sm:w-[95%] md:w-[90%] my-4 mx-auto flex space">
-                     <div className="flex items-center space-x-2 py-3 px-3 md:px-5 rounded-md border border-slate-100 shadow mx-auto">
-                        <FaGoogle className="text-lg"/>
+                  <div className="w-full lg:w-[90%] my-4 mx-auto flex space-x-1 sm:space-x-2">
+                     <button className="flex items-center space-x-2 rounded-md border border-slate-100 shadow mx-auto py-3 px-2 md:px-5">
+                        <FaGoogle className="text-lg sm:text-xl"/>
                         <span className="text-xs">Sign up with Google</span>
-                     </div>
-                     <div className="flex items-center space-x-2 p-3 rounded-md border border-slate-100 shadow mx-auto">
-                        <FaFacebook className="text-lg"/>
+                     </button>
+                     <button className="flex items-center space-x-2 rounded-md border border-slate-100 shadow mx-auto py-3 px-2 md:px-5">
+                        <FaFacebook className="text-lg sm:text-xl"/>
                         <span className="text-xs">Sign up with Facebook</span>
-                     </div>
+                     </button>
                   </div>
 
                   {/* Don’t have an account? Sign up */}
@@ -66,15 +66,15 @@ const LoginPageView = () => {
                </div>
                
                {/* App Store & Google Play Store */}
-               <div className="my-4 flex">
-                  <div className="border border-slate-200 shadow-md flex w-[200px] mx-auto rounded-md p-3 items-center space-x-6 bg-[#F5F5F5] mx-1">
-                     <FaApple className="text-3xl ml-3"/>
-                     <span>App Store</span>
-                  </div>
-                  <div className="border border-slate-200 shadow-md flex w-[200px] mx-auto rounded-md p-3 items-center space-x-6 bg-[#F5F5F5] mx-1">
-                     <FaGooglePlay className="text-3xl ml-3"/>
-                     <span>Google Play</span>
-                  </div>
+               <div className="flex mx-auto mt-3">
+                  <button className="flex items-center space-x-2 md:space-x-5 rounded-md border border-slate-100 shadow mx-auto py-3 px-2 md:px-8 bg-[#F5F5F5] mr-1">
+                     <FaApple className="text-xl sm:text-3xl ml-1"/>
+                     <span className="text-sm">App Store</span>
+                  </button>
+                  <button className="flex items-center space-x-2 md:space-x-5 rounded-md border border-slate-100 shadow mx-auto py-3 px-2 md:px-8 bg-[#F5F5F5] ml-1">
+                     <FaGooglePlay className="text-xl sm:text-3xl ml-1"/>
+                     <span className="text-sm">Google Play</span>
+                  </button>
                </div>
             </div>
          </div>
