@@ -42,7 +42,7 @@ const PostJobView = () => {
         <div className='min-h-screen md:p-16 m-5'>
             <Control title='Post a Job'/>
             <div className='mt-10'>
-                <form handleSubmit={handleSubmit} >
+                <form onSubmit={handleSubmit} >
                     <div className='grid md:grid-cols-2 gap-4'>
                         <label className="block">
                             <span className="block w-full text-[#00538F] text-2xl font-medium pl-3">Job Title</span>
