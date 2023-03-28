@@ -3,11 +3,10 @@ import Control from '../../common/Control/Control'
 import {MdOutlineSpeed, MdOutlineFileUpload} from 'react-icons/md'
 import { BsTags, BsPaypal } from 'react-icons/bs'
 import {FaCreditCard} from 'react-icons/fa'
-import PricePicker from '../../common/PricePicker'
+import PricePicker from '../../common/PricePicker';
 import { ValidateSchema } from './PostJobSchema'
 import { useFormik } from 'formik'
   
-import PricePicker from '../../common/PricePicker';
 import { Link } from 'react-router-dom'
 
 const PostJobView = () => {
