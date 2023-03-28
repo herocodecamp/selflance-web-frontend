@@ -22,22 +22,21 @@ const PostJobView = () => {
         terms: true,
     }
     
-    const PostJobForm = () => {
       
-        const { values, handleBlur, handleChange, handleSubmit, errors, touched } =
-          useFormik({
-            initialValues,
-            validationSchema: ValidateSchema,
-            validateOnChange: true,
-            validateOnBlur: false,
-      
-            onSubmit: (values, action) => {
-              console.log(values);
-              action.resetForm();
-            },
-          });
-      
-        console.log("errors", errors);
+    const { values, handleBlur, handleChange, handleSubmit, errors, touched } =
+        useFormik({
+        initialValues,
+        validationSchema: ValidateSchema,
+        validateOnChange: true,
+        validateOnBlur: false,
+    
+        onSubmit: (values, action) => {
+            console.log(values);
+            action.resetForm();
+        },
+        });
+    
+    console.log("errors", errors);
 
     return ( 
         <div className='min-h-screen md:p-16 m-5'>
@@ -214,6 +213,4 @@ const PostJobView = () => {
         </div>
     )
 }
-}
-
 export default PostJobView

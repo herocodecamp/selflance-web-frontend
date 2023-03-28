@@ -35,7 +35,7 @@ const JobDetailView = () => {
                 </div>
                 <div className='flex flex-col justify-center gap-2'>
                   <p>Uploaded file 127837873282</p>
-                  <hr class="w-48 h-1 border-0 rounded bg-[#00538F]"/> 
+                  <hr className="w-48 h-1 border-0 rounded bg-[#00538F]"/> 
                 </div>
 
               </div>
@@ -45,35 +45,35 @@ const JobDetailView = () => {
                 </div>
                 <div className='flex flex-col justify-center gap-2'>
                   <p>Uploaded file 127837873282</p>
-                  <hr class="w-48 h-1 border-0 rounded bg-[#00538F]"/> 
+                  <hr className="w-48 h-1 border-0 rounded bg-[#00538F]"/> 
                 </div>
 
               </div>
             </div>
             <div className="mt-12 py-8 border border-gray-300 rounded-md w-full text-gray-500 flex text-2xl font-medium justify-around">
               <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 m-6 gap-16 w-full items-center'>
-                <div class="flex flex-col dark:text-white ">
+                <div className="flex flex-col dark:text-white ">
                   <div className='flex flex-col items-center sm:items-start'>
                     <div className="flex items-center gap-6">
-                      <div class="flex w-4 h-4 bg-[#DD730A] rounded-full mr-1.5"></div>
+                      <div className="flex w-4 h-4 bg-[#DD730A] rounded-full mr-1.5"></div>
                       <h5>Category</h5>
                     </div>
                     <p className='ml-12 text-sm mt-3'>UI/UX DESIGNER</p>
                   </div>
                 </div>
-                <div class="flex flex-col dark:text-white ">
+                <div className="flex flex-col dark:text-white ">
                   <div className='flex flex-col items-center sm:items-start'>
                     <div className="flex items-center gap-6">
-                      <div class="flex w-4 h-4 bg-[#DD730A] rounded-full mr-1.5"></div>
+                      <div className="flex w-4 h-4 bg-[#DD730A] rounded-full mr-1.5"></div>
                       <h5>Project takes time</h5>
                     </div>
                     <p className='ml-12 text-sm mt-3'>Less than 1 Month</p>
                   </div>
                 </div>
-                <div class="flex flex-col dark:text-white ">
+                <div className="flex flex-col dark:text-white ">
                   <div className='flex flex-col items-center sm:items-start'>
                     <div className="flex items-center gap-6">
-                      <div class="flex w-4 h-4 bg-[#DD730A] rounded-full mr-1.5"></div>
+                      <div className="flex w-4 h-4 bg-[#DD730A] rounded-full mr-1.5"></div>
                       <h5>Experience Level</h5>
                     </div>
                     <p className='ml-12 text-sm mt-3'>Level 1 Seller</p>
@@ -81,28 +81,28 @@ const JobDetailView = () => {
                 </div>
               
   
-                <div class="flex flex-col dark:text-white ">
+                <div className="flex flex-col dark:text-white ">
                   <div className='flex flex-col items-center sm:items-start'>
                     <div className="flex items-center gap-6">
-                      <div class="flex w-4 h-4 bg-[#DD730A] rounded-full mr-1.5"></div>
+                      <div className="flex w-4 h-4 bg-[#DD730A] rounded-full mr-1.5"></div>
                       <h5>Service Price</h5>
                     </div>
                     <p className='ml-12 text-sm mt-3'>$20</p>
                   </div>
                 </div>
-                <div class="flex flex-col dark:text-white ">
+                <div className="flex flex-col dark:text-white ">
                   <div className='flex flex-col items-center sm:items-start'>
                     <div className="flex items-center gap-6">
-                      <div class="flex w-4 h-4 bg-[#DD730A] rounded-full mr-1.5"></div>
+                      <div className="flex w-4 h-4 bg-[#DD730A] rounded-full mr-1.5"></div>
                       <h5>Status</h5>
                     </div>
                     <p className='ml-12 text-sm mt-3'>Pending</p>
                   </div>
                 </div>
-                <div class="flex flex-col dark:text-white ">
+                <div className="flex flex-col dark:text-white ">
                   <div className='flex flex-col items-center sm:items-start'>
                     <div className="flex items-center gap-6">
-                      <div class="flex w-4 h-4 bg-[#DD730A] rounded-full mr-1.5"></div>
+                      <div className="flex w-4 h-4 bg-[#DD730A] rounded-full mr-1.5"></div>
                       <h5>Date</h5>
                     </div>
                     <p className='ml-12 text-sm mt-3'>24 June 2022</p>
@@ -111,10 +111,10 @@ const JobDetailView = () => {
               </div>
             </div>
             <div className="flex justify-center gap-6 mt-12">
-                <button type="button" class="text-white bg-[#00538F] hover:bg-[#014c82] focus:ring-4 focus:outline-none focus:ring-blue-300 shadow text-lg font-medium rounded-lg py-3 px-8 lg:py-6 lg:px-24 text-center">
+                <button type="button" className="text-white bg-[#00538F] hover:bg-[#014c82] focus:ring-4 focus:outline-none focus:ring-blue-300 shadow text-lg font-medium rounded-lg py-3 px-8 lg:py-6 lg:px-24 text-center">
                     <Link to="/inbox/sellername">Chat</Link>
                 </button>
-                <button type="button" class="text-white bg-[#DD730A] hover:bg-[#bd6308] focus:ring-4 focus:outline-none focus:ring-blue-300 shadow text-lg font-medium rounded-lg py-3 px-8 lg:py-6 lg:px-24 text-center">
+                <button type="button" className="text-white bg-[#DD730A] hover:bg-[#bd6308] focus:ring-4 focus:outline-none focus:ring-blue-300 shadow text-lg font-medium rounded-lg py-3 px-8 lg:py-6 lg:px-24 text-center">
                    <Link to="/buyer/orders">Accept</Link> 
                 </button>
             </div>

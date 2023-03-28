@@ -26,7 +26,7 @@ const JobPost = ({data}) => {
         
       </div>
       <div className='flex justify-between mt-1 md:text-2xl'>
-        <span class="bg-gray-100 text-gray-800 font-medium mr-2 px-4 py-0.5 rounded-3xl dark:bg-gray-700 dark:text-gray-300">{data.status}</span>
+        <span className="bg-gray-100 text-gray-800 font-medium mr-2 px-4 py-0.5 rounded-3xl dark:bg-gray-700 dark:text-gray-300">{data.status}</span>
         <div className='text-gray-400'>
           Date: {data.date}
         </div>
