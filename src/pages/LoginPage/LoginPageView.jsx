@@ -4,10 +4,27 @@ import { BiShow } from "react-icons/bi";
 import { FaGoogle, FaFacebook, FaApple, FaGooglePlay } from "react-icons/fa";
 import CommonButton from "../../components/OrderPageComponents/CommonButton";
 import Footer from "../../components/Footer/Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { loginUser } from "../../api";
+import { authActions } from "../../store/AuthSlice";
+import { useDispatch } from "react-redux";
 
 
 const LoginPageView = () => {
+   const dispatch = useDispatch();
+   const navigate = useNavigate()
+   const handleSubmit = async (event) =>{
+      event.preventDefault();
+      const email = event.target.username.value;
+      const password = event.target.password.value;
+      console.log(email,password)
+      const userLogin = await loginUser({email, password});
+      console.log(userLogin)
+      if(userLogin.status==='SUCCESS'){
+         dispatch(authActions.userRegister({userId:userLogin.data.userId, userInfo:userLogin.data}));
+         navigate('/')
+      }
+   }
    return(
       <>
          <div className="w-full h-screen mt-20 sm:w-[90%] md:w-[90%] justify-center mx-auto flex-none sm:flex m-2 p-2 bg-white md:space-x-28">
@@ -23,14 +40,14 @@ const LoginPageView = () => {
                      <h1 className="text-3xl font-bold my-2">Login</h1>
                      <span>Let’s build something greater</span>
                   </div>
-                  <form action="#" method="post">
+                  <form onSubmit={handleSubmit}>
                      <div className="my-3">
                         <label htmlFor="username" className="text-sm select-none">E-mail or Username</label>
-                        <input id="username" type="text" placeholder="Enter your E-mail or Username" className="w-full bg-[#F5F5F5] border-[#E8E9EA] rounded mt-1 focus:border-none"/>
+                        <input name="username" type="text" placeholder="Enter your E-mail or Username" className="w-full bg-[#F5F5F5] border-[#E8E9EA] rounded mt-1 focus:border-none"/>
                      </div>
                      <div className="my-3">
                         <label htmlFor="password" className="text-sm select-none">Password</label>
-                        <input id="password" type="Password" placeholder="Enter your Password" className="w-full bg-transparent border-[#E8E9EA] rounded mt-1 focus:border-none z-0"/>
+                        <input name="password" type="Password" placeholder="Enter your Password" className="w-full bg-transparent border-[#E8E9EA] rounded mt-1 focus:border-none z-0"/>
                         <BiShow className="w-[25px] float-right mr-3 -mt-7 text-xl bg-transparent z-50 text-slate-500"/>
                      </div>
 
