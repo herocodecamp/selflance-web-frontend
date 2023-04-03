@@ -65,12 +65,13 @@ import LoginPageView from "./pages/LoginPage";
 import SignUpPageView from "./pages/SignUpPage";
 
 import { Routes, BrowserRouter, Route } from "react-router-dom";
+import ToasterContainer from "./utils/ToasterContainer";
 
 
 function App() {
   return (
     <>
-      <OrderPage/>
+      {/* <OrderPage/> */}
       {/* <AddNewCardPage/> */}
       {/* <OrderProcessingPage/> */}
       {/* <CustomerSupportPage/> */}
@@ -78,7 +79,6 @@ function App() {
       {/* <LoginPage/> */}
       {/* <SignUpPage/> */}
       {/* <ConfirmPage/> */}
-
 
       {/* <Dashboard /> */}
 
@@ -138,6 +138,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
+              <Route  path="/verifyOtp" element={<ConfirmPage/>} />
               <Route  path="/" element={<LandingPage />} />
 
               <Route path="/blogs" element={<Blogs />} />
@@ -177,6 +178,7 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
+        <ToasterContainer />
     </>
   );
 }
