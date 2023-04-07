@@ -3,9 +3,14 @@ import Logo from "../../Assets/logo.png";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const NavbarView = () => {
+
+  const userId = useSelector(state=>state.Auth.userId)
+  
   const location = useLocation();
+
   console.log(location);
   const [toggle, setToggle] = useState(false);
   return (
@@ -71,7 +76,7 @@ const NavbarView = () => {
                       ? "bg-[rgba(64,120,194,0.63)]   py-1.5 sm:py-2.5 px-2 md:px-4  rounded-md"
                       : "hidden sm:flex "
                   }
-                  to="/become_seller"
+                  to={`/become_seller/${userId}`}
                 >
                   Find Work
                 </NavLink>
@@ -146,7 +151,7 @@ const NavbarView = () => {
               <Link to="/blogs">Blogs</Link>
             </li>
             <li className=" text-black py-2 px-2 rounded-md">
-              <Link to="/become_seller">Find Work</Link>
+              <Link to={`/become_seller/${userId}`}>Find Work</Link>
             </li>
             <li className=" text-black py-2 px-2 rounded-md">
               <Link to="/job_post/new">Post a Job</Link>

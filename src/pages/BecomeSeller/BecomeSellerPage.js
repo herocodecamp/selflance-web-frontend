@@ -7,6 +7,7 @@ import Control from '../../common/Control/Control'
 
 const BecomeSeller = () => {
   const [step, setStep] = useState(1)
+  
   const handleStep = (step) => {
     setStep(step)
   }
