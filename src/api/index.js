@@ -6,10 +6,28 @@ const USER_END_POINT ={
     SIGNUP: ()=> '/user/signup',
     VERIFY_OTP: ()=> '/user/verifyOTP',
     LOGIN: ()=> '/user/login',
+    USER_DETAILS: '/user/userDetails'
 }
 
 const URL = (endPoint) => `${BaseUrl}${endPoint}`
 console.log(URL)
+
+export const submitUserDetails = async(userDetails, userId) =>{
+    try{
+        const response = await axios.post(`${BaseUrl}/${USER_END_POINT.USER_DETAILS}/${userId}/create`,userDetails,{
+            headers: {
+                "Content-Type": "multipart/form-data",
+              },
+        })
+
+        console.log(response)
+        return response
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+}
 
 export const userSignUp = async(userInfo) =>{
 

@@ -1,5 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 // import { LoginPatient } from "../APi/api";
+
+
 const initialState = {
   userId: null,
   userInfo: null,

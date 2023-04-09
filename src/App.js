@@ -66,7 +66,11 @@ import SignUpPageView from "./pages/SignUpPage";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
 import ToasterContainer from "./utils/ToasterContainer";
 
+
+
 function App() {
+
+  
   return (
     <>
       {/* <OrderPage/> */}
@@ -164,8 +168,8 @@ function App() {
           <Route path="/users/seller/dashboard" element={<SeDashboard />} />
           <Route path="/users/buyer/dashboard" element={<Dashboard />} />
 
-          <Route path="/become_seller" element={<BecomeSeller />} />
-          <Route path="/settings/:sellerID" element={<MenuPage />} />
+              <Route path="/become_seller" element={<BecomeSeller />} />
+              <Route path="/settings/:sellerID" element={<MenuPage />} />
 
           <Route path="/buyer_order_process/:buyerID" element={<OrderPage />} />
           <Route path="/seller_create_offer/:sellerID" element={<SeCreateOfferPage />} />
