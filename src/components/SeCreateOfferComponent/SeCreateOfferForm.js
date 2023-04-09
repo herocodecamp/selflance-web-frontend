@@ -2,6 +2,9 @@ import { Label, Select, TextInput } from "flowbite-react";
 import { Formik, useFormik } from "formik";
 import React, { useState } from "react";
 import { ValidateSchema } from "./CreateOfferSchema";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 const initialValues = {
   description: "",
@@ -14,7 +17,7 @@ const initialValues = {
 };
 
 const SeCreateOfferForm = () => {
-  
+  const { sellerID } = useParams();
   const { values, handleBlur, handleChange, handleSubmit, errors, touched } =
     useFormik({
       initialValues,
@@ -22,9 +25,17 @@ const SeCreateOfferForm = () => {
       validateOnChange: true,
       validateOnBlur: false,
 
-      onSubmit: (values, action) => {
-        console.log(values);
-        action.resetForm();
+      onSubmit: async (values, action) => {
+        try {
+          const response = await axios.post(
+            `http://localhost:8000/api/v1/sellerOffer/${sellerID}`,
+            values
+          );
+          console.log(response.data, "response");
+          action.resetForm();
+        } catch (error) {
+          console.log("post error", error);
+        }
       },
     });
 
