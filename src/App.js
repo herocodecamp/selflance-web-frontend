@@ -60,12 +60,15 @@ import SeCreateOfferPage from "./pages/SellerCreateAnOferr";
 import AgreementPage from "./pages/AgreementPage";
 // import UploadDeliveryPage from "./pages/UploadDelivery";
 import SeWriteReview from "./pages/SeWriteReview/SeWriteReview";
+import WorkPlacePage from './pages/Workplace'
 
 import LoginPageView from "./pages/LoginPage";
 import SignUpPageView from "./pages/SignUpPage";
 
 import { Routes, BrowserRouter, Route } from "react-router-dom";
 import ToasterContainer from "./utils/ToasterContainer";
+
+
 
 
 
@@ -161,15 +164,16 @@ function App() {
               <Route path="/buyer/orders" element={<ManageOrder/>} />
 
               <Route path="/users/search" element={<SearchPage />} />
-              <Route path="/users/search/:userID/gig-details" element={< ServiceDetails/>} />
+              <Route path="/users/search/:userID/gig-details" element={<ServiceDetails/>} />
               <Route path="/users/:userID/profile" element={<SellerProfile/>} />
 
               <Route path="/users/orders" element={<OrderScreen />} />
-              <Route path="/users/seller/dashboard" element={<SeDashboard />} />
+              <Route path="/users/seller/dashboard/:userID" element={<SeDashboard />} />
               <Route path="/users/buyer/dashboard" element={<Dashboard />} />
 
               <Route path="/become_seller/:userID" element={<BecomeSeller />} />
-              <Route path="/settings/:sellerID" element={<MenuPage />} />
+              <Route path="/settings/:userID" element={<MenuPage />} />
+              <Route path='/:userID/gig/create' element={<WorkPlacePage/>} />
 
           <Route
             path="/privacy_policy"

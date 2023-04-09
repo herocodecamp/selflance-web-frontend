@@ -6,7 +6,8 @@ const USER_END_POINT ={
     SIGNUP: ()=> '/user/signup',
     VERIFY_OTP: ()=> '/user/verifyOTP',
     LOGIN: ()=> '/user/login',
-    USER_DETAILS: '/user/userDetails'
+    USER_DETAILS: '/user/userDetails',
+    GIG_CREATE: '/gig'
 }
 
 const URL = (endPoint) => `${BaseUrl}${endPoint}`
@@ -28,6 +29,25 @@ export const submitUserDetails = async(userDetails, userId) =>{
         console.log(err)
     }
 }
+
+export const gigCreate = async(gigDetails, userId) =>{
+    try{
+        const response = await axios.post(`${BaseUrl}/${USER_END_POINT.GIG_CREATE}/${userId}/create`,gigDetails,{
+            headers: {
+                "Content-Type": "multipart/form-data",
+              },
+        })
+
+        console.log(response)
+        return response
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+}
+
+
 
 export const userSignUp = async(userInfo) =>{
 

@@ -7,7 +7,7 @@ const initial_state = {
     about: '',
     occupation:'',
     jobDescription:'',
-    profileImage: '',
+    profileImage: {},
     education: [],
     hourlyRate: '',
     skills: [],
@@ -25,6 +25,7 @@ const becomeSellerSlice = createSlice({
     initialState: initial_state,
     reducers:{
         detailsView1 (state,action){
+            console.log(action.payload.profileImage)
             state.firstname = action.payload.firstname ? action.payload.firstname : ''
             state.lastname = action.payload.lastname ? action.payload.lastname : ''
             state.location = action.payload.location ? action.payload.location : ''

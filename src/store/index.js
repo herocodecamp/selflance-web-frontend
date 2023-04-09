@@ -4,7 +4,8 @@ import { combineReducers, configureStore,  } from "@reduxjs/toolkit";
 import { persistReducer} from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import authSlice from "./AuthSlice";
-import BecomeSellerSlice, { becomeSellerActions } from "./BecomeSellerSlice";
+import BecomeSellerSlice from "./BecomeSellerSlice";
+import CreateGigSlice from "./CreateGigSlice";
 
 // persist config storage
 const persistConfig = {
@@ -17,7 +18,8 @@ const persistConfig = {
 // Property key write as like below
 const rootReducer = combineReducers({
   Auth: authSlice,
-  BecomeSeller: BecomeSellerSlice
+  BecomeSeller: BecomeSellerSlice,
+  CreateGig: CreateGigSlice,
 
 });
 
@@ -30,14 +32,7 @@ const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      serializableCheck: {
-        // Ignore these action types
-        ignoredActions: ["becomeseller/detailsView1"],
-         // Ignore these field paths in all actions
-        ignoredActionPaths: ['payload.profileImage'],
-        // Ignore these paths in the state
-        // ignoredPaths: ['profileImage'],
-      },
+      serializableCheck: false,
     })
 });
 

@@ -1,16 +1,18 @@
 import React from 'react'
 import ProgressBar from './ProgressBar'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux";
 import { becomeSellerActions } from '../../store/BecomeSellerSlice';
-import { submitUserDetails } from '../../api';
+import { submitUserDetails, } from '../../api';
 
 const AccoutSecurity = () => {
 
     const dispatch = useDispatch();
     const data = useSelector(state=>state.BecomeSeller);
+    console.log(data.profileImage)
     const userInfo = useSelector(state=>state.Auth);
     const params = useParams()
+    const navigate = useNavigate();
    
    
     
@@ -24,7 +26,7 @@ const AccoutSecurity = () => {
 
         // reading data from store
        
-        console.log(data)
+        
 
 
 
@@ -44,16 +46,18 @@ const AccoutSecurity = () => {
     data.contactNumber && form.append('contactNumber', data.contactNumber)
     data.sellerLanguage && form.append('sellerLanguage', data.sellerLanguage)
     data.languageLevel && form.append('languageLevel', data.languageLevel)
+    data.profileImage && form.append('profileImage', data.profileImage)
     // params.userID && form.append('userId',params.userID)
 
     // viewing formData
-    for (var key of form.entries()) {
-        console.log(key[0] + ', ' + key[1])
-    }
+    // for (var key of form.entries()) {
+    //     console.log(key[0] + ', ' + key[1])
+    // }
 
     const postRequest = await submitUserDetails(form, params.userID);
     console.log("after request", postRequest)
-
+    
+    if(postRequest) {navigate(`/settings/${params.userID}`)}
     }
 
 
@@ -103,7 +107,7 @@ const AccoutSecurity = () => {
             </div>
             <div className="flex justify-center gap-6 mt-12">
                 <button type="submit" className="text-white bg-[#00538F] hover:bg-[#014c82] focus:ring-4 focus:outline-none focus:ring-blue-300 shadow text-lg font-medium rounded-lg py-3 px-8 lg:py-6 lg:px-24 text-center">
-                    {/* <Link to="/settings/:sellerID">Continue</Link> */} Continue
+                    {/* <Link to="/dashboard/:sellerID">Continue</Link> */} Continue
                 </button>
             </div>
             
