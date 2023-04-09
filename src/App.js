@@ -21,7 +21,6 @@ import LoginPage from "./pages/LoginPage";
 import ConfirmPage from "./pages/ConfirmPage";
 import SignUpPage from "./pages/SignUpPage";
 
-
 // Section
 import PostJobPage from "./pages/PostJobPage";
 import ReviewJobPage from "./pages/ReviewJobPage";
@@ -71,8 +70,6 @@ import ToasterContainer from "./utils/ToasterContainer";
 
 
 
-
-
 function App() {
 
   
@@ -80,7 +77,7 @@ function App() {
     <>
       {/* <OrderPage/> */}
       {/* <AddNewCardPage/> */}
-      {/* <OrderProcessingPage/> */}
+      {/* <OrderProcessingPage /> */}
       {/* <CustomerSupportPage/> */}
       {/* <BuyerOrderManagementPage/> */}
       {/* <LoginPage/> */}
@@ -122,7 +119,6 @@ function App() {
 
       {/* <AgreementPage /> */}
 
-
       {/* <AgreementPage /> */}
 
       {/* <UploadDeliveryPage /> */}
@@ -145,35 +141,37 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-              <Route  path="/verifyOtp" element={<ConfirmPage/>} />
-              <Route  path="/" element={<LandingPage />} />
+          <Route path="/verifyOtp" element={<ConfirmPage />} />
+          <Route path="/" element={<LandingPage />} />
 
-              <Route path="/blogs" element={<Blogs />} />
-              <Route path="/blogs/:blogID" element={<SingleBlog />} /> 
-              
-              <Route path="/login" element={<LoginPageView />} />
-              <Route path="/signup" element={<SignUpPageView />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:blogID" element={<SingleBlog />} />
 
-              <Route path="/job_posts" element={<JobList/>} />
-              <Route path="/job_post/new" element={<PostJobPage />} />
-              <Route path="/job_post/new/review" element={<ReviewJobPage/>} />
-              <Route path="/job_posts/response" element={<JobResponsePage/>} />
-              <Route path="/job_posts/:jobID/details" element={<JobDetail/>}/>
-              <Route path="/inbox/sellername" element={<Messaging/>} />
+          <Route path="/login" element={<LoginPageView />} />
+          <Route path="/signup" element={<SignUpPageView />} />
 
-              <Route path="/buyer/orders" element={<ManageOrder/>} />
+          <Route path="/job_posts" element={<JobList />} />
+          <Route path="/job_post/new" element={<PostJobPage />} />
+          <Route path="/job_post/new/review" element={<ReviewJobPage />} />
+          <Route path="/job_posts/response" element={<JobResponsePage />} />
+          <Route path="/job_posts/:jobID/details" element={<JobDetail />} />
+          <Route path="/inbox/sellername" element={<Messaging />} />
+
+          <Route path="/buyer/orders" element={<ManageOrder />} />
 
               <Route path="/users/search" element={<SearchPage />} />
               <Route path="/users/search/:userID/gig-details" element={<ServiceDetails/>} />
               <Route path="/users/:userID/profile" element={<SellerProfile/>} />
 
               <Route path="/users/orders" element={<OrderScreen />} />
-              <Route path="/users/seller/dashboard/:userID" element={<SeDashboard />} />
+              <Route path="/users/seller/dashboard" element={<SeDashboard />} />
               <Route path="/users/buyer/dashboard" element={<Dashboard />} />
 
               <Route path="/become_seller/:userID" element={<BecomeSeller />} />
-              <Route path="/settings/:userID" element={<MenuPage />} />
-              <Route path='/:userID/gig/create' element={<WorkPlacePage/>} />
+              <Route path="/settings/:sellerID" element={<MenuPage />} />
+
+          <Route path="/buyer_order_process/:buyerID" element={<OrderPage />} />
+          <Route path="/seller_create_offer/:sellerID" element={<SeCreateOfferPage />} />
 
           <Route
             path="/privacy_policy"
@@ -186,7 +184,7 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
-        <ToasterContainer />
+      <ToasterContainer />
     </>
   );
 }
