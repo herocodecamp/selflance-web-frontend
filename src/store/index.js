@@ -18,12 +18,8 @@ const persistConfig = {
 const rootReducer = combineReducers({
   Auth: authSlice,
   BecomeSeller: BecomeSellerSlice,
-<<<<<<< HEAD
-  sellerOffer: sellerOfferReducer,
-=======
   CreateGig: CreateGigSlice,
 
->>>>>>> d249c2107b6e556a4f60a927ca834d37a1e3b05f
 });
 
 // persisted all reducers inside persistedReducer

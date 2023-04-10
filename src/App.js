@@ -162,13 +162,8 @@ function App() {
               <Route path="/users/seller/dashboard" element={<SeDashboard />} />
               <Route path="/users/buyer/dashboard" element={<Dashboard />} />
 
-<<<<<<< HEAD
-          <Route path="/become_seller" element={<BecomeSeller />} />
-          <Route path="/settings/:sellerID" element={<MenuPage />} />
-=======
               <Route path="/become_seller/:userID" element={<BecomeSeller />} />
               <Route path="/settings/:sellerID" element={<MenuPage />} />
->>>>>>> d249c2107b6e556a4f60a927ca834d37a1e3b05f
 
           <Route path="/buyer_order_process/:offerId" element={<OrderPage />} />
 
