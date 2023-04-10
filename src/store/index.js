@@ -5,7 +5,6 @@ import storage from "redux-persist/lib/storage";
 import authSlice from "./AuthSlice";
 import BecomeSellerSlice, { becomeSellerActions } from "./BecomeSellerSlice";
 import sellerOfferReducer from "./GetSellerOfferSlice";
-import BecomeSellerSlice from "./BecomeSellerSlice";
 import CreateGigSlice from "./CreateGigSlice";
 import JobPostSlice from './JobPostSlice';
 
@@ -34,20 +33,8 @@ const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-<<<<<<< HEAD
-      serializableCheck: {
-        // Ignore these action types
-        ignoredActions: ["becomeseller/detailsView1"],
-        // Ignore these field paths in all actions
-        ignoredActionPaths: ["payload.profileImage"],
-        // Ignore these paths in the state
-        // ignoredPaths: ['profileImage'],
-      },
-    }),
-=======
       serializableCheck: false,
     })
->>>>>>> d249c2107b6e556a4f60a927ca834d37a1e3b05f
 });
 
 export default store;
