@@ -7,13 +7,15 @@ const USER_END_POINT ={
     VERIFY_OTP: ()=> '/user/verifyOTP',
     LOGIN: ()=> '/user/login',
     USER_DETAILS: '/user/userDetails',
-    GIG_CREATE: '/gig'
+    GIG_CREATE: '/gig',
+    JOB_CREATE: '/jobpost'
 }
 
 const URL = (endPoint) => `${BaseUrl}${endPoint}`
 console.log(URL)
 
 export const submitUserDetails = async(userDetails, userId) =>{
+
     try{
         const response = await axios.post(`${BaseUrl}/${USER_END_POINT.USER_DETAILS}/${userId}/create`,userDetails,{
             headers: {
@@ -33,6 +35,25 @@ export const submitUserDetails = async(userDetails, userId) =>{
 export const gigCreate = async(gigDetails, userId) =>{
     try{
         const response = await axios.post(`${BaseUrl}/${USER_END_POINT.GIG_CREATE}/${userId}/create`,gigDetails,{
+            headers: {
+                "Content-Type": "multipart/form-data",
+              },
+        })
+
+        console.log(response)
+        return response
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+}
+
+
+export const jobCreate = async(jobDetails, userId) =>{
+    try{
+        console.log("from API: ", jobDetails)
+        const response = await axios.post(`${BaseUrl}/${USER_END_POINT.JOB_CREATE}/${userId}/create`,jobDetails,{
             headers: {
                 "Content-Type": "multipart/form-data",
               },

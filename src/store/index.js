@@ -6,6 +6,7 @@ import storage from "redux-persist/lib/storage";
 import authSlice from "./AuthSlice";
 import BecomeSellerSlice from "./BecomeSellerSlice";
 import CreateGigSlice from "./CreateGigSlice";
+import JobPostSlice from './JobPostSlice';
 
 // persist config storage
 const persistConfig = {
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
   Auth: authSlice,
   BecomeSeller: BecomeSellerSlice,
   CreateGig: CreateGigSlice,
+  JobPost: JobPostSlice
 
 });
 

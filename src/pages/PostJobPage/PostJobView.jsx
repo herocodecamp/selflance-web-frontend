@@ -5,9 +5,11 @@ import { BsTags, BsPaypal } from 'react-icons/bs'
 import {FaCreditCard} from 'react-icons/fa'
 import PricePicker from '../../common/PricePicker';
 import { ValidateSchema } from './PostJobSchema'
-import { useFormik } from 'formik'
-  
-import { Link } from 'react-router-dom'
+import { useFormik } from 'formik';
+import { Link, useNavigate } from 'react-router-dom'
+
+import { useDispatch } from 'react-redux'
+import { jobPostActions } from '../../store/JobPostSlice'
 
 const initialValues = {
     title: "",
@@ -19,13 +21,15 @@ const initialValues = {
     hourlyTo: 10,
     description: "",
     terms: false,
+    jobFiles:''
 }
 
 const PostJobView = () => {
     
-    
+   const navigate = useNavigate();
+   const dispatch = useDispatch()
       
-    const { values, handleBlur, handleChange, handleSubmit, errors, touched } =
+    const { values, handleBlur, handleChange, handleSubmit, setFieldValue, errors, touched } =
         useFormik({
         initialValues,
         validationSchema: ValidateSchema,
@@ -33,12 +37,16 @@ const PostJobView = () => {
         validateOnBlur: false,
     
         onSubmit: (values, action) => {
-            console.log(values);
-            action.resetForm();
+            
+
+            dispatch(jobPostActions.jobData({values}))
+
+            navigate('/job_post/new/review')
+            // action.resetForm();
         },
         });
     
-    console.log("errors", errors);
+    // console.log("errors", errors);
 
     return ( 
         <div className='min-h-screen md:p-16 m-5'>
@@ -48,46 +56,46 @@ const PostJobView = () => {
                     <div className='grid md:grid-cols-2 gap-4'>
                         <label className="block">
                             <span className="block w-full text-[#00538F] text-2xl font-medium pl-3">Job Title</span>
-                            <input type="text" className="peer mt-1 text-gray-500 block w-full px-3 py-6 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeholder='Write a title here' name='title' onBlur={handleBlur} onChange={handleChange} value={values.title} />    
+                            <input type="text" className="peer mt-1 text-gray-500 block w-full px-3 py-6 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeholder='Write a title here'id='title' name='title' onBlur={handleBlur} onChange={handleChange} value={values.title} />    
                         </label>
                         <label className="block">
                             <span className="block w-full text-[#00538F] text-2xl font-medium pl-3">Select the Category</span>
-                            <select type="text" className="peer mt-1 text-gray-500 block w-full px-3 py-6 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeholder='Write a title here' name='category' onChange={handleChange} onSubmit={handleSubmit} value={values.category}>
+                            <select type="text" className="peer mt-1 text-gray-500 block w-full px-3 py-6 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeholder='Write a title here' id='category' name='category' onChange={handleChange}  value={values.category}>
                                 <option>Choose related category</option>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
+                                <option>Programming</option>
+                                <option>Graphic Designer</option>
+                                <option>Voice Over</option>
                             </select>
                         </label>
                     </div>
                     <div className='grid md:grid-cols-2 gap-4'>
                     <label className="block mt-12">
                             <span className="block w-full text-[#00538F] text-2xl font-medium pl-3">Project Takes Time</span>
-                            <select type="text" className="peer mt-1 block text-gray-500 w-full px-3 py-6 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeholder='Write a title here' name='duration' onChange={handleChange} onSubmit={handleSubmit} value={values.duration} >
+                            <select type="text" className="peer mt-1 block text-gray-500 w-full px-3 py-6 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeholder='Write a title here' id='duration' name='duration' onChange={handleChange} onSubmit={handleSubmit} value={values.duration} >
                                 <option>Select time period according to your project length</option>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
+                                <option>1 Day</option>
+                                <option>3 Days</option>
+                                <option>More than 3 Days</option>
                             </select>
                         </label>
                         <label className="block mt-12">
                             <span className="block w-full text-[#00538F] text-2xl font-medium pl-3">Experience Level</span>
-                            <select type="text" className="peer mt-1 block text-gray-500 w-full px-3 py-6 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeholder='Write a title here' name='experience' onChange={handleChange} onSubmit={handleSubmit} value={values.experience} >
+                            <select type="text" className="peer mt-1 block text-gray-500 w-full px-3 py-6 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeholder='Write a title here' id='experience' name='experience' onChange={handleChange}  value={values.experience} >
                                 <option>Select level according to your project complexity</option>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
+                                <option>Basic</option>
+                                <option>Intermediate</option>
+                                <option>Complex</option>
                             </select>
                         </label>
                     </div>
                     <div className='grid md:grid-cols-2 gap-4'>
                     <label className="block mt-12">
                             <span className="block w-full text-[#00538F] text-2xl font-medium pl-3">Select Seller Language</span>
-                            <select type="text" className="peer mt-1 block text-gray-500 w-full px-3 py-6 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeholder='Write a title here' name='language' onChange={handleChange} onSubmit={handleSubmit} value={values.language}>
+                            <select type="text" className="peer mt-1 block text-gray-500 w-full px-3 py-6 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeholder='Write a title here' id='language' name='language' onChange={handleChange}  value={values.language}>
                                 <option>Choose related language</option>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
+                                <option>English</option>
+                                <option>Urdu/Hindi</option>
+                                <option>Any Other</option>
                             </select>
                         </label>
                         
@@ -115,7 +123,7 @@ const PostJobView = () => {
                         <div className='mt-6 grid grid-cols-2 gap-4 text-gray-500'>
                             <div className=''>
                                     <p className='ml-3'>From</p>
-                                    <PricePicker onChange={handleChange} onBlur={handleBlur} name='hourlyFrom' value={values.hourlyFrom} />
+                                    <PricePicker onChange={handleChange} onBlur={handleBlur} id='hourlyFrom' name='hourlyFrom' value={values.hourlyFrom} />
                             </div>
                             <div>
                                     <p className='ml-3'>To</p>
@@ -130,18 +138,19 @@ const PostJobView = () => {
                     <div className='grid grid-cols-1 gap-4'>
                         <div className="block mt-12">
                             <span className="block w-full text-[#00538F] text-2xl font-medium pl-3">Job Description in Details</span>
-                            <textarea id="message" className="mt-6 block p-5 w-full text-sm text-gray-500 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" rows='20' placeholder="Write your thoughts here..." name='description' onChange={handleChange} onSubmit={handleSubmit} value={values.description} ></textarea>
+                            <textarea id="description" className="mt-6 block p-5 w-full text-sm text-gray-500 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" rows='20' placeholder="Write your thoughts here..." name='description' onChange={handleChange}  value={values.description} ></textarea>
                         </div>
                     </div>
                     <div className='grid grid-cols-1 gap-4'>
                         <div className="block mt-12">
                             <span className="block w-full text-[#00538F] text-2xl font-medium pl-3">Upload Documents</span>
-                            <label htmlFor="input-file" className="mt-6 flex flex-col justify-center w-full h-20 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                            <label htmlFor="jobFiles" className="mt-6 flex flex-col justify-center w-full h-20 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                                 <div className="flex justify-between items-center mx-4">
                                     <p className=" text-sm text-gray-400 dark:text-gray-400">Upload File</p>
                                     <p className=" text-gray-400 dark:text-gray-400"><MdOutlineFileUpload size={'1.5em'}/></p>
                                 </div>
-                                <input id="input-file" type="file" className="hidden" multiple />
+                                <input id="jobFiles" type="file" name="jobFiles" className="hidden" onChange={(e) =>
+                                                                                setFieldValue('jobFiles', e.currentTarget.files[0])}  />
         
                             </label>
                             <p className='text-right mt-3 text-gray-400'>File Size is Max: 150MB</p>
@@ -185,10 +194,16 @@ const PostJobView = () => {
                             <div className="block mt-12">
                                 <div className="flex items-center">
                                     <div className="flex items-center h-5">
-                                        <input id="helper-checkbox" aria-describedby="helper-checkbox-text" type="checkbox" value="" className="w-8 h-8 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                                        {/* <input id="helper-checkbox" aria-describedby="helper-checkbox-text" type="checkbox" value="" className="w-8 h-8 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/> */}
+                                        <input id="terms" type="checkbox" name='terms' onChange={handleChange}  value={values.terms} className="w-8 h-8 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+
                                     </div>
-                                    <div className="ml-5 text-sm" name='terms' onChange={handleChange} onSubmit={handleSubmit} value={values.terms} >
-                                        <label htmlFor="helper-checkbox" className=" text-2xl text-gray-400 dark:text-gray-300">5% Advance Payment for security and safety. I've accepted this term & condition</label>
+                                    <div className="ml-5 text-sm"  >
+                                        
+                                        <label  htmlFor="terms" className=" text-2xl text-gray-400 dark:text-gray-300" > 5% Advance Payment for security and safety. I've accepted this term & condition</label>
+                                        
+                                        
+                                        {/* <label htmlFor="helper-checkbox" className=" text-2xl text-gray-400 dark:text-gray-300">5% Advance Payment for security and safety. I've accepted this term & condition</label> */}
                                     </div>
                                 </div>
 
@@ -197,8 +212,8 @@ const PostJobView = () => {
                     </div>
                     <div className='grid lg:grid-cols-2 gap-4'>
                         <div className="col-end-3 col-span-1 gap-6 mt-12 flex-row-reverse flex gap w-full justify-between text-lg">
-                            <button type="button" className="text-white bg-[#00538F] hover:bg-[#014c82] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg py-3 px-8  lg:px-16 lg:py-6 text-center  w-full items-center ">
-                            <Link to="/job_post/new/review"> Review a Job</Link>
+                            <button type="submit" className="text-white bg-[#00538F] hover:bg-[#014c82] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg py-3 px-8  lg:px-16 lg:py-6 text-center  w-full items-center ">
+                             Review Job
                             
                             </button>
                             <button type="button" className="border text-gray-400 shadow hover:bg-gray-100  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg ;f text-center items-center w-full ">
