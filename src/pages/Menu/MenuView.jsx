@@ -8,8 +8,14 @@ import {BsFillCreditCard2BackFill, BsHeartFill, BsCashStack} from 'react-icons/b
 import {FaRegAddressCard, FaHeadset, FaUserPlus} from 'react-icons/fa'
 import {IoDocumentText, IoWarning, IoLogOut} from 'react-icons/io5'
 import profileImg from '../../Assets/msg_profile.png';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 
 const MenuView = () => {
+    const params = useParams();
+    const navigate = useNavigate();
+
+    console.log(params)
+
   return (
     <div className='min-h-screen md:p-16 m-5'>
         <div className='flex justify-between items-center'>
@@ -29,16 +35,16 @@ const MenuView = () => {
         </div>
         <div className="w-full text-gray-900 bg-white border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
             <button type="button" className="relative inline-flex justify-between items-center w-full px-4 py-4 text-2xl hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
-                <div className='flex items-center gap-4'>
+                <div className='flex items-center gap-4' >
                     <span className='bg-[#E2EED8] p-3 rounded-full'><TiUser className='text-blue-700' size={'1.2em'}/></span>
-                My Profile
+                  <Link to={`/users/${params.userID}/profile`}>My Profile</Link> 
                 </div>
                 <SlArrowRight/>
             </button>
             <button type="button" className="relative inline-flex justify-between items-center w-full px-4 py-4 text-2xl hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
                 <div className='flex items-center gap-4'>
                     <span className='bg-blue-200 p-3 rounded-full'><MdInsertChart className='text-blue-700' size={'1.2em'}/></span>
-                Dashboard
+                         <Link to={`/users/seller/dashboard/${params.userID}`}>Dashboard</Link>
                 </div>
                 <SlArrowRight/>
             </button>

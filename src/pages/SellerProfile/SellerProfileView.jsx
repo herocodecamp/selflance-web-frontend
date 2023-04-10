@@ -14,7 +14,7 @@ import PortfolioImage3 from "../../Assets/seller_portfolio-3.png";
 import Review from "../../components/Reviews";
 import { MdOutlineEdit } from "react-icons/md";
 import { BiTime } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 const sellerData={
@@ -146,7 +146,7 @@ const sellerData={
 
 const SellerProfileView= ()=>{
 
-
+        const params = useParams()
 
         return(<>
                 <div class="mt-6 md:mt-12">
@@ -388,7 +388,8 @@ const SellerProfileView= ()=>{
                             {/* Gigs */}
                             <div class="flex items-center justify-between">
                                 <h4 class="font-bold  text-sm md:text-xl">Active Gigs</h4>
-                                <button type="button" class="text-[8px] md:text-base font-medium text-[#828282] mr-2">Create New</button>
+                                <button type="button" class="text-[8px] md:text-base font-medium text-[#828282] mr-2">
+                                    <Link to={`/${params.userID}/gig/create`}>Create New</Link></button>
 
                             </div>
                             

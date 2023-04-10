@@ -22,7 +22,7 @@ const BecomeSellerView = ({handleStep}) => {
 
           
 
-     dispatch(becomeSellerActions.detailsView1({firstname,lastname,jobDescription,languageLevel,hourlyRate,sellerLanguage}))
+     dispatch(becomeSellerActions.detailsView1({firstname,lastname,jobDescription,languageLevel,profileImage,hourlyRate,sellerLanguage}))
 
      handleStep(2)
      

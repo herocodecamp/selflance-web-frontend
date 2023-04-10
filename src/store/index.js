@@ -18,7 +18,12 @@ const persistConfig = {
 const rootReducer = combineReducers({
   Auth: authSlice,
   BecomeSeller: BecomeSellerSlice,
+<<<<<<< HEAD
   sellerOffer: sellerOfferReducer,
+=======
+  CreateGig: CreateGigSlice,
+
+>>>>>>> d249c2107b6e556a4f60a927ca834d37a1e3b05f
 });
 
 // persisted all reducers inside persistedReducer
@@ -29,6 +34,7 @@ const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
+<<<<<<< HEAD
       serializableCheck: {
         // Ignore these action types
         ignoredActions: ["becomeseller/detailsView1"],
@@ -38,6 +44,10 @@ const store = configureStore({
         // ignoredPaths: ['profileImage'],
       },
     }),
+=======
+      serializableCheck: false,
+    })
+>>>>>>> d249c2107b6e556a4f60a927ca834d37a1e3b05f
 });
 
 export default store;

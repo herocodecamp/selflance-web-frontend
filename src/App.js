@@ -59,6 +59,7 @@ import SeCreateOfferPage from "./pages/SellerCreateAnOferr";
 import AgreementPage from "./pages/AgreementPage";
 // import UploadDeliveryPage from "./pages/UploadDelivery";
 import SeWriteReview from "./pages/SeWriteReview/SeWriteReview";
+import WorkPlacePage from './pages/Workplace'
 
 import LoginPageView from "./pages/LoginPage";
 import SignUpPageView from "./pages/SignUpPage";
@@ -153,19 +154,21 @@ function App() {
 
           <Route path="/buyer/orders" element={<ManageOrder />} />
 
-          <Route path="/users/search" element={<SearchPage />} />
-          <Route
-            path="/users/search/:userID/gig-details"
-            element={<ServiceDetails />}
-          />
-          <Route path="/users/:userID/profile" element={<SellerProfile />} />
+              <Route path="/users/search" element={<SearchPage />} />
+              <Route path="/users/search/:userID/gig-details" element={<ServiceDetails/>} />
+              <Route path="/users/:userID/profile" element={<SellerProfile/>} />
 
-          <Route path="/users/orders" element={<OrderScreen />} />
-          <Route path="/users/seller/dashboard" element={<SeDashboard />} />
-          <Route path="/users/buyer/dashboard" element={<Dashboard />} />
+              <Route path="/users/orders" element={<OrderScreen />} />
+              <Route path="/users/seller/dashboard" element={<SeDashboard />} />
+              <Route path="/users/buyer/dashboard" element={<Dashboard />} />
 
+<<<<<<< HEAD
           <Route path="/become_seller" element={<BecomeSeller />} />
           <Route path="/settings/:sellerID" element={<MenuPage />} />
+=======
+              <Route path="/become_seller/:userID" element={<BecomeSeller />} />
+              <Route path="/settings/:sellerID" element={<MenuPage />} />
+>>>>>>> d249c2107b6e556a4f60a927ca834d37a1e3b05f
 
           <Route path="/buyer_order_process/:offerId" element={<OrderPage />} />
 

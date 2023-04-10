@@ -1,22 +1,85 @@
 import React from 'react'
 import {IoMdCheckboxOutline} from 'react-icons/io'
-import {AiOutlinePlus} from 'react-icons/ai'
+import {AiOutlinePlus} from 'react-icons/ai';
+import { useDispatch } from 'react-redux'
+import { createGigActions } from '../../store/CreateGigSlice'
+
+
+const packageList = ['Summary', 'Price', 'Prototype','Source File', 'Logo', 'No of Pages', 'No. of Revisions', 'Delivery'];
+
+const packageValue = ['summary', 'price', 'prototype','sourceFile', 'logo', 'pages', 'revisions', 'delivery'];
 
 const Details = ({handleStep}) => {
+
+    const dispatch = useDispatch();
+
+    const packages=[]
+    const handleSubmit =(e)=>{
+        e.preventDefault();
+        // const {value,name} = e.target;
+
+        const basicpackage = {
+            packageName: 'Basic',
+            price: e.target.priceBasic.value,
+            prototype: e.target.prototypeBasic.value,
+            sourceFile: e.target.prototypeBasic.checked,
+            logo: e.target.logoBasic.checked,
+            pages: e.target.pagesBasic.value,
+            revisions: e.target.revisionsBasic.value,
+            deliveryDuration: e.target.deliveryBasic.value
+        }
+        packages.push(basicpackage)
+
+        const standardpackage = {
+            packageName: 'Standard',
+            price: e.target.priceStandard.value,
+            prototype: e.target.prototypeStandard.value,
+            sourceFile: e.target.prototypeStandard.checked,
+            logo: e.target.logoStandard.checked,
+            pages: e.target.pagesStandard.value,
+            revisions: e.target.revisionsStandard.value,
+            deliveryDuration: e.target.deliveryStandard.value
+        }
+        packages.push(standardpackage)
+        const premiumpackage = {
+            packageName: 'Premium',
+            price: e.target.pricePremium.value,
+            prototype: e.target.prototypePremium.value,
+            sourceFile: e.target.prototypePremium.checked,
+            logo: e.target.logoPremium.checked,
+            pages: e.target.pagesPremium.value,
+            revisions: e.target.revisionsPremium.value,
+            deliveryDuration: e.target.deliveryPremium.value
+        }
+
+        packages.push(premiumpackage)
+
+       const serviceDescription = e.target.servicedecription.value
+
+        console.log(packages)
+
+        dispatch(createGigActions.gigView2({serviceDescription,packages}))
+
+        handleStep(3)
+
+    }
   return (
     <div>
+        <form onSubmit={handleSubmit}>
         <div className='grid md:grid-cols-1 gap-4'>
             <div className="block mt-2">
                 <span className="block w-full text-[#00538F] text-2xl font-medium my-5">Describe your service</span>
-                <textarea id="message" className="mt-6 block p-5 w-full text-sm text-gray-500 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" rows='20' placeholder="Describe your service..."></textarea>
+                <textarea  name="servicedecription" className="mt-6 block p-5 w-full text-sm text-gray-500 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" rows='10' placeholder="Describe your service..."></textarea>
             </div>
         </div>
         <div className='grid md:grid-cols-1 gap-4'>
         <div className="block mt-12">
-                <span className="block w-full text-[#00538F] text-2xl font-medium pl-3">Packages</span>
+            
+
+                <span className="block w-full text-[#00538F] text-2xl font-medium pl-3 my-5">Packages</span>
                 
                 <div className="relative overflow-x-auto">
-                    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 border">
+                    {/* <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 border">
                         <thead className="text-center text-gray-700 capitalize bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
                                 <th scope="col" className="px-6 py-3 bg-white">
@@ -173,7 +236,168 @@ const Details = ({handleStep}) => {
 
                             </tr>   
                         </tfoot>
-                    </table>
+                    </table> */}
+                    <div className='grid grid-cols-4 gap-0'>
+                        {/* packages */}
+                        <div className='col-start-1 col-span-1  border'>
+                            <table className="w-full">
+                                <thead className='h-12'>
+                                    <tr className='border' >
+                                <th className='' >Packages</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        packageList.map((item,index)=>{
+                                            return(
+                                                <tr key={index} className='border text-base font-normal'>
+                                                    <div className={`ml-10 ${index ===0 ? 'my-6':'my-3'}`}>
+                                                    <td >{item}</td>
+                                                    </div>
+                                                </tr>
+                                            )
+                                        })
+                                    }
+                                </tbody>
+                                       
+                             </table>
+
+                        </div>
+
+                        {/* Basic Package */}
+                        <div className='col-start-2 col-span-1 w-full border'>
+                             <table className="w-full">
+                                <thead className='h-12'>
+                                    <tr className='border' >
+                                        
+                                <th className='' >Basic</th>
+                                
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        packageValue.map((item,index)=>{
+                                            
+                                                return(
+                                                    
+                                                        index >=2 && index <=4 ? (<tr key={index} className='border'>
+                                                        <div className={`ml-16 lg:ml-28 ${index ===0 ? 'my-6':'my-3'}`}>
+                                                        <td >
+                                                        <input  type="checkbox"  name={`${item}Basic`} class="text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 m-0" />
+                                                        </td>
+                                                        </div>
+                                                    </tr>):(<tr key={index} className='border'>
+                                                        <div className={`p-0 w-full ${index ===0 ? 'h-[74px]':'h-[50px]'}`}>
+                                                        <td className='' >
+                                                        <input type="text" name={`${item}Basic`} class={`p-0 w-full text-xs text-gray-900 bg-transparent border-0   appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer ${index === 0 ?'text-start': 'text-center'}`} placeholder={`Enter ${item}`}  />
+                                                        </td>
+                                                        </div>
+                                                    </tr>)
+                                                   
+                                                    
+                                                )
+                                            
+                                            
+                                        })
+                                    }
+                                </tbody>
+                                       
+                             </table>
+
+
+                        </div>
+
+                        {/* Standard Package */}
+                        <div className='col-start-3 col-span-1 w-full border'>
+
+                        <table className="w-full">
+                                <thead className='h-12'>
+                                    <tr className='border' >
+                                        
+                                <th className='' >Standard</th>
+                                
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        packageValue.map((item,index)=>{
+                                            
+                                                return(
+                                                    
+                                                        index >=2 && index <=4 ? (<tr key={index} className='border'>
+                                                        <div className={`ml-16 lg:ml-28 ${index ===0 ? 'my-6':'my-3'}`}>
+                                                        <td >
+                                                        <input  type="checkbox"  name={`${item}Standard`} class="text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 m-0" />
+                                                        </td>
+                                                        </div>
+                                                    </tr>):(<tr key={index} className='border'>
+                                                        <div className={`p-0 w-full ${index ===0 ? 'h-[74px]':'h-[50px]'}`}>
+                                                        <td className='' >
+                                                        <input type="text" name={`${item}Standard`} class={`p-0 w-full text-xs text-gray-900 bg-transparent border-0   appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer ${index === 0 ?'text-start': 'text-center'}`} placeholder={`Enter ${item}`} />
+                                                        </td>
+                                                        </div>
+                                                    </tr>)
+                                                   
+                                                    
+                                                )
+                                            
+                                            
+                                        })
+                                    }
+                                </tbody>
+                                       
+                             </table>
+
+                        </div>
+
+                        {/* Premium Package */}
+                        <div className='col-start-4 col-span-1 w-full border'>
+
+                        <table className="w-full">
+                                <thead className='h-12'>
+                                    <tr className='border' >
+                                        
+                                <th className='' >Premium</th>
+                                
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        packageValue.map((item,index)=>{
+                                            
+                                                return(
+                                                    
+                                                        index >=2 && index <=4 ? (<tr key={index} className='border'>
+                                                        <div className={`ml-16 lg:ml-28 ${index ===0 ? 'my-6':'my-3'}`}>
+                                                        <td >
+                                                        <input  type="checkbox"  name={`${item}Premium`} class="text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 m-0" />
+                                                        </td>
+                                                        </div>
+                                                    </tr>):(<tr key={index} className='border'>
+                                                        <div className={`p-0 w-full ${index ===0 ? 'h-[74px]':'h-[50px]'}`}>
+                                                        <td className='' >
+                                                        <input type="text" name={`${item}Premium`} class={`p-0 w-full text-xs text-gray-900 bg-transparent border-0   appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer ${index === 0 ?'text-start': 'text-center'}`} placeholder={`Enter ${item}`}/>
+                                                        </td>
+                                                        </div>
+                                                    </tr>)
+                                                   
+                                                    
+                                                )
+                                            
+                                            
+                                        })
+                                    }
+                                </tbody>
+                                       
+                             </table>
+
+                        </div>
+
+                    </div>
+
+                    
+
+
                 </div>
             </div>
         </div>
@@ -237,7 +461,7 @@ const Details = ({handleStep}) => {
 
         <div className='grid lg:grid-cols-4 gap-4'>
             <div className="col-end-5 col-span-1 gap-6 mt-12 flex-row-reverse flex gap w-full justify-between text-lg">
-                <button type="button" className="text-white bg-[#00538F] hover:bg-[#014c82] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg py-3 px-8  lg:px-16 lg:py-6 text-center  w-full items-center " onClick={() => handleStep(3)} >
+                <button type="submit" className="text-white bg-[#00538F] hover:bg-[#014c82] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg py-3 px-8  lg:px-16 lg:py-6 text-center  w-full items-center " >
                 Continue
                 
                 </button>
@@ -245,6 +469,7 @@ const Details = ({handleStep}) => {
             </div>
             
         </div>
+        </form>
 
     </div>
   )
