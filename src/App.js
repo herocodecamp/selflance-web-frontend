@@ -67,12 +67,7 @@ import SignUpPageView from "./pages/SignUpPage";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
 import ToasterContainer from "./utils/ToasterContainer";
 
-
-
-
 function App() {
-
-  
   return (
     <>
       {/* <OrderPage/> */}
@@ -170,8 +165,12 @@ function App() {
               <Route path="/become_seller/:userID" element={<BecomeSeller />} />
               <Route path="/settings/:sellerID" element={<MenuPage />} />
 
-          <Route path="/buyer_order_process/:buyerID" element={<OrderPage />} />
-          <Route path="/seller_create_offer/:sellerID" element={<SeCreateOfferPage />} />
+          <Route path="/buyer_order_process/:offerId" element={<OrderPage />} />
+
+          <Route
+            path="/seller_create_offer/:offerId"
+            element={<SeCreateOfferPage />}
+          />
 
           <Route
             path="/privacy_policy"

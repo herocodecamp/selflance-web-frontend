@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HistoryBackButton from "../../components/HistoryBackButton/";
 import OrderPageBanner from '../../components/OrderPageComponents/OrderPageBanner';
 import OrderDetails from '../../components/OrderPageComponents/OrderDetails';
 import OrderSummary from '../../components/OrderPageComponents/OrderSummary';
 import Button from '../../components/OrderPageComponents/CommonButton';
 import Footer from "../../components/Footer/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { fetchSellerOffer } from "../../store/GetSellerOfferSlice";
 
 
 
 const OrderPage = () => {
+  const { offerId } = useParams();
+  const dispatch = useDispatch();
+  const sellerOffer = useSelector((state) => state.sellerOffer[offerId]);
+  console.log("seller Offer", sellerOffer)
+
+  useEffect(() => {
+    dispatch(fetchSellerOffer(offerId));
+  }, [dispatch, offerId]);
+
     return (
       <>
         <div className="w-[95%] sm:w-[90%] md:w-[85%] mx-auto">
