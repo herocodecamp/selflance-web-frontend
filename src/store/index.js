@@ -6,6 +6,7 @@ import authSlice from "./AuthSlice";
 import BecomeSellerSlice, { becomeSellerActions } from "./BecomeSellerSlice";
 import sellerOfferReducer from "./GetSellerOfferSlice";
 import CreateGigSlice from "./CreateGigSlice";
+import JobPostSlice from './JobPostSlice';
 
 // persist config storage
 const persistConfig = {
@@ -20,7 +21,8 @@ const rootReducer = combineReducers({
   Auth: authSlice,
   BecomeSeller: BecomeSellerSlice,
   CreateGig: CreateGigSlice,
-  sellerOffer: sellerOfferReducer
+  sellerOffer: sellerOfferReducer,
+  JobPost: JobPostSlice
 
 });
 
