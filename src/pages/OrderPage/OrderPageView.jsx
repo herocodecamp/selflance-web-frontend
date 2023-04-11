@@ -13,6 +13,7 @@ import { fetchSellerOffer } from "../../store/GetSellerOfferSlice";
 
 const OrderPage = () => {
   const { offerId } = useParams();
+  console.log('offerId', offerId)
   const dispatch = useDispatch();
   const sellerOffer = useSelector((state) => state.sellerOffer[offerId]);
   console.log("seller Offer", sellerOffer)
@@ -27,9 +28,9 @@ const OrderPage = () => {
           <HistoryBackButton text="Order"/>
           <OrderPageBanner/>
     
-          <OrderDetails/>
+          <OrderDetails sellerOffer={sellerOffer}/>
     
-          <OrderSummary/>
+          <OrderSummary sellerOffer={sellerOffer}/>
     
           <Button text="Continue" className="block mb-4 mx-auto bg-primary rounded-md text-base text-white py-3 sm:py-5 md:py-7 px-10 sm:px-20 md:px-32 hover:ring-2 hover:underline"/>
         </div>

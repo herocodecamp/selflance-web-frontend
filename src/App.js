@@ -181,6 +181,7 @@ function App() {
               />
             }
           />
+          <Route path="*" element={<><p className=" flex justify-center items-center h-screen text-4xl font-bold">page not found</p></>}/>
         </Routes>
       </BrowserRouter>
       <ToasterContainer />
