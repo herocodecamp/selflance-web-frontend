@@ -37,9 +37,9 @@ import VerificationPage from "./pages/Verification";
 
 import Dashboar from "./pages/DashBoardPage";
 
-// import OrderProcess from "./pages/orderRequirements/OrderProcess";
-// import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
-// import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
+import OrderProcess from "./pages/orderRequirements/OrderProcess";
+import SubmiteRequirement from "./pages/orderRequirements/SubmiteRequirement";
+import SubmitRequirement2 from "./pages/orderRequirements/SubmitRequirement2";
 import Congratulations from "./pages/orderRequirements/Congratulations";
 import SeDashboard from "./pages/SellerDashboard";
 import SellerSearchPage from "./pages/SellerSearchPage";
@@ -164,8 +164,14 @@ function App() {
 
               <Route path="/become_seller/:userID" element={<BecomeSeller />} />
               <Route path="/settings/:sellerID" element={<MenuPage />} />
+     
 
           <Route path="/buyer_order_process/:offerId" element={<OrderPage />} />
+
+          <Route path="/submit_requirement" element={<SubmiteRequirement />}/>
+          <Route path="/submit_requirement2" element={<SubmitRequirement2 />}/>
+          <Route path="/congratulations" element={<Congratulations />}/>
+          <Route path="/order_process" element={<OrderProcess />}/>
 
           <Route
             path="/seller_create_offer/:offerId"

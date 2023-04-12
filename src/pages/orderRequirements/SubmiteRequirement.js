@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { AiOutlineFileProtect } from 'react-icons/ai';
 import { BiArrowBack, BiUpload } from 'react-icons/bi';
 import { useDropzone } from 'react-dropzone';
+import { useNavigate } from 'react-router-dom';
 
 
 const SubmiteRequirement = () => {
+
+const navigate = useNavigate()
 
   const [selectedFile, setSelectedFile] = useState(null);
   console.log('select file', selectedFile)
@@ -20,6 +23,10 @@ const SubmiteRequirement = () => {
   };
 
   const { getRootProps, getInputProps } = useDropzone({ onDrop: handleDrop });
+
+  const handleNavigateRequirement = () => {
+    navigate('/submit_requirement2')
+  }
 
 
   return (
@@ -77,6 +84,7 @@ const SubmiteRequirement = () => {
         <button
           disabled={!selectedFile}
           className={`font-bold text-base ${selectedFile ? 'bg-[#00538F]' : 'bg-[#80A9C7]'}  text-white sm:px-4 sm:py-2 px-4 py-2  rounded-lg`}
+          onClick={handleNavigateRequirement}
         >Submit Requirement</button>
       </div>
 

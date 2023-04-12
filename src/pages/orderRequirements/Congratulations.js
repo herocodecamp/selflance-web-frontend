@@ -1,8 +1,14 @@
 import React from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 import congratulation from '../../Assets/svg/congratulation.svg'
+import { useNavigate } from 'react-router-dom';
 
 const Congratulations = () => {
+  const navigate = useNavigate()
+
+  const handleNavigate = () => {
+    navigate('/')
+  }
   return (
     <div className='sm:px-16 py-12 px-4 sm:py-8'>
       <BiArrowBack className='text-xl sm:text-2xl text-[#000000] hover:cursor-pointer' />
@@ -16,6 +22,7 @@ const Congratulations = () => {
 
           <button
             className='font-bold text-base sm:w-full  bg-[#00538F] text-white sm:px-8 sm:py-2 px-6 py-2  rounded-lg'
+            onClick={handleNavigate}
           >Done</button>
 
         </div>

@@ -5,10 +5,8 @@ import RazorPay from "../../Assets/Razorpay.png";
 
 import { FaCheck } from "react-icons/fa";
 
-const OrderDetails = ({ sellerOffer }) => {
+const OrderDetails = ({ sellerOffer, paymentMethod, setPaymentMethod }) => {
   const { delivery_time, revision } = sellerOffer;
-  const [paymentMethod, setPaymentMethod] = useState('');
-  console.log("payment method", paymentMethod)
 
   const handlePaymentMethod = (e) => {
     setPaymentMethod(e.target.value);

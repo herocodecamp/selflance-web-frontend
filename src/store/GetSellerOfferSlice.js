@@ -11,6 +11,17 @@ export const fetchSellerOffer = createAsyncThunk(
   }
 );
 
+export const postMultiplePageData = createAsyncThunk(
+  "sellerOffer/postMultiplePageData",
+  async ({ page1Data, page2Data }) => {
+    const response = await axios.post(
+      `http://localhost:8000/api/v1/buyerOrderProcess/multiplePageData`,
+      { page1Data, page2Data }
+    );
+    return response.data;
+  }
+);
+
 export const sellerOfferSlice = createSlice({
   name: "sellerOffer",
   initialState: {},
@@ -18,6 +29,10 @@ export const sellerOfferSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchSellerOffer.fulfilled, (state, action) => {
       state[action.payload.offerId] = action.payload;
+    });
+
+    builder.addCase(postMultiplePageData.fulfilled, (state, action) => {
+      // handle successful response from server if needed
     });
   },
 });
