@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
-import { AiOutlineFileProtect } from 'react-icons/ai';
-import { BiArrowBack, BiUpload } from 'react-icons/bi';
-import { useDropzone } from 'react-dropzone';
-import { useNavigate } from 'react-router-dom';
-
+import React, { useEffect, useState } from "react";
+import { AiOutlineFileProtect } from "react-icons/ai";
+import { BiArrowBack, BiUpload } from "react-icons/bi";
+import { useDropzone } from "react-dropzone";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setPage3Data } from "../../store/GetSellerOfferSlice";
 
 const SubmiteRequirement = () => {
-
-const navigate = useNavigate()
-
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [selectedFile, setSelectedFile] = useState(null);
-  console.log('select file', selectedFile)
 
 
   const handleFileSelect = (event) => {
@@ -25,22 +24,26 @@ const navigate = useNavigate()
   const { getRootProps, getInputProps } = useDropzone({ onDrop: handleDrop });
 
   const handleNavigateRequirement = () => {
-    navigate('/submit_requirement2')
-  }
-
+    if (selectedFile) {
+      dispatch(setPage3Data(selectedFile.name));
+    }
+    navigate("/submit_requirement2");
+  };
 
   return (
-    <div className='sm:px-12 px-4 py-4 space-y-4'>
-      <h2 className='text-[#00538F] sm:xl leading-5 font-bold flex space-x-4 items-center'> <BiArrowBack className='text-2xl sm:text-4xl text-[#000000] hover:cursor-pointer' /> <span>Send Requirement</span></h2>
+    <div className="sm:px-12 px-4 py-4 space-y-4">
+      <h2 className="text-[#00538F] sm:xl leading-5 font-bold flex space-x-4 items-center">
+        {" "}
+        <BiArrowBack className="text-2xl sm:text-4xl text-[#000000] hover:cursor-pointer" />{" "}
+        <span>Send Requirement</span>
+      </h2>
 
-      <div className='sm:pt-16 pt-6 '>
-        <div className='bg-[#FFFFFF] rounded-3xl drop-shadow-lg sm:w-1/2 mx-auto w-full sm:py-8 px-2 sm:px-6 text-center space-y-2 sm:space-y-4 py-4'>
-
-          <BiUpload className='text-xl w-1/2 mx-auto sm:text-2xl text-[#00538F]' />
+      <div className="sm:pt-16 pt-6 ">
+        <div className="bg-[#FFFFFF] rounded-3xl drop-shadow-lg sm:w-1/2 mx-auto w-full sm:py-8 px-2 sm:px-6 text-center space-y-2 sm:space-y-4 py-4">
+          <BiUpload className="text-xl w-1/2 mx-auto sm:text-2xl text-[#00538F]" />
           <div class="relative rounded-md shadow-sm ">
             <input
               type="file"
-
               class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
               onChange={handleFileSelect}
             />
@@ -50,44 +53,45 @@ const navigate = useNavigate()
             >
               upload file, photo and document
             </button>
-
           </div>
 
-          <p className='text-[#696974]'>or</p>
+          <p className="text-[#696974]">or</p>
 
           <div {...getRootProps()} className="border-2 border-dashed p-4">
             <input {...getInputProps()} />
-            <p className='text-[#696974] leading-4 text-base'>drag a file, photo and document</p>
+            <p className="text-[#696974] leading-4 text-base">
+              drag a file, photo and document
+            </p>
           </div>
-
-
-
         </div>
       </div>
-      <div className='sm:p-12 p-4'>
+      <div className="sm:p-12 p-4">
         {selectedFile && (
-          <div className='flex items-center space-x-6'>
-            <span className='bg-[#E2EED8] w-[40px] h-[40px] rounded-full'><AiOutlineFileProtect className='text-[#00538F] text-2xl w-1/2 mx-auto mt-2' /></span>
-            <div className='w-full space-y-4'>
-              <p> file uploading: {selectedFile.name}
-              </p>
+          <div className="flex items-center space-x-6">
+            <span className="bg-[#E2EED8] w-[40px] h-[40px] rounded-full">
+              <AiOutlineFileProtect className="text-[#00538F] text-2xl w-1/2 mx-auto mt-2" />
+            </span>
+            <div className="w-full space-y-4">
+              <p> file uploading: {selectedFile.name}</p>
 
-              <div className='bg-gray-200 rounded-lg h-6 w-11/12'>
-                <div className='bg-[#00538F] w-1/2 rounded-lg h-6'></div>
+              <div className="bg-gray-200 rounded-lg h-6 w-11/12">
+                <div className="bg-[#00538F] w-1/2 rounded-lg h-6"></div>
               </div>
-
             </div>
           </div>
         )}
       </div>
-      <div className='text-center'>
+      <div className="text-center">
         <button
           disabled={!selectedFile}
-          className={`font-bold text-base ${selectedFile ? 'bg-[#00538F]' : 'bg-[#80A9C7]'}  text-white sm:px-4 sm:py-2 px-4 py-2  rounded-lg`}
+          className={`font-bold text-base ${
+            selectedFile ? "bg-[#00538F]" : "bg-[#80A9C7]"
+          }  text-white sm:px-4 sm:py-2 px-4 py-2  rounded-lg`}
           onClick={handleNavigateRequirement}
-        >Submit Requirement</button>
+        >
+          Submit Requirement
+        </button>
       </div>
-
     </div>
   );
 };

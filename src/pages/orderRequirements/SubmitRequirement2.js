@@ -1,13 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineFileProtect } from "react-icons/ai";
 import { BiArrowBack, BiUpload } from "react-icons/bi";
 import { useDropzone } from "react-dropzone";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  postMultiplePageData,
+  setPage4Data,
+} from "../../store/GetSellerOfferSlice";
 
 const SubmitRequirement2 = () => {
   const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState(null);
-  console.log("select file", selectedFile);
+  const dispatch = useDispatch();
+
+  const page1Data = useSelector((state) => state.sellerOffer.page1Data);
+  const page2Data = useSelector((state) => state.sellerOffer.page2Data);
+  const page3Data = useSelector((state) => state.sellerOffer.page3Data);
+  const page4Data = useSelector((state) => state.sellerOffer.page4Data);
+
+
+  console.log(
+    { page1Data, page2Data, page3Data, page4Data },
+    "whole object here"
+  );
 
   const handleFileSelect = (event) => {
     const file = event.target.files[0];
@@ -21,7 +37,25 @@ const SubmitRequirement2 = () => {
   const { getRootProps, getInputProps } = useDropzone({ onDrop: handleDrop });
 
   const handleNavigateRequirement = () => {
-    navigate("/congratulations");
+    if (selectedFile) {
+      dispatch(setPage4Data(selectedFile.name));
+      console.log("select file", selectedFile.name);
+    }
+
+    if (page1Data && page2Data && page3Data && page4Data) {
+      const data = {
+        page1Data,
+        page2Data,
+        page3Data,
+        page4Data,
+      };
+      dispatch(postMultiplePageData(data));
+      console.log("whole data here", data);
+
+      navigate("/congratulations");
+    } else {
+      console.log("data not found");
+    }
   };
 
   return (

@@ -172,6 +172,7 @@ function App() {
           <Route path="/submit_requirement2" element={<SubmitRequirement2 />}/>
           <Route path="/congratulations" element={<Congratulations />}/>
           <Route path="/order_process" element={<OrderProcess />}/>
+          <Route path="/stripe/payment_method" element={<AddNewCardPage />}/>
 
           <Route
             path="/seller_create_offer/:offerId"
