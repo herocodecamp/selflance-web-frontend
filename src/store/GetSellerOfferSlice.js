@@ -18,7 +18,10 @@ export const postMultiplePageData = createAsyncThunk(
       `http://localhost:8000/api/v1/buyerOrderProcess/6416b330cc7ed41f89a9c8ba`,
       { ...page1Data, ...page2Data, ...page3Data, ...page4Data }
     );
-    console.log( { ...page1Data, ...page2Data, ...page3Data, ...page4Data }, 'here response data')
+    console.log(
+      { ...page1Data, ...page2Data, ...page3Data, ...page4Data },
+      "here response data"
+    );
     return response.data;
   }
 );
@@ -54,7 +57,7 @@ export const sellerOfferSlice = createSlice({
 
     builder.addCase(postMultiplePageData.fulfilled, (state, action) => {
       // handle successful response from server if needed
-      console.log('post data state', {state, action})
+      console.log("post data state", { state, action });
     });
   },
 });
