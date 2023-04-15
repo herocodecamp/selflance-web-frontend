@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { FaAngleRight } from "react-icons/fa";
-import { FaAngleLeft } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
+import React,{useState} from "react";
+import { FaAngleRight} from 'react-icons/fa';
+import {FaAngleLeft} from 'react-icons/fa';
+import {FaArrowLeft} from 'react-icons/fa';
+import {FaArrowRight} from 'react-icons/fa';
 import GigMainImage from "../../Assets/Service_Details_main_pic.png";
 import profileImage from "../../Assets/profileImage.png";
 import RatingStar from "../../Assets/Star-filled.png";
@@ -12,63 +12,66 @@ import {FaChevronDown, FaChevronRight} from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const images = [GigMainImage, GigMainImage, GigMainImage, GigMainImage];
+
+const images = [
+ GigMainImage,GigMainImage,GigMainImage,GigMainImage
+  ];
 // const packageList = ['Summary', 'Price', 'Prototype','Source File', 'Logo', 'No of Pages', 'No. of Revisions', 'Delivery'];
 
-const Packages = ["Basic", "Standard", "Premium"];
+const Packages = ['Basic', 'Standard', 'Premium'];
 
 // packageData[0]=> basic
 // packageData[1]=> standard
 // packageData[2]=> premium
 
-const packageData = [
-  {
-    summary: "I will design 2 App screen including source file + prototype",
-    price: "$10",
-    prototype: false,
-    sourcefile: true,
-    logo: false,
-    pages: "Up to 2",
-    revisions: "3",
-    deliveryDuration: "1",
-  },
-  {
-    summary: "I will design 4 App screen including source file + prototype",
-    price: "$30",
-    prototype: true,
-    sourcefile: true,
-    logo: false,
-    pages: "Up to 4",
-    revisions: "Unlimited",
-    deliveryDuration: "2",
-  },
-  {
-    summary: "I will design 8 App screen including source file + prototype",
-    price: "$40",
-    prototype: true,
-    sourcefile: true,
-    logo: true,
-    pages: "Up to 8",
-    revisions: "Unlimited",
-    deliveryDuration: "3",
-  },
-];
+const packageData= [
+    {
+        summary: 'I will design 2 App screen including source file + prototype',
+        price: '$10',
+        prototype: false,
+        sourcefile: true,
+        logo: false,
+        pages: 'Up to 2',
+        revisions: '3',
+        deliveryDuration: '1'
+    },
+    {
+        summary: 'I will design 4 App screen including source file + prototype',
+        price: '$30',
+        prototype: true,
+        sourcefile: true,
+        logo: false,
+        pages: 'Up to 4',
+        revisions: 'Unlimited',
+        deliveryDuration: '2'
+    },
+    {
+        summary: 'I will design 8 App screen including source file + prototype',
+        price: '$40',
+        prototype: true,
+        sourcefile: true,
+        logo: true,
+        pages: 'Up to 8',
+        revisions: 'Unlimited',
+        deliveryDuration: '3'
+    },
+]
 
-const userDetails = {
-  id: "1",
-  name: "Hamza Saeed",
-  image: profileImage,
-  status: "online",
-  about: `Hi guys, my name is Hamza Saeed and I am originally certified by government. I am a professional graphic designer and work on different software like FIGMA, ADOBE XD ,ADOBE PHOTOSHOP, ADOBE ILLUSTRATOR. I am doing this work for the last five years professionally with different companies. There are advantages to using design in business. It has the potential to improve your performance, efficiencies, and the value of your products and services. It can also lower your company's costs and risks. It has the potential to increase customer engagement and retention. Please contact me for queries. Thanks`,
-  country: "Pakistan",
-  lastdelivery: "15 Days ago",
-  membership: "Since 2018",
-  rating: "4.9",
-  completedOrder: "50",
-  progressOrder: "02",
-  reviews: "20",
-  serviceCategory: "PERSONAL APP DESIGNER EXPERT / GRAPHIC DESIGNER/ FIGMA",
-  description: `I welcome you to the ultimate & one-stop-shop for your all graphic design work. I’m a professional graphic designer with over 5 years of experience & would love to work as your personal expert graphic designer. \n
+const userDetails ={
+    id:'1',
+    name: 'Hamza Saeed',
+    image: profileImage,
+    status: 'online',
+    about: `Hi guys, my name is Hamza Saeed and I am originally certified by government. I am a professional graphic designer and work on different software like FIGMA, ADOBE XD ,ADOBE PHOTOSHOP, ADOBE ILLUSTRATOR. I am doing this work for the last five years professionally with different companies. There are advantages to using design in business. It has the potential to improve your performance, efficiencies, and the value of your products and services. It can also lower your company's costs and risks. It has the potential to increase customer engagement and retention. Please contact me for queries. Thanks`,
+    country: 'Pakistan',
+    lastdelivery: '15 Days ago',
+    membership: 'Since 2018',
+    rating: '4.9',
+    completedOrder: '50',
+    progressOrder: '02',
+    reviews: '20',
+    serviceCategory: 'PERSONAL APP DESIGNER EXPERT / GRAPHIC DESIGNER/ FIGMA',
+    description: `I welcome you to the ultimate & one-stop-shop for your all graphic design work. I’m a professional graphic designer with over 5 years of experience & would love to work as your personal expert graphic designer. \n
 
     WHATEVER PHOTOSHOP EDITS YOU NEED: \n
     ✅ Color correction, contrast and brightness\n
@@ -92,16 +95,8 @@ const userDetails = {
     ► Friendly service
     ► Unlimited revisions
     THANK YOU!`,
-};
-
-const navList = [
-  "Overview",
-  "Details",
-  "Packages",
-  "About the Seller",
-  "Reviews",
-];
-const beadCrumbs = ["Graphics & Design", "App Design"];
+    
+}
 
 const navList =['Overview', 'Details', 'Packages', 'About the Seller', 'Reviews'];
 const beadCrumbs =['Graphics & Design', 'App Design'];
@@ -117,10 +112,10 @@ const ServiceDetailsView = ({gig}) =>{
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const [showDetails, setShowDetails] = useState(false);
-  const [showAboutText, setShowAboutText] = useState(false);
+    const [showDetails, setShowDetails] = useState(false);
+    const[showAboutText, setShowAboutText] = useState(false);
 
-  const previousImageIndex = () =>
+    const previousImageIndex = () =>
     setCurrentImageIndex((index) =>
       index === 0 ? gig.gigImages.length - 1 : index - 1
     );
@@ -661,9 +656,7 @@ const ServiceDetailsView = ({gig}) =>{
             </div>
 
         </div>
-      </div>
-    </div>
-  );
-};
+    )
+}
 
-export default ServiceDetailsView;
+export default ServiceDetailsView;  
