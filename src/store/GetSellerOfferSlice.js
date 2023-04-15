@@ -5,7 +5,7 @@ export const fetchSellerOffer = createAsyncThunk(
   "sellerOffer/fetchSellerOffer",
   async (offerId) => {
     const response = await axios.get(
-      `http://localhost:8000/api/v1/buyerOrderProcess/sellerOffer/${offerId}`
+      `http://localhost:8000/api/v1/gig/${offerId}`
     );
     return response.data;
   }

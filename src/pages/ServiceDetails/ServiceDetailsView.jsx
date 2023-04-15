@@ -125,6 +125,7 @@ const ServiceDetailsView = () => {
 
   const handleNavigate = (id) => {
     navigate(`/buyer_order_process/${id}`)
+    console.log(id)
   };
 
   return (
@@ -432,7 +433,7 @@ const ServiceDetailsView = () => {
                             <td class="px-6 py-4 border-r-2" key={index}>
                               <button
                                 class="bg-[#00538F] w-[120px] text-white font-medium text-lg rounded-md"
-                                onClick={() => handleNavigate(item?._id)}
+                                onClick={() => handleNavigate("64173176b5418deb70609439")}
                               >
                                 Select
                               </button>

@@ -167,7 +167,7 @@ function App() {
               <Route path="/settings/:sellerID" element={<MenuPage />} />
      
 
-          <Route path="/buyer_order_process/offerId" element={<OrderPage />} />
+          <Route path="/buyer_order_process/:offerId" element={<OrderPage />} />
 
           <Route path="/submit_requirement" element={<SubmiteRequirement />}/>
           <Route path="/submit_requirement2" element={<SubmitRequirement2 />}/>
