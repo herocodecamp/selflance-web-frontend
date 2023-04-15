@@ -20,7 +20,7 @@ const ReviewJobView = () => {
 
       console.log(response)
 
-      if(response.statusText === 'OK') {navigate('/job_posts/response')}
+      if(response.statusText === 'OK') {navigate(`/job_posts/${userID}/list`)}
   }
   return (
     <div className='min-h-screen md:p-16 p-4 m-5'>

@@ -12,7 +12,7 @@ const JobPost = ({data}) => {
             {data.title}
           </h5>
           <p className='mt-3'>{data.description}</p>
-          <p className='my-3'><span className='text-2xl font-medium'>Category:</span> {data.categories}</p>
+          <p className='my-3'><span className='text-2xl font-medium'>Category:</span> {data.category}</p>
         </div>
         <div className=''>
           { data.status === 'Pending'?
@@ -28,7 +28,7 @@ const JobPost = ({data}) => {
       <div className='flex justify-between mt-1 md:text-2xl'>
         <span className="bg-gray-100 text-gray-800 font-medium mr-2 px-4 py-0.5 rounded-3xl dark:bg-gray-700 dark:text-gray-300">{data.status}</span>
         <div className='text-gray-400'>
-          Date: {data.date}
+          Date: {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(data.createdAt)))}
         </div>
       </div>
       

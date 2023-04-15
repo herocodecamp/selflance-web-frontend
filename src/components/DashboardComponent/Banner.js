@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import { FcManager } from 'react-icons/fc'
 import banner1 from '../../Assets/svg/banner-1.svg'
 import DCategories from './DCategories';
@@ -8,8 +8,25 @@ import Recommended from './Recommended';
 import Suggested from './Suggested';
 import './BorderRedius.css'
 import Drawer from './Drawer';
+import { useSelector } from 'react-redux';
+import getSearch from '../../api/buyersearch';
 
 const Banner = () => {
+      const {search,subCategory,page}= useSelector(state=>state.Search)
+
+      const [obj,setObj] = useState(null)
+
+      useEffect(()=>{
+        getSearch(search,page,subCategory).then((resp)=>{
+          if(resp && resp.error) {console.log(resp.error)}
+
+          setObj(resp.data)
+
+        }).catch(err=>console.log(err))
+      },[search,page,subCategory])
+
+      console.log("from the banner and fetch data is: ", obj)
+                                                                                                                                                                                                                                                                                       
   return (
     <>
       <div className='py-8 w-full pr-6'>

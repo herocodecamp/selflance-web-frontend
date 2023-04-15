@@ -5,12 +5,15 @@ import RazorPay from "../../Assets/Razorpay.png";
 
 import { FaCheck } from "react-icons/fa";
 
-const OrderDetails = ({ sellerOffer, paymentMethod, setPaymentMethod }) => {
-  const { _id } = sellerOffer;
+const OrderDetails = ({ sellerOffer, paymentMethod, setPaymentMethod, index }) => {
+  const { packages } = sellerOffer;
+  console.log(sellerOffer, "sellerOffer")
 
   const handlePaymentMethod = (e) => {
     setPaymentMethod(e.target.value);
   };
+
+
 
   return (
     <div className="mb-2 flex-none md:flex space-y-3 md:space-y-0 mt-6 md:mt-0">
@@ -21,11 +24,11 @@ const OrderDetails = ({ sellerOffer, paymentMethod, setPaymentMethod }) => {
         <ul className="space-y-4 overflow-hidden text-slate-500">
           <li>
             Delivery days
-            <span className="float-right">{_id}</span>
+            <span className="float-right">{packages[index].deliveryDuration}</span>
           </li>
           <li>
             Revisions
-            <span className="float-right">{_id}</span>
+            <span className="float-right">{packages[index].revisions}</span>
           </li>
           <li>
             3 Page/Screen

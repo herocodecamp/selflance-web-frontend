@@ -31,19 +31,28 @@ const Create = ({handleStep}) => {
                 <label className="block mt-12">
                         <span className="block w-full text-[#00538F] text-2xl font-medium pl-3">Select Category</span>
                         <select type="text" name="category" className="peer mt-1 block text-gray-500 w-full px-3 py-6 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeholder='Write a title here'>
-                            <option selected> Web Designing</option>
-                            <option>Web Development</option>
-                            <option>Graphic Designing</option>
-                            <option>Data Entry</option>
+                            <option selected> Web Development</option>
+                            <option>Digital Marketing</option>
+                            <option>Graphic Design</option>
+                            <option>Video Editing</option>
+                            <option>Business</option>
+                            <option>Writing</option>
+                            <option>Programming</option>
+                            <option>Social Media</option>
+                            <option>AI Services</option>
                         </select>
                     </label>
                     <label className="block mt-12">
                         <span className="block w-full text-[#00538F] text-2xl font-medium pl-3">Selelct Sub-Category</span>
                         <select type="text" name="subCategory" className="peer mt-1 block text-gray-500 w-full px-3 py-6 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" placeholder='Write a title here'>
-                            <option selected>Figma Design</option>
-                            <option>React JS</option>
-                            <option>Flyers and Poster</option>
-                            <option>Data scraping</option>
+                            <option selected>Wordpress</option>
+                            <option>Custom Website</option>
+                            <option>Web APp Development</option>
+                            <option>Website Design</option>
+                            <option>Web Programming</option>
+                            <option>Shopify</option>
+                            <option>Mobile Apps</option>
+                            <option>WebFlow</option>
                         </select>
                     </label>
                 </div>
