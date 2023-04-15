@@ -20,8 +20,9 @@ const Details = ({handleStep}) => {
 
         const basicpackage = {
             packageName: 'Basic',
+            summary: e.target.summaryBasic.value,
             price: e.target.priceBasic.value,
-            prototype: e.target.prototypeBasic.value,
+            prototype: e.target.prototypeBasic.checked,
             sourceFile: e.target.prototypeBasic.checked,
             logo: e.target.logoBasic.checked,
             pages: e.target.pagesBasic.value,
@@ -32,8 +33,9 @@ const Details = ({handleStep}) => {
 
         const standardpackage = {
             packageName: 'Standard',
+            summary: e.target.summaryStandard.value,
             price: e.target.priceStandard.value,
-            prototype: e.target.prototypeStandard.value,
+            prototype: e.target.prototypeStandard.checked,
             sourceFile: e.target.prototypeStandard.checked,
             logo: e.target.logoStandard.checked,
             pages: e.target.pagesStandard.value,
@@ -43,8 +45,9 @@ const Details = ({handleStep}) => {
         packages.push(standardpackage)
         const premiumpackage = {
             packageName: 'Premium',
+            summary: e.target.summaryPremium.value,
             price: e.target.pricePremium.value,
-            prototype: e.target.prototypePremium.value,
+            prototype: e.target.prototypePremium.checked,
             sourceFile: e.target.prototypePremium.checked,
             logo: e.target.logoPremium.checked,
             pages: e.target.pagesPremium.value,

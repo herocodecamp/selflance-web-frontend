@@ -14,6 +14,9 @@ const USER_END_POINT ={
 const URL = (endPoint) => `${BaseUrl}${endPoint}`
 console.log(URL)
 
+
+
+//===========> USerDetails API
 export const submitUserDetails = async(userDetails, userId) =>{
 
     try{
@@ -32,6 +35,24 @@ export const submitUserDetails = async(userDetails, userId) =>{
     }
 }
 
+export const getUserDetails = async(userId) =>{
+    console.log('calling....')
+    try{
+        const response = await axios.get(`${BaseUrl}/${USER_END_POINT.USER_DETAILS}/${userId}`)
+
+        
+        return response
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+}
+
+
+
+//======> Gigs API
+
 export const gigCreate = async(gigDetails, userId) =>{
     try{
         const response = await axios.post(`${BaseUrl}/${USER_END_POINT.GIG_CREATE}/${userId}/create`,gigDetails,{
@@ -49,7 +70,38 @@ export const gigCreate = async(gigDetails, userId) =>{
     }
 }
 
+//reading ALL Gigs of the user
+export const readAllGigs = async(userId) =>{
+    try{
+        const response = await axios.get(`${BaseUrl}/${USER_END_POINT.GIG_CREATE}/${userId}`)
 
+        console.log(response)
+        return response
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+}
+
+// reading one gig
+export const readGig = async(gigID) =>{
+    try{
+        const response = await axios.get(`${BaseUrl}/${USER_END_POINT.GIG_CREATE}/gigs/${gigID}`)
+
+        console.log(response)
+        return response
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+}
+
+
+
+
+//===============> JObPOST API
 export const jobCreate = async(jobDetails, userId) =>{
     try{
         console.log("from API: ", jobDetails)
@@ -67,6 +119,26 @@ export const jobCreate = async(jobDetails, userId) =>{
         console.log(err)
     }
 }
+
+
+export const readAllJobs = async(userId) =>{
+    try{
+      
+        const response = await axios.get(`${BaseUrl}/${USER_END_POINT.JOB_CREATE}/${userId}/jobposts`)
+
+        console.log(response)
+        return response
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+}
+
+
+
+
+
 
 
 

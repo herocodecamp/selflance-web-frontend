@@ -1,4 +1,5 @@
 import Navbar from "./common/Navbar";
+import NavbarLoggedIn from "./common/NavbarLoggedIn";
 import Feedback from "./components/Feedback";
 
 import LandingPage from "./pages/LandingPage";
@@ -66,6 +67,9 @@ import SignUpPageView from "./pages/SignUpPage";
 
 import { Routes, BrowserRouter, Route } from "react-router-dom";
 import ToasterContainer from "./utils/ToasterContainer";
+import JobListPage from "./pages/JobList";
+
+
 
 function App() {
   return (
@@ -134,7 +138,8 @@ function App() {
 
       {/* Routing */}
       <BrowserRouter>
-        <Navbar />
+        {/* <Navbar /> */}
+        <NavbarLoggedIn />
         <Routes>
           <Route path="/verifyOtp" element={<ConfirmPage />} />
           <Route path="/" element={<LandingPage />} />
@@ -148,22 +153,23 @@ function App() {
           <Route path="/job_posts" element={<JobList />} />
           <Route path="/job_post/new" element={<PostJobPage />} />
           <Route path="/job_post/new/review" element={<ReviewJobPage />} />
-          <Route path="/job_posts/response" element={<JobResponsePage />} />
+          <Route path="/job_posts/:userID/list" element={<JobListPage />} />
           <Route path="/job_posts/:jobID/details" element={<JobDetail />} />
           <Route path="/inbox/sellername" element={<Messaging />} />
 
           <Route path="/buyer/orders" element={<ManageOrder />} />
 
               <Route path="/users/search" element={<SearchPage />} />
-              <Route path="/users/search/:userID/gig-details" element={<ServiceDetails/>} />
+              <Route path="/users/search/:gigID/gig-details" element={<ServiceDetails/>} />
               <Route path="/users/:userID/profile" element={<SellerProfile/>} />
+              <Route path="/:userID/gig/create" element={<WorkplacePage/>} />
 
               <Route path="/users/orders" element={<OrderScreen />} />
               <Route path="/users/seller/dashboard" element={<SeDashboard />} />
               <Route path="/users/buyer/dashboard" element={<Dashboard />} />
 
               <Route path="/become_seller/:userID" element={<BecomeSeller />} />
-              <Route path="/settings/:sellerID" element={<MenuPage />} />
+              <Route path="/settings/:userID" element={<MenuPage />} />
 
           <Route path="/buyer_order_process/:offerId" element={<OrderPage />} />
 
