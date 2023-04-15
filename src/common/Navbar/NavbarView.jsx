@@ -6,16 +6,14 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const NavbarView = () => {
-
-  const userId = useSelector(state=>state.Auth.userId)
-  
+  const userId = useSelector((state) => state.Auth.userId);
   const location = useLocation();
 
   console.log(location);
   const [toggle, setToggle] = useState(false);
   return (
     <div className="navbar-container  md:bg-primary py-3">
-      <div className="max-w-[1400px] md:border-b font-medium py-3 border-gray-500 mx-auto flex text-white justify-between items-center">
+      <div className="w-11/12 md:border-b font-medium py-3 border-gray-500 mx-auto flex text-white justify-between items-center">
         <div className="flex items-center gap-x-1 pl-2">
           {/* mobile bar icons */}
           <span onClick={() => setToggle(!toggle)} className="lg:hidden">
@@ -110,17 +108,31 @@ const NavbarView = () => {
         </div>
 
         <div className="flex px-2 items-center font-normal gap-x-8">
-          <NavLink
-            to="/login"
-            className={({ isActive, isPending }) =>
-              isActive
-                ? "bg-[#DD730A]   py-1.5 sm:py-2.5  rounded-md"
-                : "hidden sm:flex "
-            }
-          >
-            {" "}
-            <p className="px-4 sm:px-6">Login</p>
-          </NavLink>
+          {userId ? (
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? "bg-[#DD730A]   py-1.5 sm:py-2.5  rounded-md"
+                  : "hidden sm:flex "
+              }
+            >
+              {" "}
+              <p className="px-4 sm:px-6">LogOut</p>
+            </NavLink>
+          ) : (
+            <NavLink
+              to="/login"
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? "bg-[#DD730A]   py-1.5 sm:py-2.5  rounded-md"
+                  : "hidden sm:flex "
+              }
+            >
+              {" "}
+              <p className="px-4 sm:px-6">Sign In</p>
+            </NavLink>
+          )}
+
           <NavLink
             to="/signup"
             className={({ isActive, isPending }) =>

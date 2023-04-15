@@ -26,8 +26,8 @@ const rootReducer = combineReducers({
   CreateGig: CreateGigSlice,
   JobPost: JobPostSlice,
   UserData: userDataSlice,
-  Search: SearchSlice
-
+  Search: SearchSlice,
+  sellerOffer: sellerOfferReducer,
 
 });
 
@@ -39,8 +39,15 @@ const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      serializableCheck: false,
-    })
+      serializableCheck: {
+        // Ignore these action types
+        ignoredActions: ["becomeseller/detailsView1"],
+        // Ignore these field paths in all actions
+        ignoredActionPaths: ["payload.profileImage"],
+        // Ignore these paths in the state
+        // ignoredPaths: ['profileImage'],
+      },
+    }),
 });
 
 export default store;
