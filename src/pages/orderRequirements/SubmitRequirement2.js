@@ -18,7 +18,7 @@ const SubmitRequirement2 = () => {
   const page2Data = useSelector((state) => state.sellerOffer.page2Data);
   const page3Data = useSelector((state) => state.sellerOffer.page3Data);
   const page4Data = useSelector((state) => state.sellerOffer.page4Data);
-
+  const userId = useSelector((state) => state.Auth.userId);
 
   console.log(
     { page1Data, page2Data, page3Data, page4Data },
@@ -38,8 +38,10 @@ const SubmitRequirement2 = () => {
 
   const handleNavigateRequirement = () => {
     if (selectedFile) {
-      dispatch(setPage4Data(selectedFile.name));
-      console.log("select file", selectedFile.name);
+      const formData = new FormData();
+      formData.append("image", selectedFile);
+      dispatch(setPage4Data(formData));
+      console.log("form data", formData);
     }
 
     if (page1Data && page2Data && page3Data && page4Data) {
@@ -48,6 +50,7 @@ const SubmitRequirement2 = () => {
         page2Data,
         page3Data,
         page4Data,
+        userId,
       };
       dispatch(postMultiplePageData(data));
       console.log("whole data here", data);

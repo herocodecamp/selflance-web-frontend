@@ -14,11 +14,11 @@ const OrderSummary = ({ sellerOffer, index }) => {
       <div className="space-y-2 sm:space-y-3 md:space-y-7 text-lg md:text-3xl">
         <p className="text-slate-500">
           Subtotal
-          <span className="float-right">{packages[index].price}</span>
+          <span className="float-right">{packages[index]?.price}</span>
         </p>
         <p>
           Total
-          <span className="float-right">{packages[index].price}</span>
+          <span className="float-right">{packages[index]?.price}</span>
         </p>
         <p className="text-slate-400">
           Delivery Date

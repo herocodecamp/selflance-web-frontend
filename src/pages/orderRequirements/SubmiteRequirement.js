@@ -25,7 +25,10 @@ const SubmiteRequirement = () => {
 
   const handleNavigateRequirement = () => {
     if (selectedFile) {
-      dispatch(setPage3Data(selectedFile.name));
+      const formData = new FormData();
+      formData.append('image', selectedFile);
+      dispatch(setPage3Data(formData));
+      console.log("form data", formData)
     }
     navigate("/submit_requirement2");
   };

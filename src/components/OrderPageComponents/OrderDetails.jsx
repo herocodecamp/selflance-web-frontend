@@ -24,11 +24,11 @@ const OrderDetails = ({ sellerOffer, paymentMethod, setPaymentMethod, index }) =
         <ul className="space-y-4 overflow-hidden text-slate-500">
           <li>
             Delivery days
-            <span className="float-right">{packages[index].deliveryDuration}</span>
+            <span className="float-right">{packages[index]?.deliveryDuration}</span>
           </li>
           <li>
             Revisions
-            <span className="float-right">{packages[index].revisions}</span>
+            <span className="float-right">{packages[index]?.revisions}</span>
           </li>
           <li>
             3 Page/Screen

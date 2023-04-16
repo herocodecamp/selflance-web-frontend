@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 export const fetchSellerOffer = createAsyncThunk(
   "sellerOffer/fetchSellerOffer",
@@ -13,15 +14,16 @@ export const fetchSellerOffer = createAsyncThunk(
 
 export const postMultiplePageData = createAsyncThunk(
   "sellerOffer/postMultiplePageData",
-  async ({ page1Data, page2Data, page3Data, page4Data }) => {
+  async ({ page1Data, page2Data, page3Data, page4Data, userId}) => {
     const response = await axios.post(
-      `http://localhost:8000/api/v1/buyerOrderProcess/6416b330cc7ed41f89a9c8ba`,
+      `http://localhost:8000/api/v1/buyerOrderProcess/${userId}`,
       { ...page1Data, ...page2Data, ...page3Data, ...page4Data }
     );
     console.log(
       { ...page1Data, ...page2Data, ...page3Data, ...page4Data },
       "here response data"
     );
+    console.log(response, "response")
     return response.data;
   }
 );
@@ -33,7 +35,7 @@ const initialState = {
   page4Data: {},
 };
 
-export const sellerOfferSlice = createSlice({
+ const sellerOfferSlice = createSlice({
   name: "sellerOffer",
   initialState,
   reducers: {
