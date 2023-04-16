@@ -7,10 +7,13 @@ import Footer from "../../components/Footer/Footer";
 import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../../api";
 import { authActions } from "../../store/AuthSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 
 const LoginPageView = () => {
+
+   const userInfo = useSelector(state=>state.Auth.userInfo)
+
    const dispatch = useDispatch();
    const navigate = useNavigate()
    const handleSubmit = async (event) =>{
@@ -21,8 +24,10 @@ const LoginPageView = () => {
       const userLogin = await loginUser({email, password});
       console.log(userLogin)
       if(userLogin.status==='SUCCESS'){
-         dispatch(authActions.userRegister({userId:userLogin.data.userId, userInfo:userLogin.data}));
-         navigate('/')
+         dispatch(authActions.userLogin({userId:userLogin.data.userId, userInfo:userLogin.data}));
+         
+         userInfo.isSeller ? 
+         navigate('/users/seller/dashboard') : navigate('/users/buyer/dashboard')
       }
    }
    return(

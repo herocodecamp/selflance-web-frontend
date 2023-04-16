@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
-const Filter = () => {
-  const [filters, setFilters] = useState({
-    filter1: false,
-    filter2: false,
-    filter3: false,
-    filter4: false,
-    filter5: false,
-    filter6: false,
-    filter7: false,
-    filter8: false,
-  });
+const Filter = ({categories, filterData,setFilter}) => {
+  // const [filters, setFilters] = useState({
+  //   filter1: false,
+  //   filter2: false,
+  //   filter3: false,
+  //   filter4: false,
+  //   filter5: false,
+  //   filter6: false,
+  //   filter7: false,
+  //   filter8: false,
+  // });
 
   const [sellerLevel, setSellerLevel] = useState({
     seller1: false,
@@ -26,16 +26,25 @@ const Filter = () => {
     language4: false
   })
 
+  const handleChange =({ currentTarget: input })=>{
+    if (input.checked) {
+			const state = [...filterData, input.value];
+			setFilter(state);
+		} else {
+			const state = filterData.filter((val) => val !== input.value);
+			setFilter(state);
+		}
 
+  }
 
-  console.log(filters, "filters here")
+  // console.log(filters, "filters here")
 
-  const handleFilterChange = (filterName) => {
-    setFilters((prevState) => ({
-      ...prevState,
-      [filterName]: !prevState[filterName],
-    }));
-  };
+  // const handleFilterChange = (filterName) => {
+  //   setFilters((prevState) => ({
+  //     ...prevState,
+  //     [filterName]: !prevState[filterName],
+  //   }));
+  // };
 
   const hanldeSellerFilter = (sellerName) => {
     setSellerLevel((prevState) => ({
@@ -67,129 +76,34 @@ const Filter = () => {
             <div>
               <h5 className='text-xl pt-4 pl-4 font-bold text-black'>Category</h5>
             </div>
-
             <div className='py-6 pl-4 pr-2 relative'>
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="filter1"
-                    name="filter1"
-                    checked={filters.filter1}
-                    onChange={() => handleFilterChange('filter1')}
-                    className="form-checkbox h-5 w-5 text-[#DD730A]"
-                  />
-                  <label htmlFor="filter1" className="ml-2 text-gray-700">
-                    wordpress
-                  </label>
-                  <span className='bg-[#F1F1F5] w-[24px] h-[24px] rounded absolute right-3'>29</span>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="filter2"
-                    name="filter2"
-                    checked={filters.filter2}
-                    onChange={() => handleFilterChange('filter2')}
-                    className="form-checkbox h-5 w-5 text-[#DD730A]"
-                  />
-                  <label htmlFor="filter2" className="ml-2 text-gray-700">
-                    custom website
-                  </label>
-                  <span className='bg-[#F1F1F5] w-[24px] h-[24px] rounded absolute right-3'>29</span>
+                <div className="flex flex-col gap-4">
+                        {
+                      categories.map((item,index)=>{
+                        return(
+
+                          <div className="flex items-center" key={index}>
+                              <input
+                                type="checkbox"
+                                name= {item}
+                                value={item} 
+                                onChange={handleChange}
+                                className="form-checkbox h-5 w-5 text-[#DD730A]"
+                              />
+                              <label htmlFor="filter1" className="ml-2 text-gray-700">
+                                {item}
+                              </label>
+                              {/* <span className='bg-[#F1F1F5] w-[24px] h-[24px] rounded absolute right-3'>29</span> */}
+                            </div>
+
+                        )
+                      })
+                    }
+
                 </div>
 
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="filter3"
-                    name="filter3"
-                    checked={filters.filter3}
-                    onChange={() => handleFilterChange('filter3')}
-                    className="form-checkbox h-5 w-5 text-[#DD730A]"
-                  />
-                  <label htmlFor="filter3" className="ml-2 text-gray-700">
-                    Website Design
-                  </label>
-                  <span className='bg-[#F1F1F5] w-[24px] h-[24px] rounded absolute right-3'>29</span>
-                </div>
-
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="filter4"
-                    name="filter4"
-                    checked={filters.filter4}
-                    onChange={() => handleFilterChange('filter4')}
-                    className="form-checkbox h-5 w-5 text-[#DD730A]"
-                  />
-                  <label htmlFor="filter4" className="ml-2 text-gray-700">
-                    Web App development
-                  </label>
-                  <span className='bg-[#F1F1F5] w-[24px] h-[24px] rounded absolute right-3'>29</span>
-                </div>
-
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="filter5"
-                    name="filter5"
-                    checked={filters.filter5}
-                    onChange={() => handleFilterChange('filter5')}
-                    className="form-checkbox h-5 w-5 text-[#DD730A]"
-                  />
-                  <label htmlFor="filter5" className="ml-2 text-gray-700">
-                    Web programming
-                  </label>
-                  <span className='bg-[#F1F1F5] w-[24px] h-[24px] rounded absolute right-3'>29</span>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="filter6"
-                    name="filter6"
-                    checked={filters.filter6}
-                    onChange={() => handleFilterChange('filter6')}
-                    className="form-checkbox h-5 w-5 text-[#DD730A]"
-                  />
-                  <label htmlFor="filter6" className="ml-2 text-gray-700">
-                    Shopify
-                  </label>
-                  <span className='bg-[#F1F1F5] w-[24px] h-[24px] rounded absolute right-3'>29</span>
-                </div>
-
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="filter7"
-                    name="filter7"
-                    checked={filters.filter7}
-                    onChange={() => handleFilterChange('filter7')}
-                    className="form-checkbox h-5 w-5 text-[#DD730A]"
-                  />
-                  <label htmlFor="filter7" className="ml-2 text-gray-700">
-                    Mobile Apps
-                  </label>
-                  <span className='bg-[#F1F1F5] w-[24px] h-[24px] rounded absolute right-3'>29</span>
-                </div>
-
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="filter8"
-                    name="filter8"
-                    checked={filters.filter8}
-                    onChange={() => handleFilterChange('filter8')}
-                    className="form-checkbox h-5 w-5 text-[#DD730A]"
-                  />
-                  <label htmlFor="filter8" className="ml-2 text-gray-700">
-                    Webflow
-                  </label>
-                  <span className='bg-[#F1F1F5] w-[24px] h-[24px] rounded absolute right-3'>29</span>
-                </div>
-
-              </div>
             </div>
+
           </div>
 
           {/* seller level */}

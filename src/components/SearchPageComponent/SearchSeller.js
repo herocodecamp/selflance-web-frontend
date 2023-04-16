@@ -3,13 +3,13 @@ import FilterDrawer from '../PremiumSellerComponent/FilterDrawer';
 import Pagination from './Pagination';
 import SellerGig from './SellerGig';
 
-const SearchSeller = () => {
+const SearchSeller = ({gigs, searchString}) => {
   return (
     <div className='pt-16 sm:w-4/5 w-full px-4'>
       <div className='space-y-4'>
-        <FilterDrawer />
+        {/* <FilterDrawer /> */}
         <h4 className='text-[#121F3E]'>Programming & Tech  Website development</h4>
-        <h3 className='text-[#000000] text-2xl leading-9'>Results for "website development"
+        <h3 className='text-[#000000] text-2xl leading-9'>Results for "{searchString}"
         </h3>
 
         <div className='flex justify-between items-center space-x-2'>
@@ -31,7 +31,7 @@ const SearchSeller = () => {
           </div>
         </div>
 
-        <SellerGig />
+        <SellerGig gigs={gigs}/>
       </div>
     </div>
   );

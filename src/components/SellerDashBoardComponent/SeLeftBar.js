@@ -7,10 +7,13 @@ import { AiOutlineClockCircle } from 'react-icons/ai'
 import { FiSettings } from 'react-icons/fi'
 import { RxDashboard } from 'react-icons/rx'
 import { MdAppSettingsAlt } from 'react-icons/md';
+import { useParams, Link } from 'react-router-dom';
 
 const SeLeftBar = () => {
 
   const [active, setActive] = useState(1)
+
+  const params = useParams()
 
   const handleActive = (activeId) => {
     setActive(activeId)
@@ -47,7 +50,7 @@ const SeLeftBar = () => {
 
           <li
             onClick={() => handleActive(4)}
-            className={handleActiveClass(4)}><AiOutlinePlusCircle className='text-xl text-[#92929D]' /> <span className='leading-4 font-medium text-sm'>Create workplace</span></li>
+            className={handleActiveClass(4)}><AiOutlinePlusCircle className='text-xl text-[#92929D]' /> <span className='leading-4 font-medium text-sm'><Link to={`/${params.userID}/gig/create`}>Create workplace</Link></span></li>
 
           <li
             onClick={() => handleActive(5)}
@@ -63,11 +66,11 @@ const SeLeftBar = () => {
 
           <li
             onClick={() => handleActive(8)}
-            className={handleActiveClass(8)}><AiOutlineClockCircle className='text-xl text-[#92929D]' /> <span className='leading-4 font-medium text-sm'>Profile</span></li>
+            className={handleActiveClass(8)}><AiOutlineClockCircle className='text-xl text-[#92929D]' /> <span className='leading-4 font-medium text-sm'><Link to={`/users/${params.userID}/profile`}>Profile</Link></span></li>
 
           <li
             onClick={() => handleActive(9)}
-            className={handleActiveClass(9)}><FiSettings className='text-xl text-[#92929D]' /> <span className='leading-4 font-medium text-sm'>Settings</span></li>
+            className={handleActiveClass(9)}><FiSettings className='text-xl text-[#92929D]' /> <span className='leading-4 font-medium text-sm'><Link to={`/settings/${params.userID}`}>Settings</Link></span></li>
 
 
         </ul>

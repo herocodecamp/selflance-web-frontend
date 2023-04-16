@@ -1,10 +1,10 @@
 import {  createSlice } from "@reduxjs/toolkit";
 
 const initial_state = {
-    search:'',
-    subcategory:'',
-    page:'',
-    searchData:{}
+    search:null,
+    subcategory:null,
+    page:null,
+    searchData:null
  }
 
  const searchSlice = createSlice({
@@ -12,14 +12,14 @@ const initial_state = {
     initialState: initial_state,
     reducers:{
         setSearchString (state,action){
-            state.search = action.payload.search
+            state.search =  action.payload.search ?  action.payload.search :null
 
         },
         setSubCategory(state,action){
-            state.subcategory = action.payload.subCategory
+            state.subcategory = action.payload.subCategory ? action.payload.subCategory : null
         },
         setPage(state,action){
-            state.page = action.payload.page
+            state.page = action.payload.page ? action.payload.page : null
         }
 
         

@@ -37,7 +37,7 @@ const FilterDrawer = () => {
 
 
 
-  console.log(filters, "filters here")
+  // console.log(filters, "filters here")
 
   const handleFilterChange = (filterName) => {
     setFilters((prevState) => ({

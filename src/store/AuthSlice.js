@@ -43,6 +43,9 @@ const authSlice = createSlice({
       state.isRegister= false;
       state.isLoggedIn= false;
     },
+    updateSellerMode(state,action){
+      state.userInfo && (state.userInfo.isSeller = action.payload.sellerMode)
+    }
   },
   extraReducers(builder) {
     builder

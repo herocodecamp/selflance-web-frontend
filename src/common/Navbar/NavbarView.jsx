@@ -2,15 +2,26 @@ import React, { useState } from "react";
 import Logo from "../../Assets/logo.png";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { authActions } from "../../store/AuthSlice";
 
 const NavbarView = () => {
-  const userId = useSelector((state) => state.Auth.userId);
+  const {userId, isLoggedIn, isRegister} = useSelector((state) => state.Auth);
   const location = useLocation();
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   console.log(location);
   const [toggle, setToggle] = useState(false);
+
+  const handleLogOut=()=>{
+    dispatch(authActions.logout())
+    navigate('/')
+  }
+
+  
   return (
     <div className="navbar-container  md:bg-primary py-3">
       <div className="w-11/12 md:border-b font-medium py-3 border-gray-500 mx-auto flex text-white justify-between items-center">
@@ -108,7 +119,7 @@ const NavbarView = () => {
         </div>
 
         <div className="flex px-2 items-center font-normal gap-x-8">
-          {userId ? (
+          {isLoggedIn ? (
             <NavLink
               className={({ isActive, isPending }) =>
                 isActive
@@ -129,24 +140,26 @@ const NavbarView = () => {
               }
             >
               {" "}
-              <p className="px-4 sm:px-6">Sign In</p>
+              <button className="px-4 sm:px-6" onClick={()=>handleLogOut()}>Sign In</button>
             </NavLink>
           )}
-
-          <NavLink
-            to="/signup"
-            className={({ isActive, isPending }) =>
-              (isActive
-                ? "bg-[#DD730A] px-1.5 py-1.5 sm:py-2.5 sm:px-4 rounded-md"
-                : "") ||
-              (location.pathname === "/" &&
-                "bg-[#DD730A] px-1.5 py-1.5 sm:py-2.5 sm:px-4 rounded-md")
-            }
-            // className="
-            // "
-          >
-            <p>Sign Up</p>
-          </NavLink>
+          {
+            !userId && (<NavLink
+              to="/signup"
+              className={({ isActive, isPending }) =>
+                (isActive
+                  ? "bg-[#DD730A] px-1.5 py-1.5 sm:py-2.5 sm:px-4 rounded-md"
+                  : "") ||
+                (location.pathname === "/" &&
+                  "bg-[#DD730A] px-1.5 py-1.5 sm:py-2.5 sm:px-4 rounded-md")
+              }
+              // className="
+              // "
+            >
+              <p>Sign Up</p>
+            </NavLink>)
+          }
+          
         </div>
       </div>
       {/* mobile menu */}

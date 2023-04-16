@@ -61,20 +61,23 @@ const Gigs = [
 ]
 
 
-const SellerGig = () => {
-  const [seeMore, setSeeMore] = useState(3)
-
-  const handleSeeMore = () => {
-    setSeeMore(seeMore + 3)
-  }
+const SellerGig = ({gigs}) => {
 
   return (
     <div className='relative py-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-6 '>
 
+      {
+        gigs.map((item)=>{
+          return(
+            <div key={item._id} className='sm:block hidden'>
+              <SellerGigsDetails  gigData={item} />
+            </div>
+          )
+        })
+      }
 
-
-        {
+        {/* {
 
           Gigs?.map(gig => {
             return (
@@ -87,8 +90,8 @@ const SellerGig = () => {
             )
           })
 
-        }
-        {
+        } */}
+        {/* {
 
           Gigs?.slice(0, seeMore).map(gig => {
             return (
@@ -101,9 +104,9 @@ const SellerGig = () => {
             )
           })
 
-        }
+        } */}
 
-      </div>
+      {/* </div>
       <button
         onClick={handleSeeMore}
         className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full inline-flex absolute right-2 bottom-1 sm:hidden">
@@ -112,8 +115,8 @@ const SellerGig = () => {
           <path fill-rule="evenodd" d="M6.293 6.293a1 1 0 011.414 0l3.172 3.172a1 1 0 010 1.414l-3.172 3.172a1 1 0 01-1.414-1.414L8.586 10 6.293 7.707a1 1 0 010-1.414z" clip-rule="evenodd" />
         </svg>
       </button>
-      <div>
-        <Pagination />
+      <div> */}
+        {/* <Pagination /> */}
       </div>
     </div>
   );

@@ -69,9 +69,13 @@ import { Routes, BrowserRouter, Route } from "react-router-dom";
 import ToasterContainer from "./utils/ToasterContainer";
 import JobListPage from "./pages/JobList";
 
+import { useSelector } from "react-redux";
 
 
 function App() {
+
+  const {isLoggedIn} = useSelector(state=>state.Auth);
+
   return (
     <>
       {/* <OrderPage/> */}
@@ -139,8 +143,10 @@ function App() {
 
       {/* Routing */}
       <BrowserRouter>
-        {/* <Navbar /> */}
-        <NavbarLoggedIn />
+      {
+        isLoggedIn ? <NavbarLoggedIn /> : <Navbar />
+      }
+        
         <Routes>
           <Route path="/verifyOtp" element={<ConfirmPage />} />
           <Route path="/" element={<LandingPage />} />
@@ -166,7 +172,7 @@ function App() {
               <Route path="/:userID/gig/create" element={<WorkplacePage/>} />
 
               <Route path="/users/orders" element={<OrderScreen />} />
-              <Route path="/users/seller/dashboard" element={<SeDashboard />} />
+              <Route path="/users/seller/dashboard/:userID" element={<SeDashboard />} />
               <Route path="/users/buyer/dashboard" element={<Dashboard />} />
 
               <Route path="/become_seller/:userID" element={<BecomeSeller />} />
