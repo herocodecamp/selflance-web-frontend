@@ -3,9 +3,9 @@ import axios from "axios";
 
 export const fetchSellerOffer = createAsyncThunk(
   "sellerOffer/fetchSellerOffer",
-  async (offerId) => {
+  async (_id) => {
     const response = await axios.get(
-      `http://localhost:8000/api/v1/buyerOrderProcess/sellerOffer/${offerId}`
+      `http://localhost:8000/api/v1/gig/gigs/${_id}`
     );
     return response.data;
   }
@@ -52,7 +52,7 @@ export const sellerOfferSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(fetchSellerOffer.fulfilled, (state, action) => {
-      state[action.payload.offerId] = action.payload;
+      state[action.payload._id] = action.payload;
     });
 
     builder.addCase(postMultiplePageData.fulfilled, (state, action) => {

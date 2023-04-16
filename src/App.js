@@ -179,7 +179,7 @@ function App() {
               <Route path="/settings/:userID" element={<MenuPage />} />
      
 
-          <Route path="/buyer_order_process/offerId" element={<OrderPage />} />
+          <Route path="/buyer_order_process/:_id" element={<OrderPage />} />
 
           <Route path="/submit_requirement" element={<SubmiteRequirement />}/>
           <Route path="/submit_requirement2" element={<SubmitRequirement2 />}/>
