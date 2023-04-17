@@ -22,12 +22,22 @@ const OrderPage = () => {
   const index = new URLSearchParams(location.search).get("index");
 
   const sellerOffer = useSelector((state) => state.sellerOffer[_id]);
+  const userId = useSelector((state) => state.Auth.userId)
+
+  const page1Info = {
+   sellerOffer:sellerOffer?.packages[index],
+   gigId: _id,
+   buyerId: userId
+  }
   console.log("seller Offer", sellerOffer);
+  console.log("page 1 Offer", page1Info);
+
+
 
 
   useEffect(() => {
     dispatch(fetchSellerOffer(_id));
-    dispatch(setPage1Data(sellerOffer?.packages[index]));
+    dispatch(setPage1Data(page1Info));
   }, [dispatch, _id]);
 
   const handleNavigate = () => {
@@ -39,7 +49,10 @@ const OrderPage = () => {
     <>
       <div className="w-[95%] sm:w-[90%] md:w-[85%] mx-auto">
         <HistoryBackButton text="Order" />
-        <OrderPageBanner />
+        <OrderPageBanner
+        sellerOffer={sellerOffer} 
+        index={index}
+        />
 
         <OrderDetails
           index={index}

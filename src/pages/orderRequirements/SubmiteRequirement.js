@@ -11,7 +11,6 @@ const SubmiteRequirement = () => {
   const dispatch = useDispatch();
   const [selectedFile, setSelectedFile] = useState(null);
 
-
   const handleFileSelect = (event) => {
     const file = event.target.files[0];
     setSelectedFile(file);
@@ -25,10 +24,8 @@ const SubmiteRequirement = () => {
 
   const handleNavigateRequirement = () => {
     if (selectedFile) {
-      const formData = new FormData();
-      formData.append('image', selectedFile);
-      dispatch(setPage3Data(formData));
-      console.log("form data", formData)
+      dispatch(setPage3Data(selectedFile));
+      console.log("form data", selectedFile);
     }
     navigate("/submit_requirement2");
   };

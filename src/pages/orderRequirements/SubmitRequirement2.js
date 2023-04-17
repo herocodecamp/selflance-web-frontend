@@ -38,10 +38,8 @@ const SubmitRequirement2 = () => {
 
   const handleNavigateRequirement = () => {
     if (selectedFile) {
-      const formData = new FormData();
-      formData.append("image", selectedFile);
-      dispatch(setPage4Data(formData));
-      console.log("form data", formData);
+      dispatch(setPage4Data(selectedFile));
+      console.log("form data", selectedFile);
     }
 
     if (page1Data && page2Data && page3Data && page4Data) {

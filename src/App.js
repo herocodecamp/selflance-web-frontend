@@ -188,7 +188,7 @@ function App() {
           <Route path="/stripe/payment_method" element={<AddNewCardPage />}/>
 
           <Route
-            path="/seller_create_offer/:offerId"
+            path="/seller_create_offer/:sellerId"
             element={<SeCreateOfferPage />}
           />
 
