@@ -99,7 +99,7 @@ function App() {
       {/* <ManageOrder /> */}
       {/* <ManageOrderDetails /> */}
 
-      {/* {/* <ServiceDetails /> */}
+       {/* <ServiceDetails /> */}
       {/* <ManageOrderDetails /> */}
 
       {/* <Dashboar /> */}
