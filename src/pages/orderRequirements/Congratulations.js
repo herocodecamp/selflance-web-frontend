@@ -7,7 +7,7 @@ const Congratulations = () => {
   const navigate = useNavigate()
 
   const handleNavigate = () => {
-    navigate('/')
+    navigate('/users/buyer/dashboard')
   }
   return (
     <div className='sm:px-16 py-12 px-4 sm:py-8'>

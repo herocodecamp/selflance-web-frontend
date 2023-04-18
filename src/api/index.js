@@ -36,7 +36,7 @@ export const submitUserDetails = async(userDetails, userId) =>{
 }
 
 export const getUserDetails = async(userId) =>{
-    console.log('calling....')
+    console.log('calling....', userId)
     try{
         const response = await axios.get(`${BaseUrl}/${USER_END_POINT.USER_DETAILS}/${userId}`)
 
