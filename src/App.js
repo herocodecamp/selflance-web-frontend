@@ -70,6 +70,8 @@ import ToasterContainer from "./utils/ToasterContainer";
 import JobListPage from "./pages/JobList";
 
 import { useSelector } from "react-redux";
+import SellerWithdrawPage from "./pages/SellerWithdraw/SellerWithdrawPage";
+import SeSearch from "./components/SellerDashBoardComponent/SeSearch";
 
 
 function App() {
@@ -89,7 +91,6 @@ function App() {
 
       {/* <Dashboard /> */}
       {/* <ServiceDetails /> */}
-
       {/* <Footer /> */}
       {/* <<<<<<< HEAD */}
 
@@ -100,7 +101,7 @@ function App() {
       {/* <ManageOrder /> */}
       {/* <ManageOrderDetails /> */}
 
-      {/* {/* <ServiceDetails /> */}
+       {/* <ServiceDetails /> */}
       {/* <ManageOrderDetails /> */}
 
       {/* <Dashboar /> */}
@@ -174,6 +175,7 @@ function App() {
 
               <Route path="/users/orders" element={<OrderScreen />} />
               <Route path="/users/seller/dashboard/:userID" element={<SeDashboard />} />
+              <Route path="/users/seller/dashboard/profile/:userId" element={<SeProfileDashboardPage />} />
               <Route path="/users/buyer/dashboard" element={<Dashboard />} />
 
               <Route path="/become_seller/:userID" element={<BecomeSeller />} />
@@ -187,9 +189,12 @@ function App() {
           <Route path="/congratulations" element={<Congratulations />}/>
           <Route path="/order_process" element={<OrderProcess />}/>
           <Route path="/stripe/payment_method" element={<AddNewCardPage />}/>
+          <Route path="/users/seller/withdraw" element={<SellerWithdrawPage />}/>
+          <Route path="/users/seller/withdraw_details/:userId" element={<WithdrawDetailsPage />}/>
+          <Route path="/users/seller/withdraw_success" element={<WithdrawSuccessPage />}/>
 
           <Route
-            path="/seller_create_offer/:offerId"
+            path="/seller_create_offer/:sellerId"
             element={<SeCreateOfferPage />}
           />
 

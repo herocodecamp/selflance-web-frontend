@@ -7,11 +7,15 @@ const Congratulations = () => {
   const navigate = useNavigate()
 
   const handleNavigate = () => {
-    navigate('/')
+    navigate('/users/buyer/dashboard')
+  }
+
+  const handleBack = () => {
+    navigate(-1)
   }
   return (
     <div className='sm:px-16 py-12 px-4 sm:py-8'>
-      <BiArrowBack className='text-xl sm:text-2xl text-[#000000] hover:cursor-pointer' />
+      <BiArrowBack className='text-xl sm:text-2xl text-[#000000] hover:cursor-pointer' onClick={handleBack}/>
 
       <div className='flex items-center justify-center h-full sm:h-screen w-full sm:w-1/3 mx-auto text-center sm:py-12 px-2'>
 

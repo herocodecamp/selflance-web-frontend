@@ -25,7 +25,7 @@ const SellerProfile = () =>{
                 }
                 else
                 {
-                    setUser(resp.data)
+                    setUser(resp?.data)
 
                     dispatch(userDataActions.getUserData({user: resp.data}))
                 }

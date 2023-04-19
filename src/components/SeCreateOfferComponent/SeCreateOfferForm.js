@@ -17,7 +17,7 @@ const initialValues = {
 };
 
 const SeCreateOfferForm = () => {
-  const { sellerID } = useParams();
+  const { sellerId } = useParams();
   const { values, handleBlur, handleChange, handleSubmit, errors, touched } =
     useFormik({
       initialValues,
@@ -28,7 +28,7 @@ const SeCreateOfferForm = () => {
       onSubmit: async (values, action) => {
         try {
           const response = await axios.post(
-            `http://localhost:8000/api/v1/sellerOffer/${sellerID}`,
+            `http://localhost:8000/api/v1/sellerOffer/${sellerId}`,
             values
           );
           console.log(response.data, "response");
@@ -39,7 +39,6 @@ const SeCreateOfferForm = () => {
       },
     });
 
-  console.log("errors", errors);
 
   return (
     <div className="sm:py-10 py-6">

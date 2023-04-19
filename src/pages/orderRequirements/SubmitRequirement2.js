@@ -14,11 +14,16 @@ const SubmitRequirement2 = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const dispatch = useDispatch();
 
+  const handleBack = () => {
+     navigate(-1)
+   }
+ 
+
   const page1Data = useSelector((state) => state.sellerOffer.page1Data);
   const page2Data = useSelector((state) => state.sellerOffer.page2Data);
   const page3Data = useSelector((state) => state.sellerOffer.page3Data);
   const page4Data = useSelector((state) => state.sellerOffer.page4Data);
-
+  const userId = useSelector((state) => state.Auth.userId);
 
   console.log(
     { page1Data, page2Data, page3Data, page4Data },
@@ -38,8 +43,8 @@ const SubmitRequirement2 = () => {
 
   const handleNavigateRequirement = () => {
     if (selectedFile) {
-      dispatch(setPage4Data(selectedFile.name));
-      console.log("select file", selectedFile.name);
+      dispatch(setPage4Data(selectedFile));
+      console.log("form data", selectedFile);
     }
 
     if (page1Data && page2Data && page3Data && page4Data) {
@@ -48,6 +53,7 @@ const SubmitRequirement2 = () => {
         page2Data,
         page3Data,
         page4Data,
+        userId,
       };
       dispatch(postMultiplePageData(data));
       console.log("whole data here", data);
@@ -68,7 +74,7 @@ const SubmitRequirement2 = () => {
 
       <div className="sm:pt-16 pt-6 ">
         <div className="bg-[#FFFFFF] rounded-3xl drop-shadow-lg sm:w-1/2 mx-auto w-full sm:py-8 px-2 sm:px-6 text-center space-y-2 sm:space-y-4 py-4">
-          <BiUpload className="text-xl w-1/2 mx-auto sm:text-2xl text-[#00538F]" />
+          <BiUpload className="text-xl w-1/2 mx-auto sm:text-2xl text-[#00538F]" onClick={handleBack}/>
           <div class="relative rounded-md shadow-sm ">
             <input
               type="file"

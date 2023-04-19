@@ -13,21 +13,31 @@ import {
 } from "../../store/GetSellerOfferSlice";
 
 const OrderPage = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [paymentMethod, setPaymentMethod] = useState("");
 
   const { _id } = useParams();
   const location = useLocation();
   const index = new URLSearchParams(location.search).get("index");
-  console.log(index, "index");
 
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
   const sellerOffer = useSelector((state) => state.sellerOffer[_id]);
+  const userId = useSelector((state) => state.Auth.userId)
+
+  const page1Info = {
+   sellerOffer:sellerOffer?.packages[index],
+   gigId: _id,
+   buyerId: userId
+  }
   console.log("seller Offer", sellerOffer);
+  console.log("page 1 Offer", page1Info);
+
+
+
 
   useEffect(() => {
     dispatch(fetchSellerOffer(_id));
-    dispatch(setPage1Data(sellerOffer));
+    dispatch(setPage1Data(page1Info));
   }, [dispatch, _id]);
 
   const handleNavigate = () => {
@@ -35,13 +45,14 @@ const OrderPage = () => {
     navigate(`/${paymentMethod}/payment_method`);
   };
 
- 
-
   return (
     <>
       <div className="w-[95%] sm:w-[90%] md:w-[85%] mx-auto">
         <HistoryBackButton text="Order" />
-        <OrderPageBanner />
+        <OrderPageBanner
+        sellerOffer={sellerOffer} 
+        index={index}
+        />
 
         <OrderDetails
           index={index}
@@ -50,10 +61,7 @@ const OrderPage = () => {
           setPaymentMethod={setPaymentMethod}
         />
 
-        <OrderSummary 
-        index={index}
-        sellerOffer={sellerOffer}
-         />
+        <OrderSummary index={index} sellerOffer={sellerOffer} />
 
         <button
           className="block mb-4 mx-auto bg-primary rounded-md text-base text-white py-3 sm:py-5 md:py-7 px-10 sm:px-20 md:px-32 hover:ring-2 hover:underline disabled:bg-opacity-20"

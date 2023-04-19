@@ -127,7 +127,6 @@ const ServiceDetailsView = ({ gig }) => {
 
   const handleOfferClick = (index, id) => {
     console.log(index);
-    console.log(id);
     navigate(`/buyer_order_process/${id}?index=${index}`);
   };
 

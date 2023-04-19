@@ -11,6 +11,9 @@ const SubmiteRequirement = () => {
   const dispatch = useDispatch();
   const [selectedFile, setSelectedFile] = useState(null);
 
+  const handleBack = () => {
+    navigate(-1)
+  }
 
   const handleFileSelect = (event) => {
     const file = event.target.files[0];
@@ -25,7 +28,8 @@ const SubmiteRequirement = () => {
 
   const handleNavigateRequirement = () => {
     if (selectedFile) {
-      dispatch(setPage3Data(selectedFile.name));
+      dispatch(setPage3Data(selectedFile));
+      console.log("form data", selectedFile);
     }
     navigate("/submit_requirement2");
   };
@@ -34,7 +38,7 @@ const SubmiteRequirement = () => {
     <div className="sm:px-12 px-4 py-4 space-y-4">
       <h2 className="text-[#00538F] sm:xl leading-5 font-bold flex space-x-4 items-center">
         {" "}
-        <BiArrowBack className="text-2xl sm:text-4xl text-[#000000] hover:cursor-pointer" />{" "}
+        <BiArrowBack className="text-2xl sm:text-4xl text-[#000000] hover:cursor-pointer" onClick={handleBack}/>{" "}
         <span>Send Requirement</span>
       </h2>
 

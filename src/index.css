@@ -19,7 +19,7 @@
   }
 }
 
-.addNewCardInput:focus ~ .input-text{
+.addNewCardInput ~ .input-text{
   @apply text-blue-500
   bg-white
   transform 

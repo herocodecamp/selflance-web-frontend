@@ -3,12 +3,12 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import authSlice from "./AuthSlice";
-import BecomeSellerSlice, { becomeSellerActions } from "./BecomeSellerSlice";
-import sellerOfferReducer from "./GetSellerOfferSlice";
+import BecomeSellerSlice from "./BecomeSellerSlice";
 import CreateGigSlice from "./CreateGigSlice";
 import JobPostSlice from './JobPostSlice';
 import userDataSlice from "./UserData";
 import SearchSlice from "./SearchSlice";
+import GetSellerOfferSlice from "./GetSellerOfferSlice";
 
 
 // persist config storage
@@ -27,7 +27,7 @@ const rootReducer = combineReducers({
   JobPost: JobPostSlice,
   UserData: userDataSlice,
   Search: SearchSlice,
-  sellerOffer: sellerOfferReducer,
+  sellerOffer: GetSellerOfferSlice,
 
 });
 
