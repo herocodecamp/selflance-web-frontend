@@ -13,7 +13,7 @@ const SellerGigsDetails = ({ gigData }) => {
       gigData && (
         <div>
            <div>
-              {/* <img src={`http://localhost:8000/${gigData.gigImages[0].url}`} className="rounded sm:w-[296] mx-auto sm:h-[154] w-full border-2 border-[#FAFAFB]" alt="GigImage" /> */}
+              <img src={`http://localhost:8000/${gigData.gigImages[0].url}`} className="rounded sm:w-[296] mx-auto sm:h-[154] w-full border-2 border-[#FAFAFB]" alt="GigImage" />
             </div>
             <h2 className='font-poppins  text-[#171725] leading-6 font-semibold'>
               <Link to={`/users/search/${gigData._id}/gig-details`}>{gigData.title}</Link></h2>
@@ -21,8 +21,8 @@ const SellerGigsDetails = ({ gigData }) => {
             <div>
               <div className='flex items-center space-x-6'>
                 {/* user Image */}
-                {/* <img className="w-[46px] h-[46px] rounded-full" src={gig.image} alt="img" /> */}
-                <p className='text-[#171725] font-semibold leading-6'>john</p>
+                <img className="w-[46px] h-[46px] rounded-full" src={`http://localhost:8000/${gigData.userDetail.profileImage}`} alt="img" />
+                <p className='text-[#171725] font-semibold leading-6'>{gigData.userDetail.firstname}</p>
 
                 <span className='text-[#484848] font-bold text-xl absolute right-4'>{gigData.packages[0].price}</span>
               </div>

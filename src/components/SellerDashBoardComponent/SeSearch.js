@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import sellerAvatar from '../../Assets/seller_profile.png'
 import SePagination from './SePagination';
 import SeSearchDetails from './SeSearchDetails';
+import { getSellerSearch } from '../../api/sellersearch';
+import Pagination from '../SearchPageComponent/Pagination';
+
 
 const result = {
   bestMatched: [
@@ -95,7 +98,31 @@ const result = {
 
 
 const SeSearch = () => {
+
+  const [page, setPage] = useState(1);
   const [activeColor, setActiveColor] = useState(1)
+  const [obj,setObj] = useState(null);
+  
+
+  useEffect(()=>{
+      
+      getSellerSearch('',page).then((resp)=>{
+        console.log(page)
+        if(resp && resp.error) {console.log(resp.error)}
+        
+        setObj(resp.data)
+
+      }).catch(err=>console.log(err))
+      
+   
+    
+  },[page])
+
+  console.log("from the banner and fetch data is: ", obj)
+
+
+
+
   const handleActive = (activeId) => {
     setActiveColor(activeId)
   }
@@ -141,14 +168,24 @@ const SeSearch = () => {
       </div>
 
       <div className='grid grid-cols-1 gap-8 py-6'>
-        {
-          data_to_display?.map(result => <SeSearchDetails
+      {
+          obj?.queryData.map(result => <SeSearchDetails
             key={result._id}
             result={result}
           ></SeSearchDetails>)
         }
       </div>
-      <SePagination />
+      {obj && (
+        <div className='ml-32'>
+            <Pagination 
+                  page={page}
+                  limit={obj.limit ? obj.limit : 0}
+                  total={obj.totalSearch ? obj.totalSearch : 0}
+                  setPage={(page) => setPage(page)}
+            />
+        </div>
+      )}
+      
     </div>
   );
 };

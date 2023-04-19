@@ -9,11 +9,12 @@ import { useParams } from 'react-router-dom'
 
 import { gigCreate } from '../../api';
 
-
 const Photos = ({handleStep}) => {
 
     const data = useSelector(state=>state.CreateGig)
     const dispatch = useDispatch()
+
+    const {_id}=useSelector(state=>state.UserData.data)
 
     const params = useParams()
 
@@ -51,6 +52,7 @@ const Photos = ({handleStep}) => {
         data.gigFAQ && gigForm.append('gigFAQ',JSON.stringify(data.gigFAQ))
         data.videos && gigForm.append('videos',data.videos)
         data.gigRequirement && gigForm.append('gigRequirement',JSON.stringify(data.gigRequirement))
+        _id && gigForm.append('userDetail',_id)
 
         
 

@@ -11,6 +11,7 @@ import profileImg from '../../Assets/msg_profile.png';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { authActions } from '../../store/AuthSlice';
+import { userDataActions } from '../../store/UserData';
 
 const MenuView = () => {
     const params = useParams();
@@ -35,10 +36,15 @@ const MenuView = () => {
             }
             
             dispatch(authActions.updateSellerMode({sellerMode}))
-
-            
-        
+ 
     }
+
+        const handleLogOut=()=>{
+        dispatch(authActions.logout())
+        dispatch(userDataActions.LogOut())
+        
+        navigate('/')
+  }
 
   return (
     <div className='min-h-screen md:p-16 m-5'>
@@ -155,7 +161,7 @@ const MenuView = () => {
                 </div>
                 <SlArrowRight/>
             </button>
-            <button type="button" className="relative inline-flex justify-between items-center w-full px-4 py-4 text-2xl hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
+            <button type="button" onClick={handleLogOut} className="relative inline-flex justify-between items-center w-full px-4 py-4 text-2xl hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
                 <div className='flex items-center gap-4'>
                     <span className='bg-[#FFEFE0] p-3 rounded-full'><IoLogOut className='text-[#DD730A]' size={'1.2em'}/></span>
                 Log Out

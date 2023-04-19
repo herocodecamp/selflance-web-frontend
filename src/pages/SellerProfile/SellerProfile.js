@@ -27,7 +27,7 @@ const SellerProfile = () =>{
                 {
                     setUser(resp.data)
 
-                    
+                    dispatch(userDataActions.getUserData({user: resp.data}))
                 }
             })
 
@@ -50,7 +50,7 @@ const SellerProfile = () =>{
 
         console.log(user)
         
-        user && dispatch(userDataActions.getUserData({user}))
+        // user && dispatch(userDataActions.getUserData({user}))
 
     return(
         // user && (<SellerProfileView user={user} userID={params.userID} allGigs={allGigs}/>)

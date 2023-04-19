@@ -5,7 +5,7 @@ export const ValidateSchema = Yup.object({
     duration: Yup.string().required("duration is required"),
     experience: Yup.string().required("experience is required"),
     language: Yup.string().required("language is required"),
-    hourlyFrom: Yup.number().min(5).required("hourly rate is required"),
+    hourlyFrom: Yup.number().required("hourly rate is required"),
     hourlyTo: Yup.number().required("hourly rate is required"),
     description: Yup.string().max(5000).required("description is required"),
     terms: Yup.boolean(),

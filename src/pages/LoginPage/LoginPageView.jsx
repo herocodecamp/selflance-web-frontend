@@ -8,6 +8,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../../api";
 import { authActions } from "../../store/AuthSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { userDataActions } from "../../store/UserData";
+import { getUserDetails } from "../../api";
 
 
 const LoginPageView = () => {
@@ -26,6 +28,25 @@ const LoginPageView = () => {
       if(userLogin.status==='SUCCESS'){
          dispatch(authActions.userLogin({userId:userLogin.data.userId, userInfo:userLogin.data}));
          
+
+         getUserDetails(userLogin.data.userId).then((resp)=>{
+            if(resp && resp.error)
+            {
+                console.log(resp.error)
+            }
+            else
+            { 
+               if(resp.data){
+                  let user = resp.data
+              dispatch(userDataActions.getUserData({user}))
+               }
+               else{
+                  navigate(`/become_seller/${userLogin.data.userId}`)
+               }
+                  
+            }
+        })
+
          userInfo.isSeller ? 
          navigate('/users/seller/dashboard') : navigate('/users/buyer/dashboard')
       }

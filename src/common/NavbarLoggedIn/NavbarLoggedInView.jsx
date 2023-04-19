@@ -3,14 +3,15 @@ import React from 'react';
 import logo from '../../Assets/Selflance 2-svg.png'
 import avatar from '../../Assets/avatar.png'
 import {VscBellDot} from 'react-icons/vsc'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 export default function NavbarLoggedInView({setSearch}) {
 
   const navigate = useNavigate();
 
-  const user = useSelector(state=>state.UserData)
+  const user = useSelector(state=>state.UserData.data)
+  
 
 
   const handleSubmit = (e)=>{
@@ -46,7 +47,9 @@ export default function NavbarLoggedInView({setSearch}) {
         <div className='col-start-8 col-span-2 justify-self-end '>
           <div className='flex flex-row'>
             <VscBellDot className='text-xl mr-4 mt-3'/>
-            <img className="w-10 h-10 rounded-full shadow-md" src={user ? `http://localhost:8000/${user.data.profileImage}`: avatar} alt="Rounded avatar" />
+            <Link to={`/settings/${user.user}`}>
+            <img className="w-10 h-10 rounded-full shadow-md" src={user ? `http://localhost:8000/${user.profileImage}`: avatar} alt="Rounded avatar" />
+            </Link>
           </div>
         
         
@@ -55,7 +58,7 @@ export default function NavbarLoggedInView({setSearch}) {
 
         <div className='col-start-10 col-span-1 justify-self-start ml-3 mt-3 text-sm font-semibold'>
                {
-                user && user.data.firstname 
+                user && user.firstname 
                }
         </div>
 

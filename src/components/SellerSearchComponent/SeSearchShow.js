@@ -8,7 +8,7 @@ const options = [
   { value: 'level one', label: 'level one' },
 ];
 
-const SeSearchShow = () => {
+const SeSearchShow = ({searchString, jobs}) => {
 
   const [selectedOption, setSelectedOption] = useState(options[0]);
 
@@ -20,7 +20,7 @@ const SeSearchShow = () => {
     <div className='pt-8 sm:w-4/5 w-full px-4'>
       <div className='space-y-4'>
         <SeFilterDrawer />
-        <h3 className='text-[#000000] text-2xl leading-9'>Results for "Logo Design"
+        <h3 className='text-[#000000] text-2xl leading-9'>Results for "{searchString}"
         </h3>
         <div className='flex justify-between items-center space-x-2'>
           <p className='leading-9 text-[#6A6A6A] tracking-normal'>search result here</p>
@@ -51,7 +51,7 @@ const SeSearchShow = () => {
             </div>
           </div>
         </div>
-        <SeSearchBar />
+        <SeSearchBar jobs={jobs} />
       </div>
     </div>
   );

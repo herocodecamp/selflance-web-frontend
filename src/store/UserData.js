@@ -13,6 +13,11 @@ const userDataSlice = createSlice({
        {
         
         state.data = action.payload.user
+       },
+
+       LogOut(state,action)
+       {
+        state.data = {}
        }
 
     }

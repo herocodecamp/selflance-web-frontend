@@ -74,7 +74,7 @@ import { useSelector } from "react-redux";
 
 function App() {
 
-  const {isLoggedIn} = useSelector(state=>state.Auth);
+  const {isLoggedIn, userInfo} = useSelector(state=>state.Auth);
 
   return (
     <>
@@ -166,7 +166,8 @@ function App() {
 
           <Route path="/buyer/orders" element={<ManageOrder />} />
 
-              <Route path="/users/search" element={<SearchPage />} />
+              <Route path="/users/search" element={userInfo?.isSeller ? <SellerSearchPage /> : <SearchPage />} />
+              {/* <Route path="/users/seller/search" element={<SellerSearchPage />} /> */}
               <Route path="/users/search/:gigID/gig-details" element={<ServiceDetails/>} />
               <Route path="/users/:userID/profile" element={<SellerProfile/>} />
               <Route path="/:userID/gig/create" element={<WorkplacePage/>} />
