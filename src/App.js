@@ -70,6 +70,8 @@ import ToasterContainer from "./utils/ToasterContainer";
 import JobListPage from "./pages/JobList";
 
 import { useSelector } from "react-redux";
+import SellerWithdrawPage from "./pages/SellerWithdraw/SellerWithdrawPage";
+import SeSearch from "./components/SellerDashBoardComponent/SeSearch";
 
 
 function App() {
@@ -166,6 +168,7 @@ function App() {
           <Route path="/buyer/orders" element={<ManageOrder />} />
 
               <Route path="/users/search" element={<SearchPage />} />
+              <Route path="/users/seller_search" element={<SellerSearchPage />} />
               <Route path="/users/search/:gigID/gig-details" element={<ServiceDetails/>} />
               <Route path="/users/:userID/profile" element={<SellerProfile/>} />
               <Route path="/:userID/gig/create" element={<WorkplacePage/>} />
@@ -186,6 +189,9 @@ function App() {
           <Route path="/congratulations" element={<Congratulations />}/>
           <Route path="/order_process" element={<OrderProcess />}/>
           <Route path="/stripe/payment_method" element={<AddNewCardPage />}/>
+          <Route path="/users/seller/withdraw" element={<SellerWithdrawPage />}/>
+          <Route path="/users/seller/withdraw_details/:userId" element={<WithdrawDetailsPage />}/>
+          <Route path="/users/seller/withdraw_success" element={<WithdrawSuccessPage />}/>
 
           <Route
             path="/seller_create_offer/:sellerId"

@@ -32,7 +32,7 @@ const AddNewCard = () => {
       <div className="w-[90%] md:w-[80] mx-auto shadow-md">
         <HistoryBackButton text="Add New Card" />
         <form onSubmit={handleNavigate}>
-          <div className="shadow-lg border border-slate-200 rounded-3xl p-1 sm:p-2 md:p-5 lg:p-8 m-3">
+          <div className="shadow-lg border border-slate-200 rounded-3xl p-1 sm:p-2 md:p-5 lg:p-8 m-3 space-y-2">
             <img src={Card} alt="Card" className="mb-4 md:mb-10 m-auto" />
             <div className="justify-center items-center py-1">
               <label className="relative">
