@@ -1,10 +1,10 @@
 import React from 'react';
 import SellerApplyDetails from '../../components/SellerApllyComponents/SellerApplyDetails';
 
-const SellerApplyView = () => {
+const SellerApplyView = ({jobData}) => {
   return (
     <div>
-      <SellerApplyDetails />
+      <SellerApplyDetails result = {jobData}/>
     </div>
   );
 };

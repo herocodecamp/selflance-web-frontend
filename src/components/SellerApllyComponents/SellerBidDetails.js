@@ -1,11 +1,19 @@
+
 import { Label, TextInput } from "flowbite-react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineFileProtect } from "react-icons/ai";
 import { BiUpload } from "react-icons/bi";
+import { jobResponse } from "../../api/sellerjobresponse";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-const SellerBidDetails = () => {
+const SellerBidDetails = ({jobID}) => {
+
+  const {_id} = useSelector(state=>state.UserData.data)
+  const navigate = useNavigate();
+
   const [isChecked, setIsChecked] = useState(false);
-  console.log(isChecked);
+ 
   const [selectedOption, setSelectedOption] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
 
@@ -18,21 +26,37 @@ const SellerBidDetails = () => {
     setSelectedOption(event.target.value);
   };
 
+
+  var dataToSubmit
+
   const handleSubmitData = (event) => {
     event.preventDefault();
     const ED = event.target;
 
     const ApplyData = {
-      isChecked: isChecked,
-      bid: ED.bid.value,
-      duration: ED.duration.value,
-      time: ED.time.value,
-      date: ED.date.value,
-      description: ED.description.value,
-      selectFile: selectedFile,
+      bidType: isChecked ? 'Project' :'Hourly',
+      bidPrice: ED.bid.value,
+      bidDuration: ED.duration.value,
+      startTime: ED.time.value,
+      startDate: ED.date.value,
+      coverLetter: ED.description.value,
+      files: selectedFile,
     };
     console.log(ApplyData)
+    dataToSubmit = ApplyData
+
+    jobResponse(_id,jobID,dataToSubmit).then((resp)=>{
+      if(resp && resp.error ) {console.log(resp.error)}
+      
+      resp.statusText = 'OK' && 
+        navigate('/job/search/success')
+      
+    })
+
   };
+
+
+  
 
   return (
     <div className="py-6 pt-6">

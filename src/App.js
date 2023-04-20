@@ -166,8 +166,12 @@ function App() {
           <Route path="/inbox/sellername" element={<Messaging />} />
 
           <Route path="/buyer/orders" element={<ManageOrder />} />
-
+            {/* Seller Dashboard and Apply Job */}
               <Route path="/users/search" element={userInfo?.isSeller ? <SellerSearchPage /> : <SearchPage />} />
+              <Route path="/job/search/:jobID/preview" element={<SeDashboardPage2/>} />
+              <Route path="/job/search/:jobID/apply" element={<SellerApplyPage/>}/>
+              <Route path="/job/search/success" element={<ApplySuccess/>} />
+
               {/* <Route path="/users/seller/search" element={<SellerSearchPage />} /> */}
               <Route path="/users/search/:gigID/gig-details" element={<ServiceDetails/>} />
               <Route path="/users/:userID/profile" element={<SellerProfile/>} />

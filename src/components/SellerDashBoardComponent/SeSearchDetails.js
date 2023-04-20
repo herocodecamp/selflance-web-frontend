@@ -2,12 +2,24 @@ import React from 'react';
 import { BsHeart } from 'react-icons/bs'
 import { FaGreaterThan } from 'react-icons/fa'
 import userSvg from '../../Assets/svg/user.svg'
+import { useNavigate } from 'react-router-dom';
+import ReviewJobPage from '../../pages/ReviewJobPage';
 
 const SeSearchDetails = ({ result }) => {
 
-
+  const navigate = useNavigate()
 
   const PF= process.env.REACT_APP_PF
+
+  const handleApply=(ID,data)=>{
+    navigate(`/job/search/${ID}/preview`,{
+    state:{
+      jobID: ID,
+      joData: data
+    }}
+    )
+  }
+
   return (
     <div className='bg-[#FFFFFF] px-8 py-6 space-y-6 rounded-3xl drop-shadow-2xl relative'>
       <div className='flex space-x-4 items-center'>
@@ -16,7 +28,7 @@ const SeSearchDetails = ({ result }) => {
         <span className='absolute right-2 sm:right-12'><BsHeart className='text-[#B4B4B7] w-[18px] h-[15px] ' /></span>
       </div>
       <div>
-        <p className='font-sm sm:leading-6'>{result.description}</p>
+        <p className='font-sm sm:leading-6'>{result.description.slice(0,30)}...</p>
       </div>
       <div className=' grid grid-cols-2 lg:grid-cols-3 gap-2'>
         {
@@ -47,7 +59,7 @@ const SeSearchDetails = ({ result }) => {
           <img className='w-[22px] h-[22px]' src={userSvg} alt="" />
           <p className='text-[#000000]'>{result.sellerResponses.length} applied</p>
         </div>
-        <button className='flex w-[90px] h-[35px] sm:w-[120px] sm:h-[40px] lg:w-[167px] lg:h-[58px] bg-[#00538F] items-center justify-center   rounded-md text-white px-4 py-2'>Apply <FaGreaterThan className='ml-2 mt-2' /></button>
+        <button className='flex w-[90px] h-[35px] sm:w-[120px] sm:h-[40px] lg:w-[167px] lg:h-[58px] bg-[#00538F] items-center justify-center   rounded-md text-white px-4 py-2' onClick={()=>handleApply(result._id,result)} >Apply <FaGreaterThan className='ml-2 mt-2' /></button>
       </div>
     </div>
   );
