@@ -7,7 +7,7 @@ const JobResponsePage = () => {
   return (
     <>
     
-      <JobResponseView/>
+      <JobResponseView />
       <Footer/>
     </>
   )

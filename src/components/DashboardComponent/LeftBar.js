@@ -28,6 +28,8 @@ const LeftBar = () => {
 
           <li className='space-x-6 flex items-center flex-grow'><BsCheckSquare className='text-xl text-[#92929D]' /> <span className='text-[#171725] leading-4 font-medium text-sm'><Link to='/job_post/new'>Post a job</Link></span></li>
 
+          <li className='space-x-6 flex items-center flex-grow'><BsCheckSquare className='text-xl text-[#92929D]' /> <span className='text-[#171725] leading-4 font-medium text-sm'><Link to={`/job_posts/${userId}/list`}>Posted Jobs</Link></span></li>
+
           <li className='space-x-6 flex items-center flex-grow'><AiOutlineCalendar className='text-xl text-[#92929D]' /> <span className='text-[#171725] leading-4 font-medium text-sm'>Orders</span></li>
 
           <li className='space-x-6 flex items-center flex-grow'><AiOutlineClockCircle className='text-xl text-[#92929D]' /> <span className='text-[#171725] leading-4 font-medium text-sm'><Link to={`/settings/${userId}`}>Profile</Link></span></li>

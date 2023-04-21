@@ -158,12 +158,13 @@ function App() {
           <Route path="/login" element={<LoginPageView />} />
           <Route path="/signup" element={<SignUpPageView />} />
 
-          <Route path="/job_posts" element={<JobList />} />
+          
           <Route path="/job_post/new" element={<PostJobPage />} />
           <Route path="/job_post/new/review" element={<ReviewJobPage />} />
           <Route path="/job_posts/:userID/list" element={<JobListPage />} />
           <Route path="/job_posts/:jobID/details" element={<JobDetail />} />
           <Route path="/inbox/sellername" element={<Messaging />} />
+          <Route path='/job_posts/responses' element={<JobResponsePage />} />
 
           <Route path="/buyer/orders" element={<ManageOrder />} />
             {/* Seller Dashboard and Apply Job */}

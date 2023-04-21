@@ -8,12 +8,16 @@ import { jobPost } from '../../utils/mockData';
 import { useParams } from 'react-router-dom';
 
 import { readAllJobs } from '../../api';
+import { jobPostActions } from '../../store/JobPostSlice';
+import { useDispatch } from 'react-redux';
+
 
 const JobListView = () => {
 
     const [posts, setPosts] = useState(null)
 
     const params = useParams();
+    const dispatch = useDispatch();
 
     useEffect(()=>{
 
@@ -24,12 +28,15 @@ const JobListView = () => {
                 }
                 else
                 {
-                    console.log("reading all jobs",resp.data)
                     setPosts(resp.data)
+
+                    
                 }
         })
 
     },[params.userID])
+
+    posts && dispatch(jobPostActions.userJobPostData({jobData: posts}))
 
   return (
     
@@ -38,7 +45,7 @@ const JobListView = () => {
             <div className='min-h-screen md:p-16  m-5'>
             <Control title='Post a Job'/>
             <div className="mt-12">
-                <Stepper/>  
+                <Stepper />  
                 <h3 className="mt-8 text-2xl font-medium">
                     Total Job Post({posts.length})
                 </h3>

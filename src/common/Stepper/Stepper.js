@@ -1,9 +1,14 @@
 import React from 'react'
 import StepperView from './StepperView'
+import Loading from '../../pages/JobList/Loading'
 
-const Stepper = ({current}) => {
+const Stepper = () => {
+
+
+
   return (
-    <StepperView current={current}/>
+   
+    <StepperView /> 
   )
 }
 
