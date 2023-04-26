@@ -163,7 +163,9 @@ function App() {
           <Route path="/job_post/new/review" element={<ReviewJobPage />} />
           <Route path="/job_posts/:userID/list" element={<JobListPage />} />
           <Route path="/job_posts/:jobID/details" element={<JobDetail />} />
-          <Route path="/inbox/sellername" element={<Messaging />} />
+
+          <Route path="/inbox/:userID" element={<Messaging />} />
+          
           <Route path='/job_posts/responses' element={<JobResponsePage />} />
 
           <Route path="/buyer/orders" element={<ManageOrder />} />

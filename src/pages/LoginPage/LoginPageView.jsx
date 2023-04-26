@@ -18,6 +18,8 @@ const LoginPageView = () => {
 
    const dispatch = useDispatch();
    const navigate = useNavigate()
+
+
    const handleSubmit = async (event) =>{
       event.preventDefault();
       const email = event.target.username.value;
@@ -39,6 +41,7 @@ const LoginPageView = () => {
                if(resp.data){
                   let user = resp.data
               dispatch(userDataActions.getUserData({user}))
+              navigate(`/settings/${userLogin.data.userId}`)
                }
                else{
                   navigate(`/become_seller/${userLogin.data.userId}`)
@@ -47,8 +50,8 @@ const LoginPageView = () => {
             }
         })
 
-         userInfo.isSeller ? 
-         navigate('/users/seller/dashboard') : navigate('/users/buyer/dashboard')
+         // userInfo.isSeller ? 
+         // navigate('/users/seller/dashboard') : navigate('/users/buyer/dashboard')
       }
    }
    return(
